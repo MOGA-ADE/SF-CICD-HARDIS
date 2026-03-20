@@ -1,0 +1,6 @@
+projectName: sf_cicd_hardis
+developmentBranch: integration
+autoCleanTypes:
+  - destructivechanges
+  - flowPositions
+  # - minimizeProfiles

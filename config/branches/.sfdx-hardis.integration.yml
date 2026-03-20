@@ -1,0 +1,4 @@
+mergeTargets:
+  - PreProd
+targetUsername: m.curpen-external@alliancedesenergies.fr.devmcu
+instanceUrl: https://alliancedesenergies--devmcu.sandbox.my.salesforce.com
