@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- API Statut --></label>
+    <name>Api_status__c</name>
+    <picklistValues>
+        <masterLabel>Demande de prix en attente d&apos;action manuelle</masterLabel>
+        <translation><!-- Demande de prix en attente d&apos;action manuelle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande de prix envoyée par Salesforce</masterLabel>
+        <translation><!-- Demande de prix envoyée par Salesforce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande de prix rejetée par le fournisseur</masterLabel>
+        <translation><!-- Demande de prix rejetée par le fournisseur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande de prix reçue chez le fournisseur</masterLabel>
+        <translation><!-- Demande de prix reçue chez le fournisseur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande de prix validée par le fournisseur</masterLabel>
+        <translation><!-- Demande de prix validée par le fournisseur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erreur Process Mulesoft</masterLabel>
+        <translation><!-- Erreur Process Mulesoft --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

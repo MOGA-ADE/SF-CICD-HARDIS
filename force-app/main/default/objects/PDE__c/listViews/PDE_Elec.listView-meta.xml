@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDE_Elec</fullName>
+    <columns>NAME</columns>
+    <columns>DateEcheance__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PDE__c.PDE_ElecC5</value>
+    </filters>
+    <label>Points d&apos;énergie C5</label>
+</ListView>

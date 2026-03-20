@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_001</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(MobilePhone)),
+    NOT(
+        OR(
+            BEGINS(MobilePhone, &quot;06&quot;),
+            BEGINS(MobilePhone, &quot;07&quot;)
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>Le numéro de mobile doit commencer par 06 ou 07.</errorMessage>
+</ValidationRule>

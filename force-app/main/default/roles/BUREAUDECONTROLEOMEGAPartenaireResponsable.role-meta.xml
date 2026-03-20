@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>BUREAU DE CONTROLE OMEGA Partenaire - Responsable</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>BUREAU DE CONTROLE OMEGA Partenaire - Responsable</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>BUREAUDECONTROLEOMEGAPartenaireDirigeant</parentRole>
+</Role>

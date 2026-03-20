@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <definitionCreationType>Segment_Membership</definitionCreationType>
+    <lookupFieldName>CampaignMember_SM_1769684020954__dlm.rel_1769684024566_end__c</lookupFieldName>
+    <masterLabel>CampaignMember_SM_1769684020954_Id_map_ssot_CampaignMember_ssot_Id_1769684024566</masterLabel>
+    <owner>DataCloud</owner>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>CampaignMember_SM_1769684020954__dlm.Id__c</sourceFieldName>
+    <targetEntity xsi:nil="true"/>
+    <targetFieldName>ssot__CampaignMember__dlm.ssot__Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Ellisphere_Lille_Commun_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Code_NAF__c</columns>
+    <columns>Code_NAF1__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>Lead Ellisphere - Lille Commun</label>
+    <queue>Lead_Ellisphere_Lille_Commun</queue>
+    <sharedTo>
+        <role>Commercial_ADE_Lille</role>
+        <role>Directeur_Commercial_ADE_Lille</role>
+    </sharedTo>
+</ListView>

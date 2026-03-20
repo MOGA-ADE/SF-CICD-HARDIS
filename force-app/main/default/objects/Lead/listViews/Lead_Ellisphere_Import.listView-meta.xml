@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Ellisphere_Import</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>contains</operation>
+        <value>Ellisphere Import</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>ARappeler,Sans suite,Refusée</value>
+    </filters>
+    <label>Lead Ellisphere Import</label>
+    <sharedTo>
+        <group>Energy</group>
+        <group>Energy_Sub</group>
+    </sharedTo>
+</ListView>

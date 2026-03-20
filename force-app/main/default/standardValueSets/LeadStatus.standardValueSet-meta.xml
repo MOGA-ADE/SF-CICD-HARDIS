@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>En attente de traitement</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>En cours de prospection</fullName>
+        <default>false</default>
+        <label>En cours de prospection</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Attente Facture</fullName>
+        <default>false</default>
+        <label>Attente Facture</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Facture Reçue</fullName>
+        <default>false</default>
+        <label>Facture Reçue</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>ARappeler</fullName>
+        <default>false</default>
+        <label>À Rappeler</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Sans suite</fullName>
+        <default>false</default>
+        <label>Sans suite</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>ACD reçu</fullName>
+        <default>false</default>
+        <label>ACD reçu</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Reçue</fullName>
+        <default>false</default>
+        <label>Reçue</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Validée</fullName>
+        <default>false</default>
+        <label>Validée</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Refusée</fullName>
+        <default>false</default>
+        <label>Refusée</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Convertie</fullName>
+        <default>false</default>
+        <label>Convertie</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>1er contact</fullName>
+        <default>false</default>
+        <label>1er contact</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>RDV pris</fullName>
+        <default>false</default>
+        <label>RDV pris</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Négociation en cours</fullName>
+        <default>false</default>
+        <label>Négociation en cours</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention perdue</fullName>
+        <default>false</default>
+        <label>Convention perdue</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention gagnée</fullName>
+        <default>false</default>
+        <label>Convention gagnée</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Faux numéro</fullName>
+        <default>false</default>
+        <label>Faux numéro</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Hors Cible</fullName>
+        <default>false</default>
+        <label>Hors Cible</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>RDV commercial pris</fullName>
+        <default>false</default>
+        <label>RDV commercial pris</label>
+        <converted>true</converted>
+    </standardValue>
+</StandardValueSet>

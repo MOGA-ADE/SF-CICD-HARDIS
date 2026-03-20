@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rel_1772166842851_end__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Demande_Cotation_c_Home_Account_c_ma_rel</label>
+    <referenceTo>ssot__Account__dlm</referenceTo>
+    <relationshipLabel>Demande_Cotation_c_Home_Account_c_ma_rel</relationshipLabel>
+    <relationshipName>rel_1772166842851_end</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

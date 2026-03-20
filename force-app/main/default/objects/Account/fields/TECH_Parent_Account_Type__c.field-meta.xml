@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_Parent_Account_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>Parent.RecordType.Name</formula>
+    <label>TECH Parent Account Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

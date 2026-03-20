@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_002</fullName>
+    <active>true</active>
+    <description>Contrôle de cohérence entre le canal de vente et la région d&apos;activité de l&apos;utilisateur</description>
+    <errorConditionFormula>AND(
+    NOT(
+        OR(
+            ISPICKVAL(Canal_vente__c, &quot;Vente terrain&quot;),
+            ISPICKVAL(Canal_vente__c, &quot;Vente terrain Lyon&quot;)
+        )
+    ),
+    NOT(
+        ISPICKVAL(Region_activite__c, &quot;&quot;)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Region_activite__c</errorDisplayField>
+    <errorMessage>La région d&apos;activité est autorisée uniquement pour les canaux de vente Terrain</errorMessage>
+</ValidationRule>

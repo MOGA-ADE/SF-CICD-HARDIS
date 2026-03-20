@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d3399fd8-a39b-4ac5-901a-297d04958840",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "News_List__c",
+  "id" : "2cd54ba6-720c-4dc8-a1c5-73c80bb00f65",
+  "label" : "News List",
+  "objectApiName" : "News__c",
+  "routeType" : "list-a1K",
+  "type" : "route",
+  "urlPrefix" : "news"
+}

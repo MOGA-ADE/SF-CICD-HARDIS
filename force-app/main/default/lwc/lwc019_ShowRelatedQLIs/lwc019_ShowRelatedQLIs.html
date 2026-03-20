@@ -1,0 +1,78 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <lightning-icon icon-name="standard:quotes" alternative-text="Quote image" size="small"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a href={viewAllURL} class="slds-card__header-link slds-truncate">
+                  <span>Autres lignes de fournisseurs ({relatedQLIsize})</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body">
+            <lightning-spinner if:true={isLoading} alternative-text="Loading" size="medium"></lightning-spinner>
+            <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid" aria-label="Liste des QLIs">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th  scope="col">
+                            <div class="slds-truncate" title="Fournisseur">Fournisseur</div>
+                        </th>
+                        <th  scope="col">
+                            <div class="slds-truncate" title="Référence PDE ">Référence PDE</div>
+                        </th>
+                        <th  scope="col">
+                            <div class="slds-truncate" title="Type Offre">Type Offre</div>
+                        </th>
+                        <th  scope="col">
+                            <div class="slds-truncate" title="Durée de l'offre">Durée de l'offre</div>
+                        </th>
+                        <th  scope="col">
+                            <div class="slds-truncate" title="QLI remplie">QLI remplie</div>
+                        </th>
+                        <th  scope="col">
+                            <div class="slds-truncate" title="Budget TTC">Budget TTC</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={relatedQLIs} for:item="qli">
+                        <tr key={qli.Id} class="slds-hint-parent">
+                            <th scope="row">
+                            <div class="slds-truncate" title={qli.TECH_fournisseur__c} onclick={getQLIId} oncontextmenu={getQLIId} onauxclick={getQLIId} data-id={qli.Id}>
+                                <a href={redirectToQLI} tabindex="-1">{qli.TECH_fournisseur__c}</a>
+                            </div>
+                            </th>
+                            <td role="gridcell">
+                            <div class="slds-truncate" title={qli.TECH_IdentifiantPDE__c}>{qli.TECH_IdentifiantPDE__c}</div>
+                            </td>
+                            <td role="gridcell">
+                            <div class="slds-truncate" title={qli.TypeOffre__c}>{qli.TypeOffre__c}</div>
+                            </td>
+                            <td role="gridcell">
+                                <div class="slds-truncate" title={qli.DebutDeFourniture__c}>{qli.DebutDeFourniture__c}</div>
+                            </td>
+                            <td role="gridcell">
+                            <div class="slds-truncate" title={qli.TECH_QLI_Remplie__c} style="padding-left: 25px;">
+                                <lightning-formatted-rich-text value={qli.TECH_QLI_Remplie__c}></lightning-formatted-rich-text>
+                            </div>
+                            </td>
+                            <td role="gridcell">
+                                <div class="slds-truncate" title={qli.Budget_TTC__c}>{qli.Budget_TTC__c} €</div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+        <footer class="slds-card__footer">
+          <a class="slds-card__footer-action" href={viewAllURL}>View All
+            <span class="slds-assistive-text">Quotes Line Items</span>
+          </a>
+        </footer>
+    </article>
+</template>

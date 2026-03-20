@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Masse_C5_4_Postes</fullName>
+    <active>true</active>
+    <businessProcess>Sales</businessProcess>
+    <description>Opportunités possédant beaucoup de points d&apos;énergie C5 4 Postes</description>
+    <label>Masse C5 4 Postes</label>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cellule RDV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultation MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data CARTEGIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fichier de prospection - UW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LE CÈDRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onssen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Producteurs primaires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reattribution AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Nouveau</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Renouvellement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

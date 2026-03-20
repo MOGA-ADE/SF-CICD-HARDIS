@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>ZtxQP0kX4MsM6WNSdVKVR7qq1pHpwof8to6Xp2y8IFA=_1</activeVersionIdentifier>
+    <developerName>Lettre_resiliation_ELEC</developerName>
+    <masterLabel>Lettre de résiliation ELEC</masterLabel>
+    <relatedEntity>Account</relatedEntity>
+    <templateVersions>
+        <content>When I ask you what&apos;s my name, you answer {!$User.Name}.
+</content>
+        <inputs>
+            <apiName>objectToSummarize</apiName>
+            <definition>SOBJECT://Account</definition>
+            <referenceName>Input:Account</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>ZtxQP0kX4MsM6WNSdVKVR7qq1pHpwof8to6Xp2y8IFA=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Vous êtes un commercial et votre nom est {!$User.Name} et vous faites partie d&apos;une organisation appelée {!$User.Account.Name}. Votre client est {!$Input:Account.Name}. Vous souhaitez résilier un ou des contrats d&apos;énergie avec {!$Input:Account.Name}. Lorsque je vous demande de m&apos;afficher la liste des points d&apos;énergies lié a {!$Input:Account.Name}, vous devez suivre strictement mes instructions ci-dessous.
+
+Tu récupères les points d&apos;énergie {!$RelatedList:Account.PDE__r.Records}. Pour chaque PDE__c, tu m&apos;affiches son Numéro de compteur.
+
+Tu me demandes de saisir les  Numéro de compteur des PDE__c pour lesquels je souhaite résilier le contrat et attend ma réponse.
+
+Après que j&apos;ai saisie les Numéro de compteur : 30002210985736.
+
+Pour chaque PDE_c de DEFI GROUP dont le numéro de compteur est &apos;30002210985736&apos;, écris moi une lettre de résiliation en utilisant ce template :
+
+Société : {!$Input:Account.Name}
+ 
+ 
+ 
+ 
+SIRET : {!$Input:Account.Siret__c}
+Numéro de client : 
+Point de Livraison : 
+Fournisseur : PDE__c.Fournisseur__c
+ 
+ 
+ 
+Le ______________
+ 
+ 
+Courrier recommandé AR n°
+ 
+Objet : Résiliation du contrat de fourniture d’électricité
+ 
+ 
+ 
+Madame, Monsieur,
+ 
+Par la présente, je vous informe résilier mon contrat référencé ci-dessus me liant à votre société avec date d’effet au PDE__c.DateEcheanceContract__c (date d’échéance de mon contrat) en vue de mon changement de fournisseur.
+ 
+Je vous prie de bien vouloir faire le nécessaire quant à cette résiliation contractuelle et laisser mon nouveau fournisseur prendre le point de livraison concerné dans son périmètre le lendemain de mon dernier jour de fourniture chez vous.
+ 
+Je vous remercie également de bien vouloir émettre la facture de clôture correspondante et procéder, le cas échéant, au remboursement de l&apos;éventuel trop-perçu dans les meilleurs délais.
+ 
+Vous remerciant de l’attention que vous porterez à cette demande de résiliation, je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+  
+
+
+</content>
+        <inputs>
+            <apiName>objectToSummarize</apiName>
+            <definition>SOBJECT://Account</definition>
+            <referenceName>Input:Account</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Account.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>PDE__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Account.PDE__r.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>ZtxQP0kX4MsM6WNSdVKVR7qq1pHpwof8to6Xp2y8IFA=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__recordSummary</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Source cellule RDV --></label>
+    <name>Source_cellule_RDV__c</name>
+    <picklistValues>
+        <masterLabel>Ellisphere - Import 19/03/2025 Alimentaire</masterLabel>
+        <translation><!-- Ellisphere - Import 19/03/2025 Alimentaire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ellisphere - Import 19/03/2025 Industrie</masterLabel>
+        <translation><!-- Ellisphere - Import 19/03/2025 Industrie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emailing</masterLabel>
+        <translation><!-- Emailing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fichier</masterLabel>
+        <translation><!-- Fichier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PEP&apos;S</masterLabel>
+        <translation><!-- PEP&apos;S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partenaire</masterLabel>
+        <translation><!-- Partenaire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prescripteur</masterLabel>
+        <translation><!-- Prescripteur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospection terrain</masterLabel>
+        <translation><!-- Prospection terrain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospection téléphonique</masterLabel>
+        <translation><!-- Prospection téléphonique --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospection téléphonique - Hors fichier</masterLabel>
+        <translation><!-- Prospection téléphonique - Hors fichier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recherche internet</masterLabel>
+        <translation><!-- Recherche internet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Réseau personnel</masterLabel>
+        <translation><!-- Réseau personnel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sparklane</masterLabel>
+        <translation><!-- Sparklane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Target</masterLabel>
+        <translation><!-- Target --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

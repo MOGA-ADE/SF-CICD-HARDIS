@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Emailing_Lille_Lead</fullName>
+    <columns>Campagne_emailing__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Type_formulaire__c</field>
+        <operation>contains</operation>
+        <value>Emailing</value>
+    </filters>
+    <label>Lead Emailing - Lille</label>
+    <queue>Lead_Emailing_Lille</queue>
+    <sharedTo>
+        <role>Commercial_ADE_Lille</role>
+        <role>Directeur_Commercial_ADE_Lille</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statut__c</fullName>
+    <label>Statut</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>En attente de traitement</fullName>
+                <default>false</default>
+                <label>En attente de traitement</label>
+            </value>
+            <value>
+                <fullName>Validée</fullName>
+                <default>false</default>
+                <label>Validée</label>
+            </value>
+            <value>
+                <fullName>En cours de traitement</fullName>
+                <default>false</default>
+                <label>En cours de traitement</label>
+            </value>
+            <value>
+                <fullName>Comparatif prêt</fullName>
+                <default>false</default>
+                <label>Comparatif(s) prêt(s)</label>
+            </value>
+            <value>
+                <fullName>En attente de retour client</fullName>
+                <default>false</default>
+                <label>En attente de retour client</label>
+            </value>
+            <value>
+                <fullName>Demande de réactualisation</fullName>
+                <default>false</default>
+                <label>Demande de réactualisation</label>
+            </value>
+            <value>
+                <fullName>Refusée</fullName>
+                <default>false</default>
+                <label>Refusée</label>
+            </value>
+            <value>
+                <fullName>Clonée</fullName>
+                <default>false</default>
+                <label>Clonée</label>
+            </value>
+            <value>
+                <fullName>Perdue</fullName>
+                <default>false</default>
+                <label>DDC Perdue</label>
+            </value>
+            <value>
+                <fullName>Client Perdu</fullName>
+                <default>false</default>
+                <label>Client Perdu</label>
+            </value>
+            <value>
+                <fullName>En attente validation fournisseur</fullName>
+                <default>false</default>
+                <label>En attente validation fournisseur</label>
+            </value>
+            <value>
+                <fullName>Gagnée</fullName>
+                <default>false</default>
+                <label>Gagnée</label>
+            </value>
+            <value>
+                <fullName>Périmée</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Périmée</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

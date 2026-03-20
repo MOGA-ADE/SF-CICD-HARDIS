@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_affaire__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Chargé d&apos;affaire</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>contains</operation>
+            <value>Administrateur Système, Cotation User</value>
+        </filterItems>
+        <filterItems>
+            <field>User.FirstName</field>
+            <operation>contains</operation>
+            <value>Shai</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Demandes_de_cotation</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

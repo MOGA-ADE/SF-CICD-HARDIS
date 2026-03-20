@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- API : Dérogation Pénalités Retard --></label>
+    <name>API_Derogation_Penalites_Retard__c</name>
+</CustomFieldTranslation>

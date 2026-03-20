@@ -1,0 +1,30 @@
+<template>
+    <lightning-card  title="Calcul des puisances max">
+        <lightning-button label="Mettre à jour" slot="actions" onclick={updatePDE}></lightning-button>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12" lwc:if={error}>
+                <!-- Display error message if any -->
+                <div class="slds-var-p-horizontal_small" style="color: red">
+                    {error}
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="12" >
+                <template if:true={loaded}>
+                    <h1>Nouvelles valeurs calculées</h1>
+                    <div class="slds-box slds-theme_default">
+                        Résultat : {result}<br/><br/>
+                        Date de début : {dateDebut}<br/>
+                        Date de fin {dateFin}<br/>
+                        PS Max Active : {psMaxActive}<br/>
+                        PS Max Capacitive : {psMaxCapacitive}<br/>
+                        PS Max Inductive : {psMaxInductive}<br/>
+                    </div> 
+                </template>
+                <template if:false={loaded}>
+                    <lightning-spinner alternative-text="Loading"></lightning-spinner>
+                </template>
+            </lightning-layout-item>
+            
+        </lightning-layout>
+    </lightning-card>
+</template>

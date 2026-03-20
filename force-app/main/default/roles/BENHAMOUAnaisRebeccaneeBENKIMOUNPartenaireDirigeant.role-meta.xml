@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>BENHAMOU Anais Rebecca nee BENKIMOUN Partenaire - Dirigeant</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>BENHAMOU Anais Rebecca nee BENKIMOUN Partenaire - Dirigeant</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Direction</parentRole>
+</Role>

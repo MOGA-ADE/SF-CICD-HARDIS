@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospection_Emailing_Lead</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Campagne_emailing__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>Prospection Emailing</label>
+    <queue>Prospection_Emailing</queue>
+    <sharedTo>
+        <role>ADV</role>
+        <role>Charge_de_RDV</role>
+    </sharedTo>
+</ListView>

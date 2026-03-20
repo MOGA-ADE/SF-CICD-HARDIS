@@ -1,0 +1,30 @@
+<template>
+  <div class="slds-is-relative">
+    <template if:true={isLoading}>
+      <lightning-spinner
+        alternative-text="Chargement..."
+        size="medium"
+      ></lightning-spinner>
+    </template>
+
+    <div class="slds-m-around_medium">
+      <lightning-layout horizontal-align="center" class="slds-m-bottom_medium">
+        <img src={logoUrl} alt="Company Logo" style="max-height: 80px" />
+      </lightning-layout>
+
+      <h1 class="slds-text-align_center">
+        Vous êtes sur le point de valider l'offre d'Engie.
+      </h1>
+
+      <div class="slds-m-top_large slds-text-align_right">
+        <lightning-button
+          variant="brand"
+          label="Valider offre"
+          title="Valider offre"
+          onclick={handleValidateOffer}
+        >
+        </lightning-button>
+      </div>
+    </div>
+  </div>
+</template>

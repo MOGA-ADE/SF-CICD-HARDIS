@@ -1,0 +1,46 @@
+<template>
+    <article class="slds-card borderBottom">
+        <div class="slds-grid slds-einstein-header slds-card__header resetBGK">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:search" alternative-text="Search Icon" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Base de référence de nos clients">
+                            <a href="#" class="slds-card__header-link" title="Base de référence de nos clients">
+                                <span class="slds-text-heading_small">Base de référence de nos clients</span>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner marginBottom">
+            <lightning-layout>
+                <template if:true={isLoading}>
+                    <div class="spinnerContainer">
+                        <lightning-spinner></lightning-spinner>
+                    </div>
+                </template>
+                <template if:false={isLoading}>
+                    <lightning-layout-item size="5">
+                        <lightning-input type="text" placeholder="Entrer une raison sociale" value={nameValue} onchange={handleChangeRaisonSociale} name="raisonSociale"></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="1" padding="left-small">
+                        <p class="flexP">OU</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="5" padding="horizontal-small">
+                        <lightning-combobox name="codeNaf" value={codeNafValue} placeholder="Selectionner code NAF" options={codeNafList} onchange={handleChangeCodeNaf}></lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="1">
+                        <div class="buttonContainer">
+                            <lightning-button variant="brand" label="Rechercher" title="Rechercher" onclick={handleSearch} disabled={isDisabled}></lightning-button>
+                        </div>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </div>
+    </article>
+</template>

@@ -1,0 +1,511 @@
+{
+  "smartling": {
+    "translate_paths": {
+      "path": "*/translate",
+      "key": "/{*}",
+      "instruction": "*/translation-note"
+    }
+  },
+  "tooltips": {
+    "btn-undo": {
+      "translate": "Undo"
+    },
+    "btn-redo": {
+      "translate": "Redo"
+    },
+    "btn-fontstyle": {
+      "translate": "Font style"
+    },
+    "btn-fontsize": {
+      "translate": "Font size"
+    },
+    "btn-bold": {
+      "translate": "Bold"
+    },
+    "btn-italic": {
+      "translate": "Italic"
+    },
+    "btn-underline": {
+      "translate": "Underline"
+    },
+    "btn-fontcolor": {
+      "translate": "Text color"
+    },
+    "btn-leftalign": {
+      "translate": "Left align"
+    },
+    "btn-rightalign": {
+      "translate": "Right align"
+    },
+    "btn-centeralign": {
+      "translate": "Center align"
+    },
+    "btn-linespacing": {
+      "translate": "Line spacing"
+    },
+    "btn-unorderedlist": {
+      "translate": "Bulleted list"
+    },
+    "btn-orderedlist": {
+      "translate": "Numbered list"
+    },
+    "btn-inserttable": {
+      "translate": "Insert table"
+    },
+    "table": {
+      "btn-delete": {
+        "translate": "Delete"
+      },
+      "btn-mergecells": {
+        "translate": "Merge cells",
+        "translation-note": "merge multiple table cells into one"
+      },
+      "btn-1": {
+        "translate": "Insert row above"
+      },
+      "btn-2": {
+        "translate": "Insert row below"
+      },
+      "btn-3": {
+        "translate": "Insert column left"
+      },
+      "btn-4": {
+        "translate": "Insert column right"
+      },
+      "btn-5": {
+        "translate": "Configure table"
+      },
+      "btn-6": {
+        "translate": "Delete row"
+      },
+      "btn-7": {
+        "translate": "Delete column"
+      },
+      "btn-8": {
+        "translate": "Delete table"
+      },
+      "btn-9": {
+        "translate": "Fill background color"
+      }
+    },
+    "btn-conditional": {
+      "translate": "Add logic rule"
+    },
+    "inlineToolbar": {
+      "btn-1": {
+        "translate": "Upload image"
+      },
+      "btn-2": {
+        "translate": "Upload document"
+      }
+    }
+  },
+  "heading": {
+    "dropdown-1": {
+      "translate": "Header",
+      "translation-note": "text heading format"
+    },
+    "dropdown-2": {
+      "translate": "Sub Header",
+      "translation-note": "text heading format"
+    },
+    "dropdown-3": {
+      "translate": "Normal Text",
+      "translation-note": "text heading format"
+    }
+  },
+  "docusignFields": {
+    "label-company": {
+      "translate": "Company",
+      "translation-note": "Docusign field type"
+    },
+    "label-datesigned": {
+      "translate": "Date Signed",
+      "translation-note": "Docusign field type"
+    },
+    "label-email": {
+      "translate": "Email",
+      "translation-note": "Docusign field type"
+    },
+    "label-firstname": {
+      "translate": "First Name",
+      "translation-note": "Docusign field type"
+    },
+    "label-fullname": {
+      "translate": "Full Name",
+      "translation-note": "Docusign field type"
+    },
+    "label-initial": {
+      "translate": "Initial",
+      "translation-note": "Docusign field type"
+    },
+    "label-lastname": {
+      "translate": "Last Name",
+      "translation-note": "Docusign field type"
+    },
+    "label-signature": {
+      "translate": "Signature",
+      "translation-note": "Docusign field type"
+    },
+    "label-signature2": {
+      "translate": "Sign",
+      "translation-note": "Docusign field type, in the document"
+    },
+    "label-text": {
+      "translate": "Text",
+      "translation-note": "Docusign field type"
+    },
+    "label-title": {
+      "translate": "Title",
+      "translation-note": "Docusign field type"
+    }
+  },
+  "tabProperties": {
+    "btn-1": {
+      "translate": "Less Details"
+    },
+    "btn-2": {
+      "translate": "More Details"
+    },
+    "label-1": {
+      "translate": "Character Limit"
+    },
+    "label-2": {
+      "translate": "Choose Name Type"
+    },
+    "label-3": {
+      "translate": "Data Label"
+    },
+    "label-4": {
+      "translate": "Read Only"
+    },
+    "label-5": {
+      "translate": "Required Field"
+    },
+    "label-6": {
+      "translate": "Tooltip"
+    },
+    "label-7": {
+      "translate": "Validation"
+    },
+    "validationType": {
+      "dropdown-none": {
+        "translate": "None"
+      },
+      "dropdown-ssn": {
+        "translate": "SSN"
+      },
+      "dropdown-email": {
+        "translate": "Email"
+      },
+      "dropdown-numbers": {
+        "translate": "Numbers"
+      },
+      "dropdown-letters": {
+        "translate": "Letters"
+      },
+      "dropdown-date": {
+        "translate": "Date"
+      },
+      "dropdown-zip": {
+        "translate": "Zip"
+      },
+      "dropdown-zip4": {
+        "translate": "Zip+4"
+      },
+      "dropdown-custom": {
+        "translate": "Custom"
+      }
+    },
+    "validationOptions": {
+      "text-comma": {
+        "translate": ",(comma)"
+      },
+      "text-datemask": {
+        "translate": "Validation date mask"
+      },
+      "date-1": {
+        "translate": "MM/dd/yyyy",
+        "translation-note": "date format"
+      },
+      "date-2": {
+        "translate": "dd/MM/yyyy",
+        "translation-note": "date format"
+      },
+      "date-3": {
+        "translate": "yyyy/MM/dd",
+        "translation-note": "date format"
+      },
+      "text-datemessage1": {
+        "translate": "Date format should be MM/dd/yyyy"
+      },
+      "text-datemessage2": {
+        "translate": "Date format should be dd/MM/yyyy"
+      },
+      "text-datemessage3": {
+        "translate": "Date format should be yyyy/MM/dd"
+      },
+      "text-decimalseparator": {
+        "translate": "Decimal Separator"
+      },
+      "text-errormessage": {
+        "translate": "Error message"
+      },
+      "text-lettersmessage": {
+        "translate": "Enter only letters"
+      },
+      "text-period": {
+        "translate": ".(period)"
+      },
+      "text-regexpattern": {
+        "translate": "Regex Pattern"
+      }
+    }
+  },
+  "mergeTable": {
+    "label-1": {
+      "translate": "Create Merge Table: {{label}}"
+    },
+    "label-2": {
+      "translate": "SELECTED COLUMNS"
+    },
+    "label-3": {
+      "translate": "(Drag to reorder)"
+    },
+    "label-4": {
+      "translate": "FIELDS"
+    },
+    "button-1": {
+      "translate": "Cancel"
+    },
+    "button-2": {
+      "translate": "Apply"
+    }
+  },
+  "tabs": {
+    "label-1": {
+      "translate": "Docusign Fields"
+    },
+    "label-2": {
+      "translate": "Salesforce Fields"
+    }
+  },
+  "recipient": {
+    "btn-1": {
+      "translate": "Edit Recipients"
+    },
+    "btn-2": {
+      "translate": "Add Recipient"
+    },
+    "btn-3": {
+      "translate": "Add Another"
+    },
+    "btn-4": {
+      "translate": "Done",
+      "translation-note": "Complete editing"
+    },
+    "btn-5": {
+      "translate": "Cancel",
+      "translation-note": "Discard changes"
+    },
+    "btn-6": {
+      "translate": "Delete",
+      "translation-note": "Delete button to confirm delete changes"
+    },
+    "text-1": {
+      "translate": "Add and edit roles for your recipients. Some roles you might use include `Client` or `HR`."
+    },
+    "text-2": {
+      "translate": "Name of Placeholder (Required*)",
+      "translation-note": "input placeholder"
+    },
+    "text-3": {
+      "translate": "This recipient has 1 assigned field. By deleting this recipient, you will also delete their field. Would you like to delete the recipient and field?"
+    },
+    "text-4": {
+      "translate": "This recipient has {{number}} assigned fields. By deleting this recipient, you will also delete their fields. Would you like to delete the recipient and fields?"
+    },
+    "label-1": {
+      "translate": "Recipient has fields"
+    },
+    "error-1": {
+      "translate": "Each recipient name must be unique"
+    },
+    "error-2": {
+      "translate": "Please include a name for placeholder"
+    },
+    "generic": {
+      "errorMessage": "Error Message",
+      "translate": "Something went wrong"
+    }
+  },
+  "preview": {
+    "cancelBtn": { "translate": "Cancel" },
+    "loadMore": { "translate": "Load More..." },
+    "noResultsFound": { "translate": "\uD83D\uDCAC No Results Found" },
+    "previewBtn": { "translate": "Preview" },
+    "previewOff": {
+      "translate": "Preview Off"
+    },
+    "previewOn": {
+      "translate": "Preview On"
+    },
+    "recentlyUsed": { "translate": "Recently Used" },
+    "record": { "translate": "Record" },
+    "recordModalDescription": {
+      "translate": "See how the merge fields in your template look with real data"
+    },
+    "recordModalTitle": { "translate": "Choose a Record to Preview" },
+    "searchSalesforce": { "translate": "Search Salesforce" },
+    "showSmartContent": {
+      "translate": "Show smart content"
+    }
+  },
+  "file": {
+    "text-1": {
+      "translate": "Get started by uploading your files"
+    },
+    "text-2": {
+      "translate": "Drag and drop files here as well"
+    },
+    "text-3": {
+      "translate": "Supported file types: docx, jpg, jpeg, png, gif"
+    },
+    "text-4": {
+      "translate": "Maximum document size: {{number}}MB",
+      "translation-note": "number of file size"
+    },
+    "text-5": {
+      "translate": "Template successfully added."
+    },
+    "text-6": {
+      "translate": "The document you tried to upload is too big. We support document up to 25MB."
+    },
+    "text-7": {
+      "translate": "The file you tried to upload isn't in a supported format. We support: DOCX, CSV, TXT, PNG, GIF, JPEG and JPG files."
+    },
+    "text-8": {
+      "translate": "Sorry, please upload one document at a time"
+    },
+    "text-9": {
+      "translate": "Sorry, cannot import this file"
+    },
+    "btn-upload": {
+      "translate": "UPLOAD"
+    }
+  },
+  "conditionalLogic": {
+    "btn-cancel": {
+      "translate": "Cancel"
+    },
+    "btn-edit": {
+      "translate": "Edit"
+    },
+    "btn-delete": {
+      "translate": "Delete"
+    },
+    "btn-save": {
+      "translate": "Save"
+    },
+    "label-title": {
+      "translate": "Rule Builder"
+    },
+    "btn-add": {
+      "translate": "ADD RULE"
+    },
+    "label-name": {
+      "translate": "Name Rule"
+    },
+    "dropdown-method1": {
+      "translate": "Apply all of the following conditions"
+    },
+    "dropdown-method2": {
+      "translate": "Apply any of the following conditions"
+    },
+    "label-if": {
+      "translate": "If"
+    },
+    "label-orif": {
+      "translate": "Or if"
+    },
+    "label-andif": {
+      "translate": "And if"
+    },
+    "label-then": {
+      "translate": "Then"
+    },
+    "label-otherwise": {
+      "translate": "Otherwise..."
+    },
+    "dropdown-show": {
+      "translate": "Show the following content"
+    },
+    "dropdown-hide": {
+      "translate": "Hide the following content"
+    },
+    "text-drag1": {
+      "translate": "Drag your merge fields anywhere inside this If container."
+    },
+    "text-drag2": {
+      "translate": "Drag your Salesforce field here."
+    },
+    "text": {
+      "translate": "Any changes you have made to this Logic Block will not be saved. Please confirm that you would like to cancel."
+    },
+    "text-title": {
+      "translate": "Are you sure you want to cancel?"
+    },
+    "btn-confirm": {
+      "translate": "CONFIRM"
+    },
+    "error-1": {
+      "translate": "Please enter a rule name."
+    },
+    "error-2": {
+      "translate": "Some of the conditions have invalid values."
+    },
+    "error-3": {
+      "translate": "Sorry, you have duplicate rule names in your logic block. Please rename and try again."
+    },
+    "error-4": {
+      "translate": "Add a condition to {{name}} to create a logic block.",
+      "translation-note": "{{name}} will be user input rule name"
+    },
+    "error-5": {
+      "translate": "Please add content to the \"Then\" logic statement in {{name}}.",
+      "translation-note": "{{name}} will be user input rule name"
+    },
+    "error-6": {
+      "translate": "Please add content to the \"Then\" logic statement in Otherwise."
+    },
+    "placeholder": {
+      "translate": "Start typing or copy/paste your new content here..."
+    }
+  },
+  "text-placeholder": {
+    "translate": "Type or paste text here to start a new template...",
+    "translation-note": "placeholder when editor is empty"
+  },
+  "linespacing": {
+    "dropdown-single": {
+      "translate": "Single",
+      "translation-note": "single linespacing between paragraphs"
+    },
+    "dropdown-middle": {
+      "translate": "1.5",
+      "translation-note": "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double": {
+      "translate": "Double",
+      "translation-note": "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields": {
+    "searchField": {
+      "translate": "Search Fields"
+    },
+    "noResultMessage": {
+      "translate": "No results found"
+    }
+  }
+}

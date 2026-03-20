@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospection Partenaire</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>1er contact</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Convention gagnée</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Convention perdue</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>En cours de prospection</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Négociation en cours</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>RDV pris</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sans suite</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

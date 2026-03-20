@@ -1,0 +1,46 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "578aa676-fa00-439b-a452-68d0a4d737cd",
+  "label" : "Account Management",
+  "regions" : [ {
+    "id" : "23397781-ecd9-4bae-8700-102dd4b9c125",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "ELLISPHERE:ELLI_LC01_searchEngine",
+      "id" : "ad82041d-6d14-4471-ad6a-7f6aac041cc3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4a40ea6b-9bba-45b3-b23a-3eb8f2f906fd",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "64350a7c-0612-4882-9e99-e7416efcd25a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Account Management"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d1e1d92f-6d31-4903-acf7-18bf194bfb58",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a0911cd2-e5d6-4218-86b5-80679b61772f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "account-management"
+}

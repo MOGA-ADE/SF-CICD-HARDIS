@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <definitionCreationType>Segment_Membership</definitionCreationType>
+    <lookupFieldName>Account_SMH_1768316453459__dlm.rel_1768316456157_end__c</lookupFieldName>
+    <masterLabel>Account_SMH_1768316453459_Id_map_ssot_Account_ssot_Id_1768316456157</masterLabel>
+    <owner>DataCloud</owner>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>Account_SMH_1768316453459__dlm.Id__c</sourceFieldName>
+    <targetEntity xsi:nil="true"/>
+    <targetFieldName>ssot__Account__dlm.ssot__Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <description><!-- Opportunités possédant beaucoup de points d&apos;énergie C1C2C3C4 --></description>
+        <label><!-- Masse C1C2C3C4 --></label>
+        <name>Masse_C1C2C3C4</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant beaucoup de points d&apos;énergie C5 --></description>
+        <label><!-- Masse C5 --></label>
+        <name>Masse_C5</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant beaucoup de points d&apos;énergie C5 4 Postes --></description>
+        <label><!-- Masse C5 4 Postes --></label>
+        <name>Masse_C5_4_Postes</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant beaucoup de points d&apos;énergie Gaz --></description>
+        <label><!-- Masse GAZ --></label>
+        <name>Masse_GAZ</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partenaire --></label>
+        <name>Opportunity_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales --></label>
+        <name>Opportunity_Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant peu de points d&apos;énergie C1C2C3C4 --></description>
+        <label><!-- Simple C1C2C3C4 --></label>
+        <name>Simple_C1C2C3C4</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant peu de points d&apos;énergie C5 --></description>
+        <label><!-- Simple C5 --></label>
+        <name>Simple_C5</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant peu de points d&apos;énergie C5 4 Postes --></description>
+        <label><!-- Simple C5 4 Postes --></label>
+        <name>Simple_C5_4_Postes</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunités possédant peu de points d&apos;énergie Gaz --></description>
+        <label><!-- Simple Gaz --></label>
+        <name>Simple_Gaz</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

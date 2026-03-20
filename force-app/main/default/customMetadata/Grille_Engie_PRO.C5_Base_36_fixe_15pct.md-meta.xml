@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>C5_Base</label>
+    <protected>false</protected>
+    <values>
+        <field>CEE__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Date_de_Validite__c</field>
+        <value xsi:type="xsd:date">2026-03-31</value>
+    </values>
+    <values>
+        <field>Duree__c</field>
+        <value xsi:type="xsd:double">36.0</value>
+    </values>
+    <values>
+        <field>Prix_Abonnement__c</field>
+        <value xsi:type="xsd:double">14.08</value>
+    </values>
+    <values>
+        <field>Prix_Base__c</field>
+        <value xsi:type="xsd:double">58.97</value>
+    </values>
+    <values>
+        <field>Prix_Capa__c</field>
+        <value xsi:type="xsd:double">11.39</value>
+    </values>
+    <values>
+        <field>Prix_HCE__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Prix_HCH__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Prix_HC__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Prix_HPE__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Prix_HPH__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Prix_HP__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Prix_Molecule__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Remise__c</field>
+        <value xsi:type="xsd:string">15pct</value>
+    </values>
+    <values>
+        <field>type_offre__c</field>
+        <value xsi:type="xsd:string">fixe</value>
+    </values>
+</CustomMetadata>

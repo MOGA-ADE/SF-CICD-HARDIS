@@ -1,0 +1,83 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "2c0fd140-2fc5-42b7-ad93-4d030977b82c",
+  "label" : "Record Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "164f7110-8edd-490f-a5b2-4e5f4201f809",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:pathAssistant",
+      "id" : "d8aa3b50-69a0-4dbf-9b06-93089f1bcdcc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a729695e-9e09-4161-83a6-219092eb60e9",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordDetail",
+      "id" : "41287d32-8b64-449e-b51e-3f1c329fa116",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e9de9e23-b93a-403d-8062-65e1a924fc8e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "3eea1c99-4bae-4664-a34d-a356f7d23bf3",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e0657f1b-ed7e-4ba2-81ce-3e02df5c7d9f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "79a91d7d-90b7-4418-9e5e-0df54c40108e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "relatedListApiName" : "Points_energie__r",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:responsiveRelatedListSingle",
+      "id" : "68dc0268-28c9-4406-a0a2-dd06f864f3ae",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4be71f9b-c2d2-46ca-b6cd-e938224d29be",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suivi_des_pistes_Marketing_Lille</fullName>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Type_formulaire__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type_formulaire__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Sans suite,Refusée,Faux numéro,Hors Cible</value>
+    </filters>
+    <filters>
+        <field>Role_du_proprietaire__c</field>
+        <operation>contains</operation>
+        <value>lille</value>
+    </filters>
+    <label>Suivi des pistes Marketing - Lille</label>
+    <sharedTo>
+        <role>Commercial_ADE_Lille</role>
+        <role>Directeur_Commercial_ADE_Lille</role>
+        <role>Direction</role>
+    </sharedTo>
+</ListView>

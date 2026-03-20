@@ -1,0 +1,47 @@
+<template>
+    <lightning-modal-header label="Informations Enedis"></lightning-modal-header>
+    <lightning-modal-body> 
+
+        <template if:false={isLoaded}>
+            <div style="height: 200px; position:relative">
+                <lightning-spinner variant="base" size="medium"></lightning-spinner>
+              </div>
+        </template>
+
+        <template lwc:if={result}>
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item padding="around-small" size="6">
+                    <h2><b>Récupéreration des données de consommation</b></h2><br/>
+                    <div>Résultat de l'appel : <div style="color: green"><b>{result.messageConsulterMesure}</b></div></div><br/>
+                    <p>Date des relèves : du <lightning-formatted-date-time value={result.dateConsoStart} year="numeric" month="numeric" day="numeric" ></lightning-formatted-date-time>   au <lightning-formatted-date-time value={result.dateConsoEnd} year="numeric" month="numeric" day="numeric" ></lightning-formatted-date-time></p><br/>
+                    <div style="color: red" lwc:if={result.lessThan12months}>Les relèves sont inférieures à 12 mois</div>
+                    <p>Consommation (KWh):</p>
+                    <p>Base = {result.consoBase}  HP = {result.consoHP} HC = {result.consoHC}</p>
+                    <p>HPH = {result.consoHPH} HPE = {result.consoHPE} HCH = {result.consoHCH} HCE = {result.consoHCE} Pointe = {result.consoPointe}</p>
+                    <!--{result.bodyM}-->
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <h2><b>Récupéreration des données techniques</b></h2><br/>
+                    <div>Résultat de l'appel : <div style="color: green"><b>{result.messageConsulterPoint}</b></div></div><br/>
+                    <p>Adresse du site : {result.adresse} {result.codePostal} {result.ville} </p>
+                    <p>Segment : {result.segment}</p>
+                    <p>FTA : {result.FTA}</p>
+                    <p>Calendrier Fournisseur : {result.CalendrierFrn}</p><br/>
+                    <p>Puissance souscrite (KVa) : {result.psMoyenne}</p>
+                    <!--p>Base = {result.psBase}  HP = {result.psHP} HC = {result.psHC}</p>
+                    <p>HPH = {result.psHPH}  HPE = {result.psHPE} HCH = {result.psHCH} HCE = {result.psHCE} Pointe = {result.psPointe}</p-->
+                    <!--{result.bodyT}-->
+                </lightning-layout-item>
+            </lightning-layout>
+            
+        </template>
+        <template lwc:if={errorMessage}>
+            <div class="slds-var-p-horizontal_small" style="color: red">
+                {errorMessage}
+            </div>
+        </template>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="Mettre à jour" onclick={updateInfo}></lightning-button>
+    </lightning-modal-footer>
+</template>

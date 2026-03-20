@@ -1,0 +1,150 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "1bc23867-c11b-486d-8666-740566cb87c0",
+  "label" : "Opportunité Détails",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "9a147a4c-aee0-4f2d-8840-41326625d490",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:pathAssistant",
+      "id" : "604d8a37-ec09-4c8c-b6b4-32bddcd5350c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9f7bba6b-20db-4f77-a88d-9780df87a1c7",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordDetail",
+      "id" : "ce8b01c5-cad8-4517-a501-f3ef6a084a47",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f1f9becf-7804-4ad3-a69d-0208c9333791",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "b2811a21-f2f7-40ac-a014-c360bd7ec59b",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "76fb98e1-a730-46c2-abb3-4889d25c1123",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a0d48885-b216-4589-b77c-adc2c455204d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "defaultNumberofRecordsToDisplay" : 4,
+        "defaultRecordType" : "",
+        "displayType" : "List",
+        "filter" : "",
+        "hideOnNoRecord" : false,
+        "iconName" : "standard:case",
+        "layoutType" : "1 Column",
+        "maxNumberofRecordsToDisplay" : 50,
+        "newRecord" : "",
+        "objectAPIName" : "Document__c",
+        "parentField" : "Opportunite__c",
+        "parentObjectIdField" : "Id",
+        "relatedListName" : "Document",
+        "showHeader" : true,
+        "showMenuAction" : false,
+        "showRefreshButton" : false,
+        "sort" : "CreatedDate DESC",
+        "title" : "Comparatif"
+      },
+      "componentName" : "CMTD:EnhancedRelatedList",
+      "id" : "1a42b66b-7975-4a91-a18b-6cb58640dc9e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "defaultNumberofRecordsToDisplay" : 4,
+        "defaultRecordType" : "",
+        "displayType" : "List",
+        "filter" : "Type_de_document__c='Contrat à signer' and Point_energie__c=null",
+        "hideOnNoRecord" : false,
+        "iconName" : "standard:case",
+        "layoutType" : "1 Column",
+        "maxNumberofRecordsToDisplay" : 50,
+        "newRecord" : "Standard",
+        "objectAPIName" : "Document__c",
+        "parentField" : "Account__c",
+        "parentObjectIdField" : "AccountId",
+        "relatedListName" : "Document",
+        "showHeader" : true,
+        "showMenuAction" : false,
+        "showRefreshButton" : false,
+        "sort" : "CreatedDate DESC",
+        "title" : "Contrat à signer"
+      },
+      "componentName" : "CMTD:EnhancedRelatedList",
+      "id" : "809ca574-0063-461d-95d2-44a07087b847",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "defaultNumberofRecordsToDisplay" : 4,
+        "defaultRecordType" : "",
+        "displayType" : "List",
+        "filter" : "Type_de_document__c='Contrat signé' and Point_energie__c=null",
+        "hideOnNoRecord" : false,
+        "iconName" : "standard:case",
+        "layoutType" : "1 Column",
+        "maxNumberofRecordsToDisplay" : 50,
+        "newRecord" : "Standard",
+        "objectAPIName" : "Document__c",
+        "parentField" : "Account__c",
+        "parentObjectIdField" : "AccountId",
+        "relatedListName" : "Document",
+        "showHeader" : true,
+        "showMenuAction" : false,
+        "showRefreshButton" : false,
+        "sort" : "CreatedDate DESC",
+        "title" : "Contrat signé"
+      },
+      "componentName" : "CMTD:EnhancedRelatedList",
+      "id" : "7574b3a5-aa2a-4b68-b733-b3d5805155ce",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c06d9216-3f35-41d1-8389-38d24dd06fc1",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-006"
+}

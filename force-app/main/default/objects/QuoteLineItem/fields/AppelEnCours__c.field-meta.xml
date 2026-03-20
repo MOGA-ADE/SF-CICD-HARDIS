@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AppelEnCours__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Définit si un appel vers Homeys est en cours pour l&apos;optimisation TURPE</description>
+    <inlineHelpText>Définit si un appel vers Homeys est en cours pour l&apos;optimisation TURPE</inlineHelpText>
+    <label>Appel en cours ?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>ACD_Signee_Piste_convertie</fullName>
+        <description>ACD Signée Piste convertie</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Piste/Piste_convertie_success</template>
+    </alerts>
+    <alerts>
+        <fullName>ACD_Signee_Piste_convertie_erreur</fullName>
+        <description>ACD Signée Piste non convertie</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>elkhamis.sadouioui@alliancedesenergies.fr</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Piste/Piste_convertie_error</template>
+    </alerts>
+    <alerts>
+        <fullName>Account_Engagement_update_lead_existante</fullName>
+        <description>Account Engagement update lead existante</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>gestion-lead@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Piste/AE_update_existing_lead</template>
+    </alerts>
+    <alerts>
+        <fullName>B2BMA_update_piste_PEPS</fullName>
+        <description>B2BMA update piste PEPS</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>a.acquaviva@peps-energie.fr</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mathilde.huber@alliancedesenergies.fr</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Piste/B2BMA_Update_PEPS</template>
+    </alerts>
+    <alerts>
+        <fullName>Changement_Owner_Lead_Achat_Groupe</fullName>
+        <description>Changement Owner Lead Achat Groupé</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>gestion-lead@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Piste/Changement_Owner_Lead_Achat_Groupe</template>
+    </alerts>
+    <alerts>
+        <fullName>Piste_Attribuee</fullName>
+        <description>Piste Attribuée</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partenaires/Piste_Attribuee</template>
+    </alerts>
+    <alerts>
+        <fullName>Piste_Notification_AA</fullName>
+        <description>Piste Notification AA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_Apporteur_Affaire__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>gestion-lead@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partenaires/Piste_Notification_AA</template>
+    </alerts>
+    <alerts>
+        <fullName>Piste_Notification_Convertie_AA</fullName>
+        <description>Piste Notification Convertie AA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_Apporteur_Affaire__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>gestion-lead@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partenaires/Piste_Notification_Convertie_AA</template>
+    </alerts>
+    <alerts>
+        <fullName>Piste_Notification_Refus_AA</fullName>
+        <description>Piste Notification Refus AA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_Apporteur_Affaire__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>gestion-lead@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partenaires/Piste_Notification_Refus_AA</template>
+    </alerts>
+    <alerts>
+        <fullName>Piste_Reattribuee</fullName>
+        <description>Piste Réattibué</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Partenaires/Piste_Reattribuee</template>
+    </alerts>
+</Workflow>

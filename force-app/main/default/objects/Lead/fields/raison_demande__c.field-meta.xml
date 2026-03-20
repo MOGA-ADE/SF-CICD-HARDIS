@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>raison_demande__c</fullName>
+    <description>Champ en provenance du site internet</description>
+    <label>Raison de la demande</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Changement de fournisseur sur le site actuel</fullName>
+                <default>false</default>
+                <label>Changement de fournisseur sur le site actuel</label>
+            </value>
+            <value>
+                <fullName>Installation sur un nouveau site (compteur existant)</fullName>
+                <default>false</default>
+                <label>Installation sur un nouveau site (compteur existant)</label>
+            </value>
+            <value>
+                <fullName>Installation sur un nouveau site (compteur neuf)</fullName>
+                <default>false</default>
+                <label>Installation sur un nouveau site (compteur neuf)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

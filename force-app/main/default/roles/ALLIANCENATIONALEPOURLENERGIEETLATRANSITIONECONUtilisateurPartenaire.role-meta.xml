@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>ALLIANCE NATIONALE POUR L ENERGIE ET LA TRANSITION ECON Utilisateur Partenaire</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>ALLIANCE NATIONALE POUR L ENERGIE ET LA TRANSITION ECON Utilisateur Partenaire</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>ALLIANCENATIONALEPOURLENERGIEETLATRANSITIONECONPartenaireResponsable</parentRole>
+</Role>

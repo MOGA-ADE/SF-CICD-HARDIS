@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "00097938-a48c-49ce-99a2-324941c13400",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "detail_a05__c",
+  "id" : "c53a3512-9988-4e71-a374-ddcfbe75dd7c",
+  "label" : "Document Détails",
+  "objectApiName" : "Document__c",
+  "routeType" : "detail-a0J",
+  "type" : "route",
+  "urlPrefix" : "document"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Create_contract_prestation</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Create contract prestation</label>
+</PermissionSet>

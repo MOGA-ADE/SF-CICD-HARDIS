@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "ade_pictos_360",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005am1UAA",
+        "type" : "file",
+        "size" : 4343
+      }
+    }
+  },
+  "urlName" : "ade-pictos-360"
+}

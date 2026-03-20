@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "9d346dc8-5c95-4fbd-bb8a-2068025d4bfd",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "Offre_Fournisseur_Detail__c",
+  "id" : "76be717c-7608-4e05-8efd-f6d001fe66e6",
+  "label" : "Offre Fournisseur Detail",
+  "routeType" : "detail-0Q0",
+  "type" : "route",
+  "urlPrefix" : "quote"
+}

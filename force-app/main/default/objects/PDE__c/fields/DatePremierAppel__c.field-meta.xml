@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DatePremierAppel__c</fullName>
+    <description>Date du Premier Appel effectué à Homeys</description>
+    <inlineHelpText>Date du Premier Appel effectué à Homeys</inlineHelpText>
+    <label>Date du Premier Appel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

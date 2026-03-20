@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktDataConnection xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connectionMethod>Ingress</connectionMethod>
+    <connectionStatus>ACTIVE</connectionStatus>
+    <connectorName>GoogleAds</connectorName>
+    <credentials>
+        <fullName>Google_Ads_namedCredential</fullName>
+        <credentialName>namedCredential</credentialName>
+        <value>*</value>
+    </credentials>
+    <externalRecordIdentifier>c18f9bf0-4463-4474-a1c4-a75d3a603b15</externalRecordIdentifier>
+    <isActivityEnabled>false</isActivityEnabled>
+    <isSentosEnabled>false</isSentosEnabled>
+    <masterLabel>Google Ads</masterLabel>
+    <parameters>
+        <fullName>Google_Ads_customerId</fullName>
+        <paramName>customerId</paramName>
+        <value>412-014-0398</value>
+    </parameters>
+    <shouldAutoCreatePolicies>false</shouldAutoCreatePolicies>
+</MktDataConnection>

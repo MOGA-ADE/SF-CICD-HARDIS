@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarketSegmentDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <includeCriteria>{&quot;type&quot;:&quot;TextComparison&quot;,&quot;path&quot;:null,&quot;joinPath&quot;:null,&quot;subject&quot;:{&quot;objectApiName&quot;:&quot;ssot__AccountContact__dlm&quot;,&quot;fieldApiName&quot;:&quot;Service_Liste_Prescripteur__c&quot;},&quot;selfReference&quot;:false,&quot;operator&quot;:&quot;contains&quot;,&quot;subjectFieldDataType&quot;:&quot;TEXT&quot;,&quot;subjectFieldBusinessType&quot;:&quot;TEXT&quot;,&quot;subjectFieldSourceType&quot;:&quot;DIRECT&quot;,&quot;values&quot;:[&quot;TETE DE RESEAU&quot;]}</includeCriteria>
+    <masterLabel>Newsletter - Prescripteur &quot;Tête de_6dbdd</masterLabel>
+    <segmentOn>ssot__AccountContact__dlm</segmentOn>
+    <segmentType>UI</segmentType>
+</MarketSegmentDefinition>

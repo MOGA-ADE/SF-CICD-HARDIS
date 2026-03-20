@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bypassGrill__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Variable pour bypasser le Trigger qui cree automatiquement les Quotes</description>
+    <label>bypassGrill</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

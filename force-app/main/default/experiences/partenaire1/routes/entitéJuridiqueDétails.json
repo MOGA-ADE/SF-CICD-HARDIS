@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "213bcdba-c4d2-4002-8f8c-f5c92aa7f078",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "detail_001__c",
+  "id" : "9173867f-91e1-470a-ac4b-e3fa2e18c47e",
+  "label" : "Entité Juridique Détails",
+  "routeType" : "detail-001",
+  "type" : "route",
+  "urlPrefix" : "account"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>HEMERA SELECT Partenaire - Dirigeant</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>HEMERA SELECT Partenaire - Dirigeant</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Directeur_partenaires_France</parentRole>
+</Role>

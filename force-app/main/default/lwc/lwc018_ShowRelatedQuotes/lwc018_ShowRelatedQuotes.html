@@ -1,0 +1,63 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <lightning-icon icon-name="standard:quotes" alternative-text="Quote image" size="small"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a href={viewAllURL} class="slds-card__header-link slds-truncate">
+                  <span>Autres devis ({relatedQuoteSize})</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body">
+          <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid" aria-label="Liste des quotes">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Nom">Nom</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Type Offre">Type Offre</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Date fin de contrat">Fin de contrat</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Rémunération">Rémunération</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <template for:each={relatedQuotes} for:item="quote">
+                    <tr key={quote.Id} class="slds-hint-parent">
+                        <th scope="row">
+                          <div class="slds-truncate" title={quote.Name} onclick={getQuoteId} oncontextmenu={getQuoteId} onauxclick={getQuoteId} data-id={quote.Id}>
+                            <a href={redirectToQuote} tabindex="-1">{quote.Name}</a>
+                          </div>
+                        </th>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title={quote.TypeOffre__c}>{quote.TypeOffre__c}</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title={quote.Date_de_fin_de_contrat__c}><lightning-formatted-date-time value={quote.Date_de_fin_de_contrat__c} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title={quote.Remuneration__c}>{quote.GrandTotal} €</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+          </table>
+        </div>
+        <footer class="slds-card__footer">
+          <a class="slds-card__footer-action" href={viewAllURL}>View All
+            <span class="slds-assistive-text">Quotes</span>
+          </a>
+        </footer>
+      </article>
+</template>

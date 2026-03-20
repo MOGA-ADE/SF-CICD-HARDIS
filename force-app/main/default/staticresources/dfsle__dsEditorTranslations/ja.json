@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "元に戻す"
+    },
+    "btn-redo" : {
+      "translate" : "やり直す"
+    },
+    "btn-fontstyle" : {
+      "translate" : "フォントスタイル"
+    },
+    "btn-fontsize" : {
+      "translate" : "フォントサイズ"
+    },
+    "btn-bold" : {
+      "translate" : "太字"
+    },
+    "btn-italic" : {
+      "translate" : "斜体"
+    },
+    "btn-underline" : {
+      "translate" : "下線"
+    },
+    "btn-fontcolor" : {
+      "translate" : "テキストの色"
+    },
+    "btn-leftalign" : {
+      "translate" : "左揃え"
+    },
+    "btn-rightalign" : {
+      "translate" : "右揃え"
+    },
+    "btn-centeralign" : {
+      "translate" : "中央揃え"
+    },
+    "btn-linespacing" : {
+      "translate" : "行間"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "記号付きリスト"
+    },
+    "btn-orderedlist" : {
+      "translate" : "番号付きリスト"
+    },
+    "btn-inserttable" : {
+      "translate" : "表の挿入"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "削除"
+      },
+      "btn-mergecells" : {
+        "translate" : "セルの結合",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "行を上に挿入"
+      },
+      "btn-2" : {
+        "translate" : "行を下に挿入"
+      },
+      "btn-3" : {
+        "translate" : "列を左に挿入"
+      },
+      "btn-4" : {
+        "translate" : "列を右に挿入"
+      },
+      "btn-5" : {
+        "translate" : "表の設定"
+      },
+      "btn-6" : {
+        "translate" : "行の削除"
+      },
+      "btn-7" : {
+        "translate" : "列の削除"
+      },
+      "btn-8" : {
+        "translate" : "表の削除"
+      },
+      "btn-9" : {
+        "translate" : "背景の塗りつぶしの色"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "ルールの追加"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "画像のアップロード"
+      },
+      "btn-2" : {
+        "translate" : "文書のアップロード"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "ヘッダー",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "サブヘッダー",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "標準テキスト",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "会社",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "署名日",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "メール",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "名",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "氏名",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "イニシャル",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "姓",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "署名",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "署名",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "テキスト",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "役職",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "簡易表示"
+    },
+    "btn-2" : {
+      "translate" : "詳細表示"
+    },
+    "label-1" : {
+      "translate" : "文字数の上限"
+    },
+    "label-2" : {
+      "translate" : "名前タイプの選択"
+    },
+    "label-3" : {
+      "translate" : "データラベル"
+    },
+    "label-4" : {
+      "translate" : "読み取り専用"
+    },
+    "label-5" : {
+      "translate" : "必須フィールド"
+    },
+    "label-6" : {
+      "translate" : "ツールヒント"
+    },
+    "label-7" : {
+      "translate" : "検証"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "なし"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "メール"
+      },
+      "dropdown-numbers" : {
+        "translate" : "数字"
+      },
+      "dropdown-letters" : {
+        "translate" : "文字（半角英字）"
+      },
+      "dropdown-date" : {
+        "translate" : "日付"
+      },
+      "dropdown-zip" : {
+        "translate" : "ZIPコード"
+      },
+      "dropdown-zip4" : {
+        "translate" : "Zip + 4"
+      },
+      "dropdown-custom" : {
+        "translate" : "カスタム"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ",（コンマ）"
+      },
+      "text-datemask" : {
+        "translate" : "日付の検証マスク"
+      },
+      "date-1" : {
+        "translate" : "MM/dd/yyyy",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "dd/MM/yyyy",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "yyyy/MM/dd",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "日付形式はMM/dd/yyyyである必要があります"
+      },
+      "text-datemessage2" : {
+        "translate" : "日付形式はdd/MM/yyyyである必要があります"
+      },
+      "text-datemessage3" : {
+        "translate" : "日付形式はyyyy/MM/ddである必要があります"
+      },
+      "text-decimalseparator" : {
+        "translate" : "小数点記号"
+      },
+      "text-errormessage" : {
+        "translate" : "エラーメッセージ"
+      },
+      "text-lettersmessage" : {
+        "translate" : "半角の英字およびスペースのみ入力できます"
+      },
+      "text-period" : {
+        "translate" : ".（ピリオド）"
+      },
+      "text-regexpattern" : {
+        "translate" : "正規表現パターン"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "表の差し込みを作成"
+    },
+    "label-2" : {
+      "translate" : "選択された列"
+    },
+    "label-3" : {
+      "translate" : "（ドラッグして並べ替え）"
+    },
+    "label-4" : {
+      "translate" : "フィールド"
+    },
+    "button-1" : {
+      "translate" : "キャンセル"
+    },
+    "button-2" : {
+      "translate" : "適用"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "DocuSignフィールド"
+    },
+    "label-2" : {
+      "translate" : "Salesforceフィールド"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "受信者の編集"
+    },
+    "btn-2" : {
+      "translate" : "受信者の追加"
+    },
+    "btn-3" : {
+      "translate" : "さらに追加"
+    },
+    "btn-4" : {
+      "translate" : "完了",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "キャンセル",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "削除",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "受信者の役割を追加または編集します。たとえば、「クライアント」や「人事」などの役割を使用できます。"
+    },
+    "text-2" : {
+      "translate" : "名前またはプレースホルダー（必須*）",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "この受信者には1個のフィールドが割り当てられています。この受信者を削除すると、受信者のフィールドも削除されます。受信者およびフィールドを削除してもよろしいですか?"
+    },
+    "text-4" : {
+      "translate" : "この受信者には{{number}}個のフィールドが割り当てられています。この受信者を削除すると、受信者のフィールドも削除されます。受信者およびフィールドを削除してもよろしいですか?"
+    },
+    "label-1" : {
+      "translate" : "受信者のフィールド"
+    },
+    "error-1" : {
+      "translate" : "同じ受信者名は使用できません。"
+    },
+    "error-2" : {
+      "translate" : "プレースホルダー名を追加してください。"
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "問題が発生しました"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "キャンセル"
+    },
+    "loadMore" : {
+      "translate" : "さらにロード..."
+    },
+    "noResultsFound" : {
+      "translate" : "💬結果が見つかりません"
+    },
+    "previewBtn" : {
+      "translate" : "プレビュー"
+    },
+    "previewOff" : {
+      "translate" : "プレビュー無効"
+    },
+    "previewOn" : {
+      "translate" : "プレビュー有効"
+    },
+    "recentlyUsed" : {
+      "translate" : "最近使用したフィールド"
+    },
+    "record" : {
+      "translate" : "レコード"
+    },
+    "recordModalDescription" : {
+      "translate" : "テンプレート上の差し込みフィールドが実際にどのように表示されるかを確認できます"
+    },
+    "recordModalTitle" : {
+      "translate" : "プレビューするレコードの選択"
+    },
+    "searchSalesforce" : {
+      "translate" : "Salesforceの検索"
+    },
+    "showSmartContent" : {
+      "translate" : "スマートコンテンツを表示"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "ファイルをアップロードして開始します"
+    },
+    "text-2" : {
+      "translate" : "ここにファイルをドラッグ＆ドロップすることもできます"
+    },
+    "text-3" : {
+      "translate" : "サポートされているファイルタイプ: DOCX、JPG、JPEG、PNG、GIF"
+    },
+    "text-4" : {
+      "translate" : "最大ファイルサイズ: {{number}}MB",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "テンプレートが追加されました。"
+    },
+    "text-6" : {
+      "translate" : "アップロードする文書が大きすぎます。25MB以下の文書をアップロードできます。"
+    },
+    "text-7" : {
+      "translate" : "アップロードするファイルの形式がサポートされていません。サポートされているファイル形式は、DOCX、CSV、TXT、PNG、GIF、JPEG、およびJPGです。"
+    },
+    "text-8" : {
+      "translate" : "同時にアップロードできる文書は1つのみです。"
+    },
+    "text-9" : {
+      "translate" : "このファイルをインポートすることはできません"
+    },
+    "btn-upload" : {
+      "translate" : "アップロード"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "キャンセル"
+    },
+    "btn-edit" : {
+      "translate" : "編集"
+    },
+    "btn-delete" : {
+      "translate" : "削除"
+    },
+    "btn-save" : {
+      "translate" : "保存"
+    },
+    "label-title" : {
+      "translate" : "ルールビルダー"
+    },
+    "btn-add" : {
+      "translate" : "ルールの追加"
+    },
+    "label-name" : {
+      "translate" : "ルール名"
+    },
+    "dropdown-method1" : {
+      "translate" : "以下のすべての条件が満たされる場合"
+    },
+    "dropdown-method2" : {
+      "translate" : "以下のいずれかの条件が満たされる場合"
+    },
+    "label-if" : {
+      "translate" : "条件:"
+    },
+    "label-orif" : {
+      "translate" : "または"
+    },
+    "label-andif" : {
+      "translate" : "かつ"
+    },
+    "label-then" : {
+      "translate" : "アクション:"
+    },
+    "label-otherwise" : {
+      "translate" : "上記以外の場合のアクション:"
+    },
+    "dropdown-show" : {
+      "translate" : "以下を表示する"
+    },
+    "dropdown-hide" : {
+      "translate" : "以下を非表示にする"
+    },
+    "text-drag1" : {
+      "translate" : "差し込みフィールドを［条件］エリアにドラッグします。"
+    },
+    "text-drag2" : {
+      "translate" : "Salesforceフィールドをここにドラッグします。"
+    },
+    "text" : {
+      "translate" : "このロジックに加えたすべての変更は破棄されます。キャンセルしてもよろしいですか?"
+    },
+    "text-title" : {
+      "translate" : "キャンセルしてもよろしいですか?"
+    },
+    "btn-confirm" : {
+      "translate" : "確認"
+    },
+    "error-1" : {
+      "translate" : "ルール名を入力してください。"
+    },
+    "error-2" : {
+      "translate" : "無効な値が設定されている条件があります。"
+    },
+    "error-3" : {
+      "translate" : "同じ名前のルールがあります。名前を変更してやり直してください。"
+    },
+    "error-4" : {
+      "translate" : "「{{name}}」ルールに条件を追加してロジックを定義します。",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "「{{name}}」ルールのアクションを定義してください。",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "［上記以外の場合のアクション］を定義してください。"
+    },
+    "placeholder" : {
+      "translate" : "内容を入力するか、コピーして貼り付けてください。"
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "ここにテキストを入力するか貼り付けて新しいテンプレートの作成を開始します",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "1行",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1.5行",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "2行",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "フィールドの検索"
+    },
+    "noResultMessage" : {
+      "translate" : "結果が見つかりません"
+    }
+  }
+}

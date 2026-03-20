@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>temps_traitement_restant__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(TECH_BuisnessDaysElapsed__c = 0,ISPICKVAL(Status,&quot;New&quot;),ISPICKVAL(LeadSource,&quot;Demande de contact site&quot;),ISBLANK(Apporteur_affaires__c)), 
+IMAGE(&quot;/img/samples/flag_green.gif&quot;, &quot;green&quot;, 20, 20),
+IF(AND(TECH_BuisnessDaysElapsed__c = 1,ISPICKVAL(Status,&quot;New&quot;),ISPICKVAL(LeadSource,&quot;Demande de contact site&quot;),ISBLANK(Apporteur_affaires__c)),
+IMAGE(&quot;/img/samples/flag_yellow.gif&quot;, &quot;yellow&quot;, 20, 20),
+IF(AND(TECH_BuisnessDaysElapsed__c &gt; 1,ISPICKVAL(Status,&quot;New&quot;),ISPICKVAL(LeadSource,&quot;Demande de contact site&quot;),ISBLANK(Apporteur_affaires__c)),
+			IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;red&quot;, 20, 20),
+			&quot;&quot;
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Drapeau vert 2 jours restant
+Drapeau orange 1 jour restant
+Drapeau rouge dernier jour restant</inlineHelpText>
+    <label>Temps de traitement restant</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

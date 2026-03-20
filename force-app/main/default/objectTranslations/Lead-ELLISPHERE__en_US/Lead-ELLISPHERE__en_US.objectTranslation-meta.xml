@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <description><!-- Lead reçu depuis les apporteurs d&apos;affaires / préscripteurs --></description>
+        <label><!-- Apporteur Affaires --></label>
+        <name>Apporteur_Affaires</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lead --></label>
+        <name>Lead</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prospection Partenaire --></label>
+        <name>Prospection_Partenaire</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prospection téléphonique --></label>
+        <name>Prospection_telephonique</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Merci de mettre le status à &apos;ACD reçu&apos; ou &apos;Convertie&apos; avant de convertir la piste en compte. --></errorMessage>
+        <name>Authorise_convert</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Vous devez renseigner une date de RDV (R1) pour toutes les pistes provenant d&apos;une prospection téléphonique hebdomadaire --></errorMessage>
+        <name>Date_RDV_Prospection_telephonique_hebdo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de vous attribuer la piste avant de travailler dessus --></errorMessage>
+        <name>LeadOwnerIsQueue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Vous ne pouvez pas la source de la piste lorsqu&apos;elle est en &apos;Demande de contact site&apos; --></errorMessage>
+        <name>LeadSource_Demande_contact_site</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner l&apos;apporteur d&apos;affaire ou le prescripteur source de votre piste --></errorMessage>
+        <name>Lead_source_incomplete</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner la période de l&apos;achat groupé. --></errorMessage>
+        <name>Lead_source_incompleteAchatGroupe</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner la période de l&apos;achat groupé. --></errorMessage>
+        <name>Lead_source_incompleteProspectionTel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner le nom du salon ainsi que l&apos;année. --></errorMessage>
+        <name>Lead_source_incompleteSalon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner un motif de hors cible --></errorMessage>
+        <name>Motif_hors_cible_manquant</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner un motif de refus --></errorMessage>
+        <name>Motif_refus_manquant</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Veuillez préciser une raison pour le statut &quot;Sans suite&quot; --></errorMessage>
+        <name>Raison_abandon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de mettre le statut d&apos;appel à &apos;Faux Numéro&apos; --></errorMessage>
+        <name>Statut_Appel_incorrect</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner un type de rappel --></errorMessage>
+        <name>Type_de_rappel_manquant</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Deca122o00000IVIW7AAP --></label>
+        <name>Deca122o00000IVIW7AAP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca122o00000IVIfFAAX --></label>
+        <name>Deca122o00000IVIfFAAX</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca12aT000000OVvVQAW --></label>
+        <name>Deca12aT000000OVvVQAW</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca12aT000002xDuXQAU --></label>
+        <name>Deca12aT000002xDuXQAU</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendWithDocuSign --></label>
+        <name>SendWithDocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "Revenue-presse-newsletter-interne-décembre25",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005aUHUAY",
+        "type" : "file",
+        "size" : 2845762
+      }
+    }
+  },
+  "urlName" : "revenue-presse-newsletter-interne-d-cembre25"
+}

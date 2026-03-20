@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "518d5953-a7de-4310-8062-92aede5cc595",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "relatedlist_a05__c",
+  "id" : "03ee2554-0b10-49b0-8486-0bd7a052a094",
+  "label" : "Document Liste associée",
+  "objectApiName" : "Document__c",
+  "routeType" : "relatedlist-a0J",
+  "type" : "route",
+  "urlPrefix" : "document"
+}

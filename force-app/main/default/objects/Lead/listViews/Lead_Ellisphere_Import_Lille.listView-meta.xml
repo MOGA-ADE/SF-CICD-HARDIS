@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Ellisphere_Import_Lille</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Code_NAF__c</columns>
+    <columns>ELLISPHERE__Elli_ActivityTypeAndCode__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>contains</operation>
+        <value>Ellisphere</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>9/24/2024 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Sans suite,Faux numéro,Hors Cible</value>
+    </filters>
+    <label>Lead Ellisphere Import Lille</label>
+    <sharedTo>
+        <role>Commercial_ADE_Lille</role>
+    </sharedTo>
+</ListView>

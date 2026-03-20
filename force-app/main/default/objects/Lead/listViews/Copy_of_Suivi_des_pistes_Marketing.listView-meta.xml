@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Suivi_des_pistes_Marketing</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+    <columns>Campagne_emailing__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campagne_emailing__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Sans suite,Refusée,Faux numéro,Hors Cible</value>
+    </filters>
+    <filters>
+        <field>Role_du_proprietaire__c</field>
+        <operation>contains</operation>
+        <value>sédentaire ADE</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>Automobile,Réactivation Lyon,Warm,Hot,Emailing Lyon</value>
+    </filters>
+    <label>Suivi des pistes - Emailing Lyon</label>
+    <sharedTo>
+        <role>Commercial_sedentaire_ADE</role>
+        <role>Directeur_commercial_sedentaire_ADE</role>
+        <role>Direction</role>
+    </sharedTo>
+</ListView>

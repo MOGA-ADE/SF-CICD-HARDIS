@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Preprod</label>
+    <protected>false</protected>
+    <values>
+        <field>Access_token__c</field>
+        <value xsi:type="xsd:string">v4LHWzfyj9kTNWP2TpcostfQfPY76G</value>
+    </values>
+    <values>
+        <field>Call_back__c</field>
+        <value xsi:type="xsd:string">https://alliancedesenergies--ellisphere.sandbox.my.site.com/services/apexrest/callback/endesa</value>
+    </values>
+    <values>
+        <field>Client_id__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Client_secret__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">;jG{Rm9y^YWkOac</value>
+    </values>
+    <values>
+        <field>Quote_url__c</field>
+        <value xsi:type="xsd:string">https://alliancedesenergies--ellisphere.sandbox.lightning.force.com/lightning/r/Quote/[QUOTE_ID]/view</value>
+    </values>
+    <values>
+        <field>Refresh_token__c</field>
+        <value xsi:type="xsd:string">ExAI5rUFHxlaati1db1spHD1ySDaJe</value>
+    </values>
+    <values>
+        <field>Sandboxe__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Timeout__c</field>
+        <value xsi:type="xsd:double">120000.0</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">apifournisseur@alliancedesenergies.com</value>
+    </values>
+    <values>
+        <field>token__c</field>
+        <value xsi:type="xsd:string">388b5df5caff3d55a1b37d55cef37cbd8989c012</value>
+    </values>
+    <values>
+        <field>url__c</field>
+        <value xsi:type="xsd:string">https://test.ppc-endesa.fr/api/api-offre/2.0/</value>
+    </values>
+</CustomMetadata>

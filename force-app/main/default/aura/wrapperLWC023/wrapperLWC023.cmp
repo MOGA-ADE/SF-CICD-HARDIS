@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId" access="global">
+    <!-- Passe le recordId à votre composant LWC -->
+    <aura:attribute name="recordId" type="String"/>
+    <c:lwc023_GenerateEnergismeJSON recordId="{!v.recordId}" />
+</aura:component>

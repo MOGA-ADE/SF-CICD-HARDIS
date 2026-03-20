@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Formule Classique</label>
+    <protected>false</protected>
+    <values>
+        <field>Formule__c</field>
+        <value xsi:type="xsd:string">(!$Record.AbonnementMois__c * 12)+
+(!$Record.PrixHC__c * !$Record.ConsoHC__c )+
+( !$Record.PrixHceMwh__c * !$Record.Conso_HCE__c )+
+( !$Record.PrixHchMwh__c * !$Record.Conso_HCH__c )+
+( !$Record.PrixHP__c * !$Record.ConsoHP__c )+
+( !$Record.PrixHpeMwh__c * !$Record.Conso_HPE__c )+
+( !$Record.PrixHphMwh__c * !$Record.Conso_HPH__c )+
+( !$Record.PointesMWh__c * !$Record.Conso_Pointe__c )+
+( !$Record.CEE__c * !$Record.CARElec__c )+
+( !$Record.CapaciteMwh__c * !$Record.CARElec__c)</value>
+    </values>
+    <values>
+        <field>Fournisseur__c</field>
+        <value xsi:type="xsd:string">Engie</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Les commentaires remplis par le client sur le site internet. --></help>
+    <label><!-- Commentaires du client --></label>
+    <name>Commentaires_client__c</name>
+</CustomFieldTranslation>

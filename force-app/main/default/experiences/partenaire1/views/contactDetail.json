@@ -1,0 +1,85 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "55385407-4cb8-4b04-b88b-f54c31fc73ca",
+  "label" : "Contact Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "30822e6a-2b20-4946-a5ad-f83a068c00d2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e698ca75-bf7c-4f57-b5b6-3f41b52cd3eb",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordDetail",
+      "id" : "bd997287-24dc-4caa-8628-696d34379700",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "36ea72aa-515e-450b-8603-3f4bcdba6f3a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}",
+        "showLegacyActivityComposer" : false
+      },
+      "componentName" : "forceCommunity:activityPanel",
+      "id" : "9b95ad7e-dc4f-4ed6-a7ac-11c023ad4e10",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "71988837-6623-404e-b904-daf8a7a71168",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9c6e4828-2eb7-4b25-a27e-35c79060341b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "72c4cca4-fc43-4c2b-8345-a27f3d6ba349",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "relatedListApiName" : "AccountContactRelations",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:responsiveRelatedListSingle",
+      "id" : "3ae19e7b-fd7c-4870-9576-7f6cb952e559",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "54c3b1d9-a103-4234-a6ad-5ba6ea28d812",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-003"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_source_incompleteProspectionTel</fullName>
+    <active>false</active>
+    <description>Si la lead est du record type &apos;Prospection téléphonique&apos; alors on doit renseigner une source pour la cellule RDV</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Prospection_telephonique&apos;,
+ISPICKVAL(Source_cellule_RDV__c,&apos;&apos;))</errorConditionFormula>
+    <errorDisplayField>Source_cellule_RDV__c</errorDisplayField>
+    <errorMessage>Merci de renseigner la période de l&apos;achat groupé.</errorMessage>
+</ValidationRule>

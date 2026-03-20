@@ -1,0 +1,32 @@
+<template>
+    <div class="container">
+        <div class="button-container">
+            <lightning-button 
+                label="Télécharger le template CSV"
+                onclick={downloadTemplate}
+                variant="brand"
+                class="slds-m-bottom_small template-button">
+            </lightning-button>
+        </div>
+        <div class="drop"
+             ondragover={handleDragOver}
+             ondrop={handleDrop}>
+            Glisser/Déposer votre fichier CSV contenant les numéros de compteurs
+        </div>
+
+        <!-- Message d'erreur -->
+        <template if:true={errorMessage}>
+            <div class="message error">
+                {errorMessage}
+            </div>
+        </template>
+
+        <!-- Message de succès -->
+        <template if:true={successMessage}>
+            <div class="message success">
+                {successMessage}
+            </div>
+        </template>
+
+    </div>
+</template>

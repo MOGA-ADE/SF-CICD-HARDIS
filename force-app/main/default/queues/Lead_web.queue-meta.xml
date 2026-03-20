@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>ilan.chemla@alliancedesenergies.fr</email>
+    <name>Lead web</name>
+    <queueMembers>
+        <users>
+            <user>ilan.chemla@alliancedesenergies.fr</user>
+            <user>j.tronel@alliancedesenergies.fr</user>
+            <user>l.chemla@energieplus.paris</user>
+            <user>shai.fitoussi@alliancedesenergies.fr</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

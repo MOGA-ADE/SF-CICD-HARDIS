@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Segment --></label>
+    <name>Segment__c</name>
+    <picklistValues>
+        <masterLabel>Aucun</masterLabel>
+        <translation><!-- Aucun --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C1</masterLabel>
+        <translation><!-- C1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C2</masterLabel>
+        <translation><!-- C2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C3</masterLabel>
+        <translation><!-- C3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C4</masterLabel>
+        <translation><!-- C4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C5</masterLabel>
+        <translation><!-- C5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T1</masterLabel>
+        <translation><!-- T1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T2</masterLabel>
+        <translation><!-- T2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T3</masterLabel>
+        <translation><!-- T3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T4</masterLabel>
+        <translation><!-- T4 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

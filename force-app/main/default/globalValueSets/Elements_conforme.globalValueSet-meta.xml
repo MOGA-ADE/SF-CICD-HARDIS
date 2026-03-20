@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>S’est présenté comme travaillant avec ADE</fullName>
+        <default>false</default>
+        <label>S’est présenté comme travaillant avec ADE</label>
+    </customValue>
+    <customValue>
+        <fullName>Nom et Prénom signataire</fullName>
+        <default>false</default>
+        <label>Nom et Prénom signataire</label>
+    </customValue>
+    <customValue>
+        <fullName>Numéro de téléphone signataire</fullName>
+        <default>false</default>
+        <label>Numéro de téléphone signataire</label>
+    </customValue>
+    <customValue>
+        <fullName>Mail signataire</fullName>
+        <default>false</default>
+        <label>Mail signataire</label>
+    </customValue>
+    <customValue>
+        <fullName>Raison Sociale</fullName>
+        <default>false</default>
+        <label>Raison Sociale</label>
+    </customValue>
+    <customValue>
+        <fullName>Numéro de SIRET</fullName>
+        <default>false</default>
+        <label>Numéro de SIRET</label>
+    </customValue>
+    <customValue>
+        <fullName>Fournisseur</fullName>
+        <default>false</default>
+        <label>Fournisseur</label>
+    </customValue>
+    <customValue>
+        <fullName>Nombre de compteurs</fullName>
+        <default>false</default>
+        <label>Nombre de compteurs</label>
+    </customValue>
+    <customValue>
+        <fullName>Durée d&apos;engagement</fullName>
+        <default>false</default>
+        <label>Durée d&apos;engagement</label>
+    </customValue>
+    <customValue>
+        <fullName>Date de démarrage</fullName>
+        <default>false</default>
+        <label>Date de démarrage</label>
+    </customValue>
+    <customValue>
+        <fullName>Date de fin</fullName>
+        <default>false</default>
+        <label>Date de fin</label>
+    </customValue>
+    <customValue>
+        <fullName>Le client est informé que son contrat actuel doit être résilié</fullName>
+        <default>false</default>
+        <label>Le client est informé que son contrat actuel doit être résilié</label>
+    </customValue>
+    <customValue>
+        <fullName>Avez-vous un exemplaire du contrat ?</fullName>
+        <default>false</default>
+        <label>Avez-vous un exemplaire du contrat ?</label>
+    </customValue>
+    <customValue>
+        <fullName>Énergie</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Énergie</label>
+    </customValue>
+    <masterLabel>Éléments conforme</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

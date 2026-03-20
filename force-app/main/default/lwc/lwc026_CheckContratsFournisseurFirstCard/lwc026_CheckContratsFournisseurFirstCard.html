@@ -1,0 +1,18 @@
+<template>
+    <lightning-card >
+        <div class="slds-grid slds-wrap slds-p-around_small">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-p-horizontal_x-small">
+                <lightning-combobox name="Fournisseur" label="Fournisseur" options={picklistFournisseurs} onchange={onChangeSearchAppelFacturation}></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-3 slds-p-horizontal_x-small">
+                <lightning-combobox name="Mois" label="Mois" options={picklistMois} onchange={onChangeSearchAppelFacturation}></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-3 slds-p-horizontal_x-small">
+                <lightning-combobox name="Année" label="Année" options={picklistAnnee} onchange={onChangeSearchAppelFacturation}></lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-col slds-p-horizontal_x-small slds-text-align_center">
+            <lightning-button variant="brand" label="Chercher" title="Chercher" onclick={searchAppelFacturation} disabled={searchDisabled}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cocher la case s&apos;il s&apos;agit d&apos;une campagne d&apos;achat groupé --></help>
+    <label><!-- Achat groupé --></label>
+    <name>Achat_groupe__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Frais Distribution Variable --></label>
+    <name>Frais_Distribution_Variable__c</name>
+    <picklistValues>
+        <masterLabel>Inclus</masterLabel>
+        <translation><!-- Inclus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non Inclus</masterLabel>
+        <translation><!-- Non Inclus --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,199 @@
+<template>
+    <!-- Carte PARAMÈTRES -->
+    <article class="slds-card">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:crypto_product_category_wallet_role" alternative-text="Custom" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">Personnalisez le comparatif en fonction des besoins de votre client !</h2>
+                    </div>
+                </div>
+                <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <template lwc:if={recordId}>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="6" padding="around-small" small-device-size="12" medium-device-size="6" large-device-size="6" >
+                    <div>
+                        <lightning-checkbox-group
+                            name="fournisseurs"
+                            label={label}
+                            options={fournisseurOptions}
+                            value={selectedFournisseurs}
+                            onchange={handleFournisseurChange}
+                            disabled={disabledInputs}
+                            required
+                            message-when-value-missing="Au moins un fournisseur doit être coché">
+                        </lightning-checkbox-group>
+                        <!-- GO : sous les offres, à gauche (direct + popup) -->
+                        <template lwc:if={showGOSection}>
+                            <!-- On affiche le bloc GO uniquement si des GO existent OU si la vue est "direct" -->
+
+                            <template lwc:if={hasGOToDisplay}>
+                                <lightning-checkbox-group
+                                    name="go"
+                                    label="Garanties d'origine à afficher dans le comparatif"
+                                    options={goOptions}
+                                    value={selectedGO}
+                                    onchange={handleGOChange}
+                                    disabled={disabledInputs}
+                                    required={isGORequired}
+                                    message-when-value-missing="Au moins une garantie d'origine doit être cochée">
+                                </lightning-checkbox-group>
+                            </template>
+
+                            <!-- Message d’avertissement (uniquement vue directe) -->
+                            <template lwc:if={isDirectView}>
+                                <template lwc:if={noGOAvailable}>
+                                    <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-top_xx-small" role="alert">
+                                        <span class="slds-assistive-text">Warning</span>
+                                        <lightning-icon 
+                                            icon-name="utility:warning" 
+                                            alternative-text="Warning" 
+                                            size="small" 
+                                            class="slds-m-right_x-small">
+                                        </lightning-icon>
+                                        <h2>
+                                            Aucune garantie d'origine n'existe encore.<br/>
+                                            Vous pouvez en créer via le bouton « Gestion des garanties d'origines ».
+                                        </h2>
+                                    </div>
+                                </template>
+                            </template>
+
+                        </template>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small" small-device-size="12" medium-device-size="6" large-device-size="6" >
+                    <div>
+                        <legend class="slds-form-element__legend slds-form-element__label">Affichage des sections</legend>
+                        <lightning-input 
+                          type="checkbox"
+                          label="Afficher le TTC"
+                          name="sectionTTC"
+                          value={sectionTTC}
+                          checked={sectionTTC}
+                          onchange={handleSectionTTChange}
+                          disabled={disabledInputs}>
+                        </lightning-input>
+    
+                        <template lwc:if={oppHasSituationActuelle}>
+                            <lightning-input 
+                              type="checkbox"
+                              label="Afficher la situation actuelle"
+                              name="sectionSituationActuelle"
+                              value={sectionSituationActuelle}
+                              checked={sectionSituationActuelle}
+                              onchange={handleSectionSituationActuelleChange}
+                              disabled={disabledInputs}>
+                            </lightning-input>
+                        </template>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <template lwc:if={hasTurpeQuote}>
+                        <lightning-input 
+                            type="number"
+                            name="margePEPS"
+                            label="Marge intervention PEP'S (%)"
+                            min={minMargePEPS}
+                            max={maxMargePEPS}
+                            value={margePEPS}
+                            onchange={handleMargeChange}
+                            step="0.1"
+                            required>
+                        </lightning-input>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+            <footer class="slds-card__footer">   
+                <lightning-button lwc:if={oppIsMasse} style="margin: 0 8px;" variant="brand" label="Générer Comparatif Résumé" onclick={handleGenerateResumeComparatif}></lightning-button>
+                <lightning-button lwc:if={hasTurpeQuote} style="margin: 0 8px;" variant="brand" label="Générer Lettre de mission" onclick={handleGenerateLettreMission}></lightning-button>
+                <lightning-button style="margin: 0 8px;" variant="brand" label="Générer Comparatif Détaillé" onclick={handleGenerateComparatif}></lightning-button>
+                <!-- Bouton “Gestion des garanties d’origines” UNIQUEMENT en vue Direct -->
+                <lightning-button
+                    lwc:if={isDirectView}
+                    class="slds-m-right_small"
+                    variant="neutral"
+                    label="Gestion des garanties d'origines"
+                    onclick={openGOPopup}>
+                </lightning-button>
+
+            </footer>
+        </template>
+        <!-- message d’erreur hors contexte -->
+        <template lwc:else>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item padding="around-small">
+                    <p>Cette page doit être visitée seulement depuis le lien "télécharger" de votre demande de cotation.<br>
+                        Elle sert à personnaliser votre comparatif.<br>
+                        Vous pouvez quitter cette page.</p>
+                </lightning-layout-item>
+            </lightning-layout>
+
+        </template>
+    </article>
+
+    <!-- Carte TABLEAU DES COPROPRIÉTÉS -->
+    <template lwc:if={oppIsForSyndic}>
+        <article class="slds-card slds-m-top_medium">
+            <!-- en-tête -->
+            <div class="slds-card__header slds-grid slds-grid_align-spread">
+                <header class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:account" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">Comparatifs par copropriété</h2>
+                    </div>
+                </header>
+            </div>
+
+            <!-- corps -->
+            <div class="slds-card__body slds-card__body_inner">
+                <!-- spinner tant que les données ne sont pas prêtes -->
+                <template lwc:if={coproDataLoaded}>
+                    <lightning-datatable key-field="id"
+                                         data={coproData}
+                                         columns={coproColumns}
+                                         hide-checkbox-column>
+                    </lightning-datatable>
+                </template>
+                <template lwc:else>
+                    <div class="slds-is-relative slds-p-vertical_medium">
+                        <lightning-spinner alternative-text="Chargement…" size="x-small"></lightning-spinner>
+                    </div>
+                </template>
+            </div>
+        </article>
+    </template>
+
+    <!-- ============ MODALE LOCALE (SLDS) : Gestion des GO ============ -->
+    <template lwc:if={showGOPopup}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="go-modal-heading"
+                class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                            title="Fermer" onclick={closeGOPopup}>
+                        <lightning-icon icon-name="utility:close" alternative-text="Fermer" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Fermer</span>
+                    </button>
+                    <h2 id="go-modal-heading" class="slds-text-heading_medium">
+                        Gestion des Garanties d'Origine
+                    </h2>
+                </header>
+                <div class="slds-modal__content" style="min-height: 40vh;">
+                    <c-lwc029_-garantie-origine-manager
+                        record-id={recordId}
+                        mode="full"
+                        mode-appel="direct">
+                    </c-lwc029_-garantie-origine-manager>
+                </div>
+            </div>
+        </section>
+    </template>
+</template>

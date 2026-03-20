@@ -1,0 +1,62 @@
+<template>
+    <!-- Infos lead -->
+    <article class="slds-card borderBottom">
+        <div class="slds-grid slds-einstein-header slds-card__header resetBGK">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:partners" alternative-text="partners Icon" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Authentification">
+                            Étape 2 : Détails de la piste
+                        </h2>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner marginBottom customFontSize">
+            <h3>Information de la société :</h3>
+            <lightning-input label="Raison sociale" name="Company" type="text" placeholder="Raison sociale" onchange={handleChange} required></lightning-input>
+            <lightning-input label="Siret (14 chiffres)" maxlength="14" name="Siret__c" type="number" placeholder="Siret" onchange={handleChange} required></lightning-input>
+            <lightning-input label="Enseigne (optionnel)" name="ELLISPHERE__Elli_Tradename__c" type="text" placeholder="Enseigne" onchange={handleChange}></lightning-input>
+            <br>
+            <h3>Information de contact :</h3>
+            <lightning-input label="Nom" name="LastName" type="text" placeholder="Nom" onchange={handleChange} required></lightning-input>
+            <lightning-input label="Prénom" name="FirstName" type="text" placeholder="Prénom" onchange={handleChange} required></lightning-input>
+            <lightning-input label="Fonction" name="Title" type="text" placeholder="Fonction" onchange={handleChange} required></lightning-input>
+            <lightning-input label="Téléphone" name="Phone" type="tel" placeholder="Téléphone" onchange={handleChange} required></lightning-input>
+            <lightning-input label="Adresse mail" name="Email" type="email" placeholder="Adresse mail" onchange={handleChange} required></lightning-input>
+            <br>
+            <h3>Autorisation d'accès aux données de consommation signé <span style="color:red;">(Obligatoire)</span> : </h3>
+            <div class="fileUploadContainer">
+                <lightning-file-upload
+                    name="fileUploader"
+                    accept={acceptedFormats}
+                    record-id={myRecordId}
+                    onuploadfinished={handleUploadFinished}
+                    required
+                ></lightning-file-upload>
+                <p if:true={fileUploaded}>
+                    <lightning-icon
+                    icon-name="utility:success"
+                    size="small"
+                    alternative-text="Icon success"
+                    title="Success"
+                    ></lightning-icon>
+                    &nbsp;
+                    Le fichier a été chargé
+                </p>
+            </div>
+            <p class="error" if:true={errorFile}>
+                Vous devez charger un fichier avant de pouvoir passer à l'étape suivante.
+            </p>
+        </div>
+        <footer class="slds-card__footer borderTop">
+            <div class="buttonContainer">
+                <lightning-button variant="neutral" label="Précédent" title="Précédent" onclick={handlePrevious} ></lightning-button>
+                <lightning-button variant="brand" label="Suivant" title="Suivant" onclick={handleNext}></lightning-button>
+            </div>
+        </footer>
+    </article>
+</template>

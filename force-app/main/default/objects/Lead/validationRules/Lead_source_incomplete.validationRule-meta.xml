@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_source_incomplete</fullName>
+    <active>true</active>
+    <description>Si la lead source est &quot;Apporteur d&apos;affaire&quot; ou &quot;Prescripteur&quot; il faut renseigner le compte correspondant dans le champs &quot;apporteur d&apos;affaire / prescripteur&quot;</description>
+    <errorConditionFormula>AND(
+					OR(
+									ISPICKVAL(LeadSource,&apos;Apporteur Affaires&apos;),
+									ISPICKVAL(LeadSource,&apos;Prescripteur&apos;)
+					    ),
+     ISBLANK(AE_PartenaireId__c ),   				
+					ISBLANK(Apporteur_affaires__c)
+	)</errorConditionFormula>
+    <errorDisplayField>Apporteur_affaires__c</errorDisplayField>
+    <errorMessage>Merci de renseigner l&apos;apporteur d&apos;affaire ou le prescripteur source de votre piste</errorMessage>
+</ValidationRule>

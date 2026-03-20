@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Statut --></label>
+    <name>Statut__c</name>
+    <picklistValues>
+        <masterLabel>Client Perdu</masterLabel>
+        <translation><!-- Client Perdu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clonée</masterLabel>
+        <translation><!-- Clonée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comparatif(s) prêt(s)</masterLabel>
+        <translation><!-- Comparatif(s) prêt(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DDC Perdue</masterLabel>
+        <translation><!-- DDC Perdue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande de réactualisation</masterLabel>
+        <translation><!-- Demande de réactualisation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En attente de retour client</masterLabel>
+        <translation><!-- En attente de retour client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En attente de traitement</masterLabel>
+        <translation><!-- En attente de traitement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En attente validation fournisseur</masterLabel>
+        <translation><!-- En attente validation fournisseur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En cours de traitement</masterLabel>
+        <translation><!-- En cours de traitement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gagnée</masterLabel>
+        <translation><!-- Gagnée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refusée</masterLabel>
+        <translation><!-- Refusée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validée</masterLabel>
+        <translation><!-- Validée --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

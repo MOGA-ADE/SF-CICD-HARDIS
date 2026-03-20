@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fichier_import_ELLISPHERE_19_03_25_Indus</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source_cellule_RDV__c</field>
+        <operation>equals</operation>
+        <value>Ellisphere - Import 19/03/2025 Industrie</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>éallo,sbenb,nhall</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Refusée,Faux numéro,Hors Cible,RDV commercial pris</value>
+    </filters>
+    <label>Fichier import ELLISPHERE 19-03-25 Indus</label>
+    <sharedTo>
+        <role>Charge_de_RDV</role>
+    </sharedTo>
+</ListView>

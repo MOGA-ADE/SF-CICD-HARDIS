@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Origine du contrat</description>
+    <label>Source</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Une source ne peut pas être un compte de type &quot;partner&quot;</errorMessage>
+        <filterItems>
+            <field>Account.RecordType.Name</field>
+            <operation>notEqual</operation>
+            <value>Account Partner</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Contracts</relationshipLabel>
+    <relationshipName>Contracts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

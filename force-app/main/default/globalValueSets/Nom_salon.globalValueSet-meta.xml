@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Atlantica - Niort</fullName>
+        <default>false</default>
+        <label>Atlantica - Niort</label>
+    </customValue>
+    <customValue>
+        <fullName>Agro Haut de France – Arras</fullName>
+        <default>false</default>
+        <label>Agro Haut de France – Arras</label>
+    </customValue>
+    <customValue>
+        <fullName>Analyse Industrielle &amp; Instrumentation - Paris Champerret</fullName>
+        <default>false</default>
+        <label>Analyse Industrielle &amp; Instrumentation - Paris Champerret</label>
+    </customValue>
+    <customValue>
+        <fullName>AGECOTEL – Nice</fullName>
+        <default>false</default>
+        <label>AGECOTEL – Nice</label>
+    </customValue>
+    <customValue>
+        <fullName>AutoCar Expo - Lyon</fullName>
+        <default>false</default>
+        <label>AutoCar Expo - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Expo – Amiens</fullName>
+        <default>false</default>
+        <label>Business Expo – Amiens</label>
+    </customValue>
+    <customValue>
+        <fullName>Beauté Sélection – Lyon</fullName>
+        <default>false</default>
+        <label>Beauté Sélection – Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Congrès National UNIS</fullName>
+        <default>false</default>
+        <label>Congrès National UNIS</label>
+    </customValue>
+    <customValue>
+        <fullName>CIEL (Carrefour de l&apos;immobilier d&apos;entreprise Lyonnais) – Lyon</fullName>
+        <default>false</default>
+        <label>CIEL (Carrefour de l&apos;immobilier d&apos;entreprise Lyonnais) – Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Congrès National FNAIM</fullName>
+        <default>false</default>
+        <label>Congrès National FNAIM</label>
+    </customValue>
+    <customValue>
+        <fullName>Congrès SYNERPA</fullName>
+        <default>false</default>
+        <label>Congrès SYNERPA</label>
+    </customValue>
+    <customValue>
+        <fullName>Congrès Réunir</fullName>
+        <default>false</default>
+        <label>Congrès Réunir</label>
+    </customValue>
+    <customValue>
+        <fullName>CIEL - Lyon</fullName>
+        <default>false</default>
+        <label>CIEL - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Congrès HLM</fullName>
+        <default>false</default>
+        <label>Congrès HLM</label>
+    </customValue>
+    <customValue>
+        <fullName>Congrès HLM - Paris</fullName>
+        <default>false</default>
+        <label>Congrès HLM - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>CFIA – Rennes</fullName>
+        <default>false</default>
+        <label>CFIA – Rennes</label>
+    </customValue>
+    <customValue>
+        <fullName>EquipHotel - Paris</fullName>
+        <default>false</default>
+        <label>EquipHotel - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>EQUIP AUTO - Paris</fullName>
+        <default>false</default>
+        <label>EQUIP AUTO - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Enviropro - Angers</fullName>
+        <default>false</default>
+        <label>Enviropro - Angers</label>
+    </customValue>
+    <customValue>
+        <fullName>Franchise expo - Paris</fullName>
+        <default>false</default>
+        <label>Franchise expo - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>FitLyon - Lyon</fullName>
+        <default>false</default>
+        <label>FitLyon - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>FCTM ESOPE - Paris</fullName>
+        <default>false</default>
+        <label>FCTM ESOPE - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Funexpo - Lyon</fullName>
+        <default>false</default>
+        <label>Funexpo - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Funéraire Paris – Paris</fullName>
+        <default>false</default>
+        <label>Funéraire Paris – Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Franchise Event – Rennes</fullName>
+        <default>false</default>
+        <label>Franchise Event – Rennes</label>
+    </customValue>
+    <customValue>
+        <fullName>Flotauto - Lyon</fullName>
+        <default>false</default>
+        <label>Flotauto - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Food in Sud - Marseille</fullName>
+        <default>false</default>
+        <label>Food in Sud - Marseille</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Industrie - Paris</fullName>
+        <default>false</default>
+        <label>Global Industrie</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon de la copropriete - Paris</fullName>
+        <default>false</default>
+        <label>Salon de la copropriete - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon Expert comptable - Aura - Lyon</fullName>
+        <default>false</default>
+        <label>Salon Expert comptable - Aura - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>SIVAL - Angers</fullName>
+        <default>false</default>
+        <label>SIVAL - Angers</label>
+    </customValue>
+    <customValue>
+        <fullName>Packaging Week - Paris</fullName>
+        <default>false</default>
+        <label>Packaging Week - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>SIRAH Europain – Paris</fullName>
+        <default>false</default>
+        <label>SIRAH Europain – Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Open Énergie – Lyon</fullName>
+        <default>false</default>
+        <label>Open Énergie – Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Rest&apos;Hotel et métiers de bouche – Rennes</fullName>
+        <default>false</default>
+        <label>Rest&apos;Hotel et métiers de bouche – Rennes</label>
+    </customValue>
+    <customValue>
+        <fullName>S.I.T.L – Paris</fullName>
+        <default>false</default>
+        <label>S.I.T.L – Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>SIA - Paris</fullName>
+        <default>false</default>
+        <label>SIA - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Rencontre Régionale Mobilians</fullName>
+        <default>false</default>
+        <label>Rencontre Régionale Mobilians</label>
+    </customValue>
+    <customValue>
+        <fullName>SIEC – Paris</fullName>
+        <default>false</default>
+        <label>SIEC – Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon des métiers de bouche – Montpellier</fullName>
+        <default>false</default>
+        <label>Salon des métiers de bouche – Montpellier</label>
+    </customValue>
+    <customValue>
+        <fullName>Horesta - Lille</fullName>
+        <default>false</default>
+        <label>Horesta - Lille</label>
+    </customValue>
+    <customValue>
+        <fullName>Innov Agri - Outarville</fullName>
+        <default>false</default>
+        <label>Innov Agri - Outarville</label>
+    </customValue>
+    <customValue>
+        <fullName>In salon – Nice</fullName>
+        <default>false</default>
+        <label>In salon – Nice</label>
+    </customValue>
+    <customValue>
+        <fullName>Journée des Conseils Syndicaux UNIS - Lyon</fullName>
+        <default>false</default>
+        <label>Journée des Conseils Syndicaux UNIS - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>SETT – Montpellier</fullName>
+        <default>false</default>
+        <label>SETT – Montpellier</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon Alpin – Albertville</fullName>
+        <default>false</default>
+        <label>Salon Alpin – Albertville</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon expert-comptable - Lons-le-Saunier</fullName>
+        <default>false</default>
+        <label>Salon expert-comptable - Lons-le-Saunier</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon Comptoir et Fournil - La Rochelle</fullName>
+        <default>false</default>
+        <label>Salon Comptoir et Fournil - La Rochelle</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon Vendéeprho - La Roche Sur Yon</fullName>
+        <default>false</default>
+        <label>Salon Vendéeprho - La Roche Sur Yon</label>
+    </customValue>
+    <customValue>
+        <fullName>SIMODEC - La-Roche-sur-Foron</fullName>
+        <default>false</default>
+        <label>SIMODEC - La-Roche-sur-Foron</label>
+    </customValue>
+    <customValue>
+        <fullName>PROBIO Ouest - Angers</fullName>
+        <default>false</default>
+        <label>PROBIO Ouest - Angers</label>
+    </customValue>
+    <customValue>
+        <fullName>INNOMOOV - Avignon</fullName>
+        <default>false</default>
+        <label>INNOMOOV - Avignon</label>
+    </customValue>
+    <customValue>
+        <fullName>SIMI</fullName>
+        <default>false</default>
+        <label>SIMI</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon Grand Ouest - Nantes</fullName>
+        <default>false</default>
+        <label>Salon Industrie Grand Ouest - Nantes</label>
+    </customValue>
+    <customValue>
+        <fullName>SOLUCOP - Nice</fullName>
+        <default>false</default>
+        <label>SOLUCOP - Nice</label>
+    </customValue>
+    <customValue>
+        <fullName>Pollutec - Paris</fullName>
+        <default>false</default>
+        <label>Pollutec - Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Pollutec - Lyon</fullName>
+        <default>false</default>
+        <label>Pollutec - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>SIRHA - Lyon</fullName>
+        <default>false</default>
+        <label>SIRHA - Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon Vienneprho</fullName>
+        <default>false</default>
+        <label>Salon Vienneprho</label>
+    </customValue>
+    <customValue>
+        <fullName>SOLUCOP - Toulouse</fullName>
+        <default>false</default>
+        <label>SOLUCOP - Toulouse</label>
+    </customValue>
+    <customValue>
+        <fullName>SOLUCOP - Lille</fullName>
+        <default>false</default>
+        <label>SOLUCOP - Lille</label>
+    </customValue>
+    <customValue>
+        <fullName>SELI</fullName>
+        <default>false</default>
+        <label>SELI</label>
+    </customValue>
+    <customValue>
+        <fullName>SPACE Elevage</fullName>
+        <default>false</default>
+        <label>SPACE Elevage</label>
+    </customValue>
+    <customValue>
+        <fullName>Serbotel</fullName>
+        <default>false</default>
+        <label>Serbotel</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Class Factory – Lille</fullName>
+        <default>false</default>
+        <label>Energy Class Factory – Lille</label>
+    </customValue>
+    <customValue>
+        <fullName>Fetexpo</fullName>
+        <default>false</default>
+        <label>Fetexpo</label>
+    </customValue>
+    <customValue>
+        <fullName>SEPEM - Douai</fullName>
+        <default>false</default>
+        <label>SEPEM - Douai</label>
+    </customValue>
+    <customValue>
+        <fullName>Forum Energy Time</fullName>
+        <default>false</default>
+        <label>Forum Energy Time</label>
+    </customValue>
+    <customValue>
+        <fullName>Salon de l&apos;Environnement de Travail et des Achats -  SETA</fullName>
+        <default>false</default>
+        <label>Salon de l&apos;Environnement de Travail et des Achats -  SETA</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Hotel Tech</fullName>
+        <default>false</default>
+        <label>Food Hotel Tech</label>
+    </customValue>
+    <customValue>
+        <fullName>Ouest industrie</fullName>
+        <default>false</default>
+        <label>Ouest industrie</label>
+    </customValue>
+    <customValue>
+        <fullName>Euromove</fullName>
+        <default>false</default>
+        <label>Euromove</label>
+    </customValue>
+    <customValue>
+        <fullName>Forum europ&apos;energies</fullName>
+        <default>false</default>
+        <label>Forum europ&apos;energies</label>
+    </customValue>
+    <customValue>
+        <fullName>Mondial de l&apos;Auto</fullName>
+        <default>false</default>
+        <label>Mondial de l&apos;Auto</label>
+    </customValue>
+    <masterLabel>Nom du salon</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

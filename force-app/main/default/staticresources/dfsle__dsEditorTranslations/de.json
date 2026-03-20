@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "Rückgängig machen"
+    },
+    "btn-redo" : {
+      "translate" : "Wiederholen"
+    },
+    "btn-fontstyle" : {
+      "translate" : "Schriftstil"
+    },
+    "btn-fontsize" : {
+      "translate" : "Schriftgröße"
+    },
+    "btn-bold" : {
+      "translate" : "Fett"
+    },
+    "btn-italic" : {
+      "translate" : "Kursiv"
+    },
+    "btn-underline" : {
+      "translate" : "Unterstreichen"
+    },
+    "btn-fontcolor" : {
+      "translate" : "Textfarbe"
+    },
+    "btn-leftalign" : {
+      "translate" : "Linksbündig"
+    },
+    "btn-rightalign" : {
+      "translate" : "Rechtsbündig"
+    },
+    "btn-centeralign" : {
+      "translate" : "Zentriert"
+    },
+    "btn-linespacing" : {
+      "translate" : "Zeilenabstand"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "Aufzählung"
+    },
+    "btn-orderedlist" : {
+      "translate" : "Nummerierte Liste"
+    },
+    "btn-inserttable" : {
+      "translate" : "Tabelle einfügen"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "Löschen"
+      },
+      "btn-mergecells" : {
+        "translate" : "Zellen verbinden",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "Zeile oberhalb einfügen"
+      },
+      "btn-2" : {
+        "translate" : "Zeile unterhalb einfügen"
+      },
+      "btn-3" : {
+        "translate" : "Spalte links einfügen"
+      },
+      "btn-4" : {
+        "translate" : "Spalte rechts einfügen"
+      },
+      "btn-5" : {
+        "translate" : "Tabelle konfigurieren"
+      },
+      "btn-6" : {
+        "translate" : "Zeile löschen"
+      },
+      "btn-7" : {
+        "translate" : "Spalte löschen"
+      },
+      "btn-8" : {
+        "translate" : "Tabelle löschen"
+      },
+      "btn-9" : {
+        "translate" : "Füllfarbe für Hintergrund"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "Logikregel hinzufügen"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "Bild hochladen"
+      },
+      "btn-2" : {
+        "translate" : "Dokument hochladen"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "Kopfzeile",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "Unterüberschrift",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "Standardtext",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "Firma",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "Signaturdatum",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "E-Mail",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "Vorname",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "Vollständiger Name",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "Initialen",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "Nachname",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "Signatur",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "Signieren",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "Text",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "Stellenbezeichnung",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "Weniger Details"
+    },
+    "btn-2" : {
+      "translate" : "Mehr Details"
+    },
+    "label-1" : {
+      "translate" : "Zeichenbeschränkung"
+    },
+    "label-2" : {
+      "translate" : "Namenstyp auswählen"
+    },
+    "label-3" : {
+      "translate" : "Datenbezeichnung"
+    },
+    "label-4" : {
+      "translate" : "Schreibgeschützt"
+    },
+    "label-5" : {
+      "translate" : "Pflichtfeld"
+    },
+    "label-6" : {
+      "translate" : "Kontexthilfe"
+    },
+    "label-7" : {
+      "translate" : "Validierung"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "Keine"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "E-Mail"
+      },
+      "dropdown-numbers" : {
+        "translate" : "Zahlen"
+      },
+      "dropdown-letters" : {
+        "translate" : "Buchstaben"
+      },
+      "dropdown-date" : {
+        "translate" : "Datum"
+      },
+      "dropdown-zip" : {
+        "translate" : "PLZ"
+      },
+      "dropdown-zip4" : {
+        "translate" : "PLZ + 4"
+      },
+      "dropdown-custom" : {
+        "translate" : "Benutzerdefiniert"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ", (Komma)"
+      },
+      "text-datemask" : {
+        "translate" : "Maske für Datumsvalidierung"
+      },
+      "date-1" : {
+        "translate" : "MM.tt.JJJJ",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "tt.MM.JJJJ",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "JJJJ.MM.tt",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "Datumsformat ist MM.tt.jjjj"
+      },
+      "text-datemessage2" : {
+        "translate" : "Datumsformat ist tt.MM.jjjj"
+      },
+      "text-datemessage3" : {
+        "translate" : "Datumsformat ist jjjj.MM.tt"
+      },
+      "text-decimalseparator" : {
+        "translate" : "Dezimaltrennzeichen"
+      },
+      "text-errormessage" : {
+        "translate" : "Fehlermeldung"
+      },
+      "text-lettersmessage" : {
+        "translate" : "Nur Buchstaben eingeben"
+      },
+      "text-period" : {
+        "translate" : ". (Punkt)"
+      },
+      "text-regexpattern" : {
+        "translate" : "Muster regulärer Ausdrücke"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "Zusammenführungstabelle erstellen: {{label}}"
+    },
+    "label-2" : {
+      "translate" : "AUSGEWÄHLTE SPALTEN"
+    },
+    "label-3" : {
+      "translate" : "(Per Drag-and-drop neu sortieren)"
+    },
+    "label-4" : {
+      "translate" : "FELDER"
+    },
+    "button-1" : {
+      "translate" : "Abbrechen"
+    },
+    "button-2" : {
+      "translate" : "Anwenden"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "DocuSign-Felder"
+    },
+    "label-2" : {
+      "translate" : "Salesforce-Felder"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "Empfänger bearbeiten"
+    },
+    "btn-2" : {
+      "translate" : "Empfänger hinzufügen"
+    },
+    "btn-3" : {
+      "translate" : "Weitere hinzufügen"
+    },
+    "btn-4" : {
+      "translate" : "Fertig",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "Abbrechen",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "Löschen",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "Fügen Sie Rollen für Empfänger hinzu und bearbeiten Sie sie. Rollenbeispiele: Kunde, Buchhaltung"
+    },
+    "text-2" : {
+      "translate" : "Platzhaltername (erforderlich*)",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "Dieser Empfänger hat 1 zugewiesenes Feld. Durch Löschen des Empfängers löschen Sie auch das Feld. Möchten Sie den Empfänger samt Feld löschen?"
+    },
+    "text-4" : {
+      "translate" : "Der Empfänger hat {{number}} zugewiesene Felder. Durch das Löschen des Empfängers löschen Sie auch diese Felder. Möchten Sie den Empfänger samt Felder löschen?"
+    },
+    "label-1" : {
+      "translate" : "Empfänger hat Felder"
+    },
+    "error-1" : {
+      "translate" : "Jeder Empfängername muss eindeutig sein"
+    },
+    "error-2" : {
+      "translate" : "Name für Platzhalter einfügen"
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "Fehler"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "Abbrechen"
+    },
+    "loadMore" : {
+      "translate" : "Weitere laden ..."
+    },
+    "noResultsFound" : {
+      "translate" : "💬 Keine Ergebnisse gefunden"
+    },
+    "previewBtn" : {
+      "translate" : "Vorschau"
+    },
+    "previewOff" : {
+      "translate" : "Vorschau aus"
+    },
+    "previewOn" : {
+      "translate" : "Vorschau ein"
+    },
+    "recentlyUsed" : {
+      "translate" : "Zuletzt verwendet"
+    },
+    "record" : {
+      "translate" : "Datensatz"
+    },
+    "recordModalDescription" : {
+      "translate" : "Briefvorlagenfelder der Vorlage mit Echtdaten ansehen"
+    },
+    "recordModalTitle" : {
+      "translate" : "Datensatz für Vorschau auswählen"
+    },
+    "searchSalesforce" : {
+      "translate" : "Salesforce durchsuchen"
+    },
+    "showSmartContent" : {
+      "translate" : "Smart-Inhalte anzeigen"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "Gleich durchstarten und Dateien hochladen"
+    },
+    "text-2" : {
+      "translate" : "Dateien per Drag-and-drop hier ablegen"
+    },
+    "text-3" : {
+      "translate" : "Unterstützte Dateitypen: docx, jpg, jpeg, png, gif"
+    },
+    "text-4" : {
+      "translate" : "Maximale Dokumentengröße: {{number}} MB",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "Vorlage hinzugefügt."
+    },
+    "text-6" : {
+      "translate" : "Das Dokument, das Sie hochladen möchten, ist zu groß. Dokumente dürfen bis zu 25 MB groß sein."
+    },
+    "text-7" : {
+      "translate" : "Das Dateiformat, das Sie hochladen möchten, wird nicht unterstützt. Unterstützte Dateiformate: DOCX, CSV, TXT, PNG, GIF, JPEG und JPG."
+    },
+    "text-8" : {
+      "translate" : "Laden Sie die Dokumente einzeln hoch."
+    },
+    "text-9" : {
+      "translate" : "Datei kann nicht importiert werden."
+    },
+    "btn-upload" : {
+      "translate" : "HOCHLADEN"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "Abbrechen"
+    },
+    "btn-edit" : {
+      "translate" : "Bearbeiten"
+    },
+    "btn-delete" : {
+      "translate" : "Löschen"
+    },
+    "btn-save" : {
+      "translate" : "Speichern"
+    },
+    "label-title" : {
+      "translate" : "Regel-Generator"
+    },
+    "btn-add" : {
+      "translate" : "REGEL HINZUFÜGEN"
+    },
+    "label-name" : {
+      "translate" : "Regel benennen"
+    },
+    "dropdown-method1" : {
+      "translate" : "Alle der folgenden Regeln anwenden"
+    },
+    "dropdown-method2" : {
+      "translate" : "Beliebig viele der folgenden Regeln anwenden"
+    },
+    "label-if" : {
+      "translate" : "Wenn"
+    },
+    "label-orif" : {
+      "translate" : "Oder wenn"
+    },
+    "label-andif" : {
+      "translate" : "Und wenn"
+    },
+    "label-then" : {
+      "translate" : "Dann"
+    },
+    "label-otherwise" : {
+      "translate" : "Andernfalls"
+    },
+    "dropdown-show" : {
+      "translate" : "Folgenden Inhalt anzeigen"
+    },
+    "dropdown-hide" : {
+      "translate" : "Folgenden Inhalt ausblenden"
+    },
+    "text-drag1" : {
+      "translate" : "Briefvorlagenfeld im „Wenn“-Container beliebig ablegen."
+    },
+    "text-drag2" : {
+      "translate" : "Salesforce-Feld hier ablegen."
+    },
+    "text" : {
+      "translate" : "Änderungen am Logikblock werden nicht gespeichert. Bestätigen Sie das Abbrechen."
+    },
+    "text-title" : {
+      "translate" : "Möchten Sie wirklich abbrechen?"
+    },
+    "btn-confirm" : {
+      "translate" : "BESTÄTIGEN"
+    },
+    "error-1" : {
+      "translate" : "Regel benennen."
+    },
+    "error-2" : {
+      "translate" : "Einige Bedingungen enthalten ungültige Werte,"
+    },
+    "error-3" : {
+      "translate" : "Logikblock enthält doppelte Regelnamen. Benennen Sie sie um und versuchen Sie es erneut."
+    },
+    "error-4" : {
+      "translate" : "Zum Erstellen eines Logikblocks eine Bedingung zur Regel „{{name}}“ hinzufügen.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "Für die „Dann“-Logik der Regel „{{name}}“ Inhalt hinzufügen.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "Inhalt für die „Dann“-Logik im Bereich „Andernfalls“ hinzufügen."
+    },
+    "placeholder" : {
+      "translate" : "Neue Inhalte hier eingeben oder kopieren/einfügen"
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "Text für eine neue Vorlage einfügen oder eingeben",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "1,0",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1,5",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "2,0",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "Felder suchen"
+    },
+    "noResultMessage" : {
+      "translate" : "Keine Ergebnisse gefunden"
+    }
+  }
+}

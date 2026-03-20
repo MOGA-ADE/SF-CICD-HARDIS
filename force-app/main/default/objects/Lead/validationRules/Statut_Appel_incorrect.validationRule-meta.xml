@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statut_Appel_incorrect</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Faux numéro&quot;),
+NOT(ISPICKVAL(Statut_appel__c, &quot;Faux numéro&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Statut_appel__c</errorDisplayField>
+    <errorMessage>Merci de mettre le statut d&apos;appel à &apos;Faux Numéro&apos;</errorMessage>
+</ValidationRule>

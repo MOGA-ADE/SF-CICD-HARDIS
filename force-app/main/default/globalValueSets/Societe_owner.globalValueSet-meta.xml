@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ADE</fullName>
+        <default>false</default>
+        <label>ADE</label>
+    </customValue>
+    <customValue>
+        <fullName>PWE</fullName>
+        <default>false</default>
+        <label>PWE</label>
+    </customValue>
+    <customValue>
+        <fullName>PEP&apos;S</fullName>
+        <default>false</default>
+        <label>PEP&apos;S</label>
+    </customValue>
+    <masterLabel>Société du owner</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

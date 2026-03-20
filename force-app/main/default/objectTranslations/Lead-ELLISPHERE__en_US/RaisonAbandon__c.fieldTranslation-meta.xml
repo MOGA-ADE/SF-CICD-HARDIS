@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Raison de l&apos;Abandon --></label>
+    <name>RaisonAbandon__c</name>
+    <picklistValues>
+        <masterLabel>Absence de pouvoir décisionnel</masterLabel>
+        <translation><!-- Absence de pouvoir décisionnel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autre</masterLabel>
+        <translation><!-- Autre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doublon</masterLabel>
+        <translation><!-- Doublon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Délai de décision</masterLabel>
+        <translation><!-- Délai de décision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fermeture entreprise</masterLabel>
+        <translation><!-- Fermeture entreprise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hors Sujet</masterLabel>
+        <translation><!-- Hors Sujet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mauvais numéro / email</masterLabel>
+        <translation><!-- Mauvais numéro / email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mauvaise note Ellisphere</masterLabel>
+        <translation><!-- Mauvaise note Ellisphere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N&apos;a pas fait de demande</masterLabel>
+        <translation><!-- N&apos;a pas fait de demande --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ne pas recruter</masterLabel>
+        <translation><!-- Ne pas recruter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ne répond pas</masterLabel>
+        <translation><!-- Ne répond pas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Particulier</masterLabel>
+        <translation><!-- Particulier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pas convaincu par les services</masterLabel>
+        <translation><!-- Pas convaincu par les services  --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pas de besoin actuel</masterLabel>
+        <translation><!-- Pas de besoin actuel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pas intéressé</masterLabel>
+        <translation><!-- Pas intéressé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problème technique</masterLabel>
+        <translation><!-- Problème technique --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service proposé ne correspond pas au besoin</masterLabel>
+        <translation><!-- Service proposé ne correspond pas au besoin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vient de signer ailleurs</masterLabel>
+        <translation><!-- Vient de signer ailleurs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Échéance à plus de 24 mois</masterLabel>
+        <translation><!-- Échéance à plus de 24 mois --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

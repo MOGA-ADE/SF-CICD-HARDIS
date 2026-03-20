@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AttValues</name>
+        <label>AttValues</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignmentItems>
+            <assignToReference>CAR</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FormuleCAR</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UpdateRecord</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>FormuleCAR</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+  AND(
+    {!$Record.RecordType.DeveloperName} = &apos;PDE_ElecC5&apos;,
+    OR({!$Record.TECH_MU_CU__c} = &apos;CU&apos;, ISPICKVAL({!$Record.FTA__c}, &apos;BT &lt;= 36 kVA - LU EP&apos;)),
+    {!$Record.TECH_C5_4Postes__c} = false
+  ), 
+  {!$Record.Conso_Base__c},
+  IF(
+    AND(
+      {!$Record.RecordType.DeveloperName} = &apos;PDE_ElecC5&apos;,
+      {!$Record.TECH_MU_CU__c} = &apos;MU&apos;,
+      {!$Record.TECH_C5_4Postes__c} = false
+    ), 
+    ({!$Record.ConsoHP__c} + {!$Record.ConsoHC__c}),
+    IF(
+      AND(
+        {!$Record.RecordType.DeveloperName} = &apos;PDE_ElecC5&apos;,
+        {!$Record.TECH_C5_4Postes__c} = true
+      ), 
+      ({!$Record.Conso_HPH__c} + {!$Record.Conso_HCH__c} + {!$Record.Conso_HPE__c} + {!$Record.Conso_HCE__c}),
+      IF(
+        OR(
+          {!$Record.RecordType.DeveloperName} = &apos;Elec_C3_C4&apos;,
+          {!$Record.RecordType.DeveloperName} = &apos;Elec_C1C2&apos;
+        ), 
+        ({!$Record.Conso_Pointe__c} + {!$Record.Conso_HPH__c} + {!$Record.Conso_HCH__c} + {!$Record.Conso_HPE__c} + {!$Record.Conso_HCE__c}),
+          null
+        )
+      )
+    )
+  )</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>FL008_AutomatedCalcul {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FL008_AutomatedCalcul</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UpdateRecord</name>
+        <label>UpdateRecord</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Consommation_Annuelle_de_R_f_rence_Elec__c</field>
+            <value>
+                <elementReference>CAR</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>AttValues</targetReference>
+        </connector>
+        <filterFormula>OR(
+ISNEW(),
+OR(
+ISCHANGED({!$Record.Conso_Base__c}),
+ISCHANGED({!$Record.Conso_HCE__c}),
+ISCHANGED({!$Record.Conso_HPH__c}),
+ISCHANGED({!$Record.Conso_HCH__c}),
+ISCHANGED({!$Record.Conso_HPE__c}),
+ISCHANGED({!$Record.Conso_Pointe__c}),
+ISCHANGED({!$Record.ConsoHC__c}),
+ISCHANGED({!$Record.ConsoHP__c}),
+ISCHANGED({!$Record.FTA__c})
+)
+)</filterFormula>
+        <object>PDE__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>CAR</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+    </variables>
+</Flow>

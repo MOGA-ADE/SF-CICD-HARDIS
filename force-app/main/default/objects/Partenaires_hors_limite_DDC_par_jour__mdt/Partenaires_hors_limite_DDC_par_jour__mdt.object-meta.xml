@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Liste des partenaires qui ne comptent pas dans le calcul du nombre de cotation par jour</description>
+    <label>Partenaire hors limite DDC par jour</label>
+    <pluralLabel>Partenaires hors limite DDC par jour</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

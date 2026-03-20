@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>DocuSign - Renouvellement ACD</label>
+    <permissionSets>AccesBoutonRenouvellementACD</permissionSets>
+    <permissionSets>DocuSign_JWT_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

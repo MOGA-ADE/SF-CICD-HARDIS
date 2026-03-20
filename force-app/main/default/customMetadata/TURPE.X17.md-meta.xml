@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>17</label>
+    <protected>false</protected>
+    <values>
+        <field>CSPV_Base__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>CSPV_HCE__c</field>
+        <value xsi:type="xsd:double">6.9</value>
+    </values>
+    <values>
+        <field>CSPV_HCH__c</field>
+        <value xsi:type="xsd:double">19.9</value>
+    </values>
+    <values>
+        <field>CSPV_HC__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>CSPV_HPE__c</field>
+        <value xsi:type="xsd:double">10.1</value>
+    </values>
+    <values>
+        <field>CSPV_HPH__c</field>
+        <value xsi:type="xsd:double">40.5</value>
+    </values>
+    <values>
+        <field>CSPV_HP__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>CSPV_PTE__c</field>
+        <value xsi:type="xsd:double">70.1</value>
+    </values>
+    <values>
+        <field>Composant_de_Comptage__c</field>
+        <value xsi:type="xsd:double">376.39</value>
+    </values>
+    <values>
+        <field>Composant_de_Gestion__c</field>
+        <value xsi:type="xsd:double">435.72</value>
+    </values>
+    <values>
+        <field>Composant_de_Soutirage_Part_Fixe__c</field>
+        <value xsi:type="xsd:double">14.41</value>
+    </values>
+    <values>
+        <field>FTA__c</field>
+        <value xsi:type="xsd:string">HTA - PM - CU</value>
+    </values>
+    <values>
+        <field>Index__c</field>
+        <value xsi:type="xsd:double">5.1</value>
+    </values>
+    <values>
+        <field>Segment__c</field>
+        <value xsi:type="xsd:string">C1</value>
+    </values>
+</CustomMetadata>

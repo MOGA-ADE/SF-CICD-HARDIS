@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deux_decimales_pour_les_conso</fullName>
+    <active>true</active>
+    <description>Les champs de consommation doivent avoir exactement deux chiffres après la virgule.</description>
+    <errorConditionFormula>OR(
+AND(NOT(ISBLANK(CARGaz__c)), MOD(CARGaz__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Consommation_Annuelle_de_R_f_rence_Elec__c)), MOD(Consommation_Annuelle_de_R_f_rence_Elec__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Conso_Base__c)), MOD(Conso_Base__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Conso_HPH__c)), MOD(Conso_HPH__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Conso_HPE__c)), MOD(Conso_HPE__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Conso_HCH__c)), MOD(Conso_HCH__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Conso_HCE__c)), MOD(Conso_HCE__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(ConsoHP__c)), MOD(ConsoHP__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(ConsoHC__c)), MOD(ConsoHC__c * 100, 1) &lt;&gt; 0),
+AND(NOT(ISBLANK(Conso_Pointe__c)), MOD(Conso_Pointe__c * 100, 1) &lt;&gt; 0)
+)</errorConditionFormula>
+    <errorMessage>Les champs de consommation doivent avoir exactement deux chiffres après la virgule.
+Cliquez sur les champs de consommation pour voir leur valeur exacte.</errorMessage>
+</ValidationRule>

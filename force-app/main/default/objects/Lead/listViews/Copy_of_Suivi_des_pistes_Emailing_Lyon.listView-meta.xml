@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Suivi_des_pistes_Emailing_Lyon</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+    <columns>Campagne_emailing__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campagne_emailing__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Sans suite,Refusée,Faux numéro,Hors Cible</value>
+    </filters>
+    <filters>
+        <field>Role_du_proprietaire__c</field>
+        <operation>contains</operation>
+        <value>ADE Lille</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>Réactivation Lille,Warm,Hot,Emailing Lille</value>
+    </filters>
+    <label>Suivi des pistes - Emailing Lille</label>
+    <sharedTo>
+        <role>Commercial_ADE_Lille</role>
+        <role>Directeur_Commercial_ADE_Lille</role>
+        <role>Direction</role>
+    </sharedTo>
+</ListView>

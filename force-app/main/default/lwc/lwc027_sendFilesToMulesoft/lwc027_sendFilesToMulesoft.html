@@ -1,0 +1,33 @@
+<template>
+    <article class="slds-card borderBottom">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:mulesoft" alternative-text="Mulesoft Icon" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Drop bills">
+                            <span class="slds-text-heading_x-small"><b>Déposer des factures ELEC/ACD sur Mulesoft (Bêta)</b></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner slds-m-bottom_large">
+            <lightning-file-upload
+                label="Vos factures"
+                name="fileUploader"
+                multiple
+                record-id={recordId}
+                accepted-formats={acceptedFormats}
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+            <lightning-spinner if:true={isLoading} alternative-text="Loading" size="x-small"></lightning-spinner>
+        </div>
+        <footer class="slds-card__footer">
+            <p style="text-align: left;"><em>10 factures <strong>ELEC</strong> en même temps maximum. Chaque facture doit peser 10MB ou moins et être au format PDF</em></p>
+        </footer>
+    </article>
+</template>

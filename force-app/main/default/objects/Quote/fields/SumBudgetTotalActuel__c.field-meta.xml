@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SumBudgetTotalActuel__c</fullName>
+    <description>Somme des BudgetTotalActuel__c des QLI liés</description>
+    <inlineHelpText>Somme des BudgetTotalActuel__c des QLI liés</inlineHelpText>
+    <label>Budget Total Actuel (€HT/an)</label>
+    <summarizedField>QuoteLineItem.BudgetTotalActuel__c</summarizedField>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

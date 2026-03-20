@@ -1,0 +1,22 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  variant="Narrow"  title="Copropriétés" icon-name="standard:custom_notification">
+        <span slot="actions">
+            <a class="slds-button slds-button_neutral" href="https://alliancedesenergies.my.site.com/partenaire/resource/Templates/Template_Import/Template_IMPORT_COPRO.xlsx" target="_blank">Template import CSV COPRO</a>
+            <lightning-button label="Supprimer les copropriétés selectionnées" slot="actions" style="padding-left: 5px;" onclick={deleteCoproRowAction}></lightning-button>
+        </span>
+        <p slot="footer">
+            <lightning-datatable
+                key-field="id"
+                data={listCopro}
+                columns={columns}
+                onrowselection={getSelectedIdAction}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                selected-rows={setSelectedRows}
+                onsort={handleSortCopro}
+                >
+            </lightning-datatable>
+        </p>
+    </lightning-card>
+</template>

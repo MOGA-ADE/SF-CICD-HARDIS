@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Template Cotation --></label>
+    <name>TemplateCotation__c</name>
+    <picklistValues>
+        <masterLabel>C1/C2/C3/C4</masterLabel>
+        <translation><!-- C1/C2/C3/C4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C5</masterLabel>
+        <translation><!-- C5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C5 4 postes</masterLabel>
+        <translation><!-- C5 4 postes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaz</masterLabel>
+        <translation><!-- Gaz --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

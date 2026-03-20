@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Email pour notifier l&apos;apporteur d&apos;affaire de l&apos;avancement de sa piste --></help>
+    <label><!-- Email Apporteur Affaire --></label>
+    <name>Email_Apporteur_Affaire__c</name>
+</CustomFieldTranslation>

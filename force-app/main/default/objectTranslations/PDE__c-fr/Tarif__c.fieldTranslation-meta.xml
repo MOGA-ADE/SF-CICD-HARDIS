@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tarif --></label>
+    <name>Tarif__c</name>
+    <picklistValues>
+        <masterLabel>T1</masterLabel>
+        <translation><!-- T1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T2</masterLabel>
+        <translation><!-- T2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T3</masterLabel>
+        <translation><!-- T3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T4</masterLabel>
+        <translation><!-- T4 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

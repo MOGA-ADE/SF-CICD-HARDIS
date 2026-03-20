@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "f04741d3-62c7-42a7-8502-962ced544829",
+  "appPageId" : "f9f2494f-415a-4e39-a047-76d6a255a59f",
+  "configurationTags" : [ ],
+  "devName" : "Omniscript",
+  "id" : "3d707cf6-7eea-4b02-9801-c86bb3a95002",
+  "label" : "__MISSING LABEL__ Flexipage_service_view-omniscript_title not found! Please add it to the correct section in sites.xml",
+  "pageAccess" : "UseParent",
+  "routeType" : "omniscript",
+  "type" : "route",
+  "urlPrefix" : "omniscript"
+}

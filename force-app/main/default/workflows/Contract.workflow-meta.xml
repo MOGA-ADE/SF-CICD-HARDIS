@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Contrat_relance_12_mois</fullName>
+        <description>Contrat relance 12 mois</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Relance_12_mois</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrat_relance_18_mois</fullName>
+        <description>Contrat relance 18 mois</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Relance_18_mois</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrat_relance_3_mois</fullName>
+        <description>Contrat relance 3 mois</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Relance_3_mois</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrat_relance_6_mois</fullName>
+        <description>Contrat relance 6 mois</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Relance_6_mois</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrat_valid</fullName>
+        <ccEmails>adv@alliancedesenergies.fr</ccEmails>
+        <description>Contrat validé sans commission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Mail_manager_commercial__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Commercial__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Contrat_Valide_Sans_Commission</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrat_valid_PWE</fullName>
+        <description>Contrat validé PWE</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>a.beaufils@pwe-consulting.fr</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>l.dauge@pwe-consulting.fr</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>p-l.dominjon@pwe-consulting.fr1</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Commercial__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Contrat_Valide</template>
+    </alerts>
+    <alerts>
+        <fullName>Contrat_valide</fullName>
+        <ccEmails>adv@alliancedesenergies.fr</ccEmails>
+        <description>Contrat validé</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Mail_manager_commercial__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Commercial__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Contrat/Contrat_Valide</template>
+    </alerts>
+    <alerts>
+        <fullName>Symposium_offre_adhesion_gratuite</fullName>
+        <description>Symposium offre adhésion gratuite</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Mail_signataire__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>tech@alliancedesenergies.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Info_adh_rent_Symposium_1711531715069</template>
+    </alerts>
+</Workflow>

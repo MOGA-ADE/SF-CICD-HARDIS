@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Demande de cotation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Demandes de cotation</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <recordTypes>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Merci de renseigner une nouvelle date de RDV --></errorMessage>
+        <name>VR_001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Merci de respecter le délais de 24H minimum pour une demande de réactualisation. --></errorMessage>
+        <name>VR_002</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cette demande de cotation n&apos;est plus modifiable. Merci d&apos;en créer une nouvelle. --></errorMessage>
+        <name>VR_003</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cette demande de cotation est verrouillée --></errorMessage>
+        <name>VR_004</name>
+    </validationRules>
+</CustomObjectTranslation>

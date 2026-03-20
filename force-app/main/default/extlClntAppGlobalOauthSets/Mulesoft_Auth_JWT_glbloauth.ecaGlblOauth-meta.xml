@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppGlobalOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <callbackUrl>https://alliancedesenergies.lightning.force.com/callback</callbackUrl>
+    <certificate>MIIEcjCCA1qgAwIBAgIOAZvrdSucAAAAAHJlCAMwDQYJKoZIhvcNAQELBQAwfjEW
+MBQGA1UEAwwNTXVsZXNvZnRfQXV0aDEYMBYGA1UECwwPMDBEMm8wMDAwMDBzckh6
+MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNj
+bzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTAeFw0yNjAxMjMxNTI0NDNaFw0y
+NzAxMjMxMjAwMDBaMH4xFjAUBgNVBAMMDU11bGVzb2Z0X0F1dGgxGDAWBgNVBAsM
+DzAwRDJvMDAwMDAwc3JIejEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNV
+BAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUNk5sJefo2kw+Pd4s3aY0n/MW
+EXsXIdysVfH2PeVRNzw8GBPkaqee2vKSsPrOUl0vErfZeoVzZsMKbUXAIZZPx06e
+BXBioNRJuitlZyKrEDdPO0G+MDEx4C9w5RY2dMx1fsCRDLqiUybNnkHzCrt6bH4j
+G8cBGHFPvI41zsMGwdkM/1ZKAvg1NDEiHw4H/4J1u1lbbsM9CmmdW6DijmpJsJKg
+JbK29QqOCFxaomFQfkfy5D+vzLql8geK1w4S7BNfLO+Jlpy/FTouInx3C9ZtaqSZ
+Xi2r989WOszCieXamrlffpWQnEn9gYZL5GYfEvhsH7+jsn+2OZyzo3LVjUAZAgMB
+AAGjge0wgeowHQYDVR0OBBYEFM/H9jiGTGnl5kBYR7YpwwCDH2GoMA8GA1UdEwEB
+/wQFMAMBAf8wgbcGA1UdIwSBrzCBrIAUz8f2OIZMaeXmQFhHtinDAIMfYaihgYOk
+gYAwfjEWMBQGA1UEAwwNTXVsZXNvZnRfQXV0aDEYMBYGA1UECwwPMDBEMm8wMDAw
+MDBzckh6MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZy
+YW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQYIOAZvrdSucAAAAAHJl
+CAMwDQYJKoZIhvcNAQELBQADggEBAEzdrnlZhESACqEXRq1DrSbQGmmUyl5shCxl
+nZKZ8qZEwARTDwiVaQjXHhmkH+hk/A7NLqBJ2lTDuEnW9Vak+Ceb12q6vSKxaWjg
+onwDuWrHf94zRDSDgHdyIPlpIJBmawUqxsBtI6hs9sWm5xolQ9wyG0rDc0fV6Lmn
+ILrNBIf7GekinhoINC0YjT2qFm8l3eFgYCs2NEmOF8mMq+4PC4+ZIMloPTs21GT5
+8Gwo0Yzq+sh+nlm5nJQHGUW334jcJPu3b1Hw8GWXStBvC0VLNytmy6GHpE+wDGNK
+NrhYBJWQ4neAdjPg2Cqmt+psDh0z+ytZcf0Bb0FX/k4qG04l8Vo=</certificate>
+    <consumerKey>3MVG9Ve.2wqUVx_a5xabl3ucv2sQVYJLseicJdr.2mzqhXrV38SoRkV9DYlbxBkza985KSuyydwDP504eSmwx</consumerKey>
+    <externalClientApplication>Mulesoft_Auth_JWT</externalClientApplication>
+    <isClientCredentialsFlowEnabled>false</isClientCredentialsFlowEnabled>
+    <isCodeCredFlowEnabled>false</isCodeCredFlowEnabled>
+    <isCodeCredPostOnly>false</isCodeCredPostOnly>
+    <isConsumerSecretOptional>false</isConsumerSecretOptional>
+    <isDeviceFlowEnabled>false</isDeviceFlowEnabled>
+    <isIntrospectAllTokens>false</isIntrospectAllTokens>
+    <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+    <isPkceRequired>false</isPkceRequired>
+    <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+    <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+    <isSecretRequiredForTokenExchange>true</isSecretRequiredForTokenExchange>
+    <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+    <label>Mulesoft_Auth_JWT_glbloauth</label>
+    <shouldRotateConsumerKey>false</shouldRotateConsumerKey>
+    <shouldRotateConsumerSecret>false</shouldRotateConsumerSecret>
+</ExtlClntAppGlobalOauthSettings>

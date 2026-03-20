@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Consommation d&apos;énergie en volume --></label>
+    <name>conso_energie_volume__c</name>
+    <picklistValues>
+        <masterLabel>0 - 100 MWh / an</masterLabel>
+        <translation><!-- 0 - 100 MWh / an --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100 - 500 MWh / an</masterLabel>
+        <translation><!-- 100 - 500 MWh / an --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>500 MWh - 1 GWh / an</masterLabel>
+        <translation><!-- 500 MWh - 1 GWh / an --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&gt; 1 GWh / an</masterLabel>
+        <translation><!-- &gt; 1 GWh / an --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Je ne connais pas ma consommation</masterLabel>
+        <translation><!-- Je ne connais pas ma consommation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

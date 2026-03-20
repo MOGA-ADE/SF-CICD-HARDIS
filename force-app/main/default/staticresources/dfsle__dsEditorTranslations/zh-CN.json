@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "撤消"
+    },
+    "btn-redo" : {
+      "translate" : "重做"
+    },
+    "btn-fontstyle" : {
+      "translate" : "字体样式"
+    },
+    "btn-fontsize" : {
+      "translate" : "字体大小"
+    },
+    "btn-bold" : {
+      "translate" : "粗体"
+    },
+    "btn-italic" : {
+      "translate" : "斜体"
+    },
+    "btn-underline" : {
+      "translate" : "下划线"
+    },
+    "btn-fontcolor" : {
+      "translate" : "文本颜色"
+    },
+    "btn-leftalign" : {
+      "translate" : "左对齐"
+    },
+    "btn-rightalign" : {
+      "translate" : "右对齐"
+    },
+    "btn-centeralign" : {
+      "translate" : "居中对齐"
+    },
+    "btn-linespacing" : {
+      "translate" : "行间距"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "项目符号列表"
+    },
+    "btn-orderedlist" : {
+      "translate" : "编号列表"
+    },
+    "btn-inserttable" : {
+      "translate" : "插入表格"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "删除"
+      },
+      "btn-mergecells" : {
+        "translate" : "合并单元格",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "在上方插入行"
+      },
+      "btn-2" : {
+        "translate" : "在下方插入行"
+      },
+      "btn-3" : {
+        "translate" : "在左侧插入列"
+      },
+      "btn-4" : {
+        "translate" : "在右侧插入列"
+      },
+      "btn-5" : {
+        "translate" : "配置表格"
+      },
+      "btn-6" : {
+        "translate" : "删除行"
+      },
+      "btn-7" : {
+        "translate" : "删除列"
+      },
+      "btn-8" : {
+        "translate" : "删除表格"
+      },
+      "btn-9" : {
+        "translate" : "填充背景色"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "添加逻辑规则"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "上传图像"
+      },
+      "btn-2" : {
+        "translate" : "上傳文件"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "标题",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "副标题",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "普通文本",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "公司",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "签名日期",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "电子邮件",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "名字",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "全名",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "姓名首字母",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "姓氏",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "签名",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "签名",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "文本",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "标题",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "收起详情"
+    },
+    "btn-2" : {
+      "translate" : "更多详细信息"
+    },
+    "label-1" : {
+      "translate" : "字符限制"
+    },
+    "label-2" : {
+      "translate" : "选择名称类型"
+    },
+    "label-3" : {
+      "translate" : "数据标签"
+    },
+    "label-4" : {
+      "translate" : "只读"
+    },
+    "label-5" : {
+      "translate" : "必填字段"
+    },
+    "label-6" : {
+      "translate" : "工具使用建议"
+    },
+    "label-7" : {
+      "translate" : "验证"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "无"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "电子邮件"
+      },
+      "dropdown-numbers" : {
+        "translate" : "数字"
+      },
+      "dropdown-letters" : {
+        "translate" : "信件"
+      },
+      "dropdown-date" : {
+        "translate" : "日期"
+      },
+      "dropdown-zip" : {
+        "translate" : "邮编（Zip）"
+      },
+      "dropdown-zip4" : {
+        "translate" : "邮编（Zip + 4）"
+      },
+      "dropdown-custom" : {
+        "translate" : "自定义"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ", (逗号)"
+      },
+      "text-datemask" : {
+        "translate" : "验证日期掩码"
+      },
+      "date-1" : {
+        "translate" : "mm/dd/yyyy",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "dd/mm/yyyy",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "yyyy/mm/dd",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "日期格式应为：X年X月X日"
+      },
+      "text-datemessage2" : {
+        "translate" : "日期格式应为：X年X月X日"
+      },
+      "text-datemessage3" : {
+        "translate" : "日期格式应为：X年X月X日"
+      },
+      "text-decimalseparator" : {
+        "translate" : "小数分隔符"
+      },
+      "text-errormessage" : {
+        "translate" : "错误消息"
+      },
+      "text-lettersmessage" : {
+        "translate" : "仅可输入字母"
+      },
+      "text-period" : {
+        "translate" : ". (点号)"
+      },
+      "text-regexpattern" : {
+        "translate" : "正则表达式"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "创建合并表格：{{label}}"
+    },
+    "label-2" : {
+      "translate" : "選擇的欄"
+    },
+    "label-3" : {
+      "translate" : "（拖动各列可重新排序）"
+    },
+    "label-4" : {
+      "translate" : "字段"
+    },
+    "button-1" : {
+      "translate" : "取消"
+    },
+    "button-2" : {
+      "translate" : "应用"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "DocuSign 字段"
+    },
+    "label-2" : {
+      "translate" : "Salesforce 字段"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "编辑收件人"
+    },
+    "btn-2" : {
+      "translate" : "添加收件人"
+    },
+    "btn-3" : {
+      "translate" : "添加另一个"
+    },
+    "btn-4" : {
+      "translate" : "完成",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "取消",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "删除",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "添加并编辑收件人角色您可能使用的一些角色，包括“客户”或”人力资源”"
+    },
+    "text-2" : {
+      "translate" : "占位符名称（必填*）",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "此收件人具有 1 个分配的字段。删除收件人时会同时删除其字段。是否要删除收件人及字段？"
+    },
+    "text-4" : {
+      "translate" : "此收件人具有 {{number}} 个分配的字段。删除此收件人时会同时删除其字段。是否要删除此收件人及其字段？"
+    },
+    "label-1" : {
+      "translate" : "收件人有字段"
+    },
+    "error-1" : {
+      "translate" : "每个收件人名称必须是唯一的"
+    },
+    "error-2" : {
+      "translate" : "请包含占位符名称"
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "出现了错误"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "取消"
+    },
+    "loadMore" : {
+      "translate" : "加载更多……"
+    },
+    "noResultsFound" : {
+      "translate" : "💬未找到任何结果"
+    },
+    "previewBtn" : {
+      "translate" : "预览"
+    },
+    "previewOff" : {
+      "translate" : "预览已关闭"
+    },
+    "previewOn" : {
+      "translate" : "预览已开启"
+    },
+    "recentlyUsed" : {
+      "translate" : "最近使用"
+    },
+    "record" : {
+      "translate" : "记录"
+    },
+    "recordModalDescription" : {
+      "translate" : "查看合并字段填入真实数据后的样子"
+    },
+    "recordModalTitle" : {
+      "translate" : "选择要预览的记录"
+    },
+    "searchSalesforce" : {
+      "translate" : "搜索 Salesforce"
+    },
+    "showSmartContent" : {
+      "translate" : "显示智能内容"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "上传文件开始创建"
+    },
+    "text-2" : {
+      "translate" : "也可将文件拖放到此处"
+    },
+    "text-3" : {
+      "translate" : "支持的文件类型：.docx、.jpg、.jpeg、.png、.gif"
+    },
+    "text-4" : {
+      "translate" : "最大文档大小：{{number}} MB",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "已成功添加模板。"
+    },
+    "text-6" : {
+      "translate" : "您尝试上传的文档太大。我们最大支持 25MB 的文档。"
+    },
+    "text-7" : {
+      "translate" : "您尝试上传的文件格式不受支持。我们支持如下格式：.DOCX、.CSV、.TXT、.PNG、.GIF、.JPEG 和 .JPG 文件。"
+    },
+    "text-8" : {
+      "translate" : "抱歉，请一次上传一个文档"
+    },
+    "text-9" : {
+      "translate" : "抱歉，无法导入此文件"
+    },
+    "btn-upload" : {
+      "translate" : "上传"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "取消"
+    },
+    "btn-edit" : {
+      "translate" : "编辑"
+    },
+    "btn-delete" : {
+      "translate" : "删除"
+    },
+    "btn-save" : {
+      "translate" : "保存"
+    },
+    "label-title" : {
+      "translate" : "规则生成器"
+    },
+    "btn-add" : {
+      "translate" : "添加规则"
+    },
+    "label-name" : {
+      "translate" : "命名规则"
+    },
+    "dropdown-method1" : {
+      "translate" : "应用以下所有条件"
+    },
+    "dropdown-method2" : {
+      "translate" : "应用以下任意条件"
+    },
+    "label-if" : {
+      "translate" : "如果"
+    },
+    "label-orif" : {
+      "translate" : "或"
+    },
+    "label-andif" : {
+      "translate" : "及"
+    },
+    "label-then" : {
+      "translate" : "之后"
+    },
+    "label-otherwise" : {
+      "translate" : "不满足上述任何条件时……"
+    },
+    "dropdown-show" : {
+      "translate" : "显示以下内容"
+    },
+    "dropdown-hide" : {
+      "translate" : "隐藏以下内容"
+    },
+    "text-drag1" : {
+      "translate" : "将合并字段拖到此“如果”容器内的任意位置。"
+    },
+    "text-drag2" : {
+      "translate" : "将您的 Salesforce 字段拖到此处。"
+    },
+    "text" : {
+      "translate" : "您对此逻辑块所做的任何更改都不会被保存。请确认您要取消。"
+    },
+    "text-title" : {
+      "translate" : "是否确定要取消？"
+    },
+    "btn-confirm" : {
+      "translate" : "确认"
+    },
+    "error-1" : {
+      "translate" : "请输入一个规则名称。"
+    },
+    "error-2" : {
+      "translate" : "某些条件存在无效值。"
+    },
+    "error-3" : {
+      "translate" : "抱歉，您的逻辑块中存在重复的规则名称。请重命名后再次尝试。"
+    },
+    "error-4" : {
+      "translate" : "向 {{name}} 添加一个条件以创建逻辑块。",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "请向 {{name}} 中的“然后”逻辑语句添加内容。",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "请向“不满足上述任何条件时”中的“然后”逻辑语句添加内容。"
+    },
+    "placeholder" : {
+      "translate" : "开始在此处输入或复制/粘贴您的新内容……"
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "在此处输入或粘贴文本，开始创建新模板...",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "单倍行距",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1.5 倍行距",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "双倍行距",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "搜索字段"
+    },
+    "noResultMessage" : {
+      "translate" : "未找到任何结果"
+    }
+  }
+}

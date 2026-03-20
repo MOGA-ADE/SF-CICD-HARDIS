@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Permanance AOUT 0608</label>
+    <protected>false</protected>
+    <values>
+        <field>canal_vente__c</field>
+        <value xsi:type="xsd:string">Directe</value>
+    </values>
+    <values>
+        <field>date_debut__c</field>
+        <value xsi:type="xsd:date">2025-08-06</value>
+    </values>
+    <values>
+        <field>date_fin__c</field>
+        <value xsi:type="xsd:date">2025-08-25</value>
+    </values>
+    <values>
+        <field>nb_dossier__c</field>
+        <value xsi:type="xsd:double">20.0</value>
+    </values>
+</CustomMetadata>

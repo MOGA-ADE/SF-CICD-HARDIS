@@ -1,0 +1,39 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "e3215437-4e00-4743-8e14-10fbe80f4990",
+  "label" : "Entité Juridique Liste associée",
+  "regions" : [ {
+    "id" : "472ba52f-5825-4389-9579-ad6fba6db10b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customTitle" : "",
+        "parentRecordId" : "{!recordId}",
+        "relatedListName" : "{!relationshipApiName}",
+        "showBreadCrumbs" : true,
+        "showCustomTitle" : false,
+        "showManualRefreshButton" : true,
+        "showRowNumbers" : true
+      },
+      "componentName" : "forceCommunity:relatedList",
+      "id" : "b477d0a6-dab5-4ea8-a025-a624b14bd848",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c11887c8-343b-416a-b77e-20cd806bc4dc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "0de6cfeb-d815-47aa-9467-919788c100e1",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-001"
+}
