@@ -45,3 +45,7 @@ tmp/
 **/data/**/source/**
 **/data/**/target/**
 force-app/main/default/appMenus/AppSwitcher.appMenu-meta.xml
+packagexml-batch-*.xml
+packagexmlfull*.xml
+split-packagexml.py
+clean-*.sh
