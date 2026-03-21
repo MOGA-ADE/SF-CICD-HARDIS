@@ -3,4 +3,204 @@ developmentBranch: integration
 autoCleanTypes:
   - destructivechanges
   - flowPositions
-  # - minimizeProfiles
+installedPackages:
+  - Id: 0A32o000000kqkOCAQ
+    SubscriberPackageId: 03324000000TVrvAAG
+    SubscriberPackageName: Aircall CTI
+    SubscriberPackageNamespace: aircall
+    SubscriberPackageVersionId: 04tJ6000000l35GIAQ
+    SubscriberPackageVersionName: '2.26'
+    SubscriberPackageVersionNumber: 2.26.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000piiuCAA
+    SubscriberPackageId: 0332p000000EBa1AAG
+    SubscriberPackageName: ELLISPHERE
+    SubscriberPackageNamespace: ELLISPHERE
+    SubscriberPackageVersionId: 04t2p000001OFvRAAW
+    SubscriberPackageVersionName: Ellisphere connecteur
+    SubscriberPackageVersionNumber: 2.60.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000kqaiCAA
+    SubscriberPackageId: 033b0000000Pf2AAAS
+    SubscriberPackageName: Declarative Lookup Rollup Summaries Tool
+    SubscriberPackageNamespace: dlrs
+    SubscriberPackageVersionId: 04t5p000001E8vdAAC
+    SubscriberPackageVersionName: Release
+    SubscriberPackageVersionNumber: 2.19.0.8
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000pij9CAA
+    SubscriberPackageId: 0336F0000005OQLQA2
+    SubscriberPackageName: CMTD Enhanced Related List
+    SubscriberPackageNamespace: CMTD
+    SubscriberPackageVersionId: 04t6F000000cgcYQAQ
+    SubscriberPackageVersionName: 2020 - 3.3
+    SubscriberPackageVersionNumber: 3.3.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000kqZ6CAI
+    SubscriberPackageId: 0334p000000AQHEAA4
+    SubscriberPackageName: Dynamic Flow Progress
+    SubscriberPackageNamespace: dflowp
+    SubscriberPackageVersionId: 04t4p0000027q4bAAA
+    SubscriberPackageVersionName: Dreamforce Release (20 Sep 2022)
+    SubscriberPackageVersionNumber: 2.0.0.3
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000pin6CAA
+    SubscriberPackageId: 0332w000000LaV2AAK
+    SubscriberPackageName: RecordClone
+    SubscriberPackageNamespace: RQL
+    SubscriberPackageVersionId: 04t2w000009J4FcAAK
+    SubscriberPackageVersionName: v1.6
+    SubscriberPackageVersionNumber: 1.6.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000VMtWCAW
+    SubscriberPackageId: 033U00000008YtFIAU
+    SubscriberPackageName: HubSpot Integration
+    SubscriberPackageNamespace: HubSpot_Inc
+    SubscriberPackageVersionId: 04t0B00000063ZSQAY
+    SubscriberPackageVersionName: Coconut
+    SubscriberPackageVersionNumber: 3.0.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o000000kqdwCAA
+    SubscriberPackageId: 0336A000000R2HGQA0
+    SubscriberPackageName: Docusign Apps Launcher
+    SubscriberPackageNamespace: dfsle
+    SubscriberPackageVersionId: 04tKg000000XzuBIAS
+    SubscriberPackageVersionName: 7.14.2
+    SubscriberPackageVersionNumber: 7.14.2.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o0000003HkJCAU
+    SubscriberPackageId: 033400000008lMWAAY
+    SubscriberPackageName: Pardot
+    SubscriberPackageNamespace: pi
+    SubscriberPackageVersionId: 04tKY000000kyFNYAY
+    SubscriberPackageVersionName: Pardot Package v5.9
+    SubscriberPackageVersionNumber: 5.9.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000IpvKSAS
+    SubscriberPackageId: 0331Q000000NyrBQAS
+    SubscriberPackageName: Marketing Setup Objects
+    SubscriberPackageNamespace: sf_mktg
+    SubscriberPackageVersionId: 04tWt000000DSWLIA4
+    SubscriberPackageVersionName: Spring 2026
+    SubscriberPackageVersionNumber: 1.11.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000JoE2SAK
+    SubscriberPackageId: 0331Q0000015PlGQAU
+    SubscriberPackageName: Marketing Analytics
+    SubscriberPackageNamespace: mktg_dcr
+    SubscriberPackageVersionId: 04tWt00000082izIAA
+    SubscriberPackageVersionName: Spring 2025
+    SubscriberPackageVersionNumber: 1.2.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A32o0000003HjVCAU
+    SubscriberPackageId: 033f40000004aGxAAI
+    SubscriberPackageName: b2bmaIntegration
+    SubscriberPackageNamespace: b2bma
+    SubscriberPackageVersionId: 04t5G000004F39PQAS
+    SubscriberPackageVersionName: Pardot Internal Integration
+    SubscriberPackageVersionNumber: 1.7.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000Fx4cSAC
+    SubscriberPackageId: 0336S000000spIBQAY
+    SubscriberPackageName: CDPAdvertising
+    SubscriberPackageNamespace: cdpactvstrgptnr
+    SubscriberPackageVersionId: 04tKk000000Y1BdIAK
+    SubscriberPackageVersionName: 258.12b
+    SubscriberPackageVersionNumber: 3.21.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000JoKUSA0
+    SubscriberPackageId: 0331Q000000Wr6wQAC
+    SubscriberPackageName: Salesforce Data Cloud - Flow Reports
+    SubscriberPackageNamespace: datacldflowrpt
+    SubscriberPackageVersionId: 04tWs000000RrUrIAK
+    SubscriberPackageVersionName: Winter '25
+    SubscriberPackageVersionNumber: 1.2.0.4
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000IpwwSAC
+    SubscriberPackageId: 033EE0000000clFYAQ
+    SubscriberPackageName: Salesforce Data Cloud - Flow Integration
+    SubscriberPackageNamespace: datacloudflow
+    SubscriberPackageVersionId: 04tEE0000005cB7YAI
+    SubscriberPackageVersionName: Winter 2026 (65.0)
+    SubscriberPackageVersionNumber: 1.7.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000JoHGSA0
+    SubscriberPackageId: 0331Q000000YnuTQAS
+    SubscriberPackageName: UMA Analytics (SMS)
+    SubscriberPackageNamespace: uma_dcr_sms
+    SubscriberPackageVersionId: 04t1Q0000016tZIQAY
+    SubscriberPackageVersionName: Spring 2024
+    SubscriberPackageVersionNumber: 1.9.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000IpleSAC
+    SubscriberPackageId: 0331Q000000kZz6QAE
+    SubscriberPackageName: MessagingEventsSms
+    SubscriberPackageNamespace: UMsgSms
+    SubscriberPackageVersionId: 04tWt000000Br5pIAC
+    SubscriberPackageVersionName: Sep'25
+    SubscriberPackageVersionNumber: 1.9.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000IpiQSAS
+    SubscriberPackageId: 0331Q000000oXeAQAU
+    SubscriberPackageName: UnifiedMessagingConsent
+    SubscriberPackageNamespace: UMsgConsentProd
+    SubscriberPackageVersionId: 04tWt000000CQ8PIAW
+    SubscriberPackageVersionName: Aug 2025
+    SubscriberPackageVersionNumber: 1.5.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000Ipk2SAC
+    SubscriberPackageId: 0331Q0000011HLVQA2
+    SubscriberPackageName: UnifiedWhatsAppPackage
+    SubscriberPackageNamespace: UWhatsAppProd
+    SubscriberPackageVersionId: 04tWt000000CMkjIAG
+    SubscriberPackageVersionName: v258 Fall 2025
+    SubscriberPackageVersionNumber: 258.0.0.2
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
+  - Id: 0A3aT000000IpqUSAS
+    SubscriberPackageId: 033EE00000014BFYAY
+    SubscriberPackageName: MessagingEventsEmailEngagement
+    SubscriberPackageNamespace: UnifiedMsgEmail
+    SubscriberPackageVersionId: 04tEE0000003fUrYAI
+    SubscriberPackageVersionName: Apr 18 2025
+    SubscriberPackageVersionNumber: 2.2.0.1
+    VersionSettings: namespace
+    installOnScratchOrgs: false
+    installDuringDeployments: true
