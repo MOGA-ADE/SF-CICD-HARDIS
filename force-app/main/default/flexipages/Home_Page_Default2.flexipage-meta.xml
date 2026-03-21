@@ -28,7 +28,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>siteId</name>
-                    <value>BeOCG10oTVSiBaphvTB/7Q==:A8cp6Ajq5iMLB1gms2APj49oZyY20GFa</value>
+                    <value></value> <!-- GitHub detected a Tableau Personal Access Token hardcoded in a flexipage file! This is a security issue that needs to be fixed before pushing. BeOCG10oTVSiBaphvTB/7Q==:A8cp6Ajq5iMLB1gms2APj49oZyY20GFa -->
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>useJwt</name>
