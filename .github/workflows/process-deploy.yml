@@ -8,7 +8,7 @@ on:
     # Add your major branches names here
     branches:
       - main
-      - preprod
+      - PreProd
 
 name: Process Deployment (sfdx-hardis)
 permissions: read-all

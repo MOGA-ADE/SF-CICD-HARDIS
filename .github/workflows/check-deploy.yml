@@ -9,7 +9,7 @@ on:
     # Add your major branches names here
     branches:
       - main
-      - preprod
+      - PreProd
 permissions: read-all
 name: Simulate Deployment (sfdx-hardis)
 
