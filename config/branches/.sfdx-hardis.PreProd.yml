@@ -1,0 +1,4 @@
+mergeTargets:
+  - PreProd
+targetUsername: m.curpen-external@alliancedesenergies.fr.ellisphere
+instanceUrl: https://alliancedesenergies--ellisphere.sandbox.my.salesforce.com

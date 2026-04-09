@@ -1,0 +1,4 @@
+mergeTargets:
+  - main
+targetUsername: m.curpen-external@alliancedesenergies.fr
+instanceUrl: https://alliancedesenergies.my.salesforce.com
