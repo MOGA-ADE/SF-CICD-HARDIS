@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Durée de l&apos;offre souhaitée --></label>
+    <name>Duree_offre__c</name>
+    <picklistValues>
+        <masterLabel>12 mois</masterLabel>
+        <translation><!-- 12 mois --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>24 mois</masterLabel>
+        <translation><!-- 24 mois --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>36 mois</masterLabel>
+        <translation><!-- 36 mois --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Durée max</masterLabel>
+        <translation><!-- Durée max --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

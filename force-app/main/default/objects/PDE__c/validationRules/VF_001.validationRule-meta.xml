@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VF_001</fullName>
+    <active>true</active>
+    <description>Date de signature de l&apos;ACD supérieur à aujourd&apos;hui</description>
+    <errorConditionFormula>Date_signature_ACD__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Date_signature_ACD__c</errorDisplayField>
+    <errorMessage>Attention, votre date de signature de l&apos;ACD est dans le future</errorMessage>
+</ValidationRule>

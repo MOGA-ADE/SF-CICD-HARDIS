@@ -1,0 +1,39 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "dc876466-594c-46c5-86e0-cba58d5c534e",
+  "label" : "News Related List",
+  "regions" : [ {
+    "id" : "18f1ab6e-dbbd-48b1-bfa0-e3e50b99cd55",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customTitle" : "",
+        "parentRecordId" : "{!recordId}",
+        "relatedListName" : "{!relationshipApiName}",
+        "showBreadCrumbs" : true,
+        "showCustomTitle" : false,
+        "showManualRefreshButton" : true,
+        "showRowNumbers" : true
+      },
+      "componentName" : "forceCommunity:relatedList",
+      "id" : "8324c1d3-3170-4dd0-9e9f-01921e51842b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5b011a15-e4d1-45ec-881b-b909b7518352",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "4b0e52bc-1b3e-4af6-8318-48d6ddf14263",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-a1K"
+}

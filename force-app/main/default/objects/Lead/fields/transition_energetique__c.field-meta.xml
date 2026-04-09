@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>transition_energetique__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Le prospect a indiqué être intéressé par la transition énergétique lorsqu&apos;il a complété un formulaire sur le site alliancedesenergies.fr</description>
+    <label>Intéressé par transition énergétique ?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

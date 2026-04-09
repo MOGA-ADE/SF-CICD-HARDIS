@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type d&apos;Offre --></label>
+    <name>TypeOffre__c</name>
+    <picklistValues>
+        <masterLabel>ARENH</masterLabel>
+        <translation><!-- ARENH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARENH AVEC ÉCRÊTEMENT</masterLabel>
+        <translation><!-- ARENH AVEC ÉCRÊTEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARENH SANS ÉCRÊTEMENT</masterLabel>
+        <translation><!-- ARENH SANS ÉCRÊTEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PEG</masterLabel>
+        <translation><!-- PEG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRIX FIXE</masterLabel>
+        <translation><!-- PRIX FIXE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRV</masterLabel>
+        <translation><!-- TRV --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

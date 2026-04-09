@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_cellule_RDV__c</fullName>
+    <label>Source cellule RDV</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Ellisphere - Import 19/03/2025 Alimentaire</fullName>
+                <default>false</default>
+                <label>Ellisphere - Import 19/03/2025 Alimentaire</label>
+            </value>
+            <value>
+                <fullName>Ellisphere - Import 19/03/2025 Industrie</fullName>
+                <default>false</default>
+                <label>Ellisphere - Import 19/03/2025 Industrie</label>
+            </value>
+            <value>
+                <fullName>Emailing</fullName>
+                <default>false</default>
+                <label>Emailing</label>
+            </value>
+            <value>
+                <fullName>Fichier</fullName>
+                <default>false</default>
+                <label>Fichier</label>
+            </value>
+            <value>
+                <fullName>Partenaire</fullName>
+                <default>false</default>
+                <label>Partenaire</label>
+            </value>
+            <value>
+                <fullName>PEP&apos;S</fullName>
+                <default>false</default>
+                <label>PEP&apos;S</label>
+            </value>
+            <value>
+                <fullName>Prescripteur</fullName>
+                <default>false</default>
+                <label>Prescripteur</label>
+            </value>
+            <value>
+                <fullName>Prospection téléphonique</fullName>
+                <default>false</default>
+                <label>Prospection téléphonique</label>
+            </value>
+            <value>
+                <fullName>Prospection téléphonique - Hors fichier</fullName>
+                <default>false</default>
+                <label>Prospection téléphonique - Hors fichier</label>
+            </value>
+            <value>
+                <fullName>Prospection terrain</fullName>
+                <default>false</default>
+                <label>Prospection terrain</label>
+            </value>
+            <value>
+                <fullName>Recherche internet</fullName>
+                <default>false</default>
+                <label>Recherche internet</label>
+            </value>
+            <value>
+                <fullName>Réseau personnel</fullName>
+                <default>false</default>
+                <label>Réseau personnel</label>
+            </value>
+            <value>
+                <fullName>Sparklane</fullName>
+                <default>false</default>
+                <label>Sparklane</label>
+            </value>
+            <value>
+                <fullName>Target</fullName>
+                <default>false</default>
+                <label>Target</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

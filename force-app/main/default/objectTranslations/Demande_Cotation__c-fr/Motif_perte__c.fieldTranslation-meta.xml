@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motif de perte --></label>
+    <name>Motif_perte__c</name>
+    <picklistValues>
+        <masterLabel>Changement de périmètre</masterLabel>
+        <translation><!-- Changement de périmètre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client injoignable</masterLabel>
+        <translation><!-- Client injoignable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contractualisation avec un courtier concurrent</masterLabel>
+        <translation><!-- Contractualisation avec un courtier concurrent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contractualisation en direct avec un fournisseur non proposé</masterLabel>
+        <translation><!-- Contractualisation en direct avec un fournisseur non proposé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contractualisation en direct avec un fournisseur proposé</masterLabel>
+        <translation><!-- Contractualisation en direct avec un fournisseur proposé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En attente d’une baisse de marché</masterLabel>
+        <translation><!-- En attente d’une baisse de marché --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erreur de données (SIRET, signataire, décisionnaire erroné)</masterLabel>
+        <translation><!-- Erreur de données (SIRET, signataire, décisionnaire erroné) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Projet  annulé (déménagement, vente, imprévu)</masterLabel>
+        <translation><!-- Projet  annulé (déménagement, vente, imprévu) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Souhaite rester chez son fournisseur actuel</masterLabel>
+        <translation><!-- Souhaite rester chez son fournisseur actuel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Échéance trop lointaine</masterLabel>
+        <translation><!-- Échéance trop lointaine --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

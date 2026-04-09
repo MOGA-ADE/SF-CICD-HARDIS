@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Primeo API Preprod Infos</label>
+    <protected>false</protected>
+    <values>
+        <field>Get_Offer_Endpoint__c</field>
+        <value xsi:type="xsd:string">getoffer4</value>
+    </values>
+    <values>
+        <field>Get_Token_Endpoint__c</field>
+        <value xsi:type="xsd:string">getofferaccesstoken</value>
+    </values>
+    <values>
+        <field>Key__c</field>
+        <value xsi:type="xsd:string">$1$O.Kc5mI5$A6N7/ejJn0GL2Y6aEuetz0</value>
+    </values>
+    <values>
+        <field>Secret__c</field>
+        <value xsi:type="xsd:string">dtrEuWq1mlUm3LHQ1a2.N.1wX9ysSycw7Gmx0SeUmio5nqQNsTwUC</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:type="xsd:string">https://eolys-preprod.primeo-energie.fr/pricer/</value>
+    </values>
+    <values>
+        <field>Valid_Offer_Endpoint__c</field>
+        <value xsi:type="xsd:string">validoffer</value>
+    </values>
+</CustomMetadata>

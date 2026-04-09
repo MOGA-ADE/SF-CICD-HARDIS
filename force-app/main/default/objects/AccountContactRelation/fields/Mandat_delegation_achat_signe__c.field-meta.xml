@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandat_delegation_achat_signe__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Mandat de délégation d&apos;achat signé</label>
+    <type>Checkbox</type>
+</CustomField>

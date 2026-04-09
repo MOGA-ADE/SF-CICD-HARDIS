@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_commercial__c</fullName>
+    <inlineHelpText>Le calcul de la commission du commercial se fait lors de la création du contrat.
+Il s&apos;agit de la commission de ADE moins la commission de la source.
+
+Attention, il ne s&apos;agit pas du montant que va percevoir le commercial/partenaire.</inlineHelpText>
+    <label>Commission du commercial €</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

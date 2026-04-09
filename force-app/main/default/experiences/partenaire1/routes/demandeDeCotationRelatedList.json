@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "81897b08-e932-434d-9c06-9623adaedd94",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "Demande_de_cotation_Related_List__c",
+  "id" : "ed625bed-98c3-420e-8fe6-0cfbafc12c87",
+  "label" : "Demande de cotation Related List",
+  "objectApiName" : "Demande_Cotation__c",
+  "routeType" : "relatedlist-a0L",
+  "type" : "route",
+  "urlPrefix" : "demande-cotation"
+}

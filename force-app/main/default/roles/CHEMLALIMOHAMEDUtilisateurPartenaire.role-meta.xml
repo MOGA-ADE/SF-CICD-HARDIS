@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>CHEMLALI MOHAMED Utilisateur Partenaire</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>CHEMLALI MOHAMED Utilisateur Partenaire</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>CHEMLALIMOHAMEDPartenaireResponsable</parentRole>
+</Role>

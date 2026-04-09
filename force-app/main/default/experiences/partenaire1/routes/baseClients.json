@@ -1,0 +1,12 @@
+{
+  "activeViewId" : null,
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "base_clients__c",
+  "id" : "e42a106d-99f2-4190-baaa-d2c39874a28a",
+  "label" : "Base clients",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-base-clients",
+  "type" : "route",
+  "urlPrefix" : "base-clients"
+}

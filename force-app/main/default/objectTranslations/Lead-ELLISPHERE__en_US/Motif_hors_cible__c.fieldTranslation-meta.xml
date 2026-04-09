@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motif de hors cible --></label>
+    <name>Motif_hors_cible__c</name>
+    <picklistValues>
+        <masterLabel>Activité non traitée</masterLabel>
+        <translation><!-- Activité non traitée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cessation d&apos;activité</masterLabel>
+        <translation><!-- Cessation d&apos;activité --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dialogue impossible (Langue étrangère, malentendant)</masterLabel>
+        <translation><!-- Dialogue impossible (Langue étrangère, malentendant) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Déjà en contact avec ADE</masterLabel>
+        <translation><!-- Déjà en contact avec ADE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N&apos;est pas un professionnel</masterLabel>
+        <translation><!-- N&apos;est pas un professionnel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retraité</masterLabel>
+        <translation><!-- Retraité --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Score trop faible</masterLabel>
+        <translation><!-- Score trop faible --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

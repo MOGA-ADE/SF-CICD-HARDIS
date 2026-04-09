@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "ade_pictos_pilotage",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005b0XUAQ",
+        "type" : "file",
+        "size" : 4747
+      }
+    }
+  },
+  "urlName" : "ade-pictos-pilotage"
+}

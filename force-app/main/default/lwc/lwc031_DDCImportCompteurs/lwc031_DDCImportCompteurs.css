@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+}
+
+.template-button {
+    position: relative;
+    bottom: 12px;
+}
+
+.drop {
+    border: 2px dashed rgb(65, 148, 249);
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(65, 148, 249, 0.05);
+    text-align: center;
+    font-weight: bold;
+    color: rgb(53, 93, 150);
+    transition: 0.2s all ease-in-out;
+}
+
+.drop:hover {
+    background: rgba(65, 148, 249, 0.12);
+    cursor: pointer;
+}
+
+.message {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.error {
+    color: #c23934; /* rouge Salesforce */
+}
+
+.success {
+    color: #2e844a; /* vert Salesforce */
+}

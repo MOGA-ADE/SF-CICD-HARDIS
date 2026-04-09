@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDE_GAZ</fullName>
+    <fields>Name</fields>
+    <fields>TECH_num_compteur__c</fields>
+    <label>PDE_GAZ</label>
+</CompactLayout>

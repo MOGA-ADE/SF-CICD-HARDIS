@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suivi_des_pistes_Marketing</fullName>
+    <columns>Derniere_action_realisee__c</columns>
+    <columns>Prochaine_action_planifiee__c</columns>
+    <columns>LastScore__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Type_formulaire__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Commentaires__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type_formulaire__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Sans suite,Refusée,Faux numéro,Hors Cible</value>
+    </filters>
+    <filters>
+        <field>Role_du_proprietaire__c</field>
+        <operation>contains</operation>
+        <value>sédentaire ade</value>
+    </filters>
+    <label>Suivi des pistes Marketing - Lyon</label>
+    <sharedTo>
+        <role>Commercial_sedentaire_ADE</role>
+        <role>Directeur_commercial_sedentaire_ADE</role>
+        <role>Direction</role>
+    </sharedTo>
+</ListView>

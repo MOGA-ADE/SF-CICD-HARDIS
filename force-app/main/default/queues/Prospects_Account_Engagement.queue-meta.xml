@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>C&apos;est pour les prospects qui étaient dans account engagement</description>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>amal.karoui@alliancedesenergies.fr</email>
+    <name>Prospects Account Engagement</name>
+    <queueMembers>
+        <users>
+            <user>a.karoui@alliancedesenergies.fr</user>
+            <user>e.bianchi@alliancedesenergies.fr</user>
+            <user>j.hardouin@alliancedesenergies.fr</user>
+            <user>j.tronel@alliancedesenergies.fr</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

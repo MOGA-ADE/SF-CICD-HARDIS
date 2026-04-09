@@ -1,0 +1,1769 @@
+<apex:page renderAs="pdf" controller="VFC008_ResumeComparatifPDFController" applyBodyTag="false" applyHtmlTag="false" showHeader="false">
+<apex:stylesheet value="{!URLFOR($Resource.EtudeComparative)}"/>
+    <head>
+        <style>
+        @page content_page{
+            size: A4 landscape;
+            margin: 0cm;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: white;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0cm;
+            padding: 0cm;
+            background-color: #031728;
+        }
+
+        .contentPage {
+            page: content_page;
+        }
+
+        .pagenumber:before {
+            content: counter(page);
+        }
+
+        .pagecount:before {
+            content: counter(pages);
+        }
+
+        body, * {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 10px;
+          color: #1E1E1E;
+          box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+            page-break-inside: auto;
+        }
+
+        tr {
+            page-break-inside: avoid; 
+            page-break-after: auto;
+        }
+
+        th, td {
+            border: 1px solid white;
+            border-bottom: none;
+            padding: 8px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th {
+            color: white;
+            font-weight: bold;
+            background-color: #196C75;
+        }
+
+        td {
+            background-color: #EAEAEA;
+        }
+
+        h1 {
+            margin: 0;
+            color: #196C75;
+            font-size: 28px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 99%;
+            text-align: right;
+            font-size: 14px;
+            color: #196C75;
+        }
+
+        .page {
+            width: 29.7cm;
+            height: 20.9cm; 
+            position: relative;
+        }
+
+        .page-break-auto {
+            page-break-after: auto;
+        }
+
+        .page-break-always {
+            page-break-after: always;
+        }
+
+        .fullContent {
+            width: 100%;
+            height: 100%;
+        }
+
+        .paddingAround {
+            width: 90%;
+            height: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .siteSeparator {
+            border: none;
+            background-color: transparent;
+        }
+
+        .metallicBlue {
+            background-color: #27457A;
+        }
+
+        .light-metallicBlue {
+            background-color: #4366a3;
+        }
+
+        .deepCarrot {
+            background-color: #E56633;
+        }
+
+        .beer {
+            background-color: #F28D20;
+        }
+
+        .crystal {
+            background-color: #44acb9;
+        }
+
+        .light-crystal {
+            background-color: #70c7d3;
+        }
+
+        .darkyellow {
+            background-color: #f7bf28;
+        }
+
+        .yellow {
+            background-color: #FFD666;
+        }
+
+        .fontDeepCarrot {
+            color: #E56633;
+        }
+
+        .accueilTextBlock {
+            position: absolute;
+            bottom: 8%;
+            left: 5%;
+            right: 5%;
+            width: 90%;
+            color: #2c3e63;
+        }
+
+        .accueilTextBlock h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e63;
+        }
+
+        .accueilTextBlock .accueilSeparator {
+            font-size: 16px;
+        }
+
+        .accueilTextBlock p.commercialName {
+            margin-top: 4px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .accueilTextBlock p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #2c3e63;
+        }
+
+        .accueilDateBlock {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #2c3e63;
+            font-weight: bold;
+        }
+
+        .boldFournisseur {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* --- GO slide fine-tuning (look maquette) --- */
+        .go-title { margin: 0 0 6px 0; color: #196C75; font-size: 26px; }
+        .go-sub { margin: 6px 0 8px 0; color: #196C75; font-size: 16px; }
+        .go-legend { margin-top: 8px; font-size: 11px; color: #1E1E1E; }
+        .go-section { margin-top: 16px; display: flex; align-items: center; gap: 8px; }
+        .go-icon { height: 18px; vertical-align: middle; }
+        .go-flag {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .go-tight table { margin-top: 12px; }
+        .go-tight th, .go-tight td { padding: 6px 8px; }
+        .go-tight th { font-size: 10px; }
+        .go-tight td { font-size: 10px; }
+        .go-right { text-align: right; }
+        .go-strong { font-weight: bold; }
+        .go-icon {
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            margin-top: -3px;
+        }
+        .go-section img.go-icon {
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            margin-top: -2px;
+        }
+        .go-section h2 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #004d4d;
+            margin-bottom: 15px;
+        }
+        .sub-title-elec {
+            color: #196C75;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .sub-title-gaz {
+            color: #0d7c4d;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #0DA35B;
+            font-weight: bold;
+        }
+L
+        /* Harmonisation des tables GO avec les tables classiques */
+        .comparatif-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            page-break-inside: auto;
+        }
+        .comparatif-table th,
+        .comparatif-table td {
+            border: 1px solid white;
+            padding: 8px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 10px;
+        }
+        .comparatif-table th {
+            color: white;
+            font-weight: bold;
+            background-color: #196C75;
+        }
+        .comparatif-table td {
+            background-color: #EAEAEA;
+        }
+        .comparatif-table td.metallicBlueTD {
+            background-color: #196C75;
+            color: white;
+            font-weight: bold;
+        }
+        .strong {
+            font-weight: bold;
+        }
+        .numeric {
+            text-align: right;
+        }
+        .go-footer {
+            width: 100%;
+            margin-top: 20px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            color: #444;
+        }
+        .sub-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #196C75; /* même vert pour Elec et Gaz */
+            margin: 10px 0;
+        }
+        .sub-title .highlight {
+            font-size: 16px;
+            font-weight: normal;
+            color: #0DA35B; /* vert clair pour mettre en avant */
+        }
+        img.go-reset-icon {
+        height: 20px !important;
+        width: 20px !important;
+        max-height: none !important;
+        max-width: none !important;
+        object-fit: initial !important;
+        }
+
+            /* ==== SECTION OPTIMISATION TURPE ==== */
+
+            /* Conteneur */
+            .turpe-section {
+                background-color: #ffffff !important; /* Force le fond blanc */
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                page-break-inside: avoid;
+            }
+
+            /* Bandeau supérieur (Économies identifiées) */
+            .turpe-banner {
+                background-color: #D9F2FA;
+                text-align: center;
+                padding: 12px;
+                margin: 6px 0;
+            }
+
+            .turpe-banner-label {
+                margin-right : 8%;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .turpe-banner-value {
+                margin-left : 8%;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            /* Tableau */
+            .turpe-table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #ffffff;
+                border: 1px solid #d9d9d9;
+                text-align: center;
+                font-size: 12px;
+                color: #000;
+            }
+
+            .turpe-table td {
+                height: 40px  !important;
+                max-height: 40px  !important; /* Fixe la hauteur pour éviter les variations */
+                overflow: hidden  !important; /* Empêche l’image de forcer la cellule */
+            }
+
+            .turpe-table th {
+                background-color: #196C75; 
+                color: white;
+                padding: 8px;
+                border: 1px solid #d9d9d9;
+                font-weight: bold;
+            }
+
+            .turpe-table td img.blur-icon {
+                width: 50px;      /* Taille fixe */
+                height: 22px;     /* Taille fixe */
+            }
+
+            /* Lignes de catégorie à gauche */
+            .turpe-category {
+                background-color: #f3f4f6;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 11px;
+                color: #000;
+            }
+
+            /* Lignes totales */
+            .turpe-total {
+                background-color: #f3f4f6;
+                font-weight: bold;
+            }
+
+            /* Valeurs positives et négatives */
+            .turpe-positive {
+                color: #009c2e;
+                font-weight: bold;
+            }
+
+            .turpe-negative {
+                color: #d0021b;
+                font-weight: bold;
+            }
+
+            /* Texte de note */
+            .turpe-note {
+                font-size: 11px;
+                color: #111;
+                margin-top: 12px;
+                line-height: 1.4;
+            }
+            .turpe-economies {
+                background-color: #D9F2FA;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 700;
+                padding: 10px 0;
+                margin-bottom: 20px;
+                letter-spacing: 0.5px;
+            }
+
+            /* Couleur verte pour valeurs optimales */
+            .turpe-table td.optimal-value {
+                color: #118C4F;
+                font-weight: 600;
+            }
+
+            .turpe-th-header {
+                background-color: #007c91; /* Bleu GO */
+                color: white;
+                padding: 8px;
+                border: 1px solid #d9d9d9;
+                font-weight: bold;
+            }
+
+            .turpe-th-header-empty {
+                background-color: #007c91;
+                border: 1px solid #d9d9d9;
+                padding: 8px;
+            }
+
+            .turpe-th-sub {
+                background-color: #EAEAEA !important;
+                color: black !important;
+                padding: 8px !important;
+                border: 1px solid #d9d9d9 !important;
+                font-weight: bold !important;
+            }
+            .turpe-bold {
+                font-weight: bold !important;
+            }
+            /* ==== SECTION OPTIMISATION TURPE – VUE MULTISITE ==== */
+
+        </style>
+    </head>
+
+    <body>
+        <!--__________________
+           |Page présentation|
+        -->
+        <div class="page page-break-always">
+            <div class="fullContent">
+                <div class="accueilTextBlock">
+                    <h1 style="display:{!IF(isOppGaz,'','none')};">Résumé d'étude comparative gaz</h1>
+                    <h1 style="display:{!IF(isOppGaz,'none','')};">Résumé d'étude comparative électricité</h1>
+                    
+                    <span class="accueilSeparator fontDeepCarrot">Pour</span>
+                    <p class="commercialName">{!opp.Account.Name}</p><br/>
+                    
+                    <span class="accueilSeparator fontDeepCarrot">Présenté par</span>
+                    <p class="commercialName">{!opp.Demande_Cotation__r.Owner.Name}</p>
+                    <p>{!opp.Demande_Cotation__r.Owner.Email}</p>
+                    <p>{!opp.Demande_Cotation__r.Owner.Phone}</p>
+
+                    <p class="accueilDateBlock">Le {!todayDate}</p>
+                </div>
+
+                <img style="display:{!IF(isOppPartenaire,'none','')};" src="{!URLFOR($Resource.Comparatif2024_Accueil,'Accueil.jpg')}" width="29.7cm" height="21cm"/>
+                <img style="display:{!IF(isOppPartenaire,'','none')};" src="{!URLFOR($Resource.Comparatif2024_Accueil,'AccueilPartenaires.jpg')}" width="29.7cm" height="21cm"/>
+            </div>
+        </div>
+
+        <!-- _________________
+            |Pages comparatif|
+        -->
+        <div class="contentPage page-break-auto">
+
+            <!-- ____________________________________________
+                |Fournisseurs séléctionnés & Budget globaux |
+            -->
+            <div class="paddingAround">
+
+                <h1>Fournisseurs seléctionnés et Budget globaux</h1>
+
+                <!-- Tableau Gaz -->
+                <apex:outputPanel rendered="{!isOppGaz}">
+                    <table class="page-break-always">
+                        <thead>
+                            <tr>
+                                <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                <th scope="rowgroup" rowspan="2">Date de début</th>
+                                <th scope="rowgroup" rowspan="2">Date de fin</th>
+                                <th scope="rowgroup" rowspan="2">Durée</th>
+                                <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                <th scope="row" colspan="1" class="metallicBlue">Énergie</th>
+                                <th scope="row" colspan="1" class="crystal">Acheminement</th>
+                                <th scope="row" colspan="1" class="deepCarrot">Taxes et Contributions</th>
+                                <th scope="row" colspan="{!IF(showSectionTTC,'2','1')};" class="darkyellow">Budget total</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="light-metallicBlue">€/an</th>
+                                <th scope="row" class="light-crystal">€/an</th>
+                                <th scope="row" class="beer">€/an</th>
+                                <th scope="row" class="yellow">HTVA/an</th>
+                                <th scope="row" class="yellow" style="display:{!IF(showSectionTTC,'','none')};">TTC/an</th>
+                            </tr>
+                        </thead>
+                        <tobdy>
+                            <apex:repeat value="{!listBudgetGlobal}" var="bg">
+                                <tr>
+                                    <td>
+                                        <apex:outputText value="{!bg.logo}" escape="false" rendered="{!bg.logo != 'None'}"/>
+                                        <apex:outputText value="{!bg.fournisseur}" escape="false" rendered="{!bg.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                    </td>
+                                    <td>
+                                        <apex:outputText rendered="{!bg.fournisseur != 'Situation Actuelle'}" value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!bg.dateDebut}"/></apex:outputText>
+                                        <apex:outputText rendered="{!bg.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                    </td>
+                                    <td><apex:outputText value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!bg.dateFin}"/></apex:outputText></td>
+                                    <td>
+                                        <apex:outputText rendered="{!bg.fournisseur != 'Situation Actuelle'}" value="{!bg.dureeOffre} mois" escape="false"></apex:outputText>
+                                        <apex:outputText rendered="{!bg.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                    </td>
+                                    <td>{!bg.typeOffre}</td>
+                                    <td><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.BudgetEnergieGaz}"/></apex:outputText></td>
+                                    <td><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.BudgetAcheminementGaz}"/></apex:outputText></td>
+                                    <td><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.BudgetTaxeGaz}"/></apex:outputText></td>
+                                    <td><span><strong><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.TotalHTVAGaz}"/></apex:outputText></strong></span></td>
+                                    <td style="display:{!IF(showSectionTTC,'','none')};"><span><strong><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.TotalTTC}"/></apex:outputText></strong></span></td>
+                                </tr>
+                            </apex:repeat>
+                        </tobdy>
+                    </table>
+                </apex:outputPanel>
+
+                <!-- Tableaux Elec -->
+                <apex:outputPanel rendered="{!NOT(isOppGaz)}">
+                    <table class="page-break-always">
+                        <thead>
+                            <tr>
+                                <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                <th scope="rowgroup" rowspan="2">Date de début</th>
+                                <th scope="rowgroup" rowspan="2">Date de fin</th>
+                                <th scope="rowgroup" rowspan="2">Durée</th>
+                                <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                <th scope="row" colspan="1" class="metallicBlue">Énergie</th>
+                                <th scope="row" colspan="1" class="crystal">Acheminement</th>
+                                <th scope="row" colspan="1" class="deepCarrot">Taxes et Contributions</th>
+                                <th scope="row" colspan="{!IF(showSectionTTC,'2','1')};" class="darkyellow">Budget total</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="light-metallicBlue">€/an</th>
+                                <th scope="row" class="light-crystal">€/an</th>
+                                <th scope="row" class="beer">€/an</th>
+                                <th scope="row" class="yellow">HTVA/an</th>
+                                <th scope="row" class="yellow" style="display:{!IF(showSectionTTC,'','none')};">TTC/an</th>
+                            </tr>
+                        </thead>
+                        <tobdy>
+                            <apex:repeat value="{!listBudgetGlobal}" var="bg">
+                                <tr>
+                                    <td>
+                                        <apex:outputText value="{!bg.logo}" escape="false" rendered="{!bg.logo != 'None'}"/>
+                                        <apex:outputText value="{!bg.fournisseur}" escape="false" rendered="{!bg.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                    </td>
+                                    <td>
+                                        <apex:outputText rendered="{!bg.fournisseur != 'Situation Actuelle'}" value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!bg.dateDebut}"/></apex:outputText>
+                                        <apex:outputText rendered="{!bg.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                    </td>
+                                    <td><apex:outputText value="{0,date,dd'/'MM'/'yyyy}"><apex:param value="{!bg.dateFin}"/></apex:outputText></td>
+                                    <td>
+                                        <apex:outputText rendered="{!bg.fournisseur != 'Situation Actuelle'}" value="{!bg.dureeOffre} mois" escape="false"></apex:outputText>
+                                        <apex:outputText rendered="{!bg.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                    </td>
+                                    <td>{!bg.typeOffre}</td>
+                                    <td><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.BudgetEnergieElec}"/></apex:outputText></td>
+                                    <td><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.BudgetAcheminementElec}"/></apex:outputText></td>
+                                    <td><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.BudgetTaxeElec}"/></apex:outputText></td>
+                                    <td><span><strong><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.TotalHTVAElec}"/></apex:outputText></strong></span></td>
+                                    <td style="display:{!IF(showSectionTTC,'','none')};"><span><strong><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!bg.TotalTTC}"/></apex:outputText></strong></span></td>
+                                </tr>
+                            </apex:repeat>
+                        </tobdy>
+                    </table>
+                </apex:outputPanel>
+            </div>
+
+            <!-- ____________
+                |Prix Moyen |
+            -->
+            <div class="paddingAround">
+
+                <h1 style="display:{!IF(isOppGaz,'none','')};">Prix moyen par FTA</h1>
+                <h1 style="display:{!IF(isOppGaz,'','none')};">Prix moyen par Tarif</h1>
+                <span>*Les prix affichés sont une moyenne pondérée</span>
+
+                <!-- Tableau Gaz -->
+                <apex:outputPanel rendered="{!isOppGaz}">
+
+                    <!-- T1 -->
+                    <apex:outputPanel rendered="{!listprixMoyenT1NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Tarif</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">Molécule</th>
+                                    <th scope="row" class="metallicBlue">Distribution variable</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenT1}" var="pm">
+                                    <tr>
+                                        <td>T1</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td>Voir l'étude détaillée</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.moleculeMoyennePonderee}"/></apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.fournisseur != 'Situation Actuelle'}"><apex:param value="{!pm.fraisDistributionVariable}"/></apex:outputText>
+                                            <apex:outputText value="Voir l'étude détaillée" escape="false" rendered="{!pm.fournisseur == 'Situation Actuelle'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- T2 -->
+                    <apex:outputPanel rendered="{!listprixMoyenT2NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Tarif</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">Molécule</th>
+                                    <th scope="row" class="metallicBlue">Distribution variable</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenT2}" var="pm">
+                                    <tr>
+                                        <td>T2</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td>Voir l'étude détaillée</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.moleculeMoyennePonderee}"/></apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.fournisseur != 'Situation Actuelle'}"><apex:param value="{!pm.fraisDistributionVariable}"/></apex:outputText>
+                                            <apex:outputText value="Voir l'étude détaillée" escape="false" rendered="{!pm.fournisseur == 'Situation Actuelle'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- T3 -->
+                    <apex:outputPanel rendered="{!listprixMoyenT3NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Tarif</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">Molécule</th>
+                                    <th scope="row" class="metallicBlue">Distribution variable</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenT3}" var="pm">
+                                    <tr>
+                                        <td>T3</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td>Voir l'étude détaillée</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.moleculeMoyennePonderee}"/></apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.fournisseur != 'Situation Actuelle'}"><apex:param value="{!pm.fraisDistributionVariable}"/></apex:outputText>
+                                            <apex:outputText value="Voir l'étude détaillée" escape="false" rendered="{!pm.fournisseur == 'Situation Actuelle'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- T4 -->
+                    <apex:outputPanel rendered="{!listprixMoyenT4NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Tarif</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">Molécule</th>
+                                    <th scope="row" class="metallicBlue">Distribution variable</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenT4}" var="pm">
+                                    <tr>
+                                        <td>T4</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td>Voir l'étude détaillée</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.moleculeMoyennePonderee}"/></apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.fournisseur != 'Situation Actuelle'}"><apex:param value="{!pm.fraisDistributionVariable}"/></apex:outputText>
+                                            <apex:outputText value="Voir l'étude détaillée" escape="false" rendered="{!pm.fournisseur == 'Situation Actuelle'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+                    
+                </apex:outputPanel>
+
+                <!-- Tableaux Elec -->
+                <apex:outputPanel rendered="{!NOT(isOppGaz)}">
+
+                    <!-- C5 BASE/HP/HC -->
+                    <apex:outputPanel rendered="{!listprixMoyenC5BaseNotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Segment</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">Base</th>
+                                    <th scope="row" class="metallicBlue">HP</th>
+                                    <th scope="row" class="metallicBlue">HC</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                    <th scope="row" class="metallicBlue">Capacité</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenC5Base}" var="pm">
+                                    <tr>
+                                        <td>C5</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.abonnementMoyenne}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.baseMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hpMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hcMoyennePonderee}"/></apex:outputText></td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCapa != 'Inclus'}"><apex:param value="{!pm.capaciteMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCapa}" escape="false" rendered="{!pm.tQuoteCapa == 'Inclus'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- C5 4 Postes -->
+                    <apex:outputPanel rendered="{!listprixMoyenC54PostesNotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Segment</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">HPH</th>
+                                    <th scope="row" class="metallicBlue">HCH</th>
+                                    <th scope="row" class="metallicBlue">HPE</th>
+                                    <th scope="row" class="metallicBlue">HCE</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                    <th scope="row" class="metallicBlue">Capacité</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenC54postes}" var="pm">
+                                    <tr>
+                                        <td>C5</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.abonnementMoyenne}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hphMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hchMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hpeMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hceMoyennePonderee}"/></apex:outputText></td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCapa != 'Inclus'}"><apex:param value="{!pm.capaciteMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCapa}" escape="false" rendered="{!pm.tQuoteCapa == 'Inclus'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- C4 -->
+                    <apex:outputPanel rendered="{!listprixMoyenC4NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Segment</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">POINTE</th>
+                                    <th scope="row" class="metallicBlue">HPH</th>
+                                    <th scope="row" class="metallicBlue">HCH</th>
+                                    <th scope="row" class="metallicBlue">HPE</th>
+                                    <th scope="row" class="metallicBlue">HCE</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                    <th scope="row" class="metallicBlue">Capacité</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenC4}" var="pm">
+                                    <tr>
+                                        <td>C4</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.abonnementMoyenne}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.pointeMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hphMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hchMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hpeMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hceMoyennePonderee}"/></apex:outputText></td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCapa != 'Inclus'}"><apex:param value="{!pm.capaciteMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCapa}" escape="false" rendered="{!pm.tQuoteCapa == 'Inclus'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- C1/C2 -->
+                    <apex:outputPanel rendered="{!listprixMoyenC1C2NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Segment</th>
+                                    <th scope="rowgroup" rowspan="2">Fournisseur</th>
+                                    <th scope="rowgroup" rowspan="2">Type d'offre</th>
+                                    <th scope="rowgroup" rowspan="2">Durée</th>
+                                    <th scope="row" class="metallicBlue">Abonnement</th>
+                                    <th scope="row" class="metallicBlue">POINTE</th>
+                                    <th scope="row" class="metallicBlue">HPH</th>
+                                    <th scope="row" class="metallicBlue">HCH</th>
+                                    <th scope="row" class="metallicBlue">HPE</th>
+                                    <th scope="row" class="metallicBlue">HCE</th>
+                                    <th scope="row" class="metallicBlue">CEE</th>
+                                    <th scope="row" class="metallicBlue">Capacité</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">(€/mois)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                    <th scope="row" class="light-metallicBlue">(€/MWh)</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listprixMoyenC1C2}" var="pm">
+                                    <tr>
+                                        <td>C1/C2</td>
+                                        <td>
+                                            <apex:outputText value="{!pm.logo}" escape="false" rendered="{!pm.logo != 'None'}"/>
+                                            <apex:outputText value="{!pm.fournisseur}" escape="false" rendered="{!pm.logo == 'None'}" styleClass="boldFournisseur"/><br/>
+                                        </td>
+                                        <td>{!pm.typeOffre}</td>
+                                        <td>
+                                            <apex:outputText rendered="{!pm.fournisseur != 'Situation Actuelle'}" value="{!pm.dureeOffre} mois" escape="false"></apex:outputText>
+                                            <apex:outputText rendered="{!pm.fournisseur == 'Situation Actuelle'}" value="--"></apex:outputText>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.abonnementMoyenne}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.pointeMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hphMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hchMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hpeMoyennePonderee}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00} €" escape="false"><apex:param value="{!pm.hceMoyennePonderee}"/></apex:outputText></td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCee == 'Soumis'}"><apex:param value="{!pm.ceeMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCee}" escape="false" rendered="{!pm.tQuoteCee != 'Soumis'}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00} €" escape="false" rendered="{!pm.tQuoteCapa != 'Inclus'}"><apex:param value="{!pm.capaciteMoyennePonderee}"/></apex:outputText>
+                                            <apex:outputText value="{!pm.tQuoteCapa}" escape="false" rendered="{!pm.tQuoteCapa == 'Inclus'}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                </apex:outputPanel>
+            </div>
+
+            <!-- ______________
+                |Volume Moyen |
+            -->
+            <div class="paddingAround">
+                <h1 style="display:{!IF(isOppGaz,'none','')};">Volume total par Segment</h1>
+                <h1 style="display:{!IF(isOppGaz,'','none')};">Volume total par Profil</h1>
+
+                <!-- Tableau Gaz -->
+                <apex:outputPanel rendered="{!isOppGaz}">
+
+                    <!-- Profils -->
+                    <apex:outputPanel rendered="{!listvolumeTotalGazNotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="row" colspan="9" class="metallicBlue">Consommations par profil (en MWh)</th>
+                                    <th scope="rowgroup" rowspan="2" class="metallicBlue">Total (en MWh)</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">P011</th>
+                                    <th scope="row" class="light-metallicBlue">P012</th>
+                                    <th scope="row" class="light-metallicBlue">P013</th>
+                                    <th scope="row" class="light-metallicBlue">P014</th>
+                                    <th scope="row" class="light-metallicBlue">P015</th>
+                                    <th scope="row" class="light-metallicBlue">P016</th>
+                                    <th scope="row" class="light-metallicBlue">P017</th>
+                                    <th scope="row" class="light-metallicBlue">P018</th>
+                                    <th scope="row" class="light-metallicBlue">P019</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listvolumeTotalGaz}" var="vt">
+                                    <tr>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p011 != 0}"><apex:param value="{!vt.p011}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p011 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p012 != 0}"><apex:param value="{!vt.p012}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p012 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p013 != 0}"><apex:param value="{!vt.p013}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p013 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p014 != 0}"><apex:param value="{!vt.p014}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p014 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p015 != 0}"><apex:param value="{!vt.p015}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p015 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p016 != 0}"><apex:param value="{!vt.p016}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p016 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p017 != 0}"><apex:param value="{!vt.p017}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p017 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p018 != 0}"><apex:param value="{!vt.p018}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p018 == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.p019 != 0}"><apex:param value="{!vt.p019}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.p019 == 0}"/>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00}" escape="false"><apex:param value="{!vt.totalConsoGaz}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+                    
+                </apex:outputPanel>
+
+                <!-- Tableaux Elec -->
+                <apex:outputPanel rendered="{!NOT(isOppGaz)}">
+
+                    <!-- C5 BASE/HP/HC -->
+                    <apex:outputPanel rendered="{!listvolumeTotalC5BaseNotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Type de compteur</th>
+                                    <th scope="row" colspan="3" class="metallicBlue">Consommations par postes (en MWh)</th>
+                                    <th scope="rowgroup" rowspan="2" class="metallicBlue">Total (en MWh)</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">BASE</th>
+                                    <th scope="row" class="light-metallicBlue">HP</th>
+                                    <th scope="row" class="light-metallicBlue">HC</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listvolumeTotalC5Base}" var="vt">
+                                    <tr>
+                                        <td>C5</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.base != 0}"><apex:param value="{!vt.base}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.base == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hp != 0}"><apex:param value="{!vt.hp}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hp == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hc != 0}"><apex:param value="{!vt.hc}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hc == 0}"/>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00}" escape="false"><apex:param value="{!vt.totalConsoElec}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- C5 4 Postes -->
+                    <apex:outputPanel rendered="{!listvolumeTotalC54postesNotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Type de compteur</th>
+                                    <th scope="row" colspan="4" class="metallicBlue">Consommations par postes (en MWh)</th>
+                                    <th scope="rowgroup" rowspan="2" class="metallicBlue">Total (en MWh)</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">HCH</th>
+                                    <th scope="row" class="light-metallicBlue">HPH</th>
+                                    <th scope="row" class="light-metallicBlue">HCE</th>
+                                    <th scope="row" class="light-metallicBlue">HPE</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listvolumeTotalC54postes}" var="vt">
+                                    <tr>
+                                        <td>C5 4 postes</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hch != 0}"><apex:param value="{!vt.hch}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hch == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hph != 0}"><apex:param value="{!vt.hph}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hph == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hce != 0}"><apex:param value="{!vt.hce}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hce == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hpe != 0}"><apex:param value="{!vt.hpe}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hpe == 0}"/>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00}" escape="false"><apex:param value="{!vt.totalConsoElec}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- C4 -->
+                    <apex:outputPanel rendered="{!listvolumeTotalC4NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Type de compteur</th>
+                                    <th scope="row" colspan="5" class="metallicBlue">Consommations par postes (en MWh)</th>
+                                    <th scope="rowgroup" rowspan="2" class="metallicBlue">Total (en MWh)</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">POINTE</th>
+                                    <th scope="row" class="light-metallicBlue">HCH</th>
+                                    <th scope="row" class="light-metallicBlue">HPH</th>
+                                    <th scope="row" class="light-metallicBlue">HCE</th>
+                                    <th scope="row" class="light-metallicBlue">HPE</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listvolumeTotalC4}" var="vt">
+                                    <tr>
+                                        <td>C4</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.pointe != 0}"><apex:param value="{!vt.pointe}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.pointe == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hch != 0}"><apex:param value="{!vt.hch}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hch == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hph != 0}"><apex:param value="{!vt.hph}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hph == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hce != 0}"><apex:param value="{!vt.hce}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hce == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hpe != 0}"><apex:param value="{!vt.hpe}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hpe == 0}"/>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00}" escape="false"><apex:param value="{!vt.totalConsoElec}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                    <!-- C1/C2 -->
+                    <apex:outputPanel rendered="{!listvolumeTotalC1C2NotEmpty}">
+                        <table class="page-break-always">
+                            <thead>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">Type de compteur</th>
+                                    <th scope="row" colspan="5" class="metallicBlue">Consommations par postes (en MWh)</th>
+                                    <th scope="rowgroup" rowspan="2" class="metallicBlue">Total (en MWh)</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="light-metallicBlue">POINTE</th>
+                                    <th scope="row" class="light-metallicBlue">HCH</th>
+                                    <th scope="row" class="light-metallicBlue">HPH</th>
+                                    <th scope="row" class="light-metallicBlue">HCE</th>
+                                    <th scope="row" class="light-metallicBlue">HPE</th>
+                                </tr>
+                            </thead>
+                            <tobdy>
+                                <apex:repeat value="{!listvolumeTotalC1C2}" var="vt">
+                                    <tr>
+                                        <td>C1 / C2</td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.pointe != 0}"><apex:param value="{!vt.pointe}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.pointe == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hch != 0}"><apex:param value="{!vt.hch}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hch == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hph != 0}"><apex:param value="{!vt.hph}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hph == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hce != 0}"><apex:param value="{!vt.hce}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hce == 0}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0, number, ###,###,##0.00}" escape="false" rendered="{!vt.hpe != 0}"><apex:param value="{!vt.hpe}"/></apex:outputText>
+                                            <apex:outputText value="--" escape="false" rendered="{!vt.hpe == 0}"/>
+                                        </td>
+                                        <td><apex:outputText value="{0, number, ###,###,##0.00}" escape="false"><apex:param value="{!vt.totalConsoElec}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                            </tobdy>
+                        </table>
+                    </apex:outputPanel>
+
+                </apex:outputPanel>
+            </div>
+        </div>
+
+        <!-- ____________________________
+            |Garanties d’Origine (1 page)|
+        -->
+        <apex:outputPanel rendered="{!NOT(ISNULL(goQuotesElec)) && goQuotesElec.size > 0 
+                                    || NOT(ISNULL(goQuotesGaz)) && goQuotesGaz.size > 0}">
+            <div class="contentPage page-break-always">
+                <div class="paddingAround go-tight">
+                    <h1 class="section-title">Mon offre verte avec ALLIANCE DES ENERGIES</h1>
+
+                    <!-- ELECTRICITE -->
+                    <apex:outputPanel rendered="{!showGOElec}">
+                        <div class="go-section">
+                            <img class="go-icon go-reset-icon" src="{!URLFOR($Resource.GOAssets,'icons/elec.png')}" />
+                            <h2 class="sub-title">
+                                Electricité verte : 
+                                <span class="highlight">Compensez 75% de vos émissions GES liées à votre consommation</span>
+                            </h2>
+                        </div>
+
+                        <table class="comparatif-table">
+                            <thead>
+                                <tr>
+                                    <th>Origine</th>
+                                    <th>Technologie</th>
+                                    <th>Début de couverture</th>
+                                    <th>Fin de couverture</th>
+                                    <th>Consommation annuelle (MWh)</th>
+                                    <th>Prix de la garantie d'origine<br/>(€/MWh)</th>
+                                    <th>Budget<br/>(€HT/an)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!goQuotesElec}" var="q">
+                                    <tr>
+                                        <td>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Européenne'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'flags/eu.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Française'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'flags/fr.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Communale'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/commune.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Départementale'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/departement.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Régionale'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/region.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Premium'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/premium.png')}"/>
+                                            </apex:outputPanel>
+                                            {!q.OrigineGarantieOrigine__c}
+                                        </td>
+                                        <td>{!q.TechnologieGarantieOrigine__c}</td>
+                                        <td><apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                            <apex:param value="{!q.DebutCouvertureGarantieOrigine__c}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                            <apex:param value="{!q.FinCouvertureGarantieOrigine__c}"/></apex:outputText></td>
+                                        <td>
+                                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                                <apex:param value="{!q.ConsoAnnuelleGarantieOrigine__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                                <apex:param value="{!q.PrixGarantieOrigine__c + q.MargeGarantieOrigine__c}" />
+                                            </apex:outputText>&nbsp;€
+                                        </td>
+                                        <td class="strong">
+                                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                                <apex:param value="{!q.BudgetGarantieOrigine__c}" />
+                                            </apex:outputText>&nbsp;€
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                    <!-- /ELECTRICITE -->
+
+                    <!-- GAZ -->
+                    <apex:outputPanel rendered="{!showGOGaz}">
+                        <div class="go-section">
+                            <img class="go-icon go-reset-icon" src="{!URLFOR($Resource.GOAssets,'icons/biogas.png')}" />
+                            <h2 class="sub-title">
+                                Biogaz / Biométhane : 
+                                <span class="highlight">Compensez 82% de vos émissions GES liées à votre consommation</span>
+                            </h2>
+                        </div>
+
+                        <table class="comparatif-table">
+                            <thead>
+                                <tr>
+                                    <th>Origine</th>
+                                    <th>Technologie</th>
+                                    <th>Début de couverture</th>
+                                    <th>Fin de couverture</th>
+                                    <th>Consommation annuelle (MWh)</th>
+                                    <th>Prix de la garantie d'origine<br/>(€/MWh)</th>
+                                    <th>Budget<br/>(€HT/an)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!goQuotesGaz}" var="q">
+                                    <tr>
+                                        <td>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Européenne'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'flags/eu.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Française'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'flags/fr.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Communale'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/commune.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Départementale'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/departement.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Régionale'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/region.png')}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!q.OrigineGarantieOrigine__c='Premium'}">
+                                                <img class="go-flag" src="{!URLFOR($Resource.GOAssets,'icons/premium.png')}"/>
+                                            </apex:outputPanel>
+                                            {!q.OrigineGarantieOrigine__c}
+                                        </td>
+                                        <td>{!q.TechnologieGarantieOrigine__c}</td>
+                                        <td><apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                            <apex:param value="{!q.DebutCouvertureGarantieOrigine__c}"/></apex:outputText></td>
+                                        <td><apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                            <apex:param value="{!q.FinCouvertureGarantieOrigine__c}"/></apex:outputText></td>
+                                        <td>
+                                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                                <apex:param value="{!q.ConsoAnnuelleGarantieOrigine__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                                <apex:param value="{!q.PrixGarantieOrigine__c + q.MargeGarantieOrigine__c}" />
+                                            </apex:outputText>&nbsp;€
+                                        </td>
+                                        <td class="strong">
+                                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                                <apex:param value="{!q.BudgetGarantieOrigine__c}" />
+                                            </apex:outputText>&nbsp;€
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                    <!-- /GAZ -->
+
+                    <!-- FOOTER -->
+                    <div class="go-footer">
+                        <div>- Rythme de facturation annuel par défaut<br/>
+                            - Rythme de livraison annuel par défaut</div>
+                        <div style="text-align:right;">* 1 MWh = 1 Garantie d'origine renouvelable</div>
+                    </div>
+                    <!-- /FOOTER -->
+
+                </div>
+            </div>
+        </apex:outputPanel>
+        <!-- /Garanties d’Origine -->
+        <!-- SECTION OPTIMISATION TURPE -->
+        <apex:outputPanel rendered="{!showTurpeMono}">
+            <div class="contentPage page-break-always">
+                <div class="paddingAround turpe-tight">
+
+                    <h2 class="section-title">Mon optimisation TURPE potentielle</h2>
+
+                    <!-- Économies identifiées alignées comme dans la maquette -->
+                    <div class="turpe-banner">
+                        <span class="turpe-banner-label">ÉCONOMIES IDENTIFIÉES</span>
+                        <span class="turpe-banner-value">
+                            <apex:outputText value="{0,number,### ### ##0.00}">
+                                <apex:param value="{!lstQLITurpe[0].EconomieIdentifie__c}" />
+                            </apex:outputText>&nbsp;€HT/an
+                        </span>
+                    </div>
+
+                    <table class="turpe-table">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" class="turpe-th-header-empty"></th>
+                                <th rowspan="2" class="turpe-th-header">POSTES</th>
+                                <th colspan="1" class="turpe-th-header">TURPE ACTUEL</th>
+                                <th colspan="1" class="turpe-th-header">TURPE OPTIMAL</th>
+                            </tr>
+                            <tr>
+                                <th class="turpe-th-sub">HTA CU</th>
+                                <th class="turpe-th-sub">HTA LU</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="turpe-category" rowspan="5">DÉNIVELÉ DE<br/>PUISSANCE<br/>SOUSCRITE</td>
+                                <td class="turpe-bold">HCE</td>
+                                <td><apex:outputText value="{0,number,### ### ##0.00}"><apex:param value="{!lstQLITurpe[0].HCEActuel__c}" /></apex:outputText></td>
+                                <td><img src="{!URLFOR($Resource.BlurIcon)}" alt="Valeur floutée" class="blur-icon" /></td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">HPE</td>
+                                <td><apex:outputText value="{0,number,### ### ##0.00}"><apex:param value="{!lstQLITurpe[0].HPEActuel__c}" /></apex:outputText></td>
+                                <td><img src="{!URLFOR($Resource.BlurIcon)}" alt="Valeur floutée" class="blur-icon" /></td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">HCH</td>
+                                <td><apex:outputText value="{0,number,### ### ##0.00}"><apex:param value="{!lstQLITurpe[0].HCHActuel__c}" /></apex:outputText></td>
+                                <td><img src="{!URLFOR($Resource.BlurIcon)}" alt="Valeur floutée" class="blur-icon" /></td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">HPH</td>
+                                <td><apex:outputText value="{0,number,### ### ##0.00}"><apex:param value="{!lstQLITurpe[0].HPHActuel__c}" /></apex:outputText></td>
+                                <td><img src="{!URLFOR($Resource.BlurIcon)}" alt="Valeur floutée" class="blur-icon" /></td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">POINTE</td>
+                                <td><apex:outputText value="{0,number,### ### ##0.00}"><apex:param value="{!lstQLITurpe[0].POINTEActuel__c}" /></apex:outputText></td>
+                                <td><img src="{!URLFOR($Resource.BlurIcon)}" alt="Valeur floutée" class="blur-icon" /></td>
+                            </tr>
+
+                            <tr>
+                                <td class="turpe-category" rowspan="5">
+                                    COMPOSANTES<br/>OPTIMISABLES DU<br/>TURPE
+                                </td>
+                                <td class="turpe-bold">Part fixe de la CS</td>
+                                <td>
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].PartFixeCSActuel__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td class="{!cssPartFixeCS}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].PartFixeCSOptimal__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">Part variable de la CS</td>
+                                <td>
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].PartVariableCSActuel__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td class="{!cssPartVariableCS}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].PartVariableCSOptimal__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">Dépassements</td>
+                                <td>
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].DepassementActuel__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td class="{!cssDepassement}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].DepassementOptimal__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">Taxe CTA</td>
+                                <td>
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].TaxeCTAActuel__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td class="{!cssTaxeCTA}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].TaxeCTAOptimal__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="turpe-bold">Intervention PEP'S</td>
+                                <td>-</td>
+                                <td class="{!cssInterventionPEPS}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].InterventionPEPS__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                            <tr class="turpe-total">
+                                <td colspan="2">TOTAL</td>
+                                <td>
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].BudgetTotalActuel__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td class="{!cssBudgetTotal}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!lstQLITurpe[0].BudgetTotalOptimal__c}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="turpe-note">
+                        <p>- Un changement de dénivelé de puissance coûte <b>68 € HT</b> auprès d'ENEDIS — 
+                            Un changement de version d'utilisation coûte <b>20 € HT</b> auprès d'ENEDIS.</p>
+                        <p><i>{!noteDateText}</i></p>
+                        <apex:outputText rendered="{!showTurpeMono}" value="{!noteConsoText}" escape="false" />
+                    </div>
+                </div>
+            </div>
+        </apex:outputPanel>
+        <!-- Section Optimisation TURPE - Vue Multisite -->
+        <apex:outputPanel rendered="{!showTurpeMulti}">
+            <div class="contentPage page-break-always">
+                <div class="paddingAround turpe-tight">
+                    <h2 class="section-title">Mon optimisation TURPE potentielle</h2>
+                    <table class="turpe-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 35%;">Informations du compteur</th>
+                                <th style="width: 20%;">Budget TURPE Actuel (€HT/an)</th>
+                                <th style="width: 20%;">Budget TURPE Optimal (€HT/an)</th>
+                                <th style="width: 25%;">Économie identifiée (€HT/an)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!lstQLITurpe}" var="qli">
+                                <tr>
+                                    <td>{!qli.PDE__r.Name}</td>
+                                    <td>
+                                        <apex:outputText value="{0,number,### ### ##0.00}">
+                                            <apex:param value="{!qli.BudgetTotalActuel__c}" />
+                                        </apex:outputText>&nbsp;€
+                                    </td>
+                                    <td class="{!
+                                        IF(
+                                            (IF(ISBLANK(qli.BudgetTotalOptimal__c), 0, qli.BudgetTotalOptimal__c)) > 
+                                            (IF(ISBLANK(qli.BudgetTotalActuel__c), 0, qli.BudgetTotalActuel__c)),
+                                            'turpe-negative',
+                                            IF(
+                                                (IF(ISBLANK(qli.BudgetTotalOptimal__c), 0, qli.BudgetTotalOptimal__c)) < 
+                                                (IF(ISBLANK(qli.BudgetTotalActuel__c), 0, qli.BudgetTotalActuel__c)),
+                                                'turpe-positive',
+                                                ''
+                                            )
+                                        )
+                                    }">
+                                        <apex:outputText value="{0,number,### ### ##0.00}">
+                                            <apex:param value="{!qli.BudgetTotalOptimal__c}" />
+                                        </apex:outputText>&nbsp;€
+                                    </td>
+                                    <td style="font-size:14px; font-weight: bold;">
+                                        <apex:outputText value="{0,number,### ### ##0.00}">
+                                            <apex:param value="{!qli.EconomieIdentifie__c}" />
+                                        </apex:outputText>&nbsp;€
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+
+                            <!-- ======== LIGNE DE TOTAL GLOBAL ======== -->
+                            <tr class="turpe-total">
+                                <td style="font-weight: bold;">TOTAL GLOBAL</td>
+                                <td>
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!totalBudgetActuel}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td class="{!cssBudgetTotalMulti}">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!totalBudgetOptimal}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                                <td style="font-size:14px; font-weight: bold;">
+                                    <apex:outputText value="{0,number,### ### ##0.00}">
+                                        <apex:param value="{!totalEconomie}" />
+                                    </apex:outputText>&nbsp;€
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <div class="turpe-note">
+                        <p>- Un changement de dénivelé de puissance coûte <b>68 € HT</b> auprès d'ENEDIS — 
+                            Un changement de version d'utilisation coûte <b>20 € HT</b> auprès d'ENEDIS.</p>
+                        <p><i>{!noteDateText}</i></p>
+                    </div>
+                </div>
+            </div>
+        </apex:outputPanel>
+        <!--______________________
+            |Fiche Découpage Prix |
+        -->
+        <div class="page page-break-always">
+                <div class="fullContent">
+                    <img style="display:{!IF(isOppGaz,'none','')};" src="{!URLFOR($Resource.Comparatif2024_FichesExtra,'decoupage-prix-elec.jpg')}" width="100%" height="100%"/>
+                    <img style="display:{!IF(isOppGaz,'','none')};" src="{!URLFOR($Resource.Comparatif2024_FichesExtra,'decoupage-prix-gaz.jpg')}" width="100%" height="100%"/>
+                </div>
+        </div>
+        <!--________________________
+            |Fiche Présentation CPB |
+        -->
+        <apex:outputPanel rendered="{!isOppGaz}">
+            <div class="page page-break-always">
+                <div class="fullContent">
+                    <img src="{!URLFOR($Resource.Comparatif2024_FichesExtra,'presentation-cpb.jpg')}" width="100%" height="100%"/>
+                </div>
+            </div>
+        </apex:outputPanel>
+        <!--____________________
+           |Fiches fournisseur |
+        -->
+        <apex:repeat value="{!listFournisseurName}" var="fournisseurName">
+                <div class="page page-break-always">
+                    <div class="fullContent">
+                        <img src="{!URLFOR($Resource.Comparatif2024_FichesFournisseur,fournisseurName)}" width="100%" height="100%"/>
+                    </div>
+                </div>
+        </apex:repeat>
+        <!--___________________________
+           |Fiche service ADE + PEP'S |
+        -->
+        <div class="page page-break-always">
+                <div class="fullContent">
+                    <img src="{!URLFOR($Resource.Comparatif2024_FichesExtra,'services-ade-peps.jpg')}" width="100%" height="100%"/>
+                </div>
+        </div>
+
+        <!--___________
+           |Last Page |
+        -->
+        <div class="page">
+            <div class="fullContent">
+                <img src="{!URLFOR($Resource.Comparatif2024_LastPage,'LastPage.png')}" width="100%" height="100%"/>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p><span class="pagenumber"/> / <span class="pagecount"/></p>
+        </footer>
+    </body>
+</apex:page>

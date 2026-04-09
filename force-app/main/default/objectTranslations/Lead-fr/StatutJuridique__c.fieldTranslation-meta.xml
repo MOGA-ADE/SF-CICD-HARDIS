@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Forme juridique --></label>
+    <name>StatutJuridique__c</name>
+    <picklistValues>
+        <masterLabel>Association déclarée</masterLabel>
+        <translation><!-- Association déclarée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Association non déclarée</masterLabel>
+        <translation><!-- Association non déclarée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EARL</masterLabel>
+        <translation><!-- EARL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EI</masterLabel>
+        <translation><!-- EI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EIRL</masterLabel>
+        <translation><!-- EIRL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EURL</masterLabel>
+        <translation><!-- EURL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GAEC</masterLabel>
+        <translation><!-- GAEC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GEIE</masterLabel>
+        <translation><!-- GEIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GIE</masterLabel>
+        <translation><!-- GIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SA</masterLabel>
+        <translation><!-- SA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SARL</masterLabel>
+        <translation><!-- SARL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAS</masterLabel>
+        <translation><!-- SAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SASU</masterLabel>
+        <translation><!-- SASU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SC</masterLabel>
+        <translation><!-- SC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCA</masterLabel>
+        <translation><!-- SCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCI</masterLabel>
+        <translation><!-- SCI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCIC</masterLabel>
+        <translation><!-- SCIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCM</masterLabel>
+        <translation><!-- SCM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCOP</masterLabel>
+        <translation><!-- SCOP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCP</masterLabel>
+        <translation><!-- SCP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCS</masterLabel>
+        <translation><!-- SCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEL</masterLabel>
+        <translation><!-- SEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SELAFA</masterLabel>
+        <translation><!-- SELAFA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SELARL</masterLabel>
+        <translation><!-- SELARL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SELAS</masterLabel>
+        <translation><!-- SELAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SELCA</masterLabel>
+        <translation><!-- SELCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEM</masterLabel>
+        <translation><!-- SEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEML</masterLabel>
+        <translation><!-- SEML --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEP</masterLabel>
+        <translation><!-- SEP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SICA</masterLabel>
+        <translation><!-- SICA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SNC</masterLabel>
+        <translation><!-- SNC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

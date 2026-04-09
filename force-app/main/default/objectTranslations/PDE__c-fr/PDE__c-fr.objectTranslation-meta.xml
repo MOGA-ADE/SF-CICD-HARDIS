@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Point d&apos;énergie</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Points d&apos;énergie</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <recordTypes>
+        <description><!-- Point d&apos;énergie de C1 à C2 --></description>
+        <label><!-- Elec C1 à C2 --></label>
+        <name>Elec_C1C2</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Point d&apos;énergie de C1 à C4 --></description>
+        <label><!-- Elec C1 à C4 --></label>
+        <name>Elec_C1C4</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Point d&apos;énergie de C3 à C4 --></description>
+        <label><!-- Elec C3 à C4 --></label>
+        <name>Elec_C3_C4</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Point d&apos;énergie C5 --></description>
+        <label><!-- Elec C5 --></label>
+        <name>PDE_ElecC5</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Gaz --></label>
+        <name>PDE_Gaz</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- test sharing --></label>
+        <name>test_sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage>
+            <!-- Les champs de consommation doivent avoir exactement deux chiffres après la virgule.
+Cliquez sur les champs de consommation pour voir leur valeur exacte. -->
+        </errorMessage>
+        <name>Deux_decimales_pour_les_conso</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Attention, votre date de signature de l&apos;ACD est dans le future --></errorMessage>
+        <name>VF_001</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Nouveau_PDE --></label>
+        <name>Nouveau_PDE</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Suppression_en_masse --></label>
+        <name>Suppression_en_masse</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Template_CSV_ELEC --></label>
+        <name>Template_CSV_ELEC</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Template_import_CSV_GAZ --></label>
+        <name>Template_import_CSV_GAZ</name>
+    </webLinks>
+</CustomObjectTranslation>

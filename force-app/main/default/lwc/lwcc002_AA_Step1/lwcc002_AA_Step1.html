@@ -1,0 +1,34 @@
+<template>
+    <!-- Code Authentification -->
+    <article class="slds-card borderBottom">
+        <div class="slds-grid slds-einstein-header slds-card__header resetBGK">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:identifier" alternative-text="identifier Icon" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Authentification">
+                            Étape 1 : Authentification
+                        </h2>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner marginBottom customFontSize">
+            <lightning-input type="text" placeholder="Entrer votre code partenaire" onchange={handleChangeCode}></lightning-input>
+            <p if:true={error} class="error">
+                Code partenaire non valide ou votre compte n'est plus actif.<br>
+                Si vous pensez qu'il s'agit d'une erreur, contactez votre référent.
+            </p>
+        </div>
+        <footer class="slds-card__footer borderTop">
+            <div class="buttonContainer">
+                <lightning-button if:false={isLoading} variant="brand" label="Suivant" title="Suivant" onclick={handleAuth} disabled={isDisabled}></lightning-button>
+                <div if:true={isLoading} class="spinnerButton">
+                    <lightning-spinner alternative-text="Loading" size="x-small" variant="inverse"></lightning-spinner>
+                </div>
+            </div>
+        </footer>
+    </article>
+</template>

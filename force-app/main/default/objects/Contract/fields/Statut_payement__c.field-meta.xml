@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statut_payement__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Encours_fournisseur__c &lt;= 0,&apos;Complet&apos;,&apos;Incomplet&apos;)</formula>
+    <label>Statut payement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

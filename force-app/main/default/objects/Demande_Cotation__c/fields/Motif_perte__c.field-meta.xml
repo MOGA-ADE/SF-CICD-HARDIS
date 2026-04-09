@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motif_perte__c</fullName>
+    <label>Motif de perte</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contractualisation en direct avec un fournisseur proposé</fullName>
+                <default>false</default>
+                <label>Contractualisation en direct avec un fournisseur proposé</label>
+            </value>
+            <value>
+                <fullName>Contractualisation en direct avec un fournisseur non proposé</fullName>
+                <default>false</default>
+                <label>Contractualisation en direct avec un fournisseur non proposé</label>
+            </value>
+            <value>
+                <fullName>Contractualisation avec un courtier concurrent</fullName>
+                <default>false</default>
+                <label>Contractualisation avec un courtier concurrent</label>
+            </value>
+            <value>
+                <fullName>Souhaite rester chez son fournisseur actuel</fullName>
+                <default>false</default>
+                <label>Souhaite rester chez son fournisseur actuel</label>
+            </value>
+            <value>
+                <fullName>En attente d’une baisse de marché</fullName>
+                <default>false</default>
+                <label>En attente d’une baisse de marché</label>
+            </value>
+            <value>
+                <fullName>Échéance trop lointaine</fullName>
+                <default>false</default>
+                <label>Échéance trop lointaine</label>
+            </value>
+            <value>
+                <fullName>Projet  annulé (déménagement, vente, imprévu)</fullName>
+                <default>false</default>
+                <label>Projet  annulé (déménagement, vente, imprévu)</label>
+            </value>
+            <value>
+                <fullName>Client injoignable</fullName>
+                <default>false</default>
+                <label>Client injoignable</label>
+            </value>
+            <value>
+                <fullName>Erreur de données (SIRET, signataire, décisionnaire erroné)</fullName>
+                <default>false</default>
+                <label>Erreur de données (SIRET, signataire, décisionnaire erroné)</label>
+            </value>
+            <value>
+                <fullName>Changement de périmètre</fullName>
+                <default>false</default>
+                <label>Changement de périmètre</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

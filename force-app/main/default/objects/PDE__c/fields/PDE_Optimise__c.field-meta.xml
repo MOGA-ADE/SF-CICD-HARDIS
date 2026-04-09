@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDE_Optimise__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				  
+  Calcul_PS_Max_OK__c = true,
+  IF(
+    OR(
+      Taux_puissance_souscrite_utilisee__c  &lt; 0.85,
+      Taux_puissance_souscrite_utilisee__c &gt; 1.10
+    ),
+    &quot;Le compteur est optimisable. Contacter les services PEP&apos;S pour une étude ! &quot;+BR()+&quot;Mail : eliot.fauquignon@peps-energie.fr&quot;+BR()+&quot;Tel : 06 30 66 36 02&quot;,
+    &quot;Le compteur est bien optimisé&quot;
+  ),
+  &quot;Calcul Impossible pour ce compteur&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PDE Optimisé ?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

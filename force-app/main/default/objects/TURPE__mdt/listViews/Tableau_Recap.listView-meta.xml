@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tableau_Recap</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Segment__c</columns>
+    <columns>FTA__c</columns>
+    <columns>Index__c</columns>
+    <columns>Composant_de_Comptage__c</columns>
+    <columns>Composant_de_Gestion__c</columns>
+    <columns>Composant_de_Soutirage_Part_Fixe__c</columns>
+    <columns>CSPV_Base__c</columns>
+    <columns>CSPV_HP__c</columns>
+    <columns>CSPV_HC__c</columns>
+    <columns>CSPV_PTE__c</columns>
+    <columns>CSPV_HPH__c</columns>
+    <columns>CSPV_HCH__c</columns>
+    <columns>CSPV_HPE__c</columns>
+    <columns>CSPV_HCE__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tableau Recap</label>
+</ListView>

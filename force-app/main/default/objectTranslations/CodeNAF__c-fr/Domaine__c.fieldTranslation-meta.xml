@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Domaine --></label>
+    <name>Domaine__c</name>
+    <picklistValues>
+        <masterLabel>ACTIVITES DE CONSEIL AUX ENTREPRISES</masterLabel>
+        <translation><!-- ACTIVITES DE CONSEIL AUX ENTREPRISES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITES DE NETTOYAGE</masterLabel>
+        <translation><!-- ACTIVITES DE NETTOYAGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITES DE SECURITE</masterLabel>
+        <translation><!-- ACTIVITES DE SECURITE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITES JURIDIQUES, COMPTABLES ET DES SIEGES SOCIAUX</masterLabel>
+        <translation><!-- ACTIVITES JURIDIQUES, COMPTABLES ET DES SIEGES SOCIAUX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITES VETERINAIRES TERTIAIRE</masterLabel>
+        <translation><!-- ACTIVITES VETERINAIRES TERTIAIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGRICULTURE ET PÊCHE</masterLabel>
+        <translation><!-- AGRICULTURE ET PÊCHE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARCHITECTURE, ETUDES ET NORMES</masterLabel>
+        <translation><!-- ARCHITECTURE, ETUDES ET NORMES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ART ET SPECTACLE</masterLabel>
+        <translation><!-- ART ET SPECTACLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTRES ACTIVITES DE SERVICES PERSONNELS</masterLabel>
+        <translation><!-- AUTRES ACTIVITES DE SERVICES PERSONNELS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTRES INDUSTRIES</masterLabel>
+        <translation><!-- AUTRES INDUSTRIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bien-être</masterLabel>
+        <translation><!-- Bien-être --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BÂTIMENT ET TRAVAUX PUBLICS (BTP) ET IMMOBILIER</masterLabel>
+        <translation><!-- BÂTIMENT ET TRAVAUX PUBLICS (BTP) ET IMMOBILIER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COMMERCE ET DISTRIBUTION</masterLabel>
+        <translation><!-- COMMERCE ET DISTRIBUTION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COMMUNICATION, MARKETING ET MEDIAS</masterLabel>
+        <translation><!-- COMMUNICATION, MARKETING ET MEDIAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENERGIE</masterLabel>
+        <translation><!-- ENERGIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENSEIGNEMENT ET FORMATION</masterLabel>
+        <translation><!-- ENSEIGNEMENT ET FORMATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FINANCE, BANQUE ET ASSURANCE</masterLabel>
+        <translation><!-- FINANCE, BANQUE ET ASSURANCE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hebergement Social</masterLabel>
+        <translation><!-- Hebergement Social --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HÔTELLERIE ET RESTAURATION</masterLabel>
+        <translation><!-- HÔTELLERIE ET RESTAURATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IMMOBILIER</masterLabel>
+        <translation><!-- IMMOBILIER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE ALIMENTAIRE</masterLabel>
+        <translation><!-- INDUSTRIE ALIMENTAIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE ALIMENTAIRE ANIMAUX</masterLabel>
+        <translation><!-- INDUSTRIE ALIMENTAIRE ANIMAUX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE CHIMIE</masterLabel>
+        <translation><!-- INDUSTRIE CHIMIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE DE L&apos;AMEUBLEMENT</masterLabel>
+        <translation><!-- INDUSTRIE DE L&apos;AMEUBLEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE DE L&apos;OPTIQUE</masterLabel>
+        <translation><!-- INDUSTRIE DE L&apos;OPTIQUE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE DU BOIS</masterLabel>
+        <translation><!-- INDUSTRIE DU BOIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE DU SPORT &amp; LOISIRS</masterLabel>
+        <translation><!-- INDUSTRIE DU SPORT &amp; LOISIRS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE DU TEXTILE</masterLabel>
+        <translation><!-- INDUSTRIE DU TEXTILE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE ELECTRONIQUE</masterLabel>
+        <translation><!-- INDUSTRIE ELECTRONIQUE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE MATERIEL MEDICAL/SANTE</masterLabel>
+        <translation><!-- INDUSTRIE MATERIEL MEDICAL/SANTE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE METALLURGIE</masterLabel>
+        <translation><!-- INDUSTRIE METALLURGIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE MINIERE</masterLabel>
+        <translation><!-- INDUSTRIE MINIERE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE PETROLIERE</masterLabel>
+        <translation><!-- INDUSTRIE PETROLIERE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE TRANSPORT</masterLabel>
+        <translation><!-- INDUSTRIE TRANSPORT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INFORMATIQUE ET TELECOMMUNICATION</masterLabel>
+        <translation><!-- INFORMATIQUE ET TELECOMMUNICATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOGISTIQUE ET TRANSPORT</masterLabel>
+        <translation><!-- LOGISTIQUE ET TRANSPORT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>METIERS DE BOUCHE</masterLabel>
+        <translation><!-- METIERS DE BOUCHE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MISE A DISPOSITION DE RESSOURCES HUMAINES</masterLabel>
+        <translation><!-- MISE A DISPOSITION DE RESSOURCES HUMAINES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ORGANISATIONS ET SYNDICATS DE METIERS</masterLabel>
+        <translation><!-- ORGANISATIONS ET SYNDICATS DE METIERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ORGANISATIONS POLITIQUES ET RELIGIEUSES</masterLabel>
+        <translation><!-- ORGANISATIONS POLITIQUES ET RELIGIEUSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RECHERCHE ET DEVELOPPEMENT EN SCIENCES</masterLabel>
+        <translation><!-- RECHERCHE ET DEVELOPPEMENT EN SCIENCES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RECYCLAGE &amp; VALORISATION DES DECHETS</masterLabel>
+        <translation><!-- RECYCLAGE &amp; VALORISATION DES DECHETS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICE PUBLIC, DEFENSE ET SECURITE</masterLabel>
+        <translation><!-- SERVICE PUBLIC, DEFENSE ET SECURITE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES D&apos;AIE ADMINISTRATIVE &amp; EVENEMENTIELLE AUX ENTREPRISES</masterLabel>
+        <translation><!-- SERVICES D&apos;AIE ADMINISTRATIVE &amp; EVENEMENTIELLE AUX ENTREPRISES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES D&apos;AMENAGEMENT PAYSAGER</masterLabel>
+        <translation><!-- SERVICES D&apos;AMENAGEMENT PAYSAGER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES DE BLANCHISSERIE</masterLabel>
+        <translation><!-- SERVICES DE BLANCHISSERIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES DE LOCATION</masterLabel>
+        <translation><!-- SERVICES DE LOCATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES DE REPARATIONS</masterLabel>
+        <translation><!-- SERVICES DE REPARATIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES DE RESERVATION</masterLabel>
+        <translation><!-- SERVICES DE RESERVATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICES FUNERAIRES</masterLabel>
+        <translation><!-- SERVICES FUNERAIRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SOCIAL</masterLabel>
+        <translation><!-- SOCIAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Santé</masterLabel>
+        <translation><!-- Santé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iNDUSTRIE PAPETIERE</masterLabel>
+        <translation><!-- iNDUSTRIE PAPETIERE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

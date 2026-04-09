@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Origine --></label>
+    <name>OrigineGarantieOrigine__c</name>
+    <picklistValues>
+        <masterLabel>Communale</masterLabel>
+        <translation><!-- Communale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Départementale</masterLabel>
+        <translation><!-- Départementale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Européenne</masterLabel>
+        <translation><!-- Européenne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Française</masterLabel>
+        <translation><!-- Française --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premium</masterLabel>
+        <translation><!-- Premium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Régionale</masterLabel>
+        <translation><!-- Régionale --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

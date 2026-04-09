@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- FTA --></label>
+    <name>FTA__c</name>
+    <picklistValues>
+        <masterLabel>BT &lt;= 36 kVA - CU</masterLabel>
+        <translation><!-- BT &lt;= 36 kVA - CU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT &lt;= 36 kVA - LU EP</masterLabel>
+        <translation><!-- BT &lt;= 36 kVA - LU EP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT &lt;= 36 kVA - MU</masterLabel>
+        <translation><!-- BT &lt;= 36 kVA - MU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT &lt;= 36Kva - CU 4 postes</masterLabel>
+        <translation><!-- BT &lt;= 36Kva - CU 4 postes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT &lt;= 36Kva - MU 4 postes</masterLabel>
+        <translation><!-- BT &lt;= 36Kva - MU 4 postes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT &gt; 36 kVA - CU</masterLabel>
+        <translation><!-- BT &gt; 36 kVA - CU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BT &gt; 36 kVA - LU</masterLabel>
+        <translation><!-- BT &gt; 36 kVA - LU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HTA - PF - CU</masterLabel>
+        <translation><!-- HTA - PF - CU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HTA - PF - LU</masterLabel>
+        <translation><!-- HTA - PF - LU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HTA - PM - CU</masterLabel>
+        <translation><!-- HTA - PM - CU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HTA - PM - LU</masterLabel>
+        <translation><!-- HTA - PM - LU --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

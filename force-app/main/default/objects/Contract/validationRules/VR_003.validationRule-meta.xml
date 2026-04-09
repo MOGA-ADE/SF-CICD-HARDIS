@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_003</fullName>
+    <active>true</active>
+    <description>Blocage de la création du contrat si région d&apos;activité absente pour un canal Terrain</description>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    Opportunity__r.Demande_Cotation__r.Owner:User.Username &lt;&gt; &quot;linda.bey@alliancedesenergies.fr&quot;,
+    OR(
+        ISPICKVAL(Canal_vente__c, &quot;Vente terrain&quot;),
+        ISPICKVAL(Canal_vente__c, &quot;Vente terrain Lyon&quot;)
+    ),
+    ISPICKVAL(Region_activite__c, &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Le commercial doit avoir une région d’activité s’il fait partie du canal de vente terrain.</errorMessage>
+</ValidationRule>

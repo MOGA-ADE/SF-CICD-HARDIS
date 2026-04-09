@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_FournisseurLogo__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Fournisseur__c,
+&quot;Antargaz&quot;,&quot;antargaz.png&quot;,
+&quot;Alterna&quot;,&quot;alterna.png&quot;,
+&quot;Dyneff&quot;,&quot;dyneff.png&quot;,
+&quot;EDF Entreprises&quot;,&quot;edf.png&quot;,
+&quot;Ekwateur&quot;,&quot;ekwateur.png&quot;,
+&quot;Electricité de Provence&quot;,&quot;electricitedeprovence.png&quot;,
+&quot;Electricité de Strasbourg&quot;,&quot;electricitedestrasbourg.png&quot;,
+&quot;Endesa&quot;,&quot;endesa.png&quot;,
+&quot;Enercoop&quot;,&quot;enercoop.png&quot;,
+&quot;Engie&quot;,&quot;engie.png&quot;,
+&quot;Eni&quot;,&quot;eni.png&quot;,
+&quot;Enovos&quot;,&quot;enovos.png&quot;,
+&quot;Dalkia&quot;,&quot;dalkia.png&quot;,
+&quot;Gaz de Bordeaux&quot;,&quot;gazdebordeaux.png&quot;,
+&quot;Gaz Européen&quot;,&quot;gazeuropeen.png&quot;,
+&quot;Gazel Energie&quot;,&quot;gazelenergie.png&quot;,
+&quot;GEG&quot;,&quot;geg.png&quot;,
+&quot;Iberdrola&quot;,&quot;iberdrola.png&quot;,
+&quot;Ilek&quot;,&quot;ilek.png&quot;,
+&quot;La Bellenergie&quot;,&quot;labellenergie.png&quot;,
+&quot;LLUM&quot;,&quot;llum.png&quot;,
+&quot;MET Energie&quot;,&quot;metenergie.png&quot;,
+&quot;OHM Energie&quot;,&quot;ohmenergie.png&quot;,
+&quot;Picoty&quot;,&quot;picoty.png&quot;,
+&quot;Planete OUI&quot;,&quot;planeteoui.png&quot;,
+&quot;Primeo Energie&quot;,&quot;primeoenergie.png&quot;,
+&quot;Save Energies&quot;,&quot;saveenergies.png&quot;,
+&quot;SEFE Energy&quot;,&quot;SEFE.png&quot;,
+&quot;Situation Actuelle&quot;, &quot;Situation_Actuelle.png&quot;,
+&quot;Proposition Renouvellement&quot;, &quot;Proposition_Renouvellement.png&quot;,
+&quot;Selia&quot;,&quot;selia.png&quot;,
+&quot;TotalEnergies&quot;,&quot;totalenergies.png&quot;,
+&quot;Total&quot;,&quot;totalenergies.png&quot;,
+&quot;Vattenfall&quot;,&quot;vattenfall.png&quot;,
+&quot;None&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TECH_Fournisseur Logo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

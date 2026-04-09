@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "linkedin-circle-colored",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005bADUAY",
+        "type" : "file",
+        "size" : 707
+      }
+    }
+  },
+  "urlName" : "linkedin-circle-colored"
+}

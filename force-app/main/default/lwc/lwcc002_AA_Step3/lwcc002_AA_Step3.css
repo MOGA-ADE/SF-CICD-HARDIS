@@ -1,0 +1,35 @@
+.customFontSize {
+    font-size: 16px !important;
+}
+
+.resetBGK {
+    background-image: none;
+    background-color: #F3F3F3;
+    text-shadow: none;
+}
+
+.buttonContainer{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.borderTop {
+    border-top-color : #D4D4D4;
+}
+
+.marginBottom {
+    margin-bottom: 30px;
+}
+
+.spinnerButton {
+    height: 32px;
+    width: 77px;
+    position: relative;
+    background-color: #0070d2;
+    border-radius: .25rem;
+}
+
+.slds-spinner_container {
+    background-color: transparent;
+}

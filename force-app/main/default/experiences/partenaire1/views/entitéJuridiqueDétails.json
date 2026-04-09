@@ -1,0 +1,292 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "213bcdba-c4d2-4002-8f8c-f5c92aa7f078",
+  "label" : "Entité Juridique Détails",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "c7413c3e-aef3-4760-8cc3-5f96d4d19975",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:pathAssistant",
+      "id" : "2b8cc307-de98-4c69-a055-5bfce815883e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "38951595-dfaa-4a6a-bfb9-77cb8130fffb",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "7a42894b-3524-4344-99cf-b9be7012c3b1",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "a997c4b2-e3d4-4d32-85a7-4f9a5fc44136",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "1",
+            "tabName" : "Détails 👀"
+          }, {
+            "UUID" : "005bbfb7-67d5-4643-b70d-7d259bdebe54",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "f6182",
+            "tabName" : "Contacts ☎️"
+          }, {
+            "UUID" : "f5e9064b-4416-4caf-b27b-b6c88a5b7fd9",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "3",
+            "tabName" : "Points d'énergie 🔌🔥"
+          }, {
+            "UUID" : "7b9ad7d0-b55a-4a13-a17c-f3cb42ea4ccd",
+            "allowGuestUser" : true,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "14bf1",
+            "tabName" : "Demande de cotation 📣"
+          }, {
+            "UUID" : "fa4bd507-980b-4af7-a29b-fb1f4a8df39b",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "7e5c0",
+            "tabName" : "Ellisphère 🔍"
+          }, {
+            "UUID" : "6a7f1a78-4af6-4703-9aff-b80ed7b78bbb",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "38bea",
+            "tabName" : "Contrats €"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "7a42894b-3524-4344-99cf-b9be7012c3b1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:recordDetail",
+          "id" : "6730455f-1f67-43e2-b964-33b445b9ca91",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a997c4b2-e3d4-4d32-85a7-4f9a5fc44136",
+        "regionLabel" : "Détails 👀",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "relatedListApiName" : "AccountContactRelations",
+            "relatedListComponentOverride" : "ADVGRID",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:responsiveRelatedListSingle",
+          "id" : "058c2ede-1aa9-4fd1-9d7a-929902eec324",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "005bbfb7-67d5-4643-b70d-7d259bdebe54",
+        "regionLabel" : "Contacts ☎️",
+        "regionName" : "f6182",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "c:csv_pdeLoader",
+          "id" : "214176b1-47a8-4664-9fd7-38042628877c",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "c:lwcc020_ShowRelatedPDEElec",
+          "id" : "3208feed-9298-4c04-9b48-5976fa6db22f",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "c:lwcc021_ShowRelatedPDEGaz",
+          "id" : "750ed98b-a038-4baf-aac3-c84981330256",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f5e9064b-4416-4caf-b27b-b6c88a5b7fd9",
+        "regionLabel" : "Points d'énergie 🔌🔥",
+        "regionName" : "3",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "relatedListApiName" : "Demandes_Cotation__r",
+            "relatedListComponentOverride" : "GRID",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:responsiveRelatedListSingle",
+          "id" : "a59f63c8-9cd5-42df-94d4-3c8b6abea099",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7b9ad7d0-b55a-4a13-a17c-f3cb42ea4ccd",
+        "regionLabel" : "Demande de cotation 📣",
+        "regionName" : "14bf1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "relatedListApiName" : "ELLISPHERE__Elli_ChildScoreAccount__r",
+            "relatedListComponentOverride" : "NONE",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:responsiveRelatedListSingle",
+          "id" : "2a2a852a-9b86-45bb-b555-ab1c9ec4c475",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "relatedListApiName" : "ELLISPHERE__Elli_FinancialCodes_Parent__r",
+            "relatedListComponentOverride" : "NONE",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:responsiveRelatedListSingle",
+          "id" : "24ce91fb-8840-4fc3-8511-6b8912f5be90",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fa4bd507-980b-4af7-a29b-fb1f4a8df39b",
+        "regionLabel" : "Ellisphère 🔍",
+        "regionName" : "7e5c0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "relatedListApiName" : "Contracts",
+            "relatedListComponentOverride" : "GRID",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:responsiveRelatedListSingle",
+          "id" : "08472211-55da-4dc9-bf39-a19a1d699bf6",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6a7f1a78-4af6-4703-9aff-b80ed7b78bbb",
+        "regionLabel" : "Contrats €",
+        "regionName" : "38bea",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "context" : "RECORD",
+        "recordId" : "{!recordId}",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:feedPublisher",
+      "id" : "886ae398-bb5e-4c6d-a4d1-fab1e06afefb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "canChangeSorting" : true,
+        "defaultFilter" : "",
+        "defaultSortOrderHomeFeed" : "CreatedDateDesc",
+        "defaultSortOrderTopicsFeed" : "Relevance",
+        "feedDesign" : "DEFAULT",
+        "hasFeedSearch" : true,
+        "subjectId" : "{!recordId}",
+        "type" : "Record"
+      },
+      "componentName" : "forceCommunity:forceCommunityFeed",
+      "id" : "413881ae-61ed-4204-82f0-6c3f5ce55d6a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "eefcb76e-e2a6-49b6-a22d-7770742972bb",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "29382875-d654-48bb-9cdf-7b481b78513c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ea0538fb-2060-4666-a652-1b61b90ac5f9",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "02219083-9fac-4c9e-9dd0-1ccf2246f097",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "relatedListApiName" : "CombinedAttachments",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:responsiveRelatedListSingle",
+      "id" : "d2fe6737-87db-4b7f-84c8-aed64ca86b02",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}",
+        "showLegacyActivityComposer" : false
+      },
+      "componentName" : "forceCommunity:activityPanel",
+      "id" : "7e7589bd-5b95-4902-ba50-0f30462cf1e0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "98e4ddf1-6d47-4a19-a6d5-ec25f9db58d1",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-001"
+}

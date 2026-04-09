@@ -1,0 +1,66 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-quick-action-panel header="Rentrer les prix des FTA par Fournisseurs">
+        <div class="actionBody">
+            <lightning-spinner if:true={showSpinner} alternative-text="Loading" size="medium"></lightning-spinner>
+            <template if:true={quoteList} for:each={quoteList} for:item="quote">
+                <lightning-accordion key={quote.id} allow-multiple-sections-open>
+                    <div class="fournisseurHeader">
+                        <div class="h1Container">
+                            <lightning-icon icon-name="standard:custom_notification" alternative-text="Icon fournisseur" ></lightning-icon>
+                            <h1>{quote.name}</h1>
+                        </div>
+                        <div class="inputContainer">
+                            <lightning-layout>
+                                <lightning-layout-item size="auto">
+                                    <lightning-input class="slds-m-right_x-small" type="date" variant="label-hidden" placeholder="Fin de fourniture" data-inputname="Nouvelle_Echeance__c" data-quoteid={quote.id} onchange={changeInput}></lightning-input>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="auto" class="slds-align_absolute-center">
+                                    <span class="slds-m-horizontal_x-small">OU</span>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="auto">
+                                    <lightning-input class="slds-m-left_x-small" type="number" step="1" variant="label-hidden" placeholder="Durée de l'offre" data-inputname="DureeEngagement__c" data-quoteid={quote.id} onchange={changeInput}></lightning-input>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal_small ftaContainer">
+                        <template if:true={quote.ftas} for:each={quote.ftas} for:item="fta">
+                            <lightning-accordion-section label={fta.name} key={fta}>
+                                <lightning-layout multiple-rows>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasAbonnement} type="number" formatter="currency" label="Abonnement (€/mois)" data-inputname="AbonnementMois__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueAbonnement} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPointe} type="number" formatter="currency" label="Pointes (€/MWh)" data-inputname="PointesMWh__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePointe} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixBase} type="number" formatter="currency" label="Prix Base (€/MWh)" data-inputname="PrixBase__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixBase} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixHPH} type="number" formatter="currency" label="Prix HPH (€/MWh)" data-inputname="PrixHphMwh__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixHPH} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixHCH} type="number" formatter="currency" label="Prix HCH (€/MWh)" data-inputname="PrixHchMwh__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixHCH} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixHPE} type="number" formatter="currency" label="Prix HPE (€/MWh)" data-inputname="PrixHpeMwh__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixHPE} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixHCE} type="number" formatter="currency" label="Prix HCE (€/MWh)" data-inputname="PrixHceMwh__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixHCE} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixHP} type="number" formatter="currency" label="Prix HP (€/MWh)" data-inputname="PrixHP__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixHP} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasPrixHC} type="number" formatter="currency" label="Prix HC (€/MWh)" data-inputname="PrixHC__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValuePrixHC} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCEE} type="number" formatter="currency" label="CEE (€/MWh)" data-inputname="CeeMwh__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCEE} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapacitePointe} type="number" formatter="currency" label="Capacité Pointes (€/MWh)" data-inputname="Capa_Pointes__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapacitePointe} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteBase} type="number" formatter="currency" label="Capacité Base (€/MWh)" data-inputname="Capa_Base__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteBase} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteHPH} type="number" formatter="currency" label="Capacité HPH (€/MWh)" data-inputname="Capa_HPH__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteHPH} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteHCH} type="number" formatter="currency" label="Capacité HCH (€/MWh)" data-inputname="Capa_HCH__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteHCH} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteHPE} type="number" formatter="currency" label="Capacité HPE (€/MWh)" data-inputname="Capa_HPE__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteHPE} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteHCE} type="number" formatter="currency" label="Capacité HCE (€/MWh)" data-inputname="Capa_HCE__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteHCE} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteHP} type="number" formatter="currency" label="Capacité HP (€/MWh)" data-inputname="Capa_HP__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteHP} onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCapaciteHC} type="number" formatter="currency" label="Capacité HC (€/MWh)" data-inputname="Capa_HC__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCapaciteHC} onchange={changeInput}></lightning-input>
+                                    <!-- <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasCSPE} type="number" formatter="currency" label="CSPE" data-inputname="CSPE__c" data-quoteid={quote.id} data-fta={fta.name} value={fta.oldValueCSPE} onchange={changeInput}></lightning-input> -->
+                                    <!-- <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasTDCFE} type="number" formatter="currency" label="TDCFE" data-inputname="TDCFE__c" data-quoteid={quote.id} data-fta={fta.name} value="0" onchange={changeInput}></lightning-input>
+                                    <lightning-input step="0.01" class="slds-m-right_x-small slds-m-bottom_x-small" if:true={fta.hasTCCFE} type="number" formatter="currency" label="TCCFE" data-inputname="TCCFE__c" data-quoteid={quote.id} data-fta={fta.name} value="0" onchange={changeInput}></lightning-input> -->
+                                </lightning-layout>
+                            </lightning-accordion-section>
+                        </template>
+                    </div>
+                 </lightning-accordion>
+            </template>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Annuler" onclick={closeAction}></lightning-button>
+            <lightning-button if:false={iSCreatingQLI} variant="brand" label="Créer les lignes fournisseurs" class="slds-m-left_x-small" onclick={createQLI}></lightning-button>
+            <lightning-button if:true={iSCreatingQLI} variant="outline-brand" label="Création en cours..." class="slds-m-left_x-small disabledButton"></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

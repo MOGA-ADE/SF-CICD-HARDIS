@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_Ancien_proprietaire_piste__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ancien propriétaire de la piste dont la source est &apos;Demande de contact site&apos;</description>
+    <inlineHelpText>Ancien propriétaire de la piste dont la source est &apos;Demande de contact site&apos;</inlineHelpText>
+    <label>Ancien propriétaire de la piste dont la</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

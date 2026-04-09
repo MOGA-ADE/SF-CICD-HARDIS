@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Chiffre_affaire__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>test</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>Commissions_salarie__r</relationship>
+    </join>
+    <label>Chiffre d&apos;affaire &amp; Commissions &amp; Contracts</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ID Chiffre d&apos;affaire</displayNameOverride>
+            <field>Id</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commercial</displayNameOverride>
+            <field>Commercial__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Convention</displayNameOverride>
+            <field>Convention__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Créé par</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de création</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dernière modification par</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de dernière modification</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mois de paiement</displayNameOverride>
+            <field>Mois_paiement__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Montant</displayNameOverride>
+            <field>Montant__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Name</displayNameOverride>
+            <field>Name</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Propriétaire</displayNameOverride>
+            <field>Owner</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Palier atteint</displayNameOverride>
+            <field>Palier_atteint__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Partenaire</displayNameOverride>
+            <field>Partenaire__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Somme des commissions</displayNameOverride>
+            <field>Somme_commissions__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Partenaire__c.Parent_AccountOwner__c</field>
+            <table>Chiffre_affaire__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.Entite_facturation__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Chiffre_affaire__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <masterLabel>Chiffre d&apos;affaire</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Appel à facturation</displayNameOverride>
+            <field>Appel_facturation__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commercial</displayNameOverride>
+            <field>Commercial__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ID Commission</displayNameOverride>
+            <field>Id</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract</displayNameOverride>
+            <field>Contract__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Créé par</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de création</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dernière modification par</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de dernière modification</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mois de paiement</displayNameOverride>
+            <field>Mois_paiement__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Montant</displayNameOverride>
+            <field>Montant__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Montant net</displayNameOverride>
+            <field>Montant_net__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Name</displayNameOverride>
+            <field>Name</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nom du contrat</displayNameOverride>
+            <field>Nom_du_contrat__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Société du commercial</displayNameOverride>
+            <field>Societe_commercial__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Chargé d&apos;affaire</displayNameOverride>
+            <field>Contract__c.Charge_affaire__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Date de signature du client</displayNameOverride>
+            <field>Contract__c.CustomerSignedDate</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Commission ADE €</displayNameOverride>
+            <field>Contract__c.Commission_ADE__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Fournisseur</displayNameOverride>
+            <field>Contract__c.FournisseurPicklist__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Nom du contrat</displayNameOverride>
+            <field>Contract__c.Name</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Nom du compte</displayNameOverride>
+            <field>Contract__c.Account</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Siret payeur</displayNameOverride>
+            <field>Contract__c.Siret_payeur__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Société du commercial</displayNameOverride>
+            <field>Contract__c.Societe_du_commercial__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : CAR</displayNameOverride>
+            <field>Contract__c.CAR__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : Source</displayNameOverride>
+            <field>Contract__c.Source__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commission : Contract : TECH_Partner_OwnerName</displayNameOverride>
+            <field>Contract__c.TECH_Partner_OwnerName__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.StartDate</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.EndDate</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.Commission_source__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.Remuneration_source__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.TECH_AA_OwnerName__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Canal de vente</displayNameOverride>
+            <field>Contract__c.Canal_vente__c</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract__c.RecordType</field>
+            <table>Chiffre_affaire__c.Commissions_salarie__r</table>
+        </columns>
+        <masterLabel>Commissions</masterLabel>
+    </sections>
+</ReportType>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EntiteJuridiquePrincipale</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName =&apos;Account_Filiale&apos;,ISBLANK( EntiteJuridiquePrincipale__c))</errorConditionFormula>
+    <errorDisplayField>EntiteJuridiquePrincipale__c</errorDisplayField>
+    <errorMessage>Une filiale doit appartenir à une entité juridique principale</errorMessage>
+</ValidationRule>

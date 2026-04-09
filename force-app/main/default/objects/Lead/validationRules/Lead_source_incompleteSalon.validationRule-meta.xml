@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_source_incompleteSalon</fullName>
+    <active>true</active>
+    <description>Si la lead source est &quot;Salon&quot; il faut renseigner le nom du salon et l&apos;année.</description>
+    <errorConditionFormula>AND(
+									ISPICKVAL(LeadSource,&apos;Salon&apos;),
+                        OR(ISPICKVAL(Annee_salon__c,&apos;&apos;),
+                        ISPICKVAL(Nom_salon__c,&apos;&apos;)))</errorConditionFormula>
+    <errorDisplayField>Nom_salon__c</errorDisplayField>
+    <errorMessage>Merci de renseigner le nom du salon ainsi que l&apos;année.</errorMessage>
+</ValidationRule>

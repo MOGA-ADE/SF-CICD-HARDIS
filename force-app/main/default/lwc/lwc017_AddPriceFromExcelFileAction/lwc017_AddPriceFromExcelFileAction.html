@@ -1,0 +1,65 @@
+<template>
+	<lightning-quick-action-panel header="Importer des lignes de fournisseurs">
+		<div class="actionBody">
+			<lightning-spinner if:true={showSpinner} alternative-text="Loading" size="medium"></lightning-spinner>
+			<div class="slds-align_absolute-center">
+				<div class="slds-text-align_center slds-m-bottom_medium" style="text-align: center">
+					<h2 class="slds-text-heading_medium">Téléchargez le template CSV :</h2>
+				</div>
+			</div>
+			<div class="slds-align_absolute-center">
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col slds-size_1-of-2 slds-text-align_left">
+						<lightning-button
+							variant="neutral" 
+							label="Template sans les prix"
+							onclick={exportTemplateSansPrix}>
+						</lightning-button>
+					</div>
+					<div class="slds-col slds-size_1-of-2 slds-text-align_right">
+						<lightning-button
+							variant="neutral" 
+							label ="Template avec les prix"
+							class="slds-m-right_x-small"
+							onclick={exportTemplateAvecPrix}>
+						</lightning-button>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="section2">
+				<h2 class="slds-text-heading_medium">Importez le template CSV :</h2>
+				<div class="slds-p-around_medium">
+					<div class="draggableContainer" draggable="true" ondragover={handleDragOver} ondrop={handleDrop}>
+						<!-- <input type="file" onchange={getFile} class="" accept=".csv" />
+						<div id="holderQLI" class="slds-var-m-top_medium slds-align_absolute-center drop">
+							Glisser/Déposer votre fichier de mise à jour des prix
+						</div>​ -->
+						<input type="file" onchange={getFile} class="slds-file-selector__input slds-assistive-text" accept=".csv" id="file-upload-input-107" aria-labelledby="file-selector-primary-label-105 file-selector-secondary-label106" />
+						<label class="slds-file-selector__body labelContainer" for="file-upload-input-107" id="file-selector-secondary-label106">
+						<span class="slds-file-selector__button slds-button slds-button_neutral">Chargez votre fichier</span>
+						<span class="slds-file-selector__text slds-medium-show marginRL">Ou glissez le ici</span>
+						</label>
+					</div>
+				</div>
+				
+				<p if:true={fileUploaded}>
+					<lightning-icon
+					icon-name="utility:success"
+					size="small"
+					alternative-text="Icon success"
+					title="Success"
+					></lightning-icon>
+					&nbsp;
+					Le fichier a été chargé
+				</p>
+			</div>	
+		</div>
+		<div slot="footer">
+            <lightning-button variant="neutral" label="Annuler" onclick={closeAction}></lightning-button>
+            <lightning-button if:false={iSCreatingQLI} variant="brand" label="Créer les lignes fournisseurs" class="slds-m-left_x-small" onclick={createQLI} disabled={disableButton}></lightning-button>
+            <lightning-button if:true={iSCreatingQLI} variant="outline-brand" label="Création en cours..." class="slds-m-left_x-small disabledButton"></lightning-button>
+        </div>
+
+	</lightning-quick-action-panel>
+</template>

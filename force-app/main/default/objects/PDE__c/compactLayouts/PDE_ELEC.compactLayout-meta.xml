@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDE_ELEC</fullName>
+    <fields>Name</fields>
+    <fields>Taux_puissance_souscrite_utilisee__c</fields>
+    <fields>PDE_Optimise_Pictogramme__c</fields>
+    <label>PDE_ELEC</label>
+</CompactLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR001_CU</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(CONTAINS(TEXT(PDE__r.FTA__c),&quot;CU&quot;),
+OR( NOT(ISBLANK(TEXT(ConsoHC__c))),NOT(ISBLANK(TEXT(ConsoHP__c)))
+)
+)</errorConditionFormula>
+    <errorMessage>Le  FTA  associé à ce point d&apos;énergie ne permet pas de remplir les champs HP ou HC</errorMessage>
+</ValidationRule>

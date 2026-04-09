@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_003</fullName>
+    <active>true</active>
+    <description>Bloquer les demandes de cotation au statut refusé</description>
+    <errorConditionFormula>AND(
+   TEXT(PRIORVALUE(Statut__c))  = &quot;Refusée&quot;,
+		 NOT(ISCHANGED(CAR_Elec__c)),
+			NOT(ISCHANGED(CAR_Gaz__c)),
+				NOT(ISCHANGED(Nombre_PDE__c)),
+				NOT(ISCHANGED(OwnerId)),
+    OR(
+        $Profile.Name = &quot;Profil Noureddine&quot;,
+        $Profile.Name = &quot;Utilisateur Partenaire Communauté&quot;,
+        $Profile.Name = &quot;Commercial&quot;
+    )
+)</errorConditionFormula>
+    <errorMessage>Cette demande de cotation n&apos;est plus modifiable. Merci d&apos;en créer une nouvelle.</errorMessage>
+</ValidationRule>

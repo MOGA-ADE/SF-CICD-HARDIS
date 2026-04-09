@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SGE_Logs</fullName>
+    <columns>NAME</columns>
+    <columns>ApexMethod__c</columns>
+    <columns>Verb__c</columns>
+    <columns>Endpoint__c</columns>
+    <columns>RequestBody__c</columns>
+    <columns>ResponseBody__c</columns>
+    <columns>StatusCode__c</columns>
+    <columns>CurrentUser__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>SGE</value>
+    </filters>
+    <filters>
+        <field>Endpoint__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>SGE Logs</label>
+</ListView>

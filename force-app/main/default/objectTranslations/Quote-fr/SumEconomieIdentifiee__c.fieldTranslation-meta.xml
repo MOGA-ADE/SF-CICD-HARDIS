@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Somme des EconomieIdentifie__c des QLI liés --></help>
+    <label><!-- Économie Totale Identifiée --></label>
+    <name>SumEconomieIdentifiee__c</name>
+</CustomFieldTranslation>

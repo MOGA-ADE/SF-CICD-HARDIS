@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE_19_03_25_Alim_RAPPELS</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source_cellule_RDV__c</field>
+        <operation>equals</operation>
+        <value>Ellisphere - Import 19/03/2025 Alimentaire</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>ARappeler</value>
+    </filters>
+    <label>ELLISPHERE 19-03-25 Alim RAPPELS</label>
+    <sharedTo>
+        <role>Charge_de_RDV</role>
+    </sharedTo>
+</ListView>

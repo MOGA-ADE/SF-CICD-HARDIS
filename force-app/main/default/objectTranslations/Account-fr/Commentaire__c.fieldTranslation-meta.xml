@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Les commentaires remplis par les commerciaux. --></help>
+    <label><!-- Commentaire --></label>
+    <name>Commentaire__c</name>
+</CustomFieldTranslation>

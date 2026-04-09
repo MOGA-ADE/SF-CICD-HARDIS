@@ -1,0 +1,1178 @@
+<apex:page standardController="Opportunity" id="quote" extensions="VFC004_EtudeComparative"
+           applyHtmlTag="false"
+           showHeader="false"
+           applyBodyTag="false" 
+           renderAs="pdf"
+           language="fr">
+    <apex:stylesheet value="{!URLFOR($Resource.EtudeComparative)}"/>
+    <body>
+        <!-- Slides Elec -->
+        <div style="display:{!IF(NOT(Opportunity.TECH_IsGaz__c),'','none')};">
+            <!-- PWE -->
+                <div style="display:{!IF(Opportunity.visuel_PWE__c,'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Accueil.png')}" width="100%" height="100%"/>
+                </div>
+                <!-- Presentation partenaire -->
+                    <div style="display:{!IF(showVisuelPartenaire,'','none')};">
+                        <div class="containerFullPage">
+                            <img src="{!URLFOR($Resource.pagesPresentationPartenaire,visuelPartenaireFileName)}" width="100%" height="100%"/>
+                        </div>
+                    </div>
+                <!-- /Presentation partenaire -->
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Info1.png')}" width="100%" height="100%"/>    
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Info2.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Info3.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage" style="position:relative;">
+                    <div class="tableContainer">
+                        <table style = "background-color:white;">
+                            <tr style="height:40px;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A; border-bottom:2px solid #3A3A3A;">
+                                    RAISON SOCIALE
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #3A3A3A;" colspan="2">
+                                    {!opportunite.Raison_sociale}
+                                </td>
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #3A3A3A;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A;border-bottom:2px solid #3A3A3A; ">
+                                    SIREN
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #3A3A3A;" colspan="2">
+                                    {!opportunite.SIREN}
+                                </td>
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #3A3A3A;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A;border-bottom:2px solid #3A3A3A;">
+                                    SIGNATAIRE
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #3A3A3A;" colspan="2">
+                                    {!opportunite.Prenom_NOM} 
+                                </td >
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #3A3A3A;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A;">
+                                    COORDONNÉES
+                                </td>
+                                <td style="text-align: left; padding-left: 15px; border-right:2px solid #3A3A3A;">
+                                    {!opportunite.Telephone}
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;  width:296px; ">
+                                    {!opportunite.Email}
+                                    </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'SlideInfoInterlocuteur.png')}" width="100%" height="100%"/>                        
+                </div>
+                </div>
+            <!-- /PWE -->
+            <!-- ADE -->
+                <div style="display:{!IF(NOT(Opportunity.visuel_PWE__c),'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Accueil.png')}" width="100%" height="100%"/>
+                </div>
+                <!-- Presentation partenaire -->
+                <div style="display:{!IF(showVisuelPartenaire,'','none')};">
+                    <div class="containerFullPage">
+                        <img src="{!URLFOR($Resource.pagesPresentationPartenaire,visuelPartenaireFileName)}" width="100%" height="100%"/>
+                    </div>
+                </div>
+                <!-- /Presentation partenaire -->
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Info1.png')}" width="100%" height="100%"/>    
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Info2.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage" style="position:relative;">
+                    <div class="tableContainer">
+                        <table style = "background-color:white;">
+                            <tr style="height:40px;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76; border-bottom:2px solid #186A76;">
+                                    RAISON SOCIALE
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #186A76;" colspan="2">
+                                    {!opportunite.Raison_sociale}
+                                </td>
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #186A76;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76;border-bottom:2px solid #186A76; ">
+                                    SIREN
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #186A76;" colspan="2">
+                                    {!opportunite.SIREN}
+                                </td>
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #186A76;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76;border-bottom:2px solid #186A76;">
+                                    SIGNATAIRE
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #186A76;" colspan="2">
+                                    {!opportunite.Prenom_NOM} 
+                                </td >
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #186A76;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76;">
+                                    COORDONNÉES
+                                </td>
+                                <td style="text-align: left; padding-left: 15px; border-right:2px solid #186A76;">
+                                    {!opportunite.Telephone}
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;  width:296px; ">
+                                    {!opportunite.Email}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'SlideInfoInterlocuteur.png')}" width="100%" height="100%"/>                        
+                </div>
+                </div>
+            <!-- /ADE -->  
+        </div>
+        <!-- Slides Gaz -->
+        <div style="display:{!IF(Opportunity.TECH_IsGaz__c,'','none')};">
+            <!-- PWE -->
+                <div style="display:{!IF(Opportunity.visuel_PWE__c,'','none')};">
+                    <div class="containerFullPage">
+                        <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Accueil.png')}" width="100%" height="100%"/>    
+                    </div>
+                    <!-- Presentation partenaire -->
+                        <div style="display:{!IF(showVisuelPartenaire,'','none')};">
+                            <div class="containerFullPage">
+                                <img src="{!URLFOR($Resource.pagesPresentationPartenaire,visuelPartenaireFileName)}" width="100%" height="100%"/>
+                            </div>
+                        </div>
+                    <!-- /Presentation partenaire -->
+                    <div class="containerFullPage">
+                        <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Info1.png')}" width="100%" height="100%"/>    
+                    </div>
+                    <div class="containerFullPage">
+                        <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Info2.png')}" width="100%" height="100%"/>    
+                    </div>
+                    <div class="containerFullPage">
+                        <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Info3.png')}" width="100%" height="100%"/>    
+                    </div>
+                    <div style="page-break-after: always; size: A4 landscape; position:relative;">
+                        <div class="tableContainer">
+                            <table style = "background-color:white;">
+                                <tr style="height:40px;">
+                                    <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A; border-bottom:2px solid #3A3A3A;">
+                                        RAISON SOCIALE
+                                    </td>
+                                    <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #3A3A3A;" colspan="2">
+                                        {!opportunite.Raison_sociale}
+                                    </td>
+                                </tr>
+                                <tr style="height:40px; border-bottom:2px solid #3A3A3A;">
+                                    <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A;border-bottom:2px solid #3A3A3A; ">
+                                        SIREN
+                                    </td>
+                                    <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #3A3A3A;" colspan="2">
+                                        {!opportunite.SIREN}
+                                    </td>
+                                </tr>
+                                <tr style="height:40px; border-bottom:2px solid #3A3A3A;">
+                                    <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A;border-bottom:2px solid #3A3A3A;">
+                                        SIGNATAIRE
+                                    </td>
+                                    <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #3A3A3A;" colspan="2">
+                                        {!opportunite.Prenom_NOM}
+                                    </td >
+                                </tr>
+                                <tr style="height:40px; border-bottom:2px solid #3A3A3A;">
+                                    <td style="text-align: center; width:217px;border-right:2px solid #3A3A3A;" >
+                                        COORDONNÉES
+                                    </td>
+                                    <td style="text-align: left; padding-left: 15px; border-right:2px solid #3A3A3A;">
+                                        {!opportunite.Telephone} 
+                                    </td>
+                                    <td style="text-align: left; padding-left: 30px;  width:296px; " >
+                                        {!opportunite.Email}
+                                    </td>                            
+                                </tr>
+                            </table>
+                        </div>
+                        <div  class="containerFullPage" style="overflow:hidden">
+                            <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'SlideInfoInterlocuteur.png')}" width="100%" height="100%" />                        
+                        </div>
+                    </div>
+                </div>
+            <!--  /PWE -->
+            <!-- ADE -->
+                <div style="display:{!IF(NOT(Opportunity.visuel_PWE__c),'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Accueil.png')}" width="100%" height="100%"/>    
+                </div>
+                <!-- Presentation partenaire -->
+                <div style="display:{!IF(showVisuelPartenaire,'','none')};">
+                    <div class="containerFullPage">
+                        <img src="{!URLFOR($Resource.pagesPresentationPartenaire,visuelPartenaireFileName)}" width="100%" height="100%"/>
+                    </div>
+                </div>
+                <!-- /Presentation partenaire -->
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Info1.png')}" width="100%" height="100%"/>    
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Info2.png')}" width="100%" height="100%"/>    
+                </div>
+                <div style="page-break-after: always; size: A4 landscape; position:relative;">
+                    <div class="tableContainer">
+                        <table style = "background-color:white;">
+                            <tr style="height:40px;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76; border-bottom:2px solid #186A76;">
+                                    RAISON SOCIALE
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #186A76;" colspan="2">
+                                    {!opportunite.Raison_sociale}
+                                </td>
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #186A76;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76;border-bottom:2px solid #186A76; ">
+                                    SIREN
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #186A76;" colspan="2">
+                                    {!opportunite.SIREN}
+                                </td>
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #186A76;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76;border-bottom:2px solid #186A76;">
+                                    SIGNATAIRE
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;border-bottom:2px solid #186A76;" colspan="2">
+                                    {!opportunite.Prenom_NOM}
+                                </td >
+                            </tr>
+                            <tr style="height:40px; border-bottom:2px solid #186A76;">
+                                <td style="text-align: center; width:217px;border-right:2px solid #186A76;" >
+                                    COORDONNÉES
+                                </td>
+                                <td style="text-align: left; padding-left: 15px; border-right:2px solid #186A76;">
+                                    {!opportunite.Telephone} 
+                                </td>
+                                <td style="text-align: left; padding-left: 30px;  width:296px; " >
+                                    {!opportunite.Email}
+                                </td>                            
+                            </tr>
+                        </table>
+                    </div>
+                    <div  class="containerFullPage" style="overflow:hidden">
+                        <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'SlideInfoInterlocuteur.png')}" width="100%" height="100%" />                        
+                    </div>
+                </div>
+                </div>
+            <!--  /ADE -->
+        </div>
+
+        <!-- Tous les tableaux -->
+            <div class="tousMesTableaux"> 
+                <apex:outputPanel rendered="{!isMonosite}">
+                    <div>
+                        <span class="monoSite">MON COMPTEUR</span>
+                    </div>
+                    <div>
+                        <span class="monoSite">Activité du site :&nbsp;{!opportunite.Activite}</span>
+                    </div>
+                </apex:outputPanel>
+
+                <!-- Tableau list PDE -->    
+                    <!-- List of PDE C1/C2/C3/C4 -->
+                    <div style="display:{!IF(opportunite.Template == 'C1/C2/C3/C4','','none')};">
+                        <table class="pdeList">
+                            <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                <tr class="pdeInfoTitle">
+                                    <th class="cellStyle" colspan="13">
+                                        <div class="pdeInfoTitle" style="background-color: #999999;">
+                                            <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </apex:outputPanel>
+                            <tr>
+                                <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">RAE</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Segment</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Puissance (KVA ou KW)</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" colspan="6" width="35%">Consommation annuelle (en MWH)</th>
+                            </tr>
+                            <tr>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">PTE</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPH</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCH</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPE</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCE</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">CAR</th>
+                            </tr>
+                        
+                                <apex:repeat value="{!listPDE}" var="pde">   
+                                    <tr>
+                                        <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                                        <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                                        <td class="cellStyle borderLines" >{!pde.RAE}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Echeance}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Profil}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Segment}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Puissance}</td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoPointes}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHPH}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHCH}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHPE}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHCE}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayCAR}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                        </table>
+                    </div>
+
+                    <!-- List of PDE C5 -->
+                    <div style="display:{!IF( opportunite.Template == 'C5','','none')};">
+                        <table class="pdeList">
+                            <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                <tr class="pdeInfoTitle">
+                                    <th class="cellStyle" colspan="9">
+                                        <div class="pdeInfoTitle" style="background-color: #999999;">
+                                            <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </apex:outputPanel>
+                            <tr>
+                                <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">RAE</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Segment</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Puissance (en KVA ou KW)</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" colspan="2" width="35%">Consommation annuelle (en MWH)</th>
+                            </tr>
+                            <tr>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;" width="17.5%">Base / HP</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;" width="17.5%">HC</th>
+                            </tr>
+                            
+                                <apex:repeat value="{!listPDE}" var="pde">
+                                        
+                                    <tr>
+                                        <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                                        <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                                        <td class="cellStyle borderLines" >{!pde.RAE}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Echeance}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Profil}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Segment}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Puissance}</td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHP_Base}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHC}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                        </table>
+                    </div>
+
+                    <!-- List of PDE C5 4 Postes -->
+                    <div style="display:{!IF( opportunite.Template == 'C5 4 postes','','none')};">
+                        <table class="pdeList">
+                            <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                <tr class="pdeInfoTitle">
+                                    <th class="cellStyle" colspan="12">
+                                        <div class="pdeInfoTitle" style="background-color: #999999;">
+                                            <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </apex:outputPanel>
+                            <tr>
+                                <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">RAE</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Segment</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Puissance (en KVA ou KW)</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" colspan="5" width="35%">Consommation annuelle (en MWH)</th>                                
+                            </tr>
+                            <tr>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPH</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCH</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPE</th>
+                                <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCE</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">CAR</th>
+                            </tr>
+                                <apex:repeat value="{!listPDE}" var="pde">
+                                        
+                                    <tr>
+                                        <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                                        <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                                        <td class="cellStyle borderLines" >{!pde.RAE}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Echeance}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Profil}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Segment}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Puissance}</td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHPH}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHCH}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHPE}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayConsoHCE}"/></apex:outputText></td>
+                                        <td class="cellStyle borderLines" ><apex:outputText value="{0, number, ###,###,##0.00}"><apex:param value="{!pde.displayCAR}"/></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>         
+                        </table>
+                    </div>
+
+                    <!-- List of PDE Gaz -->
+                    <div style="display:{!IF(opportunite.Template == 'Gaz','','none')};">
+                        <table class="pdeList">
+                            <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                <tr class="pdeInfoTitle">
+                                    <th class="cellStyle" colspan="9">
+                                        <div class="pdeInfoTitle" style="background-color: #999999;">
+                                            <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </apex:outputPanel>
+                            <tr>
+                                <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">PCE</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                                <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil<br/>-<br/>Option Tarifaire</th>
+                                <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Consommation annuelle (en MWH)</th>
+                            </tr>
+                            <tr>
+                            </tr>
+                            
+                                <apex:repeat value="{!listPDE}" var="pde">       
+                                    <tr>
+                                        <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                                        <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                                        <td class="cellStyle borderLines" >{!pde.PCE}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Echeance}</td>
+                                        <td class="cellStyle borderLines" >{!pde.Profil_Gaz}</td>
+                                        <td class="cellStyle borderLines" >{!pde.displayCAR_Gaz}</td>
+                                    </tr>
+                                </apex:repeat>
+                                    
+                        
+                        </table>
+                    </div>
+                    &nbsp;
+                <!--/Tableau list PDE -->
+
+                <!-- Tableau Comparatif -->
+                    <!-- C1/C2/C3/C4 -->
+                        <apex:outputPanel rendered="{!(opportunite.Template == 'C1/C2/C3/C4')}">
+                            <!-- MONO -->
+                                <apex:outputPanel rendered="{!isMonosite}">
+                                    <table class="pdeListSection" width="100%" style="page-break-inside:avoid;">
+                                        <tr>
+                                            <th class="cellStyle"  colspan="2"></th>
+                                            <th class="cellStyle colorComparatifTitreEnergie"  colspan="6">Prix Électricité (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreEnergie" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">BUDGET ÉLECTRICITÉ HT</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" colspan="{!IF(opportunite.displayContribution,'4','1')}">Taxes et contributions</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">Acheminement (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9;" rowspan="2"  >BUDGET TOTAL HTVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                        </tr>  
+                                        <tr>
+                                            <th class="cellStyle "  ></th>
+                                            <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray ">SITE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="2.1cm">Abonnement (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">PTE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPH</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCH</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CEE</th>  
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm" >CTA (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="2.1cm">Coût de capacité (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">CSPE (€/MWH)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">TCFE (€/MWH)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">TURPE</th>
+                                        </tr>
+                                        <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                            <apex:repeat value="{!fournisseur.listQLI}" var="qli" >
+                                                <tr>
+                                                    <td class="cellStyle cellStyleTopSide borderLines">
+                                                        <table>
+                                                            <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                            <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                            <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="cellStyle borderLines">{!qli.SITE_DE_CONSOMMATION}</td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixpointes}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPH}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCH}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPE}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuelEstime}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines">{!qli.displayCEE}</td>   
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTA}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCoutDeCapacite}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCSPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTCFE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayAcheminement,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTURPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>
+                                                </tr>
+                                            </apex:repeat>
+                                        </apex:repeat>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                            
+                                    </table>
+                                </apex:outputPanel>
+                            <!-- /MONO -->  
+                            <!-- MULTI -->
+                                <apex:outputPanel rendered="{!NOT(isMonosite)}">   
+                                    <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                        <table class="pdeListSection" width="100%" style="page-break-inside:avoid;">
+                                            <tr>
+                                                <th class="cellStyle"  colspan="2"></th>
+                                                <th class="cellStyle colorComparatifTitreEnergie"  colspan="6">Prix Électricité (en €/MWH)</th>
+                                                <th class="cellStyle colorComparatifTitreEnergie" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">BUDGET ÉLECTRICITÉ HT</th>
+                                                <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                                <th class="cellStyle colorComparatifTitreTaxe" colspan="{!IF(opportunite.displayContribution,'4','1')}">Taxes et contributions</th>
+                                                <th class="cellStyle colorComparatifTitreTaxe" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">Acheminement (en €/MWH)</th>
+                                                <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9;" rowspan="2"  >BUDGET TOTAL HTVA</th>
+                                                <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                                <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                            </tr>  
+                                            <tr>
+                                                <th class="cellStyle "  ></th>
+                                                <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray ">SITE</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie" width="2.1cm">Abonnement (€/mois)</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">PTE</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPH</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCH</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPE</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCE</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CEE</th>  
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm" >CTA (€/mois)</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" width="2.1cm">Coût de capacité (en €/MWH)</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">CSPE (€/MWH)</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">TCFE (€/MWH)</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">TURPE</th>
+                                            </tr>
+                                                <apex:repeat value="{!fournisseur.listQLI}" var="qli" >
+                                                    <tr>
+                                                        <td class="cellStyle cellStyleTopSide borderLines">
+                                                            <table>
+                                                                <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                                <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                                <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                            </table>
+                                                        </td>
+                                                    <td class="cellStyle borderLines">{!qli.SITE_DE_CONSOMMATION}</td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixpointes}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPH}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCH}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPE}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuelEstime}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines">{!qli.displayCEE}</td>   
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTA}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCoutDeCapacite}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCSPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTCFE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayAcheminement,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTURPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>
+                                                    </tr>
+                                                </apex:repeat>
+                                            <tr>
+                                                <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                            </tr>    
+                                        </table>
+                                    </apex:repeat>                                
+                                </apex:outputPanel>
+                            <!-- /MULTI --> 
+                        </apex:outputPanel>
+                    <!-- /C1/C2/C3/C4 -->
+
+                    <!-- C5 -->
+                        <apex:outputPanel rendered="{!(opportunite.Template =='C5')}">
+                        <!-- MONO -->
+                            <apex:outputPanel rendered="{!isMonosite}">
+                                <table class="pdeListSection" width="100%" style="page-break-inside:avoid;">                
+                                    <tr>
+                                        <th class="cellStyle" colspan="2"></th>
+                                        <th class="cellStyle colorComparatifTitreEnergie"  colspan="3">Budget Electricité (en €/MWH)</th>
+                                        <th class="cellStyle colorComparatifTitreEnergie" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">Budget Electricité (€ HT)</th>
+                                        <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                        <th class="cellStyle colorComparatifTitreTaxe" colspan="{!IF(opportunite.displayContribution,'4','1')}">Taxes et contributions (en €/MWH)</th>
+                                        <th class="cellStyle colorComparatifTitreTaxe" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">Acheminement (en €/MWH)</th>
+                                        <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">BUDGET TOTAL HT</th>
+                                        <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                        <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="cellStyle "  ></th>
+                                        <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray ">SITE</th>
+                                        <th class="cellStyle colorComparatifSousTitreEnergie" width="2.1cm">Abonnement (€/mois)</th>
+                                        <th class="cellStyle colorComparatifSousTitreEnergie" >BASE / HP</th>
+                                        <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HC</th>
+                                        <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CEE</th>
+                                        <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm" >CTA</th>
+                                        <th class="cellStyle colorComparatifSousTitreTaxe" width="2.1cm">Coût de capacité (estimation)</th>
+                                        <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">CSPE</th>
+                                        <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">TCFE</th>
+                                        <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">TURPE</th>
+                                    </tr>
+                                    <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                        <apex:repeat value="{!fournisseur.listQLI}" var="qli">
+                                            <tr>
+                                                <td class="cellStyle cellStyleTopSide borderLines">
+                                                    <table>
+                                                        <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                        <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                        <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                    </table>                    
+                                                </td>
+                                                <td class="cellStyle borderLines">{!qli.SITE_DE_CONSOMMATION}</td>
+                                                <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHP_Base}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHC}"/></apex:outputText></td>    
+                                                <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuelEstime}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines">{!qli.displayCEE}</td>
+                                                <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTA}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCoutDeCapacite}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCSPE}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTCFE}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayAcheminement,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTURPE}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" width="1.8cm"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText></td>
+                                                <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>       
+                                            </tr>
+                                        </apex:repeat>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                    </tr>  
+                                </table>
+                            </apex:outputPanel>
+                        <!-- /MONO -->
+                        <!-- MULTI -->
+                            <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                    <table class="pdeListSection" width="100%" style="page-break-inside:avoid;">
+                                        <tr>
+                                            <th class="cellStyle"  colspan="2"></th>
+                                            <th class="cellStyle colorComparatifTitreEnergie"  colspan="3">Prix Électricité (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreEnergie" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">BUDGET ÉLECTRICITÉ HT</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" colspan="{!IF(opportunite.displayContribution,'4','1')}">Taxes et contributions</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">Acheminement (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9;" rowspan="2"  >BUDGET TOTAL HTVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                        </tr>  
+                                        <tr>
+                                            <th class="cellStyle "  ></th>
+                                            <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray ">SITE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="2.1cm">Abonnement (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" >BASE / HP</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HC</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CEE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm" >CTA (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="2.1cm">Coût de capacité (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">CSPE (€/MWH)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">TCFE (€/MWH)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">TURPE</th>
+                                        </tr>
+                                            <apex:repeat value="{!fournisseur.listQLI}" var="qli" >
+                                                <tr>
+                                                    <td class="cellStyle cellStyleTopSide borderLines">
+                                                        <table>
+                                                            <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                            <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                            <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="cellStyle borderLines">{!qli.SITE_DE_CONSOMMATION}</td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHP_Base}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHC}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuelEstime}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines">{!qli.displayCEE}</td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTA}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCoutDeCapacite}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCSPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTCFE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayAcheminement,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTURPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>
+                                                </tr>
+                                            </apex:repeat>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                            
+                                    </table>
+                                </apex:repeat>
+                            </apex:outputPanel>
+                        <!-- /MULTI -->
+                        </apex:outputPanel>
+                    <!-- /C5 -->
+        
+                    <!-- C5 4 postes -->
+                        <apex:outputPanel rendered="{!(opportunite.Template =='C5 4 postes')}">
+                            <!-- MONO -->
+                                <apex:outputPanel rendered="{!isMonosite}">
+                                    <table class="pdeListSection" width="100%"  style="page-break-inside:avoid;">                
+                                        <tr>
+                                            <th class="cellStyle"  colspan="2"></th>
+                                            <th class="cellStyle colorComparatifTitreEnergie"  colspan="5">Budget Electricité (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreEnergie" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">Budget Electricité (€ HT)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" colspan="{!IF(opportunite.displayContribution,'4','1')}">Taxes et contributions (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">Acheminement (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">BUDGET TOTAL HT</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                        </tr>  
+                                        <tr>
+                                            <th class="cellStyle " ></th>
+                                            <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray ">SITE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="2.1cm">Abonnement (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPH</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCH</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCE</th>   
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CEE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm" >CTA</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="2.1cm">Coût de capacité (estimation)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">CSPE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">TCFE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">TURPE</th>
+                                        </tr>
+                                        <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                            <apex:repeat value="{!fournisseur.listQLI}" var="qli" >
+                                                <tr>
+                                                    <td class="cellStyle cellStyleTopSide borderLines">
+                                                        <table>
+                                                            <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                            <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                            <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="cellStyle borderLines">{!qli.SITE_DE_CONSOMMATION}</td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPH}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCH}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPE}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCE}"/></apex:outputText></td>    
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuelEstime}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines">{!qli.displayCEE}</td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTA}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCoutDeCapacite}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCSPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTCFE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayAcheminement,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTURPE}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>    
+                                                </tr>
+                                            </apex:repeat>
+                                        </apex:repeat>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                    </table>
+                                </apex:outputPanel>
+                            <!-- /MONO -->
+                            <!-- MULTI -->
+                                <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                    <table class="pdeListSection" width="100%"  style="page-break-inside:avoid;">                
+                                        <tr>
+                                            <th class="cellStyle"  colspan="2"></th>
+                                            <th class="cellStyle colorComparatifTitreEnergie"  colspan="5">Budget Electricité (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreEnergie" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">Budget Electricité (€ HT)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" colspan="{!IF(opportunite.displayContribution,'4','1')}">Taxes et contributions (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">Acheminement (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9;" rowspan="2">BUDGET TOTAL HT</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                        </tr>  
+                                        <tr>
+                                            <th class="cellStyle " ></th>
+                                            <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray ">SITE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="2.1cm">Abonnement (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPH</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCH</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HPE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie" width="1.1cm">HCE</th>   
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CEE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm" >CTA</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="2.1cm">Coût de capacité (estimation)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">CSPE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" style = "display:{!IF(opportunite.displayContribution,'','none')};" width="1.1cm">TCFE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" style = "display:{!IF(opportunite.displayAcheminement,'','none')};">TURPE</th>
+                                        </tr>
+                                            <apex:repeat value="{!fournisseur.listQLI}" var="qli" >
+                                                    <tr>
+                                                        <td class="cellStyle cellStyleTopSide borderLines">
+                                                            <table>
+                                                                <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                                <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                                <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                            </table>
+                                                        </td>
+                                                        <td class="cellStyle borderLines"> {!qli.SITE_DE_CONSOMMATION} </td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPH}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCH}"/></apex:outputText></td>    
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHPE}"/></apex:outputText></td>    
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixHCE}"/></apex:outputText></td>    
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuelEstime}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines">{!qli.displayCEE}</td>
+                                                        <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTA}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCoutDeCapacite}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCSPE}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayContribution,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTCFE}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines" style = "display:{!IF(opportunite.displayAcheminement,'','none')};"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTURPE}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>    
+                                                    </tr>
+                                            </apex:repeat>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                        </tr>
+                                    </table>
+                                </apex:repeat>
+                                </apex:outputPanel>
+                            <!-- /MULTI -->
+                        </apex:outputPanel>
+                    <!-- /C5 4 postes -->
+        
+                    <!-- GAZ -->
+                        <apex:outputPanel rendered="{!(opportunite.Template =='Gaz')}">
+                            <!-- MONO -->
+                                <apex:outputPanel rendered="{!isMonosite}">
+                                        <table class="pdeListSection" width="100%" style="page-break-inside:avoid;">   
+                                            <tr>
+                                                <th class="cellStyle " colspan="2"></th>
+                                                <th class="cellStyle colorComparatifTitreEnergie" colspan="3"> Prix Gaz (en €/Mwh) </th>
+                                                <th class="cellStyle colorComparatifTitreEnergie "  rowspan="2" style="text-align: center; border-bottom: 1px solid #d9d9d9;">BUDGET GAZ HT<br/></th>
+                                                <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                                <th class="cellStyle colorComparatifTitreTaxe" colspan="2">Taxes et contributions </th>
+                                                <th class="cellStyle colorComparatifTitreBudgetTotal " style="text-align: center; border-bottom: 1px solid #d9d9d9;" rowspan="2" >BUDGET HTVA</th>
+                                                <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                                <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="cellStyle "  ></th>
+                                                <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray">SITE</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie "> Abonnement GRDF (€/mois)</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie "> Molécule</th>
+                                                <th class="cellStyle colorComparatifSousTitreEnergie "> Distribution</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe "> CEE</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CTA (€/mois)</th>
+                                                <th class="cellStyle colorComparatifSousTitreTaxe "> TICGN (€/MWH)</th>
+                                            </tr>
+                                            <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                                <apex:repeat value="{!fournisseur.listQLI}" var="qli" >                
+                                                    <tr>
+                                                        <td class="cellStyle cellStyleTopSide borderLines">
+                                                            <table>
+                                                                <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                                <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                                <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                            </table>
+                                                        </td>                 
+                                                        <td class="cellStyle borderLines word-wrap: break-word;max-width: 50px; " >{!qli.SITE_DE_CONSOMMATION}</td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixMolecule}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayDistribution}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuel}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines">{!qli.displayCEE}</td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTAGaz}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTICGN}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText></td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                        <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>      
+                                                    </tr>     
+                                                </apex:repeat>
+                                            </apex:repeat>
+                                            <tr>
+                                                <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                            </tr>  
+                                        </table>
+                                </apex:outputPanel>
+                            <!-- /MONO -->
+                            <!-- MULTI -->
+                                <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                                    <apex:repeat value="{!listFournisseur}" var="fournisseur">
+                                        <table class="pdeListSection" width="100%" style="page-break-inside:avoid;">   
+                                        <tr>
+                                            <th class="cellStyle " colspan="2"></th>
+                                            <th class="cellStyle colorComparatifTitreEnergie" colspan="3"> Prix Gaz (en €/Mwh) </th>
+                                            <th class="cellStyle colorComparatifTitreEnergie "  rowspan="2" style="text-align: center; border-bottom: 1px solid #d9d9d9;">BUDGET GAZ HT<br/></th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" style="border-bottom: 1px solid #d9d9d9;" >Obligations (en €/MWH)</th>
+                                            <th class="cellStyle colorComparatifTitreTaxe" colspan="2">Taxes et contributions </th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal " style="text-align: center; border-bottom: 1px solid #d9d9d9;" rowspan="2" >BUDGET HTVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >TVA</th>
+                                            <th class="cellStyle colorComparatifTitreBudgetTotal" style="border-bottom: 1px solid #d9d9d9; display:{!IF(opportunite.displayTTC,'','none')};" rowspan="2"  >BUDGET TTC</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="cellStyle "  ></th>
+                                            <th class="cellStyle cellStyleWidthFirst pdeInfo colorComparatifTitreLightGray">SITE</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie "> Abonnement GRDF (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie "> Molécule</th>
+                                            <th class="cellStyle colorComparatifSousTitreEnergie "> Distribution</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe "> CEE</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe" width="1.1cm" >CTA (€/mois)</th>
+                                            <th class="cellStyle colorComparatifSousTitreTaxe "> TICGN (€/MWH)</th>
+                                        </tr>
+                                            <apex:repeat value="{!fournisseur.listQLI}" var="qli" >                
+                                                <tr>
+                                                    <td class="cellStyle cellStyleTopSide borderLines">
+                                                        <table>
+                                                            <tr><td><apex:image url="{!URLFOR($Resource.Logos, fournisseur.logo )}" width="2cm" height="0.9cm" /></td></tr>
+                                                            <tr><td><apex:outputText value="{!qli.PeriodeCouverture}" escape="false"/></td></tr>
+                                                            <tr><td><b><apex:outputText value="{!qli.typeOffre}" escape="false"/></b></td></tr>
+                                                        </table>
+                                                    </td>                 
+                                                    <td class="cellStyle borderLines word-wrap: break-word;max-width: 50px; " >{!qli.SITE_DE_CONSOMMATION}</td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayabonnement}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayPrixMolecule}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayDistribution}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreEnergie budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetAnnuel}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines">{!qli.displayCEE}</td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayCTAGaz}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTICGN}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget"><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetHT}"/></apex:outputText></td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayTVA}"/></apex:outputText> </td>
+                                                    <td class="cellStyle borderLines colorComparatifSousTitreBudgetTotal budget" style = "display:{!IF(opportunite.displayTTC,'','none')};"  width="1.8cm" ><apex:outputText value="{0, number, ###,###,##0.00} €"><apex:param value="{!qli.displayBudgetTTC}"/></apex:outputText> </td>      
+                                                </tr>     
+                                            </apex:repeat> 
+                                            <tr>
+                                                <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                                            </tr>  
+                                        </table>
+                                    </apex:repeat>
+                                </apex:outputPanel>
+                            <!-- /MULTI -->
+                        </apex:outputPanel>
+                    <!-- /GAZ -->
+                <!-- /Tableau Comparatif -->
+
+                <table width="100%" style="page-break-inside:avoid;display: {!IF(opportunite.Commentaire == '','none','')};">
+                    <tr>
+                        <td class="cellStyle" style="border: 1px solid black;border-right: 0px solid black;padding-top: 10px;padding-bottom: 10px;paddind-left: 10px;text-align: left;">Commentaire : {!Opportunite.Commentaire}</td>
+                        <td class="cellStyle" style="border: 1px solid black;border-left: 0px solid black;" colspan="13"></td>
+                    </tr>
+                </table>
+            </div>
+        <!-- /Tous les tableaux -->
+              
+        <!-- Presentation fournisseur-->
+                <apex:repeat value="{!listFournisseurName}" var="fournisseurName">
+                    <!-- ADE -->
+                        <div style="display:{!IF(NOT(Opportunity.visuel_PWE__c),'','none')};">
+                            <div class="containerFullPage">
+                                <img src="{!URLFOR($Resource.pagesPresentationFournisseurADE,fournisseurName)}" width="100%" height="100%"/>
+                            </div>
+                        </div>       
+                    <!-- /ADE -->
+
+                    <!-- PWE -->
+                        <div style="display:{!IF(Opportunity.visuel_PWE__c,'','none')};">
+                            <div class="containerFullPage">
+                                <img src="{!URLFOR($Resource.pagesPresentationFournisseurPWE,fournisseurName)}" width="100%" height="100%"/>
+                            </div>
+                        </div>
+                    <!-- /PWE -->
+  
+                </apex:repeat>                    
+        <!-- /Presentation fournisseur-->
+
+        <!-- Slides Elec -->
+        <div style="display:{!IF(NOT(Opportunity.TECH_IsGaz__c),'','none')};">
+            <!-- PWE -->
+                <div style="display:{!IF(Opportunity.visuel_PWE__c,'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin1.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin2.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin3.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin4.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin5.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin6.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin7.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin8.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin9.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecPWE,'Fin10.png')}" width="100%"  class="DerniereImage"/>
+                </div>
+                </div>
+            <!-- /PWE -->
+            <!-- ADE -->
+                <div style="display:{!IF(NOT(Opportunity.visuel_PWE__c),'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin1.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin2.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin3.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin4.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin5.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin6.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin7.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin8.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin9.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifElecADE,'Fin10.png')}" width="100%"  class="DerniereImage"/>
+                </div>
+                </div>
+            <!-- /ADE -->
+        </div>
+
+        <!-- Slides Gaz -->
+        <div style="display:{!IF(Opportunity.TECH_IsGaz__c,'','none')};">
+            <!-- PWE -->
+                <div style="display:{!IF(Opportunity.visuel_PWE__c,'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin1.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin2.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin3.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin4.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin5.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin6.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin7.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin8.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin9.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZPWE,'Fin10.png')}" width="100%"  class="DerniereImage"/>
+                </div>
+                </div>
+            <!-- /PWE -->
+            <!-- ADE -->
+                <div style="display:{!IF(NOT(Opportunity.visuel_PWE__c),'','none')};">
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin1.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin2.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin3.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin4.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin5.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin6.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin7.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin8.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin9.png')}" width="100%" height="100%"/>
+                </div>
+                <div class="containerFullPage">
+                    <img src="{!URLFOR($Resource.pagesComparatifGAZADE,'Fin10.png')}" width="100%"  class="DerniereImage"/>
+                </div>
+                </div>
+            <!-- /ADE -->
+        </div>
+    </body>
+</apex:page>

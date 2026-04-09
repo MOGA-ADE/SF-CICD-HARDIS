@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4a5dd746-225a-4489-86a2-f6abbc8b94cb",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "relatedlist_a01__c",
+  "id" : "33d2f7bd-ab7e-4d5b-b488-7a1b8ec463e4",
+  "label" : "Point dénergie Liste associée",
+  "objectApiName" : "PDE__c",
+  "routeType" : "relatedlist-a01",
+  "type" : "route",
+  "urlPrefix" : "pde"
+}

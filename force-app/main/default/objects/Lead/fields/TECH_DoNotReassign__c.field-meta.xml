@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_DoNotReassign__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Si le champs est à True le flow Réattribution des leads demande de contact site ne s&apos;exécute pas</description>
+    <label>TECH_DoNotReassign</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Drapeau vert 2 jours restant
+Drapeau orange 1 jour restant
+Drapeau rouge dernier jour restant -->
+    </help>
+    <label><!-- Temps de traitement restant --></label>
+    <name>temps_traitement_restant__c</name>
+</CustomFieldTranslation>

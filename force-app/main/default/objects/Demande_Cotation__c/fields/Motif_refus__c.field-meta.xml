@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motif_refus__c</fullName>
+    <label>Motif de refus</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACD Non conforme</fullName>
+                <default>false</default>
+                <label>ACD Non conforme</label>
+            </value>
+            <value>
+                <fullName>Facture absente ou non conforme</fullName>
+                <default>false</default>
+                <label>Facture absente ou non conforme</label>
+            </value>
+            <value>
+                <fullName>Date d&apos;échéance dépassée</fullName>
+                <default>false</default>
+                <label>Date d&apos;échéance dépassée</label>
+            </value>
+            <value>
+                <fullName>Date d&apos;échéance trop éloigné</fullName>
+                <default>false</default>
+                <label>Date d&apos;échéance trop éloigné</label>
+            </value>
+            <value>
+                <fullName>Date d&apos;échéance erronée</fullName>
+                <default>false</default>
+                <label>Date d&apos;échéance erronée</label>
+            </value>
+            <value>
+                <fullName>Notation insuffisante</fullName>
+                <default>false</default>
+                <label>Notation insuffisante</label>
+            </value>
+            <value>
+                <fullName>Compteur particulier</fullName>
+                <default>false</default>
+                <label>Compteur particulier</label>
+            </value>
+            <value>
+                <fullName>Mauvais compte</fullName>
+                <default>false</default>
+                <label>Mauvais compte</label>
+            </value>
+            <value>
+                <fullName>Périmètre non conforme</fullName>
+                <default>false</default>
+                <label>Périmètre non conforme</label>
+            </value>
+            <value>
+                <fullName>Date de RDV trop proche</fullName>
+                <default>false</default>
+                <label>Date de RDV trop proche</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,35 @@
+<template>
+    <!-- Email Notification -->
+    <article class="slds-card borderBottom">
+        <div class="slds-grid slds-einstein-header slds-card__header resetBGK">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:flow" alternative-text="flow Icon" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Authentification">
+                            Étape 3 : Suivi de la piste
+                        </h2>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner marginBottom customFontSize">
+            <h3>Adresse mail sur laquelle vous suivrez l'avancement de cette piste :</h3>
+            <lightning-input label="Votre adresse mail" name="Email_Apporteur_Affaire__c" type="email" placeholder="Entrer votre adresse mail" onchange={handleChange} required></lightning-input>
+            <br>
+            <h3>Vous pouvez ajouter un commentaire :</h3>
+            <lightning-textarea label="Commentaire" name="Commentaires__c" placeholder="Entrer votre commentaire ici" onchange={handleChange}></lightning-textarea>
+        </div>
+        <footer class="slds-card__footer borderTop">
+            <div class="buttonContainer">
+                <lightning-button  variant="neutral" label="Précédent" title="Précédent" onclick={handlePrevious} ></lightning-button>
+                <lightning-button if:false={isLoading} variant="brand" label="Suivant" title="Suivant" onclick={handleNext}></lightning-button>
+                <div if:true={isLoading} class="spinnerButton">
+                    <lightning-spinner alternative-text="Loading" size="x-small" variant="inverse"></lightning-spinner>
+                </div>
+            </div>
+        </footer>
+    </article>
+</template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chiffre_affaire__c</fullName>
+    <label>Chiffre d&apos;affaire</label>
+    <referenceTo>Chiffre_affaire__c</referenceTo>
+    <relationshipLabel>Commissions</relationshipLabel>
+    <relationshipName>Commissions_salarie</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

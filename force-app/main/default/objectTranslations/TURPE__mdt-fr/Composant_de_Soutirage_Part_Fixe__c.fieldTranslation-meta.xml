@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Composant de Soutirage Part Fixe --></label>
+    <name>Composant_de_Soutirage_Part_Fixe__c</name>
+</CustomFieldTranslation>

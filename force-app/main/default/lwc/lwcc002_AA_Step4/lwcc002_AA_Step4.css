@@ -1,0 +1,19 @@
+.resetBGK {
+    background-image: none;
+    background-color: #F3F3F3;
+    text-shadow: none;
+}
+
+.buttonContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.borderTop {
+    border-top-color : #D4D4D4;
+}
+
+.marginBottom {
+    margin-bottom: 30px;
+}

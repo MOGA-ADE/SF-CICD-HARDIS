@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FTA__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>FTA</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BT &lt;= 36 kVA - CU</fullName>
+                <default>true</default>
+                <label>BT &lt;= 36 kVA - CU</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36 kVA - MU</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36 kVA - MU</label>
+            </value>
+            <value>
+                <fullName>BT &gt; 36 kVA - CU</fullName>
+                <default>false</default>
+                <label>BT &gt; 36 kVA - CU</label>
+            </value>
+            <value>
+                <fullName>BT &gt; 36 kVA - LU</fullName>
+                <default>false</default>
+                <label>BT &gt; 36 kVA - LU</label>
+            </value>
+            <value>
+                <fullName>HTA - PF - CU</fullName>
+                <default>false</default>
+                <label>HTA - PF - CU</label>
+            </value>
+            <value>
+                <fullName>HTA - PF - LU</fullName>
+                <default>false</default>
+                <label>HTA - PF - LU</label>
+            </value>
+            <value>
+                <fullName>HTA - PM - CU</fullName>
+                <default>false</default>
+                <label>HTA - PM - CU</label>
+            </value>
+            <value>
+                <fullName>HTA - PM - LU</fullName>
+                <default>false</default>
+                <label>HTA - PM - LU</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36Kva - CU 4 postes</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36Kva - CU 4 postes</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36Kva - MU 4 postes</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36Kva - MU 4 postes</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36 kVA - LU EP</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36 kVA - LU EP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FirstNameRequired</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(ISBLANK(FirstName ),ISBLANK(TEXT(Salutation) )),
+  ISPICKVAL($User.UserType, &apos;PowerPartner&apos;) 
+)</errorConditionFormula>
+    <errorMessage>Le Prénom et la Civilité sont obligatoires.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "e3215437-4e00-4743-8e14-10fbe80f4990",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "relatedlist_001__c",
+  "id" : "15eeca53-7792-4a2e-a025-7704d0b4615a",
+  "label" : "Entité Juridique Liste associée",
+  "routeType" : "relatedlist-001",
+  "type" : "route",
+  "urlPrefix" : "account"
+}

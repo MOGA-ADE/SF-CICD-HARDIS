@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "ade_pictos_energie",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005aqrUAA",
+        "type" : "file",
+        "size" : 7557
+      }
+    }
+  },
+  "urlName" : "ade-pictos-energie"
+}

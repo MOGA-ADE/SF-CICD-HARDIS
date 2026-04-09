@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_PDE_Conforme__c</fullName>
+    <description>Y a un soucis si ce n&apos;est pas du gaz</description>
+    <externalId>false</externalId>
+    <formula>IF(
+				AND(
+								TypePDE__c = &apos;C5&apos;,
+								TECH_C5_4Postes__c ,
+								NOT(ISNULL(Puissance_souscrite__c)),  
+								NOT(ISNULL(Conso_HPH__c)),
+								NOT(ISNULL(Conso_HCH__c)),
+								NOT(ISNULL(Conso_HPE__c)),
+								NOT(ISNULL(Conso_HCE__c))),
+				&apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+				IF(
+								AND(
+												TypePDE__c = &apos;C5&apos;,
+								    TECH_MU_CU__c = &apos;CU&apos;,
+								    TECH_C5_4Postes__c = false,
+												NOT(ISNULL(Puissance_souscrite__c)),
+								    NOT(ISNULL(Conso_Base__c))),
+								&apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+				IF(
+								AND(
+												TypePDE__c = &apos;C5&apos;,
+								    TECH_MU_CU__c = &apos;MU&apos;,
+								    TECH_C5_4Postes__c = false,
+												NOT(ISNULL(Puissance_souscrite__c)),
+								    NOT(ISNULL(ConsoHC__c)),
+												NOT(ISNULL(ConsoHP__c))),
+								&apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+								IF(
+												AND(
+																TypePDE__c = &apos;Gaz&apos;,
+																NOT(ISNULL(CARGaz__c))),
+												&apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+								IF(
+												AND(
+																NOT(ISNULL(Puissance_souscrite__c)),
+																NOT(ISNULL(Conso_Pointe__c)),
+																NOT(ISNULL(Conso_HPH__c)),
+																NOT(ISNULL(Conso_HCH__c)),
+																NOT(ISNULL(Conso_HPE__c)),
+																NOT(ISNULL(Conso_HCE__c))),
+												&apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,&apos;&lt;span style=&quot;border-radius: 15px;background:red; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;X&lt;/span&gt;&apos;
+								)
+								))))</formula>
+    <label>PDE Conforme</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

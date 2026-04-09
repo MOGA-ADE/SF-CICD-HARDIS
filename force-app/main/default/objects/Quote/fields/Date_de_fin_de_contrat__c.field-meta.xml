@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_de_fin_de_contrat__c</fullName>
+    <label>Date de fin de contrat</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

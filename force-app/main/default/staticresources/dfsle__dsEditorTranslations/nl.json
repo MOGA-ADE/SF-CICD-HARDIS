@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "Ongedaan maken"
+    },
+    "btn-redo" : {
+      "translate" : "Opnieuw"
+    },
+    "btn-fontstyle" : {
+      "translate" : "Lettertype"
+    },
+    "btn-fontsize" : {
+      "translate" : "Lettergrootte"
+    },
+    "btn-bold" : {
+      "translate" : "Vet"
+    },
+    "btn-italic" : {
+      "translate" : "Cursief"
+    },
+    "btn-underline" : {
+      "translate" : "Onderstrepen"
+    },
+    "btn-fontcolor" : {
+      "translate" : "Tekstkleur"
+    },
+    "btn-leftalign" : {
+      "translate" : "Links uitlijnen"
+    },
+    "btn-rightalign" : {
+      "translate" : "Rechts uitlijnen"
+    },
+    "btn-centeralign" : {
+      "translate" : "Centreren"
+    },
+    "btn-linespacing" : {
+      "translate" : "Regelafstand"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "Lijst met opsommingstekens"
+    },
+    "btn-orderedlist" : {
+      "translate" : "Genummerde lijst"
+    },
+    "btn-inserttable" : {
+      "translate" : "Tabel invoegen"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "Verwijderen"
+      },
+      "btn-mergecells" : {
+        "translate" : "Cellen samenvoegen",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "Rij hierboven invoegen"
+      },
+      "btn-2" : {
+        "translate" : "Rij hieronder invoegen"
+      },
+      "btn-3" : {
+        "translate" : "Kolom links invoegen"
+      },
+      "btn-4" : {
+        "translate" : "Kolom rechts invoegen"
+      },
+      "btn-5" : {
+        "translate" : "Tabel configureren"
+      },
+      "btn-6" : {
+        "translate" : "Rij verwijderen"
+      },
+      "btn-7" : {
+        "translate" : "Kolom verwijderen"
+      },
+      "btn-8" : {
+        "translate" : "Tabel verwijderen"
+      },
+      "btn-9" : {
+        "translate" : "Kies de achtergrondkleur"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "Logische regel toevoegen"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "Afbeelding uploaden"
+      },
+      "btn-2" : {
+        "translate" : "Document uploaden"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "Kopregel",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "Subkopregel",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "Normale tekst",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "Bedrijf",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "Ondertekeningsdatum",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "E-mailadres",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "Voornaam",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "Volledige naam",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "Paraaf",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "Achternaam",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "Handtekening",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "Ondertekenen",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "Tekst",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "Titel",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "Minder details"
+    },
+    "btn-2" : {
+      "translate" : "Meer details"
+    },
+    "label-1" : {
+      "translate" : "Tekenlimiet"
+    },
+    "label-2" : {
+      "translate" : "Kies naamtype"
+    },
+    "label-3" : {
+      "translate" : "Gegevenslabel"
+    },
+    "label-4" : {
+      "translate" : "Alleen-lezen"
+    },
+    "label-5" : {
+      "translate" : "Verplicht veld"
+    },
+    "label-6" : {
+      "translate" : "Knopinfo"
+    },
+    "label-7" : {
+      "translate" : "Validatie"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "Geen"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "E-mailadres"
+      },
+      "dropdown-numbers" : {
+        "translate" : "Nummers"
+      },
+      "dropdown-letters" : {
+        "translate" : "Lettters"
+      },
+      "dropdown-date" : {
+        "translate" : "Datum"
+      },
+      "dropdown-zip" : {
+        "translate" : "Postcode"
+      },
+      "dropdown-zip4" : {
+        "translate" : "Postcode + 4"
+      },
+      "dropdown-custom" : {
+        "translate" : "Aangepast"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ", (komma)"
+      },
+      "text-datemask" : {
+        "translate" : "Indeling datumvalidatie"
+      },
+      "date-1" : {
+        "translate" : "MM / DD / JJJJ",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "dd/mm/jjjj",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "jjjj/mm/dd",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "Datumnotatie moet mm/dd/jjjj zijn"
+      },
+      "text-datemessage2" : {
+        "translate" : "Datumnotatie moet dd/mm/jjjj zijn"
+      },
+      "text-datemessage3" : {
+        "translate" : "Datumnotatie moet jjjj/mm/dd zijn"
+      },
+      "text-decimalseparator" : {
+        "translate" : "Scheidingsteken voor decimalen"
+      },
+      "text-errormessage" : {
+        "translate" : "Foutbericht"
+      },
+      "text-lettersmessage" : {
+        "translate" : "Voer alleen letters in"
+      },
+      "text-period" : {
+        "translate" : ". (punt)"
+      },
+      "text-regexpattern" : {
+        "translate" : "RegEx-patroon"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "Merge-tabel maken: {{label}}"
+    },
+    "label-2" : {
+      "translate" : "GESELECTEERDE KOLOMMEN"
+    },
+    "label-3" : {
+      "translate" : "(Sleep om opnieuw te ordenen)"
+    },
+    "label-4" : {
+      "translate" : "VELDEN"
+    },
+    "button-1" : {
+      "translate" : "Annuleren"
+    },
+    "button-2" : {
+      "translate" : "Toepassen"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "DocuSign-velden"
+    },
+    "label-2" : {
+      "translate" : "Salesforce-velden"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "Ontvangers bewerken"
+    },
+    "btn-2" : {
+      "translate" : "Ontvanger toevoegen"
+    },
+    "btn-3" : {
+      "translate" : "Nog een toevoegen"
+    },
+    "btn-4" : {
+      "translate" : "Gereed",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "Annuleren",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "Verwijderen",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "Voeg rollen toe en bewerk deze voor uw ontvangers. Rollen die u mogelijk gebruikt, zijn onder meer `Client` of` HR`."
+    },
+    "text-2" : {
+      "translate" : "Naam van tijdelijke aanduiding (verplicht*)",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "Deze ontvanger heeft 1 toegewezen veld. Door deze ontvanger te verwijderen, verwijdert u ook hun veld. Wilt u de ontvanger en het veld verwijderen?"
+    },
+    "text-4" : {
+      "translate" : "Deze ontvanger heeft {{number}} toegewezen velden. Door deze ontvanger te verwijderen, verwijdert u ook hun velden. Wilt u de ontvanger en velden verwijderen?"
+    },
+    "label-1" : {
+      "translate" : "Ontvanger heeft velden"
+    },
+    "error-1" : {
+      "translate" : "Elke ontvangersnaam moet uniek zijn"
+    },
+    "error-2" : {
+      "translate" : "Geef een naam op voor tijdelijke aanduiding"
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "Er is iets verkeerd gegaan"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "Annuleren"
+    },
+    "loadMore" : {
+      "translate" : "Meer laden ..."
+    },
+    "noResultsFound" : {
+      "translate" : "💬 Geen resultaten gevonden"
+    },
+    "previewBtn" : {
+      "translate" : "Voorbeeld"
+    },
+    "previewOff" : {
+      "translate" : "Voorbeeld uit"
+    },
+    "previewOn" : {
+      "translate" : "Voorbeeld aan"
+    },
+    "recentlyUsed" : {
+      "translate" : "Laatst gebruikt"
+    },
+    "record" : {
+      "translate" : "Dossier"
+    },
+    "recordModalDescription" : {
+      "translate" : "Bekijk hoe de samenvoegvelden eruitzien in uw sjabloon met echte gegevens"
+    },
+    "recordModalTitle" : {
+      "translate" : "Kies een dossier om te bekijken"
+    },
+    "searchSalesforce" : {
+      "translate" : "In Salesforce zoeken"
+    },
+    "showSmartContent" : {
+      "translate" : "Slimme inhoud weergeven"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "Ga aan de slag door uw bestanden te uploaden"
+    },
+    "text-2" : {
+      "translate" : "Sleep bestanden hier ook naartoe"
+    },
+    "text-3" : {
+      "translate" : "Ondersteunde bestandstypen: docx, jpg, jpeg, png, gif"
+    },
+    "text-4" : {
+      "translate" : "Maximale documentgrootte: {{number}} MB",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "Sjabloon succesvol toegevoegd."
+    },
+    "text-6" : {
+      "translate" : "Het document dat u probeerde te uploaden is te groot. We ondersteunen documenten tot 25 MB."
+    },
+    "text-7" : {
+      "translate" : "Het bestand dat u probeerde te uploaden heeft geen ondersteunde indeling. We ondersteunen: DOCX-, CSV-, TXT-, PNG-, GIF-, JPEG- en JPG-bestanden."
+    },
+    "text-8" : {
+      "translate" : "Sorry, u kunt maar één document tegelijkertijd uploaden"
+    },
+    "text-9" : {
+      "translate" : "Sorry, kan dit bestand niet importeren"
+    },
+    "btn-upload" : {
+      "translate" : "UPLOADEN"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "Annuleren"
+    },
+    "btn-edit" : {
+      "translate" : "Bewerken"
+    },
+    "btn-delete" : {
+      "translate" : "Verwijderen"
+    },
+    "btn-save" : {
+      "translate" : "Opslaan"
+    },
+    "label-title" : {
+      "translate" : "Regelbouwer"
+    },
+    "btn-add" : {
+      "translate" : "REGEL TOEVOEGEN"
+    },
+    "label-name" : {
+      "translate" : "Naamregel"
+    },
+    "dropdown-method1" : {
+      "translate" : "Pas alle volgende voorwaarden toe"
+    },
+    "dropdown-method2" : {
+      "translate" : "Pas een van de volgende voorwaarden toe"
+    },
+    "label-if" : {
+      "translate" : "Als"
+    },
+    "label-orif" : {
+      "translate" : "Of als"
+    },
+    "label-andif" : {
+      "translate" : "En als"
+    },
+    "label-then" : {
+      "translate" : "Dan"
+    },
+    "label-otherwise" : {
+      "translate" : "Anders ..."
+    },
+    "dropdown-show" : {
+      "translate" : "Toon de volgende inhoud"
+    },
+    "dropdown-hide" : {
+      "translate" : "Verberg de volgende inhoud"
+    },
+    "text-drag1" : {
+      "translate" : "Sleep uw samenvoegvelden naar een willekeurige locatie in deze Als-container."
+    },
+    "text-drag2" : {
+      "translate" : "Sleep uw Salesforce-veld hierheen."
+    },
+    "text" : {
+      "translate" : "Alle wijzigingen die u in dit logische blok hebt aangebracht worden niet opgeslagen. Bevestig dat u wilt annuleren."
+    },
+    "text-title" : {
+      "translate" : "Weet u zeker dat u wilt annuleren?"
+    },
+    "btn-confirm" : {
+      "translate" : "BEVESTIGEN"
+    },
+    "error-1" : {
+      "translate" : "Voer een regelnaam in."
+    },
+    "error-2" : {
+      "translate" : "Sommige voorwaarden hebben ongeldige waarden."
+    },
+    "error-3" : {
+      "translate" : "Sorry, u hebt dubbele regelnamen in uw logische blok. Wijzig de naam en probeer het opnieuw."
+    },
+    "error-4" : {
+      "translate" : "Voeg een voorwaarde toe aan {{name}} om een logisch blok aan te maken.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "Voeg inhoud toe aan de logische verklaring 'Dan' in {{name}}.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "Voeg inhoud toe aan de logische verklaring 'Dan' in Anders."
+    },
+    "placeholder" : {
+      "translate" : "Begin met typen of kopieer/plak uw nieuwe inhoud hier ..."
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "Typ of plak hier tekst om een nieuw sjabloon te starten ...",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "Enkel",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1,5",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "Dubbel",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "Zoeken in velden"
+    },
+    "noResultMessage" : {
+      "translate" : "Geen resultaten gevonden"
+    }
+  }
+}

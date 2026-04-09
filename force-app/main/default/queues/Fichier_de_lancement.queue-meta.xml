@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Fichier de lancement</name>
+    <queueMembers>
+        <users>
+            <user>f.cartier@alliancedesenergies.fr</user>
+            <user>i.gasmi@alliancedesenergies.fr</user>
+            <user>s.benbachir@alliancedesenergies.fr</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

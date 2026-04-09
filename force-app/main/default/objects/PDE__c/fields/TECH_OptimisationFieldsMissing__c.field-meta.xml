@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_OptimisationFieldsMissing__c</fullName>
+    <formula>OR(
+    ISBLANK(HCEActuel__c),
+    ISBLANK(HPEActuel__c),
+    ISBLANK(HCHActuel__c),
+    ISBLANK(HPHActuel__c),
+    ISBLANK(POINTEActuel__c),
+
+    ISBLANK(HCEOptimal__c),
+    ISBLANK(HPEOptimal__c),
+    ISBLANK(HCHOptimal__c),
+    ISBLANK(HPHOptimal__c),
+    ISBLANK(POINTEOptimal__c),
+
+    ISBLANK(PartFixeCSActuel__c),
+    ISBLANK(PartVariableCSActuel__c),
+    ISBLANK(DepassementActuel__c),
+    ISBLANK(TaxeCTAActuel__c),
+
+    ISBLANK(PartFixeCSOptimal__c),
+    ISBLANK(PartVariableCSOptimal__c),
+    ISBLANK(DepassementOptimal__c),
+    ISBLANK(TaxeCTAOptimal__c),
+
+    ISBLANK(BudgetTotalActuel__c),
+    ISBLANK(BudgetTotalOptimal__c),
+
+    ISBLANK(EconomieIdentifie__c)
+)</formula>
+    <label>TECH Champ Optimisation manquant ?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

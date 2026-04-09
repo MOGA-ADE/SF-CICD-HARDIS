@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mettre_jour_la_date_de_RDV</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Charge_affaire__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <label>Mettre à jour la date de RDV</label>
+    <sharedTo></sharedTo>
+</ListView>

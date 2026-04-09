@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" description="LC001_GenrationComparatif" controller="VFC005_OpportunityFields">
+
+    <ltng:require styles="{!$Resource.ModalWidthCSS}"/>
+
+    <aura:attribute name="isC5" type="Boolean"/>
+    <aura:attribute name="isC4" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.isC5}">
+        <iframe src="{!'/apex/Etude_ComparativeNew?Id=' + v.recordId }" width="100%" height="800px"/>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.isC4}">
+                <iframe src="{!'/apex/Etude_ComparativeNew?Id=' + v.recordId }" width="100%" height="800px"/>
+                <aura:set attribute="else">
+                    <iframe src="{!'/apex/Etude_ComparativeNew?Id=' + v.recordId }" width="100%" height="800px"/>
+                </aura:set>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+</aura:component>

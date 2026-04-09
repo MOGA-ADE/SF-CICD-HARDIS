@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "ade_pictos_optimisation",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005avhUAA",
+        "type" : "file",
+        "size" : 1762
+      }
+    }
+  },
+  "urlName" : "ade-pictos-optimisation"
+}
