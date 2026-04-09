@@ -1,0 +1,23 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  variant="Narrow"  title="Points d'énergies" icon-name="standard:account">
+        <span slot="actions">
+            <a class="slds-button slds-button_neutral" href="https://alliancedesenergies.my.site.com/partenaire/resource/Templates/Template_Import/Template_IMPORT_COPRO_PDE_ELEC.xlsx" target="_blank">Template import CSV ELEC</a>
+            <a class="slds-button slds-button_neutral" href="https://alliancedesenergies.my.site.com/partenaire/resource/Templates/Template_Import/Template_IMPORT_COPRO_PDE_GAZ.xlsx" target="_blank">Template import CSV GAZ</a>        
+            <lightning-button label="Supprimer les PDE selectionnés" slot="actions" style="padding-left: 5px;" onclick={deletePDERowAction}></lightning-button>
+        </span>
+        <p slot="footer">
+            <lightning-datatable
+                key-field="id"
+                data={listPDE}
+                columns={columns}
+                onrowselection={getSelectedIdAction}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                selected-rows={setSelectedRows}
+                onsort={handleSortPDE}
+                >
+            </lightning-datatable>
+        </p>
+    </lightning-card>
+</template>

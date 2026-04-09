@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Api_status__c</fullName>
+    <label>API Statut</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Demande de prix reçue chez le fournisseur</fullName>
+                <default>false</default>
+                <label>Demande de prix reçue chez le fournisseur</label>
+            </value>
+            <value>
+                <fullName>Demande de prix rejetée par le fournisseur</fullName>
+                <default>false</default>
+                <label>Demande de prix rejetée par le fournisseur</label>
+            </value>
+            <value>
+                <fullName>Demande de prix validée par le fournisseur</fullName>
+                <default>false</default>
+                <label>Demande de prix validée par le fournisseur</label>
+            </value>
+            <value>
+                <fullName>Erreur Process Mulesoft</fullName>
+                <default>false</default>
+                <label>Erreur Process Mulesoft</label>
+            </value>
+            <value>
+                <fullName>Demande de prix envoyée par Salesforce</fullName>
+                <default>false</default>
+                <label>Demande de prix envoyée par Salesforce</label>
+            </value>
+            <value>
+                <fullName>Demande de prix en attente d&apos;action manuelle</fullName>
+                <default>false</default>
+                <label>Demande de prix en attente d&apos;action manuelle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

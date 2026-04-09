@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalAuthIdentityProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authenticationFlow>ClientCredentials</authenticationFlow>
+    <authenticationProtocol>OAuth</authenticationProtocol>
+    <externalAuthIdentityProviderParameters>
+        <parameterName>ClientAuthentication</parameterName>
+        <parameterType>ClientAuthentication</parameterType>
+        <parameterValue>ClientSecretPost</parameterValue>
+    </externalAuthIdentityProviderParameters>
+    <externalAuthIdentityProviderParameters>
+        <parameterName>TokenUrl</parameterName>
+        <parameterType>TokenUrl</parameterType>
+        <parameterValue>https://adict-connexion.grdf.fr/oauth2/aus5y2ta2uEHjCWIR417/v1/token</parameterValue>
+    </externalAuthIdentityProviderParameters>
+    <label>GRDF Token</label>
+</ExternalAuthIdentityProvider>

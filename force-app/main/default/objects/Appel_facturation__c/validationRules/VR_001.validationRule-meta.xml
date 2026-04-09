@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_001</fullName>
+    <active>true</active>
+    <description>Empêche la modification de l&apos;enregistrement lorsqu&apos;il a été validé</description>
+    <errorConditionFormula>AND(NOT(TEXT(PRIORVALUE(Statut__c)) = &quot;En attente de validation ADV&quot;),RecordType.DeveloperName =&apos;Commission&apos;)</errorConditionFormula>
+    <errorMessage>Cet appel à facturation n&apos;est plus modifiable</errorMessage>
+</ValidationRule>

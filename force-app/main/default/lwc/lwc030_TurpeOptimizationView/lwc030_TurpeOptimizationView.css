@@ -1,0 +1,90 @@
+.turpe-banner {
+    background-color: #d8f2ff;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.turpe-banner-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem; 
+}
+
+.turpe-banner-label {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.turpe-banner-value {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.turpe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+.turpe-table th,
+.turpe-table td {
+    border: 1px solid #d8dde6;
+    padding: 6px 8px;
+    text-align: center;
+}
+.turpe-th-header {
+    background-color: #f3f6fb;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.turpe-category {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.85rem;
+}
+.turpe-total {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+.turpe-negative {
+    color: #c23934;
+    font-weight: bold;
+}
+.turpe-positive {
+    color: #007000;
+    font-weight: bold;
+}
+
+.turpe-note {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.turpe-blur{
+    filter: blur(var(--content-blur-amount, 0px));
+}
+.turpe-title {
+    font-size: 1rem;
+}
+
+.input-marge-peps{
+    margin: 0 0.5cm;
+}
+
+.turpe-note-important { 
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}

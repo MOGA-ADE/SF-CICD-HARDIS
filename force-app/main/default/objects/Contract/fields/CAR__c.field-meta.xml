@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAR__c</fullName>
+    <label>CAR</label>
+    <summarizedField>Prix_contrat_PDE__c.CAR__c</summarizedField>
+    <summaryForeignKey>Prix_contrat_PDE__c.Contract__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

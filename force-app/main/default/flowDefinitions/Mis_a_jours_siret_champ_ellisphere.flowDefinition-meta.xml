@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>je verifie si le siret__c est mis à jours et je set cette nouvelle valeur dans TCH_siret</description>
+    <masterLabel>Mise à jours siret champ ellisphere</masterLabel>
+</FlowDefinition>

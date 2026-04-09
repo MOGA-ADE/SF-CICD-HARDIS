@@ -1,0 +1,274 @@
+{
+  "appPageId" : "f8ea84a1-88eb-4d26-b3be-6be6b20f8905",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "41b47d2b-5909-47a8-9dab-9e25ffcd2116",
+  "label" : "Symposium",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/Nouveau_Logo1?v=1) center center /contain no-repeat",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0)",
+        "contentAreaWidth" : 25,
+        "sectionConfig" : {
+          "UUID" : "f8c4d63c-a4b5-4e03-b1d6-dbcf9f9e5bb6",
+          "columns" : [ {
+            "UUID" : "d32d57cf-dae4-40a0-a062-bd5fbfde20ba",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f8c4d63c-a4b5-4e03-b1d6-dbcf9f9e5bb6",
+      "regions" : [ {
+        "id" : "d32d57cf-dae4-40a0-a062-bd5fbfde20ba",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6770119e-32b8-4436-ba95-b4879ff96b91",
+          "columns" : [ {
+            "UUID" : "4362187f-1df4-4ccd-b8dd-af06913f8d3e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6770119e-32b8-4436-ba95-b4879ff96b91",
+      "regions" : [ {
+        "id" : "4362187f-1df4-4ccd-b8dd-af06913f8d3e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/symposiumne1?v=1) center center /contain no-repeat",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7b0ca210-5f01-4e40-96da-9c9c80ab6a64",
+          "columns" : [ {
+            "UUID" : "e66ae446-cb95-452a-83d8-3d6b10da6792",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7b0ca210-5f01-4e40-96da-9c9c80ab6a64",
+      "regions" : [ {
+        "id" : "e66ae446-cb95-452a-83d8-3d6b10da6792",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "33fc8f05-505e-4ca8-870d-12e4986e6f1e",
+          "columns" : [ {
+            "UUID" : "ef7118ea-3c6b-4bf3-b29b-4579b52b6321",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "33fc8f05-505e-4ca8-870d-12e4986e6f1e",
+      "regions" : [ {
+        "id" : "ef7118ea-3c6b-4bf3-b29b-4579b52b6321",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 66,
+        "sectionConfig" : {
+          "UUID" : "1db36214-0644-49a9-a52c-d2a8c7b09faa",
+          "columns" : [ {
+            "UUID" : "de75cdf8-c6e7-4a83-a3ac-e11f9330b4f2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1db36214-0644-49a9-a52c-d2a8c7b09faa",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"contractId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!c}\"}]",
+            "flowName" : "Adhesion_Symposium"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "dfa31ec3-084c-4f76-9f08-385e08f06a89",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "de75cdf8-c6e7-4a83-a3ac-e11f9330b4f2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 66,
+        "sectionConfig" : {
+          "UUID" : "4b81775c-550c-4214-baf4-66516c5f19c9",
+          "columns" : [ {
+            "UUID" : "52852039-d7b2-404d-b40e-a90cc4264e1f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4b81775c-550c-4214-baf4-66516c5f19c9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 20px;\">Découvrez comment fonctionne Symposium Business !</strong></p><p style=\"text-align: center;\"><br></p><div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/DQLqxTp_RhI\" src=\"https://www.youtube.com/embed/DQLqxTp_RhI\" data-dashlane-frameid=\"4653\"></iframe></div><p style=\"text-align: center;\"><br></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1eec40ad-d098-4d96-a6ea-7f77e323ce33",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Si vous désirez en savoir plus sur les services de SYMPOSIUM BUSINESS, visitez notre page web dédiée en <a style=\"text-decoration: underline;\" target=\"_blank\" href=\"https://alliancedesenergies.fr/mysymposium/\">cliquant ici</a></p>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "1145169f-9dbe-4e00-b657-7a6ba9bf9e90",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "52852039-d7b2-404d-b40e-a90cc4264e1f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e28d153e-78ab-4c42-a0af-3c1866db4850",
+          "columns" : [ {
+            "UUID" : "1935d590-0763-4576-b964-66d9c838100e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e28d153e-78ab-4c42-a0af-3c1866db4850",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"height: 32px; width:100%; position: fixed; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;\">\n\t<a style=\"margin-right: 16px;\" target=\"_blank\" href=\"https://alliancedesenergies.fr/mentions-legales/\">Mentions légales</a>\n    <a style=\"margin-right: 16px;\" target=\"_blank\" href=\"https://alliancedesenergies.fr/politique-de-confidentialite/\">Politique de confidentialité</a>\n    <a style=\"margin-right: 16px;\" target=\"_blank\" href=\"https://alliancedesenergies.fr/expert-energie/contact/\">Contacter Alliance des Énergies</a>\n    <a target=\"_blank\" href=\"tel:+33472829928\">04 72 82 99 28</a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "c78651a5-0c9f-4574-9483-69d09a454a7f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1935d590-0763-4576-b964-66d9c838100e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cb727d28-b853-4a76-a9c5-98e42648c34d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Symposium"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ab9bc961-137f-43dd-ad1e-9bba4a6a0c0f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5355cf4b-2320-4f64-93b5-c5a0d6f2fde1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-symposium"
+}

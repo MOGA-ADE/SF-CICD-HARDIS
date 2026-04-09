@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>GRDF {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GRDF Check Fin Droit Accès</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UPDATE_Droit_Acces_Status</name>
+        <label>UPDATE Droit Accès Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>GRDF_Erreur_Droit_Acces__c</field>
+            <value>
+                <stringValue>Droit d&apos;accès arrivé à échéance</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>GRDF_Statut_Droit_Acces__c</field>
+            <value>
+                <stringValue>Demande d&apos;accès rejetée</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UPDATE_Droit_Acces_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>GRDF_Droit_Acces_Expire__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>GRDF_Statut_Droit_Acces__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demande d&apos;accès validée</stringValue>
+            </value>
+        </filters>
+        <object>PDE__c</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2026-01-13</startDate>
+            <startTime>02:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

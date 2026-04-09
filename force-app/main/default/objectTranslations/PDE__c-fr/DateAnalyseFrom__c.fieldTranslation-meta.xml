@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date de début de l&apos;analyse TURPE --></help>
+    <label><!-- Début Date Analyse --></label>
+    <name>DateAnalyseFrom__c</name>
+</CustomFieldTranslation>

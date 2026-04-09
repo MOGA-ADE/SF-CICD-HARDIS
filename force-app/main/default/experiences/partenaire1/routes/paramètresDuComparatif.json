@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "754e0896-b059-4704-b8fa-684efc461b43",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "Parametres_du_comparatif__c",
+  "id" : "08558bf9-ecb4-4680-9c41-c0defbf23e56",
+  "label" : "Paramètres du comparatif",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-parametres-du-comparatif",
+  "type" : "route",
+  "urlPrefix" : "parametres-du-comparatif"
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motif_refus__c</fullName>
+    <label>Motif de refus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Je ne suis pas intéressé</fullName>
+                <default>false</default>
+                <label>Je ne suis pas intéressé</label>
+            </value>
+            <value>
+                <fullName>Je n&apos;ai pas de temps à vous consacrer</fullName>
+                <default>false</default>
+                <label>Je n&apos;ai pas de temps à vous consacrer</label>
+            </value>
+            <value>
+                <fullName>A déjà un courtier</fullName>
+                <default>false</default>
+                <label>A déjà un courtier</label>
+            </value>
+            <value>
+                <fullName>A déjà renégocié avec son fournisseur</fullName>
+                <default>false</default>
+                <label>A déjà renégocié avec son fournisseur</label>
+            </value>
+            <value>
+                <fullName>J&apos;ai encore le temps pour ça</fullName>
+                <default>false</default>
+                <label>J&apos;ai encore le temps pour ça</label>
+            </value>
+            <value>
+                <fullName>Je ne sais pas qui est le décisionnaire</fullName>
+                <default>false</default>
+                <label>Je ne sais pas qui est le décisionnaire</label>
+            </value>
+            <value>
+                <fullName>Nous passons pas les achats/C&apos;est centralisé</fullName>
+                <default>false</default>
+                <label>Nous passons pas les achats/C&apos;est centralisé</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

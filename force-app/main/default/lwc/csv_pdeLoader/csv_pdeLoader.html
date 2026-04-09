@@ -1,0 +1,34 @@
+<template>
+    <lightning-card variant="narrow" >
+        <h1 slot="title">Importer des points d'énergie</h1>
+        <lightning-spinner lwc:if={showSpinner}></lightning-spinner>
+        <div class="slds-p-around_medium">
+            <template if:true={isShowDrag}>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-2" draggable="true" ondragover={handleDragOver} ondrop={handleDrop}>
+                        <div  id ="holderELEC" class="slds-var-m-top_medium slds-align_absolute-center drop" style=" height:100px" >
+                            Glisser/Déposer votre fichier ELEC
+                        </div>
+                    </div>
+                    <div id="holderGAZ"  class="slds-col slds-size_1-of-2 slds-var-m-top_medium slds-align_absolute-center drop" style=" height:100px" draggable="true" ondragover={handleDragOver} ondrop={handleDrop}>      
+                        Glisser/Déposer votre fichier GAZ
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card variant="narrow" >
+        <h1 slot="title">Mettre à jour tous les points d'énergie</h1>
+        <lightning-spinner lwc:if={showSpinner}></lightning-spinner>
+        <lightning-button label="Télécharger les points d'énergie" slot="actions" onclick={getAllPdes}></lightning-button>
+        <div class="slds-p-around_medium">
+            <template if:true={isShowDrag}>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div id="updatePDE" class="slds-col slds-var-m-top_medium slds-align_absolute-center drop" style=" height:100px;margin-left:11px;" draggable="true" ondragover={handleDragOver} ondrop={handleDropUpdate}>      
+                        Glisser/Déposer votre fichier de mise à jour
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

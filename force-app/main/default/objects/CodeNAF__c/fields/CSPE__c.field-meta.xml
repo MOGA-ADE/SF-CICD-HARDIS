@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSPE__c</fullName>
+    <label>CSPE</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Non éligible taux réduit</fullName>
+                <default>false</default>
+                <label>Non éligible taux réduit</label>
+            </value>
+            <value>
+                <fullName>Potentiellement éligible taux réduit</fullName>
+                <default>false</default>
+                <label>Potentiellement éligible taux réduit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

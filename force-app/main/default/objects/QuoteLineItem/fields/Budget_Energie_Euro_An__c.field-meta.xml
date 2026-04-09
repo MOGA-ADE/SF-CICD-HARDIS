@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Energie_Euro_An__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    TECH_TypePDL__c = &quot;PDE_Gaz&quot;,
+    (AbonnementMois__c * 12) +
+    (PrixMolecule__c * CARGaz__c) +
+    (FraisTransportDistributionCapacite__c * CARGaz__c) +
+    (CeeMwh__c * CARGaz__c),
+
+    IF(
+        TECH_Segment__c = &quot;C5&quot; &amp;&amp; CONTAINS(TECH_FTA__c, &quot;4 postes&quot;),
+        (AbonnementMois__c * 12) +
+        (PrixHphMwh__c * Conso_HPH__c) +
+        (PrixHchMwh__c * Conso_HCH__c) +
+        (PrixHpeMwh__c * Conso_HPE__c) +
+        (PrixHceMwh__c * Conso_HCE__c) +
+        (Capa_HPH__c * Conso_HPH__c) +
+        (Capa_HCH__c * Conso_HCH__c) +
+        (Capa_HPE__c * Conso_HPE__c) +
+        (Capa_HCE__c * Conso_HCE__c) +
+        (CeeMwh__c * CAR_New__c),
+
+        IF(
+            TECH_Segment__c = &quot;C5&quot; &amp;&amp; 
+            (TECH_FTA__c = &quot;BT &lt;= 36 kVA - CU&quot; || TECH_FTA__c = &quot;BT &lt;= 36 kVA - LU EP&quot;),
+            (AbonnementMois__c * 12) +
+            (PrixBase__c * Conso_Base__c) +
+            (Capa_Base__c * Conso_Base__c) +
+            (CeeMwh__c * Conso_Base__c),
+
+            IF(
+                TECH_Segment__c = &quot;C5&quot; &amp;&amp; TECH_FTA__c = &quot;BT &lt;= 36 kVA - MU&quot;,
+                (AbonnementMois__c * 12) +
+                (PrixHP__c * ConsoHP__c) +
+                (PrixHC__c * ConsoHC__c) +
+                (Capa_HP__c * ConsoHP__c) +
+                (Capa_HC__c * ConsoHC__c) +
+                (CeeMwh__c * CAR_New__c),
+
+                (AbonnementMois__c * 12) +
+                (PointesMWh__c * Conso_Pointe__c) +
+                (PrixHphMwh__c * Conso_HPH__c) +
+                (PrixHchMwh__c * Conso_HCH__c) +
+                (PrixHpeMwh__c * Conso_HPE__c) +
+                (PrixHceMwh__c * Conso_HCE__c) +
+                (Capa_Pointes__c * Conso_Pointe__c) +
+                (Capa_HPH__c * Conso_HPH__c) +
+                (Capa_HCH__c * Conso_HCH__c) +
+                (Capa_HPE__c * Conso_HPE__c) +
+                (Capa_HCE__c * Conso_HCE__c) +
+                (CeeMwh__c * CAR_New__c)
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Budget Energie €/an</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

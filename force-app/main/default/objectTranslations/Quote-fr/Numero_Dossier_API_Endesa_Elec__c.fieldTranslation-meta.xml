@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Numero Dossier API Endesa Elec --></label>
+    <name>Numero_Dossier_API_Endesa_Elec__c</name>
+</CustomFieldTranslation>

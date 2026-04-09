@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Statut de l&apos;appel --></label>
+    <name>Statut_appel__c</name>
+    <picklistValues>
+        <masterLabel>Faux numéro</masterLabel>
+        <translation><!-- Faux numéro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NRPP</masterLabel>
+        <translation><!-- NRPP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pas d&apos;appel émis</masterLabel>
+        <translation><!-- Pas d&apos;appel émis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Répond</masterLabel>
+        <translation><!-- Répond --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Répondeur</masterLabel>
+        <translation><!-- Répondeur --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

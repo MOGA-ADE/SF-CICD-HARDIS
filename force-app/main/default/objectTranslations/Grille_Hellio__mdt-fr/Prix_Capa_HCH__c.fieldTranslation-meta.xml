@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Prix Capa HCH --></label>
+    <name>Prix_Capa_HCH__c</name>
+</CustomFieldTranslation>

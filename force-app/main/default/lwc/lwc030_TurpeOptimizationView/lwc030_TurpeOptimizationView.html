@@ -1,0 +1,203 @@
+<template>
+    <template if:true={data}>
+        <lightning-card title="Optimisation TURPE" icon-name="custom:custom63">
+            <div class="slds-p-around_medium">
+
+                <!-- === Vue monosite === -->
+                <template if:true={isMonoSite}>
+                    <span class="turpe-title"> Économies pour le compteur <b>{firstPde.TECH_num_compteur__c}</b> </span>
+                    <div class="turpe-banner">
+                        <div class="turpe-banner-inner">
+                            <span class="turpe-banner-label">ÉCONOMIES IDENTIFIÉES</span>
+                            <span class="turpe-banner-value">
+                                {firstPde.EconomieIdentifie__c} € HT/an
+                            </span>
+                        </div>
+                    </div>
+
+                    <template if:true={firstPde}>
+                        <table class="turpe-table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" class="turpe-th-header-empty"></th>
+                                    <th rowspan="2" class="turpe-th-header">POSTES</th>
+                                    <th colspan="1" class="turpe-th-header">TURPE ACTUEL (€)</th>
+                                    <th colspan="1" class="turpe-th-header">TURPE OPTIMAL (€)</th>
+                                </tr>
+                                <tr>
+                                    <th class="turpe-th-sub">HTA CU</th>
+                                    <th class="turpe-th-sub">HTA LU</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- DÉNIVELÉ DE PUISSANCE SOUSCRITE -->
+                                <tr>
+                                    <td class="turpe-category" rowspan="5">
+                                        DÉNIVELÉ DE<br />PUISSANCE<br />SOUSCRITE
+                                    </td>
+                                    <td class="turpe-bold">HCE</td>
+                                    <td>{firstPde.HCEActuel__c}</td>
+                                    <td class="turpe-blur">{firstPde.HCEOptimal__c}</td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">HPE</td>
+                                    <td>{firstPde.HPEActuel__c}</td>
+                                    <td class="turpe-blur">{firstPde.HPEOptimal__c}</td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">HCH</td>
+                                    <td>{firstPde.HCHActuel__c}</td>
+                                    <td class="turpe-blur">{firstPde.HCHOptimal__c}</td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">HPH</td>
+                                    <td>{firstPde.HPHActuel__c}</td>
+                                    <td class="turpe-blur">{firstPde.HPHOptimal__c}</td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">POINTE</td>
+                                    <td>{firstPde.POINTEActuel__c}</td>
+                                    <td class="turpe-blur">{firstPde.POINTEOptimal__c}</td>
+                                </tr>
+
+                                <!-- COMPOSANTES OPTIMISABLES -->
+                                <tr>
+                                    <td class="turpe-category" rowspan="5">
+                                        COMPOSANTES<br />OPTIMISABLES DU<br />TURPE
+                                    </td>
+                                    <td class="turpe-bold">Part fixe de la CS</td>
+                                    <td>{firstPde.PartFixeCSActuel__c}</td>
+                                    <td class={cssPartFixeCS}>
+                                        {firstPde.PartFixeCSOptimal__c}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">Part variable de la CS</td>
+                                    <td>{firstPde.PartVariableCSActuel__c}</td>
+                                    <td class={cssPartVariableCS}>
+                                        {firstPde.PartVariableCSOptimal__c}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">Dépassements</td>
+                                    <td>{firstPde.DepassementActuel__c}</td>
+                                    <td class={cssDepassement}>
+                                        {firstPde.DepassementOptimal__c}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">Taxe CTA</td>
+                                    <td>{firstPde.TaxeCTAActuel__c}</td>
+                                    <td class={cssTaxeCTA}>
+                                        {firstPde.TaxeCTAOptimal__c}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="turpe-bold">Intervention PEP'S</td>
+                                    <td>-</td>
+                                    <td class={cssInterventionPEPS}>
+                                        {firstPde.InterventionPEPS__c}
+                                    </td>
+                                </tr>
+
+                                <!-- TOTAL -->
+                                <tr class="turpe-total">
+                                    <td colspan="2">TOTAL</td>
+                                    <td>{firstPde.BudgetTotalActuel__c}</td>
+                                    <td class={cssBudgetTotal}>
+                                        {firstPde.BudgetTotalOptimal__c}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </template>
+
+                    <!-- Notes -->
+                    <div class="turpe-note">
+                        <p>
+                            - Un changement de dénivelé de puissance coûte
+                            <b> 68 € HT</b> auprès d'ENEDIS — Un changement de version d'utilisation coûte
+                            <b> 20 € HT</b> auprès d'ENEDIS.
+                        </p>
+                        <p><i>{noteDateText}</i></p>
+                        <template if:true={noteConsoText}>
+                            <p><i>{noteConsoText}</i></p>
+                        </template>
+                    </div>
+                </template>
+
+                <!-- === Vue multisite === -->
+                <template if:false={isMonoSite}>
+                    <table class="turpe-table">
+                        <thead>
+                            <tr>
+                                <th>Compteur</th>
+                                <th>Budget Actuel (€HT/an)</th>
+                                <th>Budget Optimal (€HT/an)</th>
+                                <th>Économie (€HT/an)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={lstPDEDecorated} for:item="pde">
+                                <tr key={pde.Id}>
+                                    <td>{pde.Name} - <b>{pde.TECH_num_compteur__c}</b></td>
+                                    <td>{pde.BudgetTotalActuel__c}</td>
+                                    <td>{pde.BudgetTotalOptimal__c}</td>   
+                                    <td class={pde._cssBudget}>{pde.EconomieIdentifie__c}</td>
+                                </tr>
+                            </template>
+
+                            <tr class="turpe-total">
+                                <td><b>Total global</b></td>
+                                <td>{totalBudgetActuel}</td>
+                                <td>{totalBudgetOptimal}</td>
+                                <td class='turpe-positive'>{totalEconomie}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Notes -->
+                    <div class="turpe-note">
+                        <p>
+                            - Un changement de dénivelé de puissance coûte
+                            <b> 68 € HT</b> auprès d'ENEDIS — Un changement de version d'utilisation coûte
+                            <b> 20 € HT</b> auprès d'ENEDIS.
+                        </p>
+                        <p><i>{noteDateText}</i></p>
+                    </div>
+                </template>
+                <div class="turpe-note-important">Une fois signée, retournez la lettre de mission à : eliot.fauquignon@peps-energie.fr </div>
+            </div>
+        </lightning-card>
+    </template>
+
+    <!-- === Gestion d'erreur === -->
+    <template if:true={error}>
+        <lightning-card title="Erreur">
+            <div class="slds-p-around_medium slds-text-color_error">
+                {error.body.message}
+            </div>
+        </lightning-card>
+    </template>
+
+    <lightning-layout-item size="6" padding="around-small">
+            <lightning-input 
+                class="input-marge-peps"
+                type="number"
+                name="margePEPS"
+                label="Marge intervention PEP'S (%)"
+                min={minMargePEPS}
+                max={maxMargePEPS}
+                value={margePEPS}
+                onchange={handleMargeChange}
+                step="0.1"
+                required>
+            </lightning-input>
+    </lightning-layout-item>
+
+    <footer class="slds-card__footer">   
+        <lightning-button  style="margin: 0 8px;" variant="brand" label="Générer Lettre de mission" onclick={handleGenerateLettreMission}></lightning-button>
+        <br/>
+    </footer>
+</template>

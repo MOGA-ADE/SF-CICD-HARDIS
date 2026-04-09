@@ -1,0 +1,15 @@
+.message-ok {
+    background-color: #edfaef;
+    border: 1px solid #04844b;
+    color: #04844b;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.message-ko {
+    background-color: #fff1f1;
+    border: 1px solid #ea001e;
+    color: #ea001e;
+    padding: 1rem;
+    border-radius: 4px;
+}

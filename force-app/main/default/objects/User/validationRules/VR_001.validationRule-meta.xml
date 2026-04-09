@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_001</fullName>
+    <active>true</active>
+    <description>Numéro de téléphone</description>
+    <errorConditionFormula>NOT(REGEX(Phone, &quot;^$|^0[0-9]( [0-9]{2}){4}$&quot;))</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Merci de rentrer votre numéro de téléphone au format 06 59 59 59 59 (Un espace tous les deux chiffres)</errorMessage>
+</ValidationRule>

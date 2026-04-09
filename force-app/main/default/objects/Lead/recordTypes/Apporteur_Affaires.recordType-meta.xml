@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apporteur_Affaires</fullName>
+    <active>true</active>
+    <businessProcess>Apporteur Affaires</businessProcess>
+    <description>Lead reçu depuis les apporteurs d&apos;affaires</description>
+    <label>Apporteur Affaires</label>
+    <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Femme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non binaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non répertorié</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Artisans%2FCommerçant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Résidentiel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secteur agricole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tertiaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDREZIEUX FOOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apporteur Affaires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cellule RDV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coalis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consoneo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultation MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demande de contact site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellisphere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FEURS FOOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fournisseur de leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LE CÈDRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead appel entrant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onssen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEP%27S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Padmalink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prescripteur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection terrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommandation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE - Fichier Jade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Réseau personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sparklane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Madame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monsieur</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>Elle%2FElle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elle%2FElles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Il%2FIls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Il%2FLui</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ils%2FEux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non répertorié</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

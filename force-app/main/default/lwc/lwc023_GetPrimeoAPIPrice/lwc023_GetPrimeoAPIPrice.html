@@ -1,0 +1,154 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:dynamic_record_choice" alternative-text="Primeo" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">Primeo Energie : Récupérer automatiquement les prix !</h2>
+                    </div>
+                </div>
+                <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <!-- Loading the QLI -->
+        <template if:false={qliToCheck}>
+            <div class="slds-card__body slds-card__body_inner bodyCard">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <!-- QLI Loaded -->
+        <template if:true={qliToCheck}>
+            <!-- Offre déjà validée AUJOURD'HUI -->
+            <div if:true={offerAlreadyCreatedAndValid} class="slds-card__body slds-card__body_inner bodyCard">
+                <!-- step badges -->
+                <div class="slds-grid slds-gutters slds-wrap" style="align-items: center;">
+                    <div class="slds-col slds-size_12-of-12">
+                        <span if:true={isPrerequisOK} class="slds-badge slds-theme_success">Offre validée</span>
+                    </div>
+                </div>
+                <!-- Opp link-->
+                <div class="slds-grid slds-gutters slds-wrap" style="align-items: center;">
+                    <div class="slds-col slds-size_12-of-12">
+                        <div class="flexContainer">
+                            <p>Opportunité Primeo associée :&nbsp; 
+                                <lightning-formatted-url    value={qliToCheck.PrimeoApiCurrentOppURL__c}
+                                                            target="_blank" >
+                                </lightning-formatted-url>
+                            </p>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+            <!-- Offre non validée AUJOURD'HUI -->
+            <div if:false={offerAlreadyCreatedAndValid} class="slds-card__body slds-card__body_inner bodyCard">
+                <lightning-spinner if:true={showSpinner} alternative-text="Loading" size="medium"></lightning-spinner>
+                <!-- step badges -->
+                <div class="slds-grid slds-gutters slds-wrap" style="align-items: center;">
+                    <div class="slds-col slds-size_4-of-12">
+                        <span if:true={isPrerequisOK} class="slds-badge slds-theme_success">Prérequis</span>
+                        <span if:false={isPrerequisOK} class="slds-badge slds-theme_error">Prérequis</span>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <span class="slds-badge">Étape 2</span>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <span class="slds-badge">Étape 3</span>
+                    </div>
+                </div>
+                <!-- Récupérer / Réactualiser les prix -->
+                <div class="slds-grid slds-gutters slds-wrap" style="align-items: center;">
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="flexContainer">
+                            <div class="prerequisContainer">
+                                <p class="colorGreen" if:true={isTypeOffreOK}>
+                                    <lightning-icon class="validityIcon" icon-name="standard:task2" alternative-text="task2" size="xx-small"></lightning-icon>
+                                    Type d'offre : <lightning-formatted-text value={qliToCheck.TECH_TypeOffre__c}></lightning-formatted-text>
+                                </p>
+                                <p class="colorRed" if:false={isTypeOffreOK}>
+                                    <lightning-icon class="validityIcon" icon-name="standard:first_non_empty" alternative-text="first_non_empty" size="xx-small"></lightning-icon>
+                                    Type d'offre doit être "Prix fixe" ou "Arenh avec écrêtement"
+                                </p>
+                                <p class="colorGreen" if:true={isDebutFournitureOK}>
+                                    <lightning-icon class="validityIcon" icon-name="standard:task2" alternative-text="task2" size="xx-small"></lightning-icon>
+                                    Début de fourniture renseigné
+                                </p>
+                                <p class="colorRed" if:false={isDebutFournitureOK}>
+                                    <lightning-icon class="validityIcon" icon-name="standard:first_non_empty" alternative-text="first_non_empty" size="xx-small"></lightning-icon>
+                                    Début de fourniture non renseigné
+                                </p>
+                                <p class="colorGreen" if:true={isNouvelleEcheanceOK}>
+                                    <lightning-icon class="validityIcon" icon-name="standard:task2" alternative-text="task2" size="xx-small"></lightning-icon>
+                                    Nouvelle échéance renseignée
+                                </p>
+                                <p class="colorRed" if:false={isNouvelleEcheanceOK}>
+                                    <lightning-icon class="validityIcon" icon-name="standard:first_non_empty" alternative-text="first_non_empty" size="xx-small"></lightning-icon>
+                                    Nouvelle échéance non renseignée
+                                </p>
+                            </div>
+                            <div class="iconContainer">
+                                <lightning-icon class="nextIcon" icon-name="utility:chevronright" alternative-text="next" size="large"></lightning-icon>
+                                <lightning-icon icon-name="utility:chevronright" alternative-text="next" size="large"></lightning-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="flexContainer">
+                            <div class="inputQueryContainer">
+                                <lightning-input type="number" label="Marge souhaitée (€/MWh)" formatter="currency" step="0.01" onchange={handleChangeMarge}></lightning-input>
+                                <br>
+                                <lightning-input type="checkbox" label="100% énergies vertes ?" onchange={handleChangeGreenEnergy}></lightning-input>
+                            </div>
+                            <div class="iconContainer">
+                                <lightning-icon class="nextIcon" icon-name="utility:chevronright" alternative-text="next" size="large"></lightning-icon>
+                                <lightning-icon icon-name="utility:chevronright" alternative-text="next" size="large"></lightning-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <template lwc:if={isPrerequisOK}>
+                            <button lwc:if={isMargeOK} class="slds-button slds-button_brand" onclick={handleGetPrices}>Récupérer les prix</button>
+                            <button lwc:else class="slds-button slds-button_brand" disabled>Récupérer les prix</button>
+                        </template>
+                        <button lwc:else class="slds-button slds-button_brand" disabled>Veuillez remplir les prérequis</button>
+                    </div>              
+                </div>
+            </div>
+            <footer if:false={offerAlreadyCreatedAndValid} class="slds-card__footer">
+                <!-- Prix déjà récupérés -->
+                <div lwc:if={isLastDatePriceOK} class="footerOfferContent">
+                    <span class="slds-badge">Offre actuelle</span>
+                    <div class="flexContainer footerFlexAlign">
+                        <p>100% énergies vertes:&nbsp;
+                            <strong><lightning-formatted-text value={isGreenEnergy} class="mgRight"></lightning-formatted-text></strong>
+                        </p>
+                        <span class="footerSeparator">|</span>
+                        <p>Marge souhaitée:&nbsp;
+                            <strong><lightning-formatted-number value={qliToCheck.PrimeoApiCurrentMarkup__c} 
+                                                        format-style="currency" 
+                                                        currency-code="EUR"
+                                                        class="mgRight">
+                            </lightning-formatted-number></strong>
+                        </p>
+                        <span class="footerSeparator">|</span>
+                        <p>Prix récupérés le :&nbsp; 
+                            <strong><lightning-formatted-date-time  value={qliToCheck.PrimeoApiPriceDate__c}
+                                                                    year="numeric" 
+                                                                    month="numeric" 
+                                                                    day="numeric" 
+                                                                    hour="2-digit"
+                                                                    minute="2-digit"
+                                                                    class="mgRight">
+                            </lightning-formatted-date-time></strong>
+                        </p>
+                        <span class="footerSeparator">|</span>
+                        <button class="slds-button slds-button_brand" onclick={handleValidOffer}>Valider l'offre</button>
+                    </div>
+                </div>
+            </footer>
+        </template>
+        
+    </article>
+</template>

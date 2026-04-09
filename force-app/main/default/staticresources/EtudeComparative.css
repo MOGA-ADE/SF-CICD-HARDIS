@@ -1,0 +1,266 @@
+@page {
+  size: A4 landscape;
+  margin:0cm;
+  padding:0cm;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.resumeOffre {
+  width: 20% !important;
+  text-align: center;
+  border: 1px solid #d9d9d9 !important;
+  font-size: 10px;
+}
+
+.CompanyInfo tr {
+  background: white;
+}
+.companyInfo .contact {
+  border: 0px solid black;
+  border-collapse: collapse;
+}
+.companyInfo .title {
+  background: #45818e;
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: white;
+}
+.companyInfo .logo {
+  //background: #404040;
+  border: 0px solid black;
+  border-collapse: collapse;
+  color: white;
+  padding: 3px;
+  //padding-top: 15px;
+  //padding-bottom: 15px;
+}
+.companyInfo .subtitle {
+  background: #d0e1e2;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 50%;
+}
+.companyInfo .detail {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.monoSite {
+  font-weight: bold;
+  color: #45818e;
+  font-size: 10px;
+}
+.multiSite {
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+}
+.pdeList tr {
+  background: white;
+  width: 100%;
+}
+.pdeList .cellStyleWidthFirst {
+  width: 16%;
+}
+.pdeList .cellStyleWidthSecond {
+  width: 10%;
+}
+.pdeList .cellStyleWidthThird {
+  width: 24%;
+}
+.pdeList .cellStyleWidthFourth {
+  width: 4%;
+}
+.pdeList .pdeInfoTitle {
+  background-color: #999999;
+  color: white;
+}
+.pdeList .pdeInfo {
+  background-color: #d9d9d9 !important;
+}
+.borderLines {
+  border-right: 1px solid #d9d9d9 !important;
+  border-left: 1px solid #d9d9d9 !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  border-top: 0px solid #d9d9d9 !important;
+}
+
+.quoteList .quoteFormula {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.quoteList .quoteInfo {
+  background: white;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.quoteList .cellStyleWidthFirst {
+  width: 12.5%;
+}
+.quoteList .cellStyleWidthSecond {
+  width: 25%;
+}
+.quoteList .cellStyleWidthThird {
+  width: 30%;
+}
+.quoteList .cellStyleWidthFourth {
+  width: 20%;
+}
+.quoteList .cellStyleWidthFifth {
+  width: 5%;
+}
+.quoteList .cellStyleWidthSixth {
+  width: 10%;
+}
+.cellStyle {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.cellStyleLeftSide {
+  border-left: 1px solid #d9d9d9 !important;
+}
+.cellStyleTopSide {
+  border-top: 1px solid #d9d9d9 !important;
+}
+.cellStyleRightSide {
+  border-right: 1px solid #d9d9d9 !important;
+}
+.borderRightHidden {
+  border-right: 0px !important;
+}
+.cellStyleHidden {
+  border: 0px solid white !important;
+  border-collapse: collapse;
+  padding: 0px;
+  width: 0px;
+}
+.cellStyleAsHeader {
+  border-collapse: collapse;
+  background-color: red !important;
+}
+.cellStyleAsHeader {
+  border-collapse: collapse;
+  background-color: red !important;
+}
+.bg_color_LightCyan {
+  //background-color: #D0E0E3; !important;
+}
+.bg_color_DarkCyan {
+  //background-color: #45818E; !important;
+  color: white;
+}
+.bg_color_Cyan {
+  //background-color: #A2C4C9 !important;
+}
+.transparentText {
+  background-color: white !important;
+  color: white !important;
+}
+
+.colorComparatifTitre {
+  background-color: #45818e;
+}
+
+.colorComparatifSousTitre {
+  background-color: #a2c4c9;
+}
+
+.budget {
+  font-weight: bold;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
+  object-fit: contain;
+}
+
+.interloInfo tr {
+  background: white;
+}
+.interloInfo .contact {
+  border-collapse: collapse;
+}
+.interloInfo .title {
+  background: #45818e;
+  color: white;
+}
+.interloInfo .logo {
+  color: white;
+  padding: 3px;
+}
+.interloInfo .subtitle {
+  background: #d0e1e2;
+  width: 50%;
+}
+
+.cover {
+  object-fit: cover;
+  width: 50px;
+  height: 100px;
+}
+
+.tableContainer{
+  height: 170px;
+  width: 660px;
+  position:absolute;
+  bottom: 20px;
+  right:50px;
+}
+
+
+.containerFullPage{
+  width: 29.7cm;
+  height: 21cm;
+}
+
+.tousMesTableaux{
+  padding: 10px;
+}
+
+.DerniereImage{
+  overflow: hidden;
+  height: 99.5%;
+}
+
+.colorComparatifTitreEnergie {
+  background-color: #588a90;
+}
+
+.colorComparatifSousTitreEnergie {
+  background-color: #a6c6ca;
+}
+
+.colorComparatifTitreTaxe {
+  background-color: #bd7646;
+}
+
+.colorComparatifSousTitreTaxe {
+  background-color: #e2a983;
+}
+
+.colorComparatifTitreBudgetTotal {
+  background-color: #d7db2d;
+}
+
+.colorComparatifSousTitreBudgetTotal {
+  background-color: #eaea7d;
+}
+
+.colorComparatifTitreLightGray{
+  background-color:#D9D9D9;
+}

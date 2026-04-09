@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type de structure --></label>
+    <name>Type_structure__c</name>
+    <picklistValues>
+        <masterLabel>Collectivité</masterLabel>
+        <translation><!-- Collectivité --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Copropriété</masterLabel>
+        <translation><!-- Copropriété --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Création d&apos;entreprise</masterLabel>
+        <translation><!-- Création d&apos;entreprise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entreprise</masterLabel>
+        <translation><!-- Entreprise --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

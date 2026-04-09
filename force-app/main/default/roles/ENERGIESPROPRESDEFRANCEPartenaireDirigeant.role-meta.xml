@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>ENERGIES PROPRES DE FRANCE Partenaire - Dirigeant</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>ENERGIES PROPRES DE FRANCE Partenaire - Dirigeant</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Priceur</parentRole>
+</Role>

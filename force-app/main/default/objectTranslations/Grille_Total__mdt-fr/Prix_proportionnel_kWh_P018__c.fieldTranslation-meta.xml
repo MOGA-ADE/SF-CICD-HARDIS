@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Prix proportionnel €/kWh P018 --></label>
+    <name>Prix_proportionnel_kWh_P018__c</name>
+</CustomFieldTranslation>

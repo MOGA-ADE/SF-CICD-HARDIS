@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>7.4</fullName>
+        <default>false</default>
+        <label>7.4</label>
+    </standardValue>
+    <standardValue>
+        <fullName>7.5</fullName>
+        <default>false</default>
+        <label>7.5</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ANDREZIEUX FOOT</fullName>
+        <default>false</default>
+        <label>ANDREZIEUX FOOT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Apollo</fullName>
+        <default>false</default>
+        <label>Apollo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Apporteur Affaires</fullName>
+        <default>false</default>
+        <label>Apporteur Affaires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Autre</fullName>
+        <default>false</default>
+        <label>Autre</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cellule RDV</fullName>
+        <default>false</default>
+        <label>Cellule RDV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coalis</fullName>
+        <default>false</default>
+        <label>Coalis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consoneo</fullName>
+        <default>false</default>
+        <label>Consoneo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultation MP</fullName>
+        <default>false</default>
+        <label>Consultation MP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Corporama</fullName>
+        <default>false</default>
+        <label>Corporama</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data CARTEGIR</fullName>
+        <default>false</default>
+        <label>Data CARTEGIR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Demande de contact site</fullName>
+        <default>false</default>
+        <label>Demande de contact site</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ellisphere</fullName>
+        <default>false</default>
+        <label>Ellisphere</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ellisphere Import</fullName>
+        <default>false</default>
+        <label>Ellisphere Import</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailing</fullName>
+        <default>false</default>
+        <label>Emailing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FEURS FOOT</fullName>
+        <default>false</default>
+        <label>FEURS FOOT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fichier de lancement</fullName>
+        <default>false</default>
+        <label>Fichier de lancement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fichier de prospection - UW</fullName>
+        <default>false</default>
+        <label>Fichier de prospection - UW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fournisseur de leads</fullName>
+        <default>false</default>
+        <label>Fournisseur de leads</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lead appel entrant</fullName>
+        <default>false</default>
+        <label>Lead appel entrant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LE CÈDRE</fullName>
+        <default>false</default>
+        <label>LE CÈDRE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Onssen</fullName>
+        <default>false</default>
+        <label>Onssen</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Padmalink</fullName>
+        <default>false</default>
+        <label>Padmalink</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PEP&apos;S</fullName>
+        <default>false</default>
+        <label>PEP&apos;S</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prescripteur</fullName>
+        <default>false</default>
+        <label>Prescripteur</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Producteurs primaires</fullName>
+        <default>false</default>
+        <label>Producteurs primaires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospection téléphonique</fullName>
+        <default>false</default>
+        <label>Prospection téléphonique</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospection téléphonique hebdomadaire</fullName>
+        <default>false</default>
+        <label>Prospection téléphonique hebdomadaire</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospection terrain</fullName>
+        <default>false</default>
+        <label>Prospection terrain</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reattribution AP</fullName>
+        <default>false</default>
+        <label>Reattribution AP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Recommandation</fullName>
+        <default>false</default>
+        <label>Recommandation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renouvellement ADE</fullName>
+        <default>false</default>
+        <label>Renouvellement ADE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renouvellement ADE - Endesa</fullName>
+        <default>false</default>
+        <label>Renouvellement ADE - Endesa</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renouvellement ADE - Fichier Jade</fullName>
+        <default>false</default>
+        <label>Renouvellement ADE - Fichier Jade</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renouvellement ADE - Primeo Energie</fullName>
+        <default>false</default>
+        <label>Renouvellement ADE - Primeo Energie</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Réseau personnel</fullName>
+        <default>false</default>
+        <label>Réseau personnel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Salon</fullName>
+        <default>false</default>
+        <label>Salon</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sparklane</fullName>
+        <default>false</default>
+        <label>Sparklane</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SUBSTENCIEL</fullName>
+        <default>false</default>
+        <label>SUBSTENCIEL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target</fullName>
+        <default>false</default>
+        <label>Target</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "ADE_Header",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005ZhtUAE",
+        "type" : "file",
+        "size" : 101659
+      }
+    }
+  },
+  "urlName" : "ade-header"
+}

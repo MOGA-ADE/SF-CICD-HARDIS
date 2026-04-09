@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Raison_abandon</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(
+     ISPICKVAL(Status, &apos;Sans suite&apos;),
+				 ISPICKVAL(RaisonAbandon__c, &apos;&apos;)
+),AND(
+     NOT(ISPICKVAL(Status, &apos;Sans suite&apos;)),
+				 NOT(ISPICKVAL(RaisonAbandon__c, &apos;&apos;))
+))</errorConditionFormula>
+    <errorDisplayField>RaisonAbandon__c</errorDisplayField>
+    <errorMessage>Veuillez préciser une raison pour le statut &quot;Sans suite&quot;</errorMessage>
+</ValidationRule>

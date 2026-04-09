@@ -1,0 +1,20 @@
+<template>
+    <!-- Header -->
+    <div class="logosContainer">
+        <div class="logoADE" style={bgkADEURL}>
+        </div>
+        <span>X</span>
+        <div class="logoPEPS" style={bgkPEPSURL}>
+        </div>
+    </div>
+    <h1 class="slds-text-heading_large">Bienvenue sur l'espace Apporteurs d'affaires !</h1>
+    <!-- Steps -->
+    <c-lwcc002_-a-a_-step1 if:true={step1Visible} onnext={handleNextStep} ></c-lwcc002_-a-a_-step1>
+    <c-lwcc002_-a-a_-step2 if:true={step2Visible} lead-object={leadObject} oncontentversionid={handleContentVersionIdChange} onnext={handleNextStep} onprevious={handlePreviousStep}></c-lwcc002_-a-a_-step2>
+    <c-lwcc002_-a-a_-step3 if:true={step3Visible} lead-object={leadObject} onsubmit={handleSubmitLead} onprevious={handlePreviousStep}></c-lwcc002_-a-a_-step3>
+    <c-lwcc002_-a-a_-step4 if:true={step4Visible}></c-lwcc002_-a-a_-step4>
+    <!-- Progress bar -->
+    <footer class="fixedBottom">
+        <div class={progressBarStep}></div>
+    </footer>
+</template>

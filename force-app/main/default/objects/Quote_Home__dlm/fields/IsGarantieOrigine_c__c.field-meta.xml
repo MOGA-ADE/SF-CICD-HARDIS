@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsGarantieOrigine_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Garantie d&apos;Origine ?</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>Garantie d&apos;Origine ?</labelOverride>
+        <masterLabel>Garantie d&apos;Origine ?</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <type>Checkbox</type>
+</CustomField>

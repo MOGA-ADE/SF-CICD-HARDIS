@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Somme de tous les champs économies identifiées (TURPE) des PDE rattachés au compte --></help>
+    <label><!-- Total Economie TURPE identifiée (€HT/an) --></label>
+    <name>TotalEconomieIdentifiee__c</name>
+</CustomFieldTranslation>

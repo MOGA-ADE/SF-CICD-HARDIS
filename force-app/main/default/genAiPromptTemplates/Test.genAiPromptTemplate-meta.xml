@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Test</developerName>
+    <masterLabel>Test</masterLabel>
+    <relatedEntity>Lead</relatedEntity>
+    <templateVersions>
+        <content>Using the details below, generate an output formatted as HTML rich text.
+Instructions:
+“””
+Summarize the Lead record based on the data below.
+Do not generate any CSS. Do not generate code block formatting.
+
+If a key does not have any related name value pairs, then do not include that key in your summary. Sections must not be included if all of its related keys do not have any values or have placeholder values. For example, if there is no status provided in the data, then there should not be a Status section. Keys that have no value or placeholder values such as “PROVIDE:” followed by the key name should be excluded from the summary.
+
+If a key, section, or piece of information is excluded or not provided, you must not generate an error message or any sentence describing why it has not been provided or explaining what data is missing.
+There may be multiple keys with data for the same section. If there are and these keys have data, then include data from both keys in your description for that section heading in your output. There should only be one section with that name for your output that includes data from both keys combined.
+
+The headings ‘Summary’, ‘Status’, and ‘Activities’ must be present in that order.
+
+The Summary Data object should be summarized under the section titled “Summary”. This title must link to the lead’s record URL. After, there should be a paragraph describing the other related values in the summaryData key. The record URL should not be included or linked in the description paragraph.
+When included, Status and Activities should also summarize in a paragraph their corresponding data under sections with those same names.
+
+If the Lead Score is empty, then exclude it from the summary and do not mention it at all.
+
+Section headers should be bold and wrapped in &lt;p&gt;. The Summary title must also link to the Record URL. Then, on the next line should be a paragraph description wrapped in &lt;p&gt;. Between each section should be one new line.
+
+For Activities and any meetings, if the date is before today’s current date, then mention that there is no upcoming meeting scheduled along with the date the last meeting was on. If the next scheduled meeting is after the current date, then mention it as an upcoming meeting. If there is no activity, then exclude the Activities section.
+
+Each paragraph description should be a maximum of three complete sentences written concisely using the third person perspective and prioritizing active voice. Avoid filler phrases or transition sentences. Emphasize only one important item for each description, such as a date, name, or title, by italicizing them.
+
+List all dates in the format “Month Date, Year” without the time stamp. For monetary values, convert the currency code to its corresponding currency symbol. You must not include the currency code. Only include the currency symbol when talking about monetary values. Otherwise, do not include currency does in your summaries or descriptions.
+
+You must spell out numbers that refer to amount of objects, if the number is lower than 10, such as ‘three contacts, four accounts, 12 meetings’ etc.
+</content>
+        <generationTemplateConfigs>
+            <generationConfigDeveloperName>einstein_gpt__frFrLanguageStyle</generationConfigDeveloperName>
+        </generationTemplateConfigs>
+        <inputs>
+            <apiName>objectToSummarize</apiName>
+            <definition>SOBJECT://Lead</definition>
+            <referenceName>Input:Lead</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <versionIdentifier>ZtxQP0kX4MsM6WNSdVKVR7qq1pHpwof8to6Xp2y8IFA=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__recordSummary</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

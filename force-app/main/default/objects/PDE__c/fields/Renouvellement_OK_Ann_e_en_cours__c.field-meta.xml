@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renouvellement_OK_Ann_e_en_cours__c</fullName>
+    <description>Cette formule ne fonctionne que pour l&apos;année en cours</description>
+    <formula>AND(
+  YEAR(Ancienne_date_echeance__c) = YEAR(TODAY()),
+  YEAR(DateEcheance__c) &gt; YEAR(TODAY()))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Renouvellement OK Année en cours</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

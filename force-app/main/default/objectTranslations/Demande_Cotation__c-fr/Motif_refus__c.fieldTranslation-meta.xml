@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motif de refus --></label>
+    <name>Motif_refus__c</name>
+    <picklistValues>
+        <masterLabel>ACD Non conforme</masterLabel>
+        <translation><!-- ACD Non conforme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Compteur particulier</masterLabel>
+        <translation><!-- Compteur particulier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date d&apos;échéance dépassée</masterLabel>
+        <translation><!-- Date d&apos;échéance dépassée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date d&apos;échéance erronée</masterLabel>
+        <translation><!-- Date d&apos;échéance erronée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date d&apos;échéance trop éloigné</masterLabel>
+        <translation><!-- Date d&apos;échéance trop éloigné --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date de RDV trop proche</masterLabel>
+        <translation><!-- Date de RDV trop proche --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facture absente ou non conforme</masterLabel>
+        <translation><!-- Facture absente ou non conforme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mauvais compte</masterLabel>
+        <translation><!-- Mauvais compte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Notation insuffisante</masterLabel>
+        <translation><!-- Notation insuffisante --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Périmètre non conforme</masterLabel>
+        <translation><!-- Périmètre non conforme --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

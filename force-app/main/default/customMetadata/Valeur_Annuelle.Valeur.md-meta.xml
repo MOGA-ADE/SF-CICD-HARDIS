@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Valeur</label>
+    <protected>false</protected>
+    <values>
+        <field>CSPE_PuissanceInfOuEgal36Kva__c</field>
+        <value xsi:type="xsd:double">30.85</value>
+    </values>
+    <values>
+        <field>CSPE_PuissanceSup250__c</field>
+        <value xsi:type="xsd:double">26.58</value>
+    </values>
+    <values>
+        <field>CSPE_PuissanceSup36OuEgal250__c</field>
+        <value xsi:type="xsd:double">26.58</value>
+    </values>
+    <values>
+        <field>CTA_T1__c</field>
+        <value xsi:type="xsd:double">1.13</value>
+    </values>
+    <values>
+        <field>CTA_T2__c</field>
+        <value xsi:type="xsd:double">3.83</value>
+    </values>
+    <values>
+        <field>CTA_T3__c</field>
+        <value xsi:type="xsd:double">26.81</value>
+    </values>
+    <values>
+        <field>CTA_T4__c</field>
+        <value xsi:type="xsd:double">916.43</value>
+    </values>
+    <values>
+        <field>Frais_Transport_Distribution_Capacite_T1__c</field>
+        <value xsi:type="xsd:double">44.95</value>
+    </values>
+    <values>
+        <field>Frais_Transport_Distribution_Capacite_T2__c</field>
+        <value xsi:type="xsd:double">12.08</value>
+    </values>
+    <values>
+        <field>Frais_Transport_Distribution_Capacite_T3__c</field>
+        <value xsi:type="xsd:double">8.69</value>
+    </values>
+    <values>
+        <field>Frais_Transport_Distribution_Capacite_T4__c</field>
+        <value xsi:type="xsd:double">1.18</value>
+    </values>
+    <values>
+        <field>TICGN__c</field>
+        <value xsi:type="xsd:double">16.39</value>
+    </values>
+    <values>
+        <field>TVA1__c</field>
+        <value xsi:type="xsd:double">0.2</value>
+    </values>
+    <values>
+        <field>TVA2__c</field>
+        <value xsi:type="xsd:double">0.2</value>
+    </values>
+</CustomMetadata>

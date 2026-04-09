@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Secteur agricole</fullName>
+        <default>false</default>
+        <label>Secteur agricole</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Résidentiel</fullName>
+        <default>false</default>
+        <label>Résidentiel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industrie</fullName>
+        <default>false</default>
+        <label>Industrie</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tertiaire</fullName>
+        <default>false</default>
+        <label>Tertiaire</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transport</fullName>
+        <default>false</default>
+        <label>Transport</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Artisans/Commerçant</fullName>
+        <default>false</default>
+        <label>Artisans/Commerçant</label>
+    </standardValue>
+</StandardValueSet>

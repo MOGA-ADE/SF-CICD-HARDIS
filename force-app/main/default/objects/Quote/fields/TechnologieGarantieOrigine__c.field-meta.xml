@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TechnologieGarantieOrigine__c</fullName>
+    <label>Technologie</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eolien</fullName>
+                <default>false</default>
+                <label>Eolien</label>
+            </value>
+            <value>
+                <fullName>Hydraulique</fullName>
+                <default>false</default>
+                <label>Hydraulique</label>
+            </value>
+            <value>
+                <fullName>Photovoltaïque</fullName>
+                <default>false</default>
+                <label>Photovoltaïque</label>
+            </value>
+            <value>
+                <fullName>BioGAZ</fullName>
+                <default>false</default>
+                <label>BioGAZ</label>
+            </value>
+            <value>
+                <fullName>Biométhane</fullName>
+                <default>false</default>
+                <label>Biométhane</label>
+            </value>
+            <value>
+                <fullName>BioGNV</fullName>
+                <default>false</default>
+                <label>BioGNV</label>
+            </value>
+            <value>
+                <fullName>Cogénération</fullName>
+                <default>false</default>
+                <label>Cogénération</label>
+            </value>
+            <value>
+                <fullName>Tout confondu</fullName>
+                <default>false</default>
+                <label>Tout confondu</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

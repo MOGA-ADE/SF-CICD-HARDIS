@@ -1,0 +1,133 @@
+<template>
+    <!-- Si appel en quick action classique -->
+    <template if:true={useQuickActionPanel}>
+        <lightning-quick-action-panel header="Gestion des Garanties d'Origine" class="slds-modal_full">
+            <template if:true={loading}>
+                <lightning-spinner size="medium"></lightning-spinner>
+            </template>
+
+            <template if:false={loading}>
+                <template if:true={showDatatable}>
+                    <template if:true={isFull}>
+                        <div class="slds-p-around_small slds-grid slds-grid_align-spread">
+                            <div class="slds-button-group" role="group">
+                                <lightning-button variant="brand" label="Ajouter Électricité" onclick={handleAddElec}></lightning-button>
+                                <lightning-button class="slds-m-left_x-small" variant="brand" label="Ajouter Gaz" onclick={handleAddGaz}></lightning-button>
+                            </div>
+                            <lightning-button label="Enregistrer" onclick={handleSave}></lightning-button>
+                        </div>
+                    </template>
+
+                    <!-- Tableau Électricité -->
+                    <template if:true={quotesElec.length}>
+                        <div class="go-section-title slds-grid slds-grid_vertical-align-center">
+                            <img src={elecIcon} alt="Électricité" class="slds-m-right_small go-icon" />
+                            <span>Électricité verte</span>
+                        </div>
+                        <c-extended-datatable
+                            key-field="Id"
+                            data={quotesElec}
+                            columns={columns}
+                            draft-values={draftValues}
+                            oncellchange={handleCellChange}
+                            onrowaction={handleRowAction}
+                            hide-checkbox-column="true"
+                            show-row-number-column="false"
+                            suppress-bottom-bar="true">
+                        </c-extended-datatable>
+                    </template>
+
+                    <!-- Tableau Gaz -->
+                    <template if:true={quotesGaz.length}>
+                        <div class="go-section-title slds-grid slds-grid_vertical-align-center slds-m-top_large">
+                            <img src={gazIcon} alt="Gaz" class="slds-m-right_small go-icon" />
+                            <span>Biogaz / Biométhane</span>
+                        </div>
+                        <c-extended-datatable
+                            key-field="Id"
+                            data={quotesGaz}
+                            columns={columns}
+                            draft-values={draftValues}
+                            oncellchange={handleCellChange}
+                            onrowaction={handleRowAction}
+                            hide-checkbox-column="true"
+                            show-row-number-column="false"
+                            suppress-bottom-bar="true">
+                        </c-extended-datatable>
+                    </template>
+
+                    <template if:false={isFull}>
+                        <div class="slds-p-around_small slds-grid slds-grid_align-end">
+                            <lightning-button label="Enregistrer les marges" onclick={handleSave}></lightning-button>
+                        </div>
+                    </template>
+                </template>
+            </template>
+        </lightning-quick-action-panel>
+    </template>
+
+    <!-- Si appel en popup depuis lwc025 : pas de quick-action-panel, donc pas de doublon de titre -->
+    <template if:false={useQuickActionPanel}>
+        <template if:true={loading}>
+            <lightning-spinner size="medium"></lightning-spinner>
+        </template>
+
+        <template if:false={loading}>
+            <template if:true={showDatatable}>
+                <template if:true={isFull}>
+                    <div class="slds-p-around_small slds-grid slds-grid_align-spread">
+                        <div class="slds-button-group" role="group">
+                            <lightning-button variant="brand" label="Ajouter Électricité" onclick={handleAddElec}></lightning-button>
+                            <lightning-button class="slds-m-left_x-small" variant="brand" label="Ajouter Gaz" onclick={handleAddGaz}></lightning-button>
+                        </div>
+                        <lightning-button label="Enregistrer" onclick={handleSave}></lightning-button>
+                    </div>
+                </template>
+
+                <!-- Tableau Électricité -->
+                <template if:true={quotesElec.length}>
+                    <div class="go-section-title slds-grid slds-grid_vertical-align-center">
+                        <img src={elecIcon} alt="Électricité" class="slds-m-right_small go-icon" />
+                        <span>Électricité verte</span>
+                    </div>
+                    <c-extended-datatable
+                        key-field="Id"
+                        data={quotesElec}
+                        columns={columns}
+                        draft-values={draftValues}
+                        oncellchange={handleCellChange}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column="true"
+                        show-row-number-column="false"
+                        suppress-bottom-bar="true">
+                    </c-extended-datatable>
+                </template>
+
+                <!-- Tableau Gaz -->
+                <template if:true={quotesGaz.length}>
+                    <div class="go-section-title slds-grid slds-grid_vertical-align-center slds-m-top_large">
+                        <img src={gazIcon} alt="Gaz" class="slds-m-right_small go-icon" />
+                        <span>Biogaz / Biométhane</span>
+                    </div>
+                    <c-extended-datatable
+                        key-field="Id"
+                        data={quotesGaz}
+                        columns={columns}
+                        draft-values={draftValues}
+                        oncellchange={handleCellChange}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column="true"
+                        show-row-number-column="false"
+                        suppress-bottom-bar="true">
+                    </c-extended-datatable>
+                </template>
+
+                <template if:false={isFull}>
+                    <div class="slds-p-around_small slds-grid slds-grid_align-end">
+                        <lightning-button label="Enregistrer les marges" onclick={handleSave}></lightning-button>
+                    </div>
+                </template>
+            </template>
+        </template>
+    </template>
+</template>

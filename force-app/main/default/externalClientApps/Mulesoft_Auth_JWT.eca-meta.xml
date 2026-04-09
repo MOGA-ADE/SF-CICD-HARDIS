@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>tech@alliancedesenergies.fr</contactEmail>
+    <description>Permet à nos projets Mulesoft de se connecter à SF via OAuth JWT</description>
+    <distributionState>Local</distributionState>
+    <iconUrl>https://login.salesforce.com/logos/Salesforce/SalesforcePlatform/icon.png</iconUrl>
+    <isProtected>false</isProtected>
+    <label>Mulesoft_Auth_JWT</label>
+    <logoUrl>https://login.salesforce.com/logos/Salesforce/SalesforcePlatform/logo.png</logoUrl>
+    <orgScopedExternalApp>00D2o000000srHz:Mulesoft_Auth_JWT</orgScopedExternalApp>
+</ExternalClientApplication>

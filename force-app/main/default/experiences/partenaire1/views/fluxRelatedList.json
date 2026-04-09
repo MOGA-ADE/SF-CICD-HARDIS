@@ -1,0 +1,23 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "a063d0e7-f52b-4bad-bb5d-859246f70446",
+  "label" : "Flux Related List",
+  "regions" : [ {
+    "id" : "0afd5c29-0c2f-4262-9aaa-5f1f02f2cce6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "e090ea5f-7981-44fb-b70c-5cc648ec5d81",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "99deb15f-410f-44ef-9ab1-9b5a10195749",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-0Fq"
+}

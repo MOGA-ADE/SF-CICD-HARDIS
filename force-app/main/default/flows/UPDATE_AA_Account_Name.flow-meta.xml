@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>UPDATE AA Account Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>UPDATE AA Owner Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UPDATE_TECH_AA_Owner_Name</name>
+        <label>UPDATE TECH AA Owner Name</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>AA_OwnerName__c</field>
+            <value>
+                <stringValue>{!$Record.Account__r.Parent.Owner.FirstName} {!$Record.Account__r.Parent.Owner.LastName}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TECH_AA_Account_Name__c</field>
+            <value>
+                <elementReference>$Record.Account__r.Parent.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UPDATE_TECH_AA_Owner_Name</targetReference>
+        </connector>
+        <filterFormula>{!$Record.Account__r.Parent.ParentId} != null</filterFormula>
+        <object>Demande_Cotation__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deca12aT000002xDuXQAU</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>test (NE PAS UTILISER)</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!URLFOR(&apos;/partenaire/apex/dfsle__embeddedsigning&apos;,null, [sId = Lead.Id, sendingExperience = &apos;null&apos;, isEmbedded = false, templateId = &apos;a12aT000002xDuXQAU&apos;, recordId = Lead.Id, title = &apos;test (NE PAS UTILISER)&apos;])}</url>
+</WebLink>

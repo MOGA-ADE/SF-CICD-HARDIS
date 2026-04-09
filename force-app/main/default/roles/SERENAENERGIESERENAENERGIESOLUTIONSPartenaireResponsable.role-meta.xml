@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>SERENA ENERGIE (SERENA ENERGIE SOLUTIONS) Partenaire - Responsable</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>SERENA ENERGIE (SERENA ENERGIE SOLUTIONS) Partenaire - Responsable</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>SERENAENERGIESERENAENERGIESOLUTIONSPartenaireDirigeant</parentRole>
+</Role>

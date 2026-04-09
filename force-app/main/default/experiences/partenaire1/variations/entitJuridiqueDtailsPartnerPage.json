@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "baeadbbb-196f-4faf-a139-0894e0e469fa",
+    "propertyOverrides" : {
+      "activeViewId" : "536945b9-4bb0-49f0-9a6b-6e743a61d995"
+    },
+    "targetId" : "9173867f-91e1-470a-ac4b-e3fa2e18c47e",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Entit_Juridique_Dtails_Partner_Page",
+  "id" : "876c714e-debd-4bb1-b71c-6c0645821e7f",
+  "type" : "experienceVariation"
+}

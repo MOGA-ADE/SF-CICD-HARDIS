@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktDataTranObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connector>SalesforceDotCom_Home</connector>
+    <creationType>Custom</creationType>
+    <dataSource>Salesforce_Home</dataSource>
+    <dataSourceObject>PermissionSet_Home</dataSourceObject>
+    <masterLabel>PermissionSet_Home</masterLabel>
+    <mktDataTranFields>
+        <fullName>Id</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Id</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>ID d&apos;ensemble d&apos;autorisations</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>0</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>PermissionsEinsteinCopilotUser</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>PermissionsEinsteinCopilotUser</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Utiliser Einstein Copilot pour Salesforce</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>421</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>PermissionSetGroupId</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>PermissionSetGroupId</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>ID PermissionSetGroup</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>479</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>SfdcOrganizationId</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>SfdcOrganizationId</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>SfdcOrganizationId</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>4</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>SystemModstamp</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;</dateFormat>
+        <externalName>SystemModstamp</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Horodateur des modifications du système</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>476</sequence>
+    </mktDataTranFields>
+    <objectCategory>Salesforce_SFDCReferenceModel_0_93.Related</objectCategory>
+</MktDataTranObject>

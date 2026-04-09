@@ -1,0 +1,189 @@
+<apex:page applyHtmlTag="false"
+    showHeader="false"
+    applyBodyTag="false"
+    renderAs="pdf"
+    language="fr"
+    readOnly="true"
+    Controller="VFC010_LettreMission"
+>
+    <head>
+        <style>
+            @page {
+                size: A4;
+                margin: 0;
+                padding: 0;
+            }
+            
+            body{
+                font-size: 10px;
+                font-family: arial, helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .page {
+                height:29.2cm;
+                width: 21cm;
+                position: relative;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .content{
+                width: 100%;
+                height: 100%;
+            }
+
+            .logo{
+                margin-top: 30px;
+                margin-left: 30px;
+            }
+
+            .content-title{
+                text-align: center;
+                font-size: 16pt;
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            .content-text{
+                font-size: 12pt;
+                padding: 0 70px;
+            }
+
+            .content-partieprenante{
+                font-size: 12pt;
+                margin-bottom: 30px;
+            }
+
+            .content-date{
+                font-size: 12pt;
+                margin-top: 50px;   
+                margin-bottom: 40px;
+                text-align: right;
+            }
+
+            .content-objet{
+                font-weight: bold;
+                font-size: 12pt;
+                margin-bottom: 40px;
+            }
+
+            .content-detail{
+                font-size: 12pt;
+                margin-bottom: 30px;
+            }
+
+            .content-remuneration{
+                font-size: 12pt;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .content-signature{
+                font-size: 12pt;
+                margin-top: 80px;
+                text-align: right;
+            }
+
+            .footer{
+                position: absolute;
+                bottom: -30px;
+                right: 0;
+                left: 0;
+                padding: 10px 20px;
+                border-top: 1pt solid #828282;
+            }
+
+            .footer-content-left{
+                float: left;
+                padding: 0;
+                margin: 0;
+                width: 50%;
+                text-align: left;
+                font-size: 10px !important;
+            }
+
+            .footer-content-right{
+                float: right;
+                width: 50%;
+                padding: 0;
+                margin: 0;
+                font-size: 10px !important;
+                text-align: right;
+            }
+
+            .font-orange{
+                color: #FFA500;
+                font-weight: bold;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <div class="content">                
+                <img class="logo" src="{!URLFOR($Resource.PEPsLogo)}" width="5.72cm" height="2.12cm" />
+                <div class="content-title">LETTRE DE MISSION</div>
+                <div class="content-text">
+                    <p class="content-partieprenante"><b>Information sur les parties prenantes</b>
+                        <br/>
+                        <br/>
+                        Raison sociale du prestataire : PEP’S By Alliance des Energies<br /> Adresse : 77
+                        BOULEVARD DE STALINGRAD, 69100 VILLEURBANNE
+                    </p>
+                    
+                    <p class="content-partieprenante">Raison sociale du client : {!accountName}<br/> Adresse : {!clientAddresse}</p>
+                    <p class="content-date">
+                        A Villeurbanne, le {!todayDate}
+                    </p>
+                    <p class="content-objet">
+                        Objet : Accompagnement Optimisation de Puissance (TURPE)
+                    </p>
+                    <p class="content-detail">
+                    Madame, Monsieur,
+                    <br/>
+                    <br/>
+                        Suite à nos échanges, nous nous engageons à vous confier en exclusivité la mission d’étude
+                        d’optimisation de puissance (TURPE) dès lors que vous aurez identifié et nous aurez informé d’économies
+                        financières potentielles.
+                        <br/>
+                        <br/>
+                        Nous sommes parfaitement informés du principe de rémunération vous concernant se décomposant ainsi :
+                    </p>
+                    <p class="content-remuneration">
+                        <b>L’économie identifiée est de {!formatMontantEconomie}€ / an HT</b>
+                    </p>
+                    <p>
+                        - Rémunération au résultat : {!pourcentageRemuneration} % des économies identifiées uniquement la 1ère année soit {!formatMontantRemuneration} €
+                    <br/>
+                    <br/>
+                    Veuillez agréer, Madame, Monsieur, l’expression de nos respectueuses salutations.</p>
+                    <p class="content-signature">
+                        Date &amp; Signature client
+                    </p>
+                </div>
+
+                <div class="footer">
+                    <div class="footer-content-left">
+                        <p>
+                            <span class="font-orange">PEP’S By Alliance des Energies</span><br/>
+                            77 Boulevard de Stalingrad, 69100 Villeurbanne <br/>
+                            alliancedesenergies.fr/peps
+                        </p>
+                        
+                    </div>
+                    <div class="footer-content-right">
+                        <p>
+                        SIRET | <span class="font-orange">88308769400039</span> <br/>
+                        TVA | &nbsp;<span class="font-orange">FR64883087694</span> <br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</apex:page>

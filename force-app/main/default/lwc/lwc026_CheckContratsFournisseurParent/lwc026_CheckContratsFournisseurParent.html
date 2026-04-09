@@ -1,0 +1,91 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Module d'aide à la facturation">
+        <div class="slds-path  slds-p-horizontal_small">
+            <div class="slds-grid slds-path__track">
+              <div class="slds-grid slds-path__scroller-container">
+                <div class="slds-path__scroller">
+                  <div class="slds-path__scroller_inner">
+                    <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal" aria-labelledby="slds-path__stage-name">
+                      <li class="slds-path__item slds-is-current slds-is-active" data-id="path-1" role="presentation">
+                        <a aria-selected="false" class="slds-path__link" href="#" role="option" tabindex="0">
+                          <span class="slds-path__stage">
+                            <lightning-icon icon-name="standard:task2" class="iconPathChecked"></lightning-icon>
+                            <span class="slds-assistive-text">Current Stage:</span>
+                          </span>
+                          <span class="slds-path__title">Période de facturation</span>
+                        </a>
+                      </li>
+                      <li class="slds-path__item slds-is-incomplete" data-id="path-2" role="presentation">
+                        <a aria-selected="false" class="slds-path__link" href="#" role="option" tabindex="-1">
+                          <span class="slds-path__stage">
+                            <lightning-icon icon-name="standard:task2" class="iconPathChecked"></lightning-icon>
+                          </span>
+                          <span class="slds-path__title">Importer votre fichier</span>
+                        </a>
+                      </li>
+                      <li class="slds-path__item slds-is-incomplete" data-id="path-3" role="presentation">
+                        <a aria-selected="false" class="slds-path__link" href="#" role="option" tabindex="-1">
+                          <span class="slds-path__stage">
+                            <lightning-icon icon-name="standard:task2" class="iconPathChecked"></lightning-icon>
+                          </span>
+                          <span class="slds-path__title">Résultat</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-grid slds-path__action">
+                <!-- sldsValidatorIgnoreNextLine -->
+                <span id="slds-path__stage-name" class="slds-path__stage-name">Stage: Unqualified</span>
+                <button onclick={downloadTemplate} class="slds-button slds-button_brand slds-path__mark-complete">Télécharger le template</button>
+              </div>
+            </div>
+        </div>
+        <template if:true={getShowFirstCard}>
+            <c-lwc026_-check-contrats-fournisseur-first-card
+            ongetparamsearchaf={handleParamSearchAppelFacturation}
+            onsearchaf={searchAppelFacturation}
+            search-disabled={searchDisabled}
+            picklist-mois={picklistMois}
+            picklist-annee={picklistAnnee}
+            picklist-fournisseurs={picklistFournisseurs}
+            ></c-lwc026_-check-contrats-fournisseur-first-card>
+        </template>
+        <template if:true={getShowSecondCard}>
+          <div class="slds-col slds-p-horizontal_x-small slds-m-top_large slds-text-align_center">
+            <p>
+                Pour le fournisseur <strong>{selectedFournisseur}</strong> pour la période de <strong>{selectedMonthName}-{selectedYear}</strong>,
+                il y a <strong>{numberOfContrats}</strong> appels à facturation pour un montant total de <strong><lightning-formatted-number value={montantTotal} format-style="currency" currency-code="EUR"></lightning-formatted-number></strong>.
+            </p>
+            <template if:true={searchFound}><p>Glisser votre appel à facturation afin de vérifier les écarts</p></template>
+          </div>
+            <c-lwc026_-check-contrats-fournisseur-second-card
+            onreturnfirstcard={returnFirstCard}
+            onfiledropped={handleFileDropped}
+            oncheckaf={checkAppelFacturationFile}
+            check-disabled={checkDisabled}
+            search-found={searchFound}
+            accepted-file-type={acceptedFileType}
+            ></c-lwc026_-check-contrats-fournisseur-second-card>
+        </template>            
+        <lightning-card if:true={getShowThirdCard}>
+          <c-lwc026_-check-contrats-fournisseur-third-card
+          onreturnfirstcard={returnFirstCard}
+          ondownloadcontrats={downloadContrats}
+          onvalidaf={validAF}
+          list-appel-facturation-k-o={listAppelFacturationKO}
+          columns-contrats-k-o={columnsContratsKO}
+          list-appel-facturation-missing-from-c-r-m={listAppelFacturationMissingFromCRM}
+          list-appel-facturation-missing-from-file={listAppelFacturationMissingFromFile}
+          columns-contrats-missing-from-file={columnsContratsMissingFromFile}
+          columns-contrats-missing-from-c-r-m={columnsContratsMissingFromCRM}
+          get-show-table-contrats-missing-from-c-r-m={getShowTableContratsMissingFromCRM}
+          get-show-table-contrats-missing-from-file={getShowTableContratsMissingFromFile}
+          get-show-success-validation={getShowSuccessValidation}
+          get-show-table-contrats-k-o={getShowTableContratsKO}
+          ></c-lwc026_-check-contrats-fournisseur-third-card>
+        </lightning-card>
+    </lightning-card>
+</template>

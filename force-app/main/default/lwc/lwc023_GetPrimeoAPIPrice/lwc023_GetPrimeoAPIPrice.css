@@ -1,0 +1,81 @@
+.subtitle{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #d8d8d8;
+    padding: 10px 0px;
+}
+
+.mgb{
+    margin-bottom: 8px;
+}
+
+.headerCard{
+    background-color: #f3f3f3;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.bodyCard{
+    padding: 8px 32px;
+}
+.flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerOfferContent {
+    padding: 8px 20px;
+    text-align: left;
+}
+
+.footerFlexAlign {
+    justify-content: start;
+}
+
+.slds-badge {
+    margin-bottom: 8px;
+}
+
+.prerequisContainer p {
+    margin-bottom: 8px;
+}
+
+.validityIcon {
+    margin-right: 8px;
+}
+
+.colorGreen {
+    color: green;
+}
+
+.colorRed {
+    color: red;
+}
+
+.iconContainer {
+    opacity: 0.2;
+}
+
+.nextIcon {
+    margin-right: -35px;
+}
+
+.inputQueryContainer {
+    width: 66%;
+}
+
+.mgRight {
+    margin-right: 24px;
+}
+
+.footerSeparator {
+    margin-right: 24px;
+}
+
+.footerOfferContent h2 {
+    text-align: left;
+    font-weight: bold;
+}

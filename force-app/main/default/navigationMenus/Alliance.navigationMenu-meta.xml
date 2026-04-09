@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>partenaire</container>
+    <containerType>Network</containerType>
+    <label>Alliance</label>
+    <navigationMenuItem>
+        <defaultListViewId>Toutes_les_opportunit_s_Attente_valida</defaultListViewId>
+        <label>Cotations en cours</label>
+        <menuItemBranding>
+            <tileImage>icons872dernieresheures96</tileImage>
+        </menuItemBranding>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Opportunity</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <defaultListViewId>Won</defaultListViewId>
+        <label>Cotations disponibles</label>
+        <menuItemBranding>
+            <tileImage>foldergfd56521d5_12801</tileImage>
+        </menuItemBranding>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Opportunity</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Pistes en cours</label>
+        <menuItemBranding>
+            <tileImage>bookg0bd9c639d_640</tileImage>
+        </menuItemBranding>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Lead</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+</NavigationMenu>

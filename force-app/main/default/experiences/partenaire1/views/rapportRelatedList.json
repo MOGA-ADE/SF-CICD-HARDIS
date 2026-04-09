@@ -1,0 +1,39 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "7a9837f6-9bc7-4115-bd3c-7b2e9d8a23cd",
+  "label" : "Rapport Related List",
+  "regions" : [ {
+    "id" : "021e0925-fd12-4e21-8f7d-cf8f7b6d618d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customTitle" : "",
+        "parentRecordId" : "{!recordId}",
+        "relatedListName" : "{!relationshipApiName}",
+        "showBreadCrumbs" : true,
+        "showCustomTitle" : false,
+        "showManualRefreshButton" : true,
+        "showRowNumbers" : true
+      },
+      "componentName" : "forceCommunity:relatedList",
+      "id" : "65ff3554-b8a2-4d0e-83b5-a013226763ee",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7c01129c-16d4-4734-8275-6ef480fce501",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "73cde0a0-bb33-4592-83fc-cb304991ef3b",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-00O"
+}

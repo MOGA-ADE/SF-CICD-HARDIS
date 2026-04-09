@@ -1,0 +1,25 @@
+<template>
+
+    <div class="selected-rows-info">
+        <span>Nombre de PDE sélectionnés : </span>
+        <span class="selected-count">{selectedRowsCount}</span>
+    </div>
+
+    <lightning-input
+            class="searchBar"
+            type="search"
+            placeholder="Rechercher un PDE"
+            value={searchTerm}
+            onchange={handleSearchChange}>
+    </lightning-input>
+    <lightning-datatable
+        key-field="Id"
+        data={filteredData}
+        columns={columns}
+        selected-rows={selectedIds}
+        onrowselection={selectedRows}
+        sorted-by={sortBy}
+        sorted-direction={sortDirection}
+        onsort={doSorting}>
+    </lightning-datatable>
+</template>

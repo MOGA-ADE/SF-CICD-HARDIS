@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "Annuler"
+    },
+    "btn-redo" : {
+      "translate" : "Rétablir"
+    },
+    "btn-fontstyle" : {
+      "translate" : "Style de la police"
+    },
+    "btn-fontsize" : {
+      "translate" : "Taille de police"
+    },
+    "btn-bold" : {
+      "translate" : "Gras"
+    },
+    "btn-italic" : {
+      "translate" : "Italique"
+    },
+    "btn-underline" : {
+      "translate" : "Souligné"
+    },
+    "btn-fontcolor" : {
+      "translate" : "Couleur du texte"
+    },
+    "btn-leftalign" : {
+      "translate" : "Aligner à gauche"
+    },
+    "btn-rightalign" : {
+      "translate" : "Aligner à droite"
+    },
+    "btn-centeralign" : {
+      "translate" : "Aligner au centre"
+    },
+    "btn-linespacing" : {
+      "translate" : "Interligne"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "Liste à puces"
+    },
+    "btn-orderedlist" : {
+      "translate" : "Liste numérotée"
+    },
+    "btn-inserttable" : {
+      "translate" : "Insérer un tableau"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "Supprimer"
+      },
+      "btn-mergecells" : {
+        "translate" : "Fusionner les cellules",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "Insérer un rang au-dessus"
+      },
+      "btn-2" : {
+        "translate" : "Insérer un rang en dessous"
+      },
+      "btn-3" : {
+        "translate" : "Insérer une colonne à gauche"
+      },
+      "btn-4" : {
+        "translate" : "Insérer une colonne à droite"
+      },
+      "btn-5" : {
+        "translate" : "Configurer le tableau"
+      },
+      "btn-6" : {
+        "translate" : "Supprimer le rang"
+      },
+      "btn-7" : {
+        "translate" : "Supprimer la colonne"
+      },
+      "btn-8" : {
+        "translate" : "Supprimer le tableau"
+      },
+      "btn-9" : {
+        "translate" : "Remplir la couleur de fond"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "Ajouter une règle logique"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "Charger une image"
+      },
+      "btn-2" : {
+        "translate" : "Charger le document"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "En‑tête",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "Sous-en-tête",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "Texte normal",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "Société",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "Date de signature",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "E‑mail",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "Prénom",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "Nom complet",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "Paraphe",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "Nom",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "Signature",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "Signature",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "Texte",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "Fonction",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "Moins de détails"
+    },
+    "btn-2" : {
+      "translate" : "Plus de détails"
+    },
+    "label-1" : {
+      "translate" : "Limite de caractères"
+    },
+    "label-2" : {
+      "translate" : "Choisissez un type de nom"
+    },
+    "label-3" : {
+      "translate" : "Étiquette de données"
+    },
+    "label-4" : {
+      "translate" : "Lecture seule"
+    },
+    "label-5" : {
+      "translate" : "Champ obligatoire"
+    },
+    "label-6" : {
+      "translate" : "Infobulle"
+    },
+    "label-7" : {
+      "translate" : "Validation"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "Aucun"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "E‑mail"
+      },
+      "dropdown-numbers" : {
+        "translate" : "Chiffres"
+      },
+      "dropdown-letters" : {
+        "translate" : "Lettres"
+      },
+      "dropdown-date" : {
+        "translate" : "Date"
+      },
+      "dropdown-zip" : {
+        "translate" : "Code postal"
+      },
+      "dropdown-zip4" : {
+        "translate" : "Zip + 4"
+      },
+      "dropdown-custom" : {
+        "translate" : "Personnalisé"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ", (virgule)"
+      },
+      "text-datemask" : {
+        "translate" : "Masque de validation de date"
+      },
+      "date-1" : {
+        "translate" : "MM/jj/aaaa",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "jj/MM/aaaa",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "aaaa/MM/jj",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "Le format de la date devrait être MM/jj/aaaa"
+      },
+      "text-datemessage2" : {
+        "translate" : "Le format de la date devrait être jj/MM/aaaa"
+      },
+      "text-datemessage3" : {
+        "translate" : "Le format de la date devrait être aaaa/MM/jj"
+      },
+      "text-decimalseparator" : {
+        "translate" : "Séparateur décimal"
+      },
+      "text-errormessage" : {
+        "translate" : "Message d’erreur"
+      },
+      "text-lettersmessage" : {
+        "translate" : "Saisir uniquement des lettres"
+      },
+      "text-period" : {
+        "translate" : ". (point)"
+      },
+      "text-regexpattern" : {
+        "translate" : "Modèle RegEx"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "Créer un tableau de fusion : {{label}}"
+    },
+    "label-2" : {
+      "translate" : "COLONNES SÉLECTIONNÉES"
+    },
+    "label-3" : {
+      "translate" : "(Glissez pour réorganiser)"
+    },
+    "label-4" : {
+      "translate" : "CHAMPS"
+    },
+    "button-1" : {
+      "translate" : "Annuler"
+    },
+    "button-2" : {
+      "translate" : "Appliquer"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "Champs DocuSign"
+    },
+    "label-2" : {
+      "translate" : "Champs Salesforce"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "Modifier les destinataires"
+    },
+    "btn-2" : {
+      "translate" : "Ajouter un destinataire"
+    },
+    "btn-3" : {
+      "translate" : "Ajouter un autre"
+    },
+    "btn-4" : {
+      "translate" : "Terminé",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "Annuler",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "Supprimer",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "Ajoutez et modifiez les rôles de vos destinataires. « Client » ou « RH » font partie des rôles que vous pourriez utiliser."
+    },
+    "text-2" : {
+      "translate" : "Nom de l’espace réservé (obligatoire*)",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "Ce destinataire a 1 champ attribué. Supprimer ce destinataire supprimera aussi son champ. Voulez‑vous supprimer le destinataire et le champ ?"
+    },
+    "text-4" : {
+      "translate" : "Ce destinataire a {{number}} champs attribués. Supprimer ce destinataire supprimera aussi ses champs. Voulez‑vous supprimer le destinataire et les champs ?"
+    },
+    "label-1" : {
+      "translate" : "Le destinataire a des champs"
+    },
+    "error-1" : {
+      "translate" : "Chaque nom de destinataire doit être unique"
+    },
+    "error-2" : {
+      "translate" : "Veuillez inclure un nom pour l’espace réservé"
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "Une erreur s’est produite"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "Annuler"
+    },
+    "loadMore" : {
+      "translate" : "Charger plus…"
+    },
+    "noResultsFound" : {
+      "translate" : "💬 Aucun résultat trouvé"
+    },
+    "previewBtn" : {
+      "translate" : "Aperçu"
+    },
+    "previewOff" : {
+      "translate" : "Aperçu désactivé"
+    },
+    "previewOn" : {
+      "translate" : "Aperçu activé"
+    },
+    "recentlyUsed" : {
+      "translate" : "Utilisés récemment"
+    },
+    "record" : {
+      "translate" : "Enregistrement"
+    },
+    "recordModalDescription" : {
+      "translate" : "Voyez à quoi ressemblent les champs de fusion de votre modèle avec de vraies données"
+    },
+    "recordModalTitle" : {
+      "translate" : "Choisir un enregistrement à prévisualiser"
+    },
+    "searchSalesforce" : {
+      "translate" : "Rechercher Salesforce"
+    },
+    "showSmartContent" : {
+      "translate" : "Afficher le contenu intelligent"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "Commencez par charger vos fichiers"
+    },
+    "text-2" : {
+      "translate" : "De même, glissez-déposez des fichiers ici"
+    },
+    "text-3" : {
+      "translate" : "Types de fichiers pris en charge : docx, jpg, jpeg, png, gif"
+    },
+    "text-4" : {
+      "translate" : "Taille maximale du document : {{number}} Mo",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "Le modèle a été ajouté avec succès."
+    },
+    "text-6" : {
+      "translate" : "Le document que vous avez essayé de charger est trop gros. Nous prenons en charge les documents jusqu’à 25 Mo."
+    },
+    "text-7" : {
+      "translate" : "Le fichier que vous avez essayé de charger n’est pas dans un format pris en charge. Nous prenons en charge les fichiers : DOCX, CSV, TXT, PNG, GIF, JPEG et JPG."
+    },
+    "text-8" : {
+      "translate" : "Désolé, veuillez charger un document à la fois"
+    },
+    "text-9" : {
+      "translate" : "Désolé, ne peut importer ce fichier"
+    },
+    "btn-upload" : {
+      "translate" : "Charger"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "Annuler"
+    },
+    "btn-edit" : {
+      "translate" : "Modifier"
+    },
+    "btn-delete" : {
+      "translate" : "Supprimer"
+    },
+    "btn-save" : {
+      "translate" : "Enregistrer"
+    },
+    "label-title" : {
+      "translate" : "Générateur de règles"
+    },
+    "btn-add" : {
+      "translate" : "AJOUTER UNE RÈGLE"
+    },
+    "label-name" : {
+      "translate" : "Règle de nom"
+    },
+    "dropdown-method1" : {
+      "translate" : "Appliquer toutes les conditions suivantes"
+    },
+    "dropdown-method2" : {
+      "translate" : "Appliquer l’une des conditions suivantes"
+    },
+    "label-if" : {
+      "translate" : "Si"
+    },
+    "label-orif" : {
+      "translate" : "Ou si"
+    },
+    "label-andif" : {
+      "translate" : "Et si"
+    },
+    "label-then" : {
+      "translate" : "Alors"
+    },
+    "label-otherwise" : {
+      "translate" : "Sinon…"
+    },
+    "dropdown-show" : {
+      "translate" : "Afficher le contenu suivant"
+    },
+    "dropdown-hide" : {
+      "translate" : "Masquer le contenu suivant"
+    },
+    "text-drag1" : {
+      "translate" : "Faites glisser vos champs de fusion n’importe où dans ce conteneur If."
+    },
+    "text-drag2" : {
+      "translate" : "Faites glisser votre champ Salesforce ici."
+    },
+    "text" : {
+      "translate" : "Toute modification que vous avez faite à ce bloc logique ne sera pas enregistrée. Veuillez confirmer que vous souhaitez bien annuler."
+    },
+    "text-title" : {
+      "translate" : "Êtes‑vous sûr de vouloir annuler ?"
+    },
+    "btn-confirm" : {
+      "translate" : "Confirmer"
+    },
+    "error-1" : {
+      "translate" : "Veuillez saisir le nom de la règle."
+    },
+    "error-2" : {
+      "translate" : "Certaines des conditions ont des valeurs non valables."
+    },
+    "error-3" : {
+      "translate" : "Désolé, vous avez des noms de règles en double dans votre bloc logique. Veuillez les renommer puis réessayer."
+    },
+    "error-4" : {
+      "translate" : "Ajoutez une condition à {{name}} pour créer un bloc logique.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "Veuillez ajouter du contenu à la déclaration logique « Then » dans {{name}}.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "Veuillez ajouter du contenu à la déclaration logique « Then » dans « Otherwise »."
+    },
+    "placeholder" : {
+      "translate" : "Commencez à saisir ou copiez/collez votre nouveau contenu ici…"
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "Saisissez ou collez du texte ici pour commencer un nouveau modèle…",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "Simple",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1,5",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "Double",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "Champs de recherches"
+    },
+    "noResultMessage" : {
+      "translate" : "Aucun résultat trouvé"
+    }
+  }
+}

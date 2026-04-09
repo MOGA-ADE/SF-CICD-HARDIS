@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "Meilleurs_voeux_2026",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/png",
+        "ref" : "0sNaT0000005a9JUAQ",
+        "type" : "file",
+        "size" : 491850
+      }
+    }
+  },
+  "urlName" : "meilleurs-voeux-2026"
+}

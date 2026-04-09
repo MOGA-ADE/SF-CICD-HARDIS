@@ -1,0 +1,289 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "dfac79f7-f0f8-437b-a2c8-34b5939ffb24",
+  "label" : "Partner Home Page",
+  "regions" : [ {
+    "id" : "8f897b7a-42b0-4634-b8c2-a620614aac41",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "eb163498-5bb9-4b09-adbe-95678c6a7c50",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "093c3f6d-25ac-41ba-9fb4-7f5e6e0f289c",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "1",
+            "tabName" : "Chiffre d'affaire"
+          }, {
+            "UUID" : "0141bd9a-ebec-41b3-85b5-8df1d8326039",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "2",
+            "tabName" : "Renouvellement"
+          }, {
+            "UUID" : "2ee3df10-554e-4c6d-bb37-03d818bf9ec1",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "3",
+            "tabName" : "Prospection"
+          }, {
+            "UUID" : "5be38265-aef1-4556-954e-cf439274e703",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "32f4f",
+            "tabName" : "Cotation"
+          }, {
+            "UUID" : "e4378f45-6b7a-4299-9f2a-07ba57e308bf",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "0c14f",
+            "tabName" : "Commission"
+          } ],
+          "useOverflowMenu" : true
+        }
+      },
+      "componentName" : "forceCommunity:tabLayout",
+      "id" : "eb163498-5bb9-4b09-adbe-95678c6a7c50",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "height" : "1000",
+            "recordId" : "XlUpNfhxzzpPCQjtGomBwEUmwkjHUH"
+          },
+          "componentName" : "forceCommunity:dashboard",
+          "id" : "adaf6204-10f1-49c0-aab3-d6dd3ec46dc8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "093c3f6d-25ac-41ba-9fb4-7f5e6e0f289c",
+        "regionLabel" : "Chiffre d'affaire",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "height" : "1000",
+            "recordId" : "aZDoEHWwBsTIjXfOnixLzinPKhjKqs"
+          },
+          "componentName" : "forceCommunity:dashboard",
+          "id" : "8dcf424f-620b-4e9d-a3fe-397d8a982490",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0141bd9a-ebec-41b3-85b5-8df1d8326039",
+        "regionLabel" : "Renouvellement",
+        "regionName" : "2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "height" : "1000",
+            "recordId" : "jErmeZVdNovczVShzHASlVXSEEGBrv"
+          },
+          "componentName" : "forceCommunity:dashboard",
+          "id" : "66adcd57-d832-43ad-851f-0be244db3918",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2ee3df10-554e-4c6d-bb37-03d818bf9ec1",
+        "regionLabel" : "Prospection",
+        "regionName" : "3",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "height" : "1000",
+            "recordId" : "QzWQAaKyItpaQjHVBfPjflZUomQqAx"
+          },
+          "componentName" : "forceCommunity:dashboard",
+          "id" : "40c204c6-b6d0-4bb3-8524-75aa1a1e024b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5be38265-aef1-4556-954e-cf439274e703",
+        "regionLabel" : "Cotation",
+        "regionName" : "32f4f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "height" : "1000",
+            "recordId" : "LgDracCpxoEnwXVhzYtYhcMAeGakcH"
+          },
+          "componentName" : "forceCommunity:dashboard",
+          "id" : "6a6aa785-afb6-45c2-b3f9-3e5c210ec586",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e4378f45-6b7a-4299-9f2a-07ba57e308bf",
+        "regionLabel" : "Commission",
+        "regionName" : "0c14f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "showCreateNewCalendar" : true,
+        "showOtherCalendars" : true,
+        "showSidebar" : true
+      },
+      "componentName" : "forceCommunity:calendar",
+      "id" : "b805dd29-986d-4d9a-9587-854f0076f640",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "05e69fe1-102c-4fbf-b145-07cfd094038b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : true,
+        "filterName" : "All",
+        "layout" : "STANDARD",
+        "pageSize" : 5,
+        "scope" : "News__c",
+        "showActionBar" : false,
+        "showChartsPanel" : false,
+        "showDisplay" : "showall",
+        "showFilterPanel" : false,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : true,
+        "showPinnedList" : true,
+        "showSearchBar" : false
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "d4c1ce9f-b922-46ac-ac40-3cfbf5207be2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "b39f9410-2f32-469a-8588-1d15d94f4460",
+          "activeTab" : "",
+          "tabs" : [ {
+            "UUID" : "6e3950a0-7673-4209-976a-f7d0cb0f2c75",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "2",
+            "tabName" : "Activités"
+          }, {
+            "UUID" : "08e633aa-bd9b-4d03-b1b1-1828aee82bf9",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "b9802",
+            "tabName" : "Chatter"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "b39f9410-2f32-469a-8588-1d15d94f4460",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<br>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "9517416c-c77b-4f51-a521-e1624e27c63c",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6e3950a0-7673-4209-976a-f7d0cb0f2c75",
+        "regionLabel" : "Activités",
+        "regionName" : "2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "canChangeSorting" : true,
+            "defaultFilter" : "",
+            "defaultSortOrderHomeFeed" : "Relevance",
+            "defaultSortOrderTopicsFeed" : "Relevance",
+            "feedDesign" : "DEFAULT",
+            "hasFeedSearch" : true,
+            "subjectId" : "{!recordId}",
+            "type" : "News"
+          },
+          "componentName" : "forceCommunity:forceCommunityFeed",
+          "id" : "a4ef0160-11a8-418c-b4a4-a9b8c1638c1d",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "08e633aa-bd9b-4d03-b1b1-1828aee82bf9",
+        "regionLabel" : "Chatter",
+        "regionName" : "b9802",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "913b75ff-6ed8-4620-9aee-fb0a0cbb4774",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "2200",
+        "recordId" : "XsYrzBDtadvPLmaCQsJXYqhODBuluu"
+      },
+      "componentName" : "forceCommunity:dashboard",
+      "id" : "65cb5e43-2bc5-4384-bbcc-a0fe9c2338b7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "778cd1ff-b616-47fb-9668-dd2722bab26f",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Accueil"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "afdebf96-e468-44dc-bd9e-bd88e5f8c2ee",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ebaf1607-a47f-4e7b-a892-e355b8940db3",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

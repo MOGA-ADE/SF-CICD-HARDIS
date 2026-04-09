@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <enforcementType>Restrict</enforcementType>
+    <masterLabel>Make Task private for external sales</masterLabel>
+    <recordFilter>Owner:User.Id=$User.Id</recordFilter>
+    <targetEntity>Task</targetEntity>
+    <userCriteria>$User.ProfileId=&apos;00e2o0000013KneAAE&apos;</userCriteria>
+    <version>1</version>
+</RestrictionRule>

@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "903d60df-4aa8-49fc-beb0-b7002ec41ab8",
+  "headMarkup" : "<title>Alliance des Énergie</title>\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/sfsites/c/resource/1579846612000/appletouchicon\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/sfsites/c/resource/1579846586000/favicon3232\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/sfsites/c/resource/1579846564000/favicon1616\">",
+  "id" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "PRM Community Template",
+  "type" : "appPage"
+}

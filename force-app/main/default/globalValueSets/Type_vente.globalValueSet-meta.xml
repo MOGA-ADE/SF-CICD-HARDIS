@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Vente en direct</fullName>
+        <default>false</default>
+        <label>Vente en direct</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente à distance</fullName>
+        <default>false</default>
+        <label>Vente à distance</label>
+    </customValue>
+    <masterLabel>Type de vente</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_004</fullName>
+    <active>false</active>
+    <description>Une demande de cotation cloonée n&apos;est plus modifiable SAUF le propriétaire de la demande de cotation</description>
+    <errorConditionFormula>AND(TEXT(PRIORVALUE(Statut__c)) = &quot;Clonée&quot;,NOT(OR(iSCHANGED(OwnerId))))</errorConditionFormula>
+    <errorMessage>Cette demande de cotation est verrouillée</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>MessagingEventsEmailV2_00D2o000000srHz_156d046f_bb2b_4fd7_bced_50355f28adac</dataConnector>
+    <dataConnectorType>IngestApi</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>INGESTAPI</dataPlatformDataSetItemName>
+    <dataSource>MessagingEventsEmailV2_00D2o000000srHz_156d046f_bb2b_4fd7_bced_50355f28adac</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>MessagingEventsEmailV2_00D2o000000srHz-EmailEngagement</masterLabel>
+    <mktDataLakeObject>MessagingEventsEmailV2_00D2o000_BB269B99__dll</mktDataLakeObject>
+    <mktDataTranObject>MessagingEventsEmailV2_00D2o000_BB269B99</mktDataTranObject>
+</DataStreamDefinition>

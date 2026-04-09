@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "2a8ac0c8-e50f-42fb-bda7-9b7f513370e5",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "Tableau_de_bord_Related_List",
+  "id" : "7dae3670-0bc5-4767-ada7-e32d0d263603",
+  "label" : "Tableau de bord Related List",
+  "routeType" : "relatedlist-01Z",
+  "type" : "route",
+  "urlPrefix" : "dashboard"
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Score_commercial__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+IF(TECH_Score_commercial__c &lt; 2, &quot;/img/samples/stars_000.gif&quot;,
+IF(TECH_Score_commercial__c &lt; 4, &quot;/img/samples/stars_100.gif&quot;,
+IF(TECH_Score_commercial__c &lt; 6, &quot;/img/samples/stars_200.gif&quot;,
+IF(TECH_Score_commercial__c &lt; 8, &quot;/img/samples/stars_300.gif&quot;,
+IF(TECH_Score_commercial__c &lt; 10, &quot;/img/samples/stars_400.gif&quot;, &quot;/img/samples/stars_500.gif&quot;
+))))),
+&quot;Rating&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Score commercial</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

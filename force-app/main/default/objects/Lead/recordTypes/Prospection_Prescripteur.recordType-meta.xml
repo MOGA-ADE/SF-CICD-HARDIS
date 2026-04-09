@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospection_Prescripteur</fullName>
+    <active>true</active>
+    <businessProcess>Prospection Prescripteur</businessProcess>
+    <description>Pour la gestion des prescripteurs</description>
+    <label>Prospection Prescripteur</label>
+    <picklistValues>
+        <picklist>Annee_salon__c</picklist>
+        <values>
+            <fullName>2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2028</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2029</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2030</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ELLISPHERE__Elli_State__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ELLISPHERE__Elli_Type_Of_Etablishment__c</picklist>
+        <values>
+            <fullName>Etablissement secondaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siège</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Femme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non binaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non répertorié</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Artisans%2FCommerçant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Résidentiel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secteur agricole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tertiaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDREZIEUX FOOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apollo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apporteur Affaires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cellule RDV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coalis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consoneo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultation MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data CARTEGIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demande de contact site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellisphere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellisphere Import</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FEURS FOOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fichier de lancement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fichier de prospection - UW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fournisseur de leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LE CÈDRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead appel entrant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onssen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEP%27S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Padmalink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prescripteur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Producteurs primaires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection terrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique hebdomadaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reattribution AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommandation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE - Endesa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE - Fichier Jade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE - Primeo Energie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Réseau personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUBSTENCIEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sparklane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motif_hors_cible__c</picklist>
+        <values>
+            <fullName>Activité non traitée</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cessation d%27activité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dialogue impossible %28Langue étrangère%2C malentendant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Déjà en contact avec ADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%27est pas un professionnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retraité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Score trop faible</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motif_refus__c</picklist>
+        <values>
+            <fullName>A déjà renégocié avec son fournisseur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A déjà un courtier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J%27ai encore le temps pour ça</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Je n%27ai pas de temps à vous consacrer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Je ne sais pas qui est le décisionnaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Je ne suis pas intéressé</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nous passons pas les achats%2FC%27est centralisé</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Madame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monsieur</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nom_salon__c</picklist>
+        <values>
+            <fullName>AGECOTEL %E2%80%93 Nice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agro Haut de France %E2%80%93 Arras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analyse Industrielle %26 Instrumentation - Paris Champerret</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atlantica - Niort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AutoCar Expo - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beauté Sélection %E2%80%93 Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Expo %E2%80%93 Amiens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFIA %E2%80%93 Rennes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIEL %28Carrefour de l%27immobilier d%27entreprise Lyonnais%29 %E2%80%93 Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIEL - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congrès HLM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congrès HLM - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congrès National FNAIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congrès National UNIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congrès Réunir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congrès SYNERPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQUIP AUTO - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Class Factory %E2%80%93 Lille</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enviropro - Angers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EquipHotel - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Euromove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCTM ESOPE - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fetexpo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FitLyon - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flotauto - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Hotel Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food in Sud - Marseille</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forum Energy Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forum europ%27energies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franchise Event %E2%80%93 Rennes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franchise expo - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funexpo - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funéraire Paris %E2%80%93 Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Industrie - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horesta - Lille</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INNOMOOV - Avignon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In salon %E2%80%93 Nice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innov Agri - Outarville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Journée des Conseils Syndicaux UNIS - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mondial de l%27Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Énergie %E2%80%93 Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ouest industrie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROBIO Ouest - Angers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaging Week - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pollutec - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pollutec - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rencontre Régionale Mobilians</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rest%27Hotel et métiers de bouche %E2%80%93 Rennes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2EI%2ET%2EL %E2%80%93 Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SELI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEPEM - Douai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SETT %E2%80%93 Montpellier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIA - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIEC %E2%80%93 Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIMI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIMODEC - La-Roche-sur-Foron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIRAH Europain %E2%80%93 Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIRHA - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIVAL - Angers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOLUCOP - Lille</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOLUCOP - Nice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOLUCOP - Toulouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPACE Elevage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon Alpin %E2%80%93 Albertville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon Comptoir et Fournil - La Rochelle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon Expert comptable - Aura - Lyon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon Grand Ouest - Nantes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon Vendéeprho - La Roche Sur Yon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon Vienneprho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon de l%27Environnement de Travail et des Achats -  SETA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon de la copropriete - Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon des métiers de bouche %E2%80%93 Montpellier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salon expert-comptable - Lons-le-Saunier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbotel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Periode_achat_groupe__c</picklist>
+        <values>
+            <fullName>Automne 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automne 2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automne 2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiver 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiver 2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiver 2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printemps 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printemps 2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printemps 2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Été 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Été 2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Été 2026</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>Elle%2FElle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elle%2FElles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Il%2FIls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Il%2FLui</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ils%2FEux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non répertorié</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qualification_Marketing__c</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RaisonAbandon__c</picklist>
+        <values>
+            <fullName>Absence de pouvoir décisionnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doublon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Délai de décision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fermeture entreprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hors Sujet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauvais numéro %2F email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauvaise note Ellisphere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%27a pas fait de demande</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ne pas recruter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ne répond pas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Particulier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pas convaincu par les services%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pas de besoin actuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pas intéressé</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problème technique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service proposé ne correspond pas au besoin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vient de signer ailleurs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Échéance à plus de 24 mois</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_cellule_RDV__c</picklist>
+        <values>
+            <fullName>Ellisphere - Import 19%2F03%2F2025 Alimentaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellisphere - Import 19%2F03%2F2025 Industrie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fichier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEP%27S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partenaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prescripteur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection terrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique - Hors fichier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recherche internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Réseau personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sparklane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>StatutJuridique__c</picklist>
+        <values>
+            <fullName>Association déclarée</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association non déclarée</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EARL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EURL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GAEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GEIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SARL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SASU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCOP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SELAFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SELARL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SELAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SELCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEML</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Statut_appel__c</picklist>
+        <values>
+            <fullName>Faux numéro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pas d%27appel émis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Répond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Répondeur</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_de_travaux__c</picklist>
+        <values>
+            <fullName>AGRI EQ 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI EQ 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI EQ 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI EQ 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI EQ 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI SE 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 113</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 117</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 118</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI TH 119</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI UT 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI UT 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI UT 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRI UT 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EN 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EQ 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EQ 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EQ 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EQ 111</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR EQ 115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR SE 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR SE 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR SE 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 107 SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 111</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 112</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 113</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 116</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 117</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 118</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 122</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 123</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 124</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 125</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 127</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 129</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 130</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 135</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 137</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 139</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 141</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 143</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 145</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 148</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 155</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 158</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 159</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 160</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 161</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 162</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 163</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 164</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAR TH 165</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EN 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 117</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 123</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 124</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 125</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 127</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 129</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 130</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 131</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT EQ 133</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT SE 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT SE 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT SE 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 111</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 112</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 113</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 116</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 121</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 122</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 125</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 126</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 127</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 134</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 135</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 139</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 140</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 141</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 142</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 143</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 145</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 146</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 153</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 154</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 155</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 156</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT TH 157</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND BA 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND BA 112</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND BA 113</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND BA 114</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND BA 116</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND BA 117</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND EN 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND EN 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 112</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 113</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 114</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 116</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 117</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 118</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 120</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 121</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 122</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 123</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 124</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 125</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 127</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 129</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 130</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 131</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 132</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 133</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 134</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 135</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND UT 136</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES CH 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES CH 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES CH 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES CH 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES CH 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES CH 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES EC 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES EC 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES EC 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES EC 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RES EC 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 103</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 111</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 113</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 114</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 117</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 118</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 119</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 120</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 121</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 122</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 123</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA EQ 124</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 104</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 106</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 107</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 108</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 109</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 111</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 112</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRA SE 113</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_rappel__c</picklist>
+        <values>
+            <fullName>Rappel auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rappel perso</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_structure__c</picklist>
+        <values>
+            <fullName>Collectivité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copropriété</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Création d%27entreprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entreprise</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>conso_energie_valeur__c</picklist>
+        <values>
+            <fullName>%3E 1 000 000 %E2%82%AC %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0 - 10 000 %E2%82%AC %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 000 - 100 000 %E2%82%AC %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100 000 - 1 000 000 %E2%82%AC %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Je ne connais pas ma consommation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>conso_energie_volume__c</picklist>
+        <values>
+            <fullName>%3E 1 GWh %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0 - 100 MWh %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100 - 500 MWh %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500 MWh - 1 GWh %2F an</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Je ne connais pas ma consommation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>raison_demande__c</picklist>
+        <values>
+            <fullName>Changement de fournisseur sur le site actuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation sur un nouveau site %28compteur existant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation sur un nouveau site %28compteur neuf%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>type_energie__c</picklist>
+        <values>
+            <fullName>Gaz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Électricité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Électricité %2B Gaz</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

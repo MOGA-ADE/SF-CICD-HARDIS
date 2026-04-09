@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Account</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Compte/PDE/Opp/Contrats</description>
+    <join>
+        <join>
+            <join>
+                <outerJoin>true</outerJoin>
+                <relationship>Prix_contrat_PDE__r</relationship>
+            </join>
+            <outerJoin>false</outerJoin>
+            <relationship>Points_energie__r</relationship>
+        </join>
+        <outerJoin>false</outerJoin>
+        <relationship>Demandes_Cotation__r</relationship>
+    </join>
+    <label>Compte/PDE/Opp/Contrats</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ID du compte</displayNameOverride>
+            <field>Id</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TECH_OwnerRegion__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Nom du compte</displayNameOverride>
+            <field>Name</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type d&apos;enregistrement du compte</displayNameOverride>
+            <field>RecordType</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Compte principal</displayNameOverride>
+            <field>Parent</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Adresse de facturation</displayNameOverride>
+            <field>BillingAddress</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rue de facturation</displayNameOverride>
+            <field>BillingStreet</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ville de facturation</displayNameOverride>
+            <field>BillingCity</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Région/Province de facturation</displayNameOverride>
+            <field>BillingState</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code postal de facturation</displayNameOverride>
+            <field>BillingPostalCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pays de facturation</displayNameOverride>
+            <field>BillingCountry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Latitude de l&apos;adresse de facturation</displayNameOverride>
+            <field>BillingLatitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Longitude de l&apos;adresse de facturation</displayNameOverride>
+            <field>BillingLongitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Geocode Accuracy</displayNameOverride>
+            <field>BillingGeocodeAccuracy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Adresse d&apos;expédition</displayNameOverride>
+            <field>ShippingAddress</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rue d&apos;expédition</displayNameOverride>
+            <field>ShippingStreet</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ville d&apos;expédition</displayNameOverride>
+            <field>ShippingCity</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Région/Province d&apos;expédition</displayNameOverride>
+            <field>ShippingState</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code postal d&apos;expédition</displayNameOverride>
+            <field>ShippingPostalCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pays d&apos;expédition</displayNameOverride>
+            <field>ShippingCountry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Latitude de l&apos;adresse d&apos;expédition</displayNameOverride>
+            <field>ShippingLatitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Longitude de l&apos;adresse d&apos;expédition</displayNameOverride>
+            <field>ShippingLongitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Geocode Accuracy</displayNameOverride>
+            <field>ShippingGeocodeAccuracy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Téléphone</displayNameOverride>
+            <field>Phone</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Télécopie</displayNameOverride>
+            <field>Fax</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Numéro du compte</displayNameOverride>
+            <field>AccountNumber</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Site Web</displayNameOverride>
+            <field>Website</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code SIC</displayNameOverride>
+            <field>Sic</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Secteur d&apos;activité</displayNameOverride>
+            <field>Industry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Chiffre d&apos;affaires annuel</displayNameOverride>
+            <field>AnnualRevenue</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Employés</displayNameOverride>
+            <field>NumberOfEmployees</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forme juridique</displayNameOverride>
+            <field>Ownership</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Symbole</displayNameOverride>
+            <field>TickerSymbol</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Évaluation</displayNameOverride>
+            <field>Rating</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Site du compte</displayNameOverride>
+            <field>Site</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Propriétaire du compte</displayNameOverride>
+            <field>Owner</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de création</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Créé par</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de dernière modification</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dernière modification par</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dernière activité</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Clé Data.com</displayNameOverride>
+            <field>Jigsaw</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Source du compte</displayNameOverride>
+            <field>AccountSource</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description SIC</displayNameOverride>
+            <field>SicDesc</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Heure ouvrable</displayNameOverride>
+            <field>OperatingHours</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Activité</displayNameOverride>
+            <field>Activite__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CEE</displayNameOverride>
+            <field>CEE__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CSPE</displayNameOverride>
+            <field>CSPE__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code NAF</displayNameOverride>
+            <field>Code_NAF__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Entité Juridique Principale</displayNameOverride>
+            <field>EntiteJuridiquePrincipale__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Siren</displayNameOverride>
+            <field>Siren__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Siret</displayNameOverride>
+            <field>Siret__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact</displayNameOverride>
+            <field>Contact__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Active</displayNameOverride>
+            <field>ELLISPHERE__Active__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Confirmation</displayNameOverride>
+            <field>ELLISPHERE__ConfirmationFormula__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Priority</displayNameOverride>
+            <field>ELLISPHERE__CustomerPriority__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Identifiant légal / SIREN</displayNameOverride>
+            <field>ELLISPHERE__ELLI_IdRegister__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCH SIRET</displayNameOverride>
+            <field>ELLISPHERE__ELLI_IdRegisterestb2__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCH SIRET (Obsolète)</displayNameOverride>
+            <field>ELLISPHERE__ELLI_IdRegisterestb__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sigle</displayNameOverride>
+            <field>ELLISPHERE__Elli_Acronym__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Détail APE 2008</displayNameOverride>
+            <field>ELLISPHERE__Elli_ActivityDescription__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>APE 2008</displayNameOverride>
+            <field>ELLISPHERE__Elli_ActivityTypeAndCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>N° de gestion / Ville</displayNameOverride>
+            <field>ELLISPHERE__Elli_AuthorityIdAndCity__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Banques</displayNameOverride>
+            <field>ELLISPHERE__Elli_BankReferences__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Capital social</displayNameOverride>
+            <field>ELLISPHERE__Elli_CapitalInformation__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Convention collective théorique</displayNameOverride>
+            <field>ELLISPHERE__Elli_CollectiveAgreement__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Objet social</displayNameOverride>
+            <field>ELLISPHERE__Elli_CommentsOnActivities__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email de l&apos;entreprise</displayNameOverride>
+            <field>ELLISPHERE__Elli_CompanyEmail__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Statut</displayNameOverride>
+            <field>ELLISPHERE__Elli_CompanyStatus__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Catégorie d&apos;entreprise</displayNameOverride>
+            <field>ELLISPHERE__Elli_CompanyType__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code canton</displayNameOverride>
+            <field>ELLISPHERE__Elli_DistrictCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ellinumber</displayNameOverride>
+            <field>ELLISPHERE__Elli_Ellinumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ellinumber (Obsolète)</displayNameOverride>
+            <field>ELLISPHERE__Elli_Elllinumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de fermeture de l&apos;établissement</displayNameOverride>
+            <field>ELLISPHERE__Elli_EstablishmentClosingDate__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type d&apos;établissement</displayNameOverride>
+            <field>ELLISPHERE__Elli_EstablishmentType__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code Fantoir/Rivoli</displayNameOverride>
+            <field>ELLISPHERE__Elli_FantoirCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Numéro  RNA</displayNameOverride>
+            <field>ELLISPHERE__Elli_IdAssocRNA2__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Numéro  RNA (Obsolète)</displayNameOverride>
+            <field>ELLISPHERE__Elli_IdAssocRNA__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Identifiant Fiscal</displayNameOverride>
+            <field>ELLISPHERE__Elli_IdFiscal__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Identifiant  National</displayNameOverride>
+            <field>ELLISPHERE__Elli_IdNational__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Identifiant Statistique</displayNameOverride>
+            <field>ELLISPHERE__Elli_IdOther__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCH_Identifiant interne</displayNameOverride>
+            <field>ELLISPHERE__Elli_IdSrc__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cordonnées (Lambert2) (Latitude)</displayNameOverride>
+            <field>ELLISPHERE__Elli_Lambert2Coordinates__Latitude__s</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cordonnées (Lambert2) (Longitude)</displayNameOverride>
+            <field>ELLISPHERE__Elli_Lambert2Coordinates__Longitude__s</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forme juridique</displayNameOverride>
+            <field>ELLISPHERE__Elli_LegalForm__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Suivi par</displayNameOverride>
+            <field>ELLISPHERE__Elli_LogoElli__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NACE 08</displayNameOverride>
+            <field>ELLISPHERE__Elli_NACE_08__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mode d&apos;exploitation</displayNameOverride>
+            <field>ELLISPHERE__Elli_OperatingMode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Surface immobilière</displayNameOverride>
+            <field>ELLISPHERE__Elli_Premises__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date immatriculation</displayNameOverride>
+            <field>ELLISPHERE__Elli_RegistrationDate__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SIRET</displayNameOverride>
+            <field>ELLISPHERE__Elli_SiretFormatAuto__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cotation en bourse</displayNameOverride>
+            <field>ELLISPHERE__Elli_StockExchangeListed__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code Pays</displayNameOverride>
+            <field>ELLISPHERE__Elli_TCH_CountryCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCH Statut de l&apos;établissement</displayNameOverride>
+            <field>ELLISPHERE__Elli_TCH_EstablishmentStatus__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCH Prestation avancée</displayNameOverride>
+            <field>ELLISPHERE__Elli_TCH_PrestationAvancee__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCH_Statut</displayNameOverride>
+            <field>ELLISPHERE__Elli_TCH_Statut__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enseigne</displayNameOverride>
+            <field>ELLISPHERE__Elli_Tradename__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD_Compte ultimate</displayNameOverride>
+            <field>ELLISPHERE__Elli_UltimateParent__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dernière actualisation le</displayNameOverride>
+            <field>ELLISPHERE__Elli_UpdateDateTime__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Numéro de TVA</displayNameOverride>
+            <field>ELLISPHERE__Elli_VatNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cordonnées (WGS) (Latitude)</displayNameOverride>
+            <field>ELLISPHERE__Elli_WGSCoordinates__Latitude__s</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cordonnées (WGS) (Longitude)</displayNameOverride>
+            <field>ELLISPHERE__Elli_WGSCoordinates__Longitude__s</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code APE2008</displayNameOverride>
+            <field>ELLISPHERE__Elli_code_ape08__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code NACE2008</displayNameOverride>
+            <field>ELLISPHERE__Elli_code_nace08__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Libellé NACE2008</displayNameOverride>
+            <field>ELLISPHERE__Elli_detail_nace08__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Libellé APE2008</displayNameOverride>
+            <field>ELLISPHERE__Elli_details_ape08__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Compte protégé</displayNameOverride>
+            <field>ELLISPHERE__Elli_protected__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Number of Locations</displayNameOverride>
+            <field>ELLISPHERE__NumberofLocations__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SLA Expiration Date</displayNameOverride>
+            <field>ELLISPHERE__SLAExpirationDate__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SLA Serial Number</displayNameOverride>
+            <field>ELLISPHERE__SLASerialNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SLA</displayNameOverride>
+            <field>ELLISPHERE__SLA__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Converti depuis Piste Ellisphere</displayNameOverride>
+            <field>ELLISPHERE__TCH_Elli_isFromEllisphereLead__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Importation automatique</displayNameOverride>
+            <field>ELLISPHERE__TCH_isAutoImport__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Upsell Opportunity</displayNameOverride>
+            <field>ELLISPHERE__UpsellOpportunity__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nb d&apos;actionnaires directs disponibles</displayNameOverride>
+            <field>ELLISPHERE__Elli_cumul_DirectShareholder__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nb de participation directes disponibles</displayNameOverride>
+            <field>ELLISPHERE__Elli_cumul_DirectShareholding__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nb d&apos;actionnaires Groupe disponibles</displayNameOverride>
+            <field>ELLISPHERE__Elli_cumul_IndirectShareholder__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nb de participations Groupe disponibles</displayNameOverride>
+            <field>ELLISPHERE__Elli_cumul_IndirectShareholding__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nb d&apos;établissements</displayNameOverride>
+            <field>ELLISPHERE__Elli_cumul_branches__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Converted from Lead</displayNameOverride>
+            <field>Converted_from_Lead__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Secteur d&apos;activité</displayNameOverride>
+            <field>SecteurActiviteEllisphere__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Syndic</displayNameOverride>
+            <field>Syndic__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code postal</displayNameOverride>
+            <field>Code_postal__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Numéro voie</displayNameOverride>
+            <field>Numero_voie__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ville</displayNameOverride>
+            <field>Ville__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Voie</displayNameOverride>
+            <field>Voie__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Adresse</displayNameOverride>
+            <field>Adresse__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commentaire</displayNameOverride>
+            <field>Commentaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH_IsPrivate</displayNameOverride>
+            <field>TECH_IsPrivate__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Code partenaire</displayNameOverride>
+            <field>Code_partenaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Convention</displayNameOverride>
+            <field>Convention__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Convention inactive</displayNameOverride>
+            <field>Convention_inactive__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH Parent Account Type</displayNameOverride>
+            <field>TECH_Parent_Account_Type__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH Parent account owner</displayNameOverride>
+            <field>TECH_Parent_account_owner__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Manager Mail</displayNameOverride>
+            <field>TECH_Owner_Manger_Mail__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Conformité E-Attestation</displayNameOverride>
+            <field>Conformite_E_Attestation__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Statut</displayNameOverride>
+            <field>Statut__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Facture devis 1</displayNameOverride>
+            <field>Facture_devis_1__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Facture devis 2</displayNameOverride>
+            <field>Facture_devis_2__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Facture devis 3</displayNameOverride>
+            <field>Facture_devis_3__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Achat groupé</displayNameOverride>
+            <field>Achat_groupe__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Année du salon</displayNameOverride>
+            <field>Annee_salon__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nom du salon</displayNameOverride>
+            <field>Nom_salon__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Période achat groupé</displayNameOverride>
+            <field>Periode_achat_groupe__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Facture devis 4</displayNameOverride>
+            <field>Facture_devis_4__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>nom du partenaire</displayNameOverride>
+            <field>nom_partenaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Titre de la page d&apos;origine</displayNameOverride>
+            <field>Titre_page_origine__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Titre SEO de la page d&apos;origine</displayNameOverride>
+            <field>Titre_SEO_page_origine__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type de formulaire</displayNameOverride>
+            <field>Type_formulaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>URL de la page d&apos;origine</displayNameOverride>
+            <field>URL_page_origine__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Batiment a plus de 2 ans ?</displayNameOverride>
+            <field>Batiment_a_plus_de_2_ans__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Secteur</displayNameOverride>
+            <field>Secteur__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type offre selectionnée</displayNameOverride>
+            <field>Type_offre_selectionnee__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GCLID</displayNameOverride>
+            <field>GCLID__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type de travaux</displayNameOverride>
+            <field>Type_de_travaux__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de la dernière demande Web</displayNameOverride>
+            <field>Date_de_la_derniere_demande__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Responsable de l&apos;achat groupé</displayNameOverride>
+            <field>Responsable_achat_groupe__c</field>
+            <table>Account</table>
+        </columns>
+        <masterLabel>Comptes</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ID Demande de cotation</displayNameOverride>
+            <field>Id</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Propriétaire</displayNameOverride>
+            <field>Owner</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Demande de cotation Name</displayNameOverride>
+            <field>Name</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type d&apos;enregistrement</displayNameOverride>
+            <field>RecordType</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de création</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Créé par</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de dernière modification</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dernière modification par</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de dernière activité</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH_Partner_OwnerName</displayNameOverride>
+            <field>TECH_Partner_OwnerName__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Chargé d&apos;affaire</displayNameOverride>
+            <field>Charge_affaire__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH_AA_OwnerName</displayNameOverride>
+            <field>TECH_AA_OwnerName__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de demande de cotation</displayNameOverride>
+            <field>Date_demande_cotation__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Infos complémentaires</displayNameOverride>
+            <field>Infos_complementaires__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rémunération</displayNameOverride>
+            <field>Marge__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Motif de refus</displayNameOverride>
+            <field>Motif_de_refus__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Signataire</displayNameOverride>
+            <field>Signataire__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Statut</displayNameOverride>
+            <field>Statut__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date RDV Client</displayNameOverride>
+            <field>Date_RDV_Client__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Manager Mail</displayNameOverride>
+            <field>TECH_Owner_Manger_Mail__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR Gaz</displayNameOverride>
+            <field>CAR_Gaz__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Société du commercial</displayNameOverride>
+            <field>Societe_du_commercial__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Origine du compte</displayNameOverride>
+            <field>Account_origin__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Conformité E-Attestation</displayNameOverride>
+            <field>Conformite_E_Attestation__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fournisseur défendu</displayNameOverride>
+            <field>Fournisseur_signe__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR Elec</displayNameOverride>
+            <field>CAR_Elec__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH_OwnerName</displayNameOverride>
+            <field>TECH_OwnerName__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH AA Account Name</displayNameOverride>
+            <field>TECH_AA_Account_Name__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AA OwnerName</displayNameOverride>
+            <field>AA_OwnerName__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date de RDV ou de réactualisation</displayNameOverride>
+            <field>TECH_Date_RDV_Reactu__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Canal_vente__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Nombre_PDE__c</field>
+            <table>Account.Demandes_Cotation__r</table>
+        </columns>
+        <masterLabel>Demandes de cotation</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commentaires du client</displayNameOverride>
+            <field>Commentaires_client__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR Elec</displayNameOverride>
+            <field>CAR_Elec__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR Gaz</displayNameOverride>
+            <field>CAR_Gaz__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR Elec Syndic</displayNameOverride>
+            <field>CAR_Elec_Syndic__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR Gaz Syndic</displayNameOverride>
+            <field>CAR_Gaz_Syndic__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campagne emailing</displayNameOverride>
+            <field>Campagne_emailing__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Campagne Google Ads</displayNameOverride>
+            <field>Campagne_Google_Ads__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Adhérent Symposium</displayNameOverride>
+            <field>Adherent_symposium__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nom de l&apos;entreprise du propriétaire</displayNameOverride>
+            <field>Nom_Entreprise_Proprietaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH_Partner_OwnerName</displayNameOverride>
+            <field>TECH_Partner_OwnerName__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Role du propriétaire</displayNameOverride>
+            <field>Role_du_proprietaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last credit score</displayNameOverride>
+            <field>TECH_last_credit_score__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CAR totale</displayNameOverride>
+            <field>TECH_CAR_Totale__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH Parent Account Name</displayNameOverride>
+            <field>TECH_Parent_Account_Name__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent_AccountOwner</displayNameOverride>
+            <field>Parent_AccountOwner__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type de partenaire</displayNameOverride>
+            <field>Type_partenaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TECH Responsable légal mail</displayNameOverride>
+            <field>TECH_Responsable_Legal_Mail__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Date_Heure_soumission_formulaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Formulaire__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalEconomieIdentifieeSyndic__c</field>
+            <table>Account</table>
+        </columns>
+        <masterLabel>Accounts</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PCE_Refonte__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>ReferencePointEnergie_Refonte__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Code_Postal__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CARGaz__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Consommation_Annuelle_de_R_f_rence_Elec__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TECH_CAR__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>FTA__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TECH_num_compteur__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Nom_du_compte__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TypePDE__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ville__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tarif__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Segment__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contrat_actif__c</field>
+            <table>Account.Demandes_Cotation__r.Points_energie__r</table>
+        </columns>
+        <masterLabel>Point d&apos;énergie</masterLabel>
+    </sections>
+</ReportType>

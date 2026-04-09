@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "8a66cd3e-443e-4f40-a6be-2000224d2907",
+    "propertyOverrides" : {
+      "activeViewId" : "ac2565eb-fd57-4b8d-b611-eb376d7e83ea"
+    },
+    "targetId" : "9173867f-91e1-470a-ac4b-e3fa2e18c47e",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Entit_Juridique_Dtails_Syndic_Page",
+  "id" : "2e5d1991-d22d-46fb-acb0-08ff21aecbb4",
+  "type" : "experienceVariation"
+}

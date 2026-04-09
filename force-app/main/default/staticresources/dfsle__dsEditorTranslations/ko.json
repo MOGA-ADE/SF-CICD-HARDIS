@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "실행 취소"
+    },
+    "btn-redo" : {
+      "translate" : "다시 실행"
+    },
+    "btn-fontstyle" : {
+      "translate" : "글꼴 스타일"
+    },
+    "btn-fontsize" : {
+      "translate" : "글꼴 크기"
+    },
+    "btn-bold" : {
+      "translate" : "굵게"
+    },
+    "btn-italic" : {
+      "translate" : "기울임꼴"
+    },
+    "btn-underline" : {
+      "translate" : "밑줄"
+    },
+    "btn-fontcolor" : {
+      "translate" : "텍스트 색상"
+    },
+    "btn-leftalign" : {
+      "translate" : "왼쪽 정렬"
+    },
+    "btn-rightalign" : {
+      "translate" : "오른쪽 정렬"
+    },
+    "btn-centeralign" : {
+      "translate" : "중앙 정렬"
+    },
+    "btn-linespacing" : {
+      "translate" : "줄 간격"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "글머리 기호 목록"
+    },
+    "btn-orderedlist" : {
+      "translate" : "번호 매기기 목록"
+    },
+    "btn-inserttable" : {
+      "translate" : "표 삽입"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "삭제"
+      },
+      "btn-mergecells" : {
+        "translate" : "셀 병합",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "위에 행 삽입"
+      },
+      "btn-2" : {
+        "translate" : "아래에 행 삽입"
+      },
+      "btn-3" : {
+        "translate" : "왼쪽에 열 삽입"
+      },
+      "btn-4" : {
+        "translate" : "오른쪽에 열 삽입"
+      },
+      "btn-5" : {
+        "translate" : "구성 테이블"
+      },
+      "btn-6" : {
+        "translate" : "행 삭제"
+      },
+      "btn-7" : {
+        "translate" : "열 삭제"
+      },
+      "btn-8" : {
+        "translate" : "표 삭제"
+      },
+      "btn-9" : {
+        "translate" : "배경색 채우기"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "논리 규칙 추가"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "이미지 업로드"
+      },
+      "btn-2" : {
+        "translate" : "문서 업로드"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "머리글",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "하위 헤더",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "일반 텍스트",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "회사",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "서명한 날짜",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "이메일",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "이름",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "전체 이름",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "이니셜",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "성",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "서명",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "서명",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "텍스트",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "직함",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "간략 정보"
+    },
+    "btn-2" : {
+      "translate" : "상세 정보"
+    },
+    "label-1" : {
+      "translate" : "문자 제한"
+    },
+    "label-2" : {
+      "translate" : "이름 유형 선택"
+    },
+    "label-3" : {
+      "translate" : "데이터 레이블"
+    },
+    "label-4" : {
+      "translate" : "읽기 전용"
+    },
+    "label-5" : {
+      "translate" : "필수 필드"
+    },
+    "label-6" : {
+      "translate" : "도구 설명"
+    },
+    "label-7" : {
+      "translate" : "확인"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "없음"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "이메일"
+      },
+      "dropdown-numbers" : {
+        "translate" : "번호"
+      },
+      "dropdown-letters" : {
+        "translate" : "글자"
+      },
+      "dropdown-date" : {
+        "translate" : "날짜"
+      },
+      "dropdown-zip" : {
+        "translate" : "Zip"
+      },
+      "dropdown-zip4" : {
+        "translate" : "우편 번호 + 4"
+      },
+      "dropdown-custom" : {
+        "translate" : "사용자 지정"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ", (쉼표)"
+      },
+      "text-datemask" : {
+        "translate" : "유효성 검사 날짜 마스크"
+      },
+      "date-1" : {
+        "translate" : "MM / DD / YYYY",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "dd/MM/yyyy",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "yyyy/MM/dd",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "날짜 형식: MM/dd/yyyy"
+      },
+      "text-datemessage2" : {
+        "translate" : "날짜 형식: dd/MM/yyyy"
+      },
+      "text-datemessage3" : {
+        "translate" : "날짜 형식: yyyy/MM/dd"
+      },
+      "text-decimalseparator" : {
+        "translate" : "소수점 자리"
+      },
+      "text-errormessage" : {
+        "translate" : "오류 메시지"
+      },
+      "text-lettersmessage" : {
+        "translate" : "문자만 입력"
+      },
+      "text-period" : {
+        "translate" : ". (마침표)"
+      },
+      "text-regexpattern" : {
+        "translate" : "Regex 패턴"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "병합 테이블 생성: {{label}}"
+    },
+    "label-2" : {
+      "translate" : "선택된 열"
+    },
+    "label-3" : {
+      "translate" : "(끌어서 순서 바꾸기)"
+    },
+    "label-4" : {
+      "translate" : "필드"
+    },
+    "button-1" : {
+      "translate" : "취소"
+    },
+    "button-2" : {
+      "translate" : "적용"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "DocuSign 필드"
+    },
+    "label-2" : {
+      "translate" : "Salesforce 필드"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "수신인 편집"
+    },
+    "btn-2" : {
+      "translate" : "수신인 추가"
+    },
+    "btn-3" : {
+      "translate" : "다른 수신인 추가"
+    },
+    "btn-4" : {
+      "translate" : "완료",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "취소",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "삭제",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "수신인 역할을 추가 및 편집하십시오. '고객' 또는 'HR'을 포함한 역할을 사용할 수 있습니다."
+    },
+    "text-2" : {
+      "translate" : "자리표시자 이름(필수*)",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "이 수신인은 1개의 할당된 필드가 있습니다. 수신인을 삭제하면 수신인의 필드도 삭제됩니다. 수신인과 필드를 삭제하시겠습니까?"
+    },
+    "text-4" : {
+      "translate" : "이 수신인은 {{number}}개의 할당된 필드가 있습니다. 수신인을 삭제하면 수신인의 필드도 삭제됩니다. 수신인과 필드를 삭제하시겠습니까?"
+    },
+    "label-1" : {
+      "translate" : "수신인에게 필드가 있음"
+    },
+    "error-1" : {
+      "translate" : "각각의 수신인 이름이 고유해야 합니다"
+    },
+    "error-2" : {
+      "translate" : "자리표시자 이름을 포함하십시오."
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "오류가 발생했습니다"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "취소"
+    },
+    "loadMore" : {
+      "translate" : "추가 로드..."
+    },
+    "noResultsFound" : {
+      "translate" : "💬 검색된 결과 없음"
+    },
+    "previewBtn" : {
+      "translate" : "미리 보기"
+    },
+    "previewOff" : {
+      "translate" : "미리보기 꺼짐"
+    },
+    "previewOn" : {
+      "translate" : "미리보기 켜짐"
+    },
+    "recentlyUsed" : {
+      "translate" : "최근에 사용됨"
+    },
+    "record" : {
+      "translate" : "레코드"
+    },
+    "recordModalDescription" : {
+      "translate" : "템플릿의 병합 필드가 실제 데이터와 함께 표시되는 방법을 참조하십시오"
+    },
+    "recordModalTitle" : {
+      "translate" : "미리보기할 레코드를 선택하십시오"
+    },
+    "searchSalesforce" : {
+      "translate" : "Salesforce 검색"
+    },
+    "showSmartContent" : {
+      "translate" : "스마트 콘텐츠 표시"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "파일 업로드하여 시작하기"
+    },
+    "text-2" : {
+      "translate" : "여기로 파일을 끌어서 놓기"
+    },
+    "text-3" : {
+      "translate" : "지원되는 파일 형식: docx, jpg, jpeg, png, gif"
+    },
+    "text-4" : {
+      "translate" : "최대 문서 사이즈: {{number}}MB",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "템플릿이 성공적으로 추가되었습니다."
+    },
+    "text-6" : {
+      "translate" : "업로드하려는 문서가 너무 큽니다. 최대 25MB까지 문서를 지원합니다."
+    },
+    "text-7" : {
+      "translate" : "업로드하려는 파일이 지원되는 형식이 아닙니다. 지원하는 파일 형식은 DOCX, CSV, TXT, PNG, GIF, JPEG 및 JPG입니다."
+    },
+    "text-8" : {
+      "translate" : "죄송합니다. 한 번에 한 문서를 업로드하십시오"
+    },
+    "text-9" : {
+      "translate" : "죄송합니다. 이 파일을 가져올 수 없습니다"
+    },
+    "btn-upload" : {
+      "translate" : "업로드"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "취소"
+    },
+    "btn-edit" : {
+      "translate" : "편집"
+    },
+    "btn-delete" : {
+      "translate" : "삭제"
+    },
+    "btn-save" : {
+      "translate" : "저장"
+    },
+    "label-title" : {
+      "translate" : "규칙 빌더"
+    },
+    "btn-add" : {
+      "translate" : "규칙 추가"
+    },
+    "label-name" : {
+      "translate" : "이름 규칙"
+    },
+    "dropdown-method1" : {
+      "translate" : "다음 조건 중 하나를 적용하십시오"
+    },
+    "dropdown-method2" : {
+      "translate" : "다음 조건 중 하나를 적용하십시오"
+    },
+    "label-if" : {
+      "translate" : "만약"
+    },
+    "label-orif" : {
+      "translate" : "Or if"
+    },
+    "label-andif" : {
+      "translate" : "And if"
+    },
+    "label-then" : {
+      "translate" : "Then"
+    },
+    "label-otherwise" : {
+      "translate" : "그렇지 않으면..."
+    },
+    "dropdown-show" : {
+      "translate" : "다음 콘텐츠 표시하기"
+    },
+    "dropdown-hide" : {
+      "translate" : "다음 콘텐츠 숨기기"
+    },
+    "text-drag1" : {
+      "translate" : "If 컨테이너 내 임의 위치에 병합 필드를 끌어다 놓으십시오."
+    },
+    "text-drag2" : {
+      "translate" : "여기에 Salesforce 필드를 끌어다 놓으십시오."
+    },
+    "text" : {
+      "translate" : "이 논리 블록에 대한 변경 사항은 저장되지 않습니다. 취소할지 확인하십시오."
+    },
+    "text-title" : {
+      "translate" : "취소하시겠습니까?"
+    },
+    "btn-confirm" : {
+      "translate" : "확인"
+    },
+    "error-1" : {
+      "translate" : "규칙 이름을 입력하십시오."
+    },
+    "error-2" : {
+      "translate" : "일부 조건에 올바르지 않은 값이 있습니다."
+    },
+    "error-3" : {
+      "translate" : "죄송합니다. 논리 블록에 규칙 이름이 중복되어 있습니다. 이름을 바꾸고 다시 시도하십시오."
+    },
+    "error-4" : {
+      "translate" : "조건을 {{name}}에 추가하여 논리 블록을 생성하십시오.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "{{name}}에서 \"Then\" 논리 명령문에 콘텐츠를 추가하십시오.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "Otherwise에서 \"Then\" 논리 명령문에 콘텐츠를 추가하십시오."
+    },
+    "placeholder" : {
+      "translate" : "여기에 새 콘텐츠를 입력하거나 복사/붙여넣기를 시작하십시오..."
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "새 템플릿을 시작하려면 여기에 텍스트를 입력하거나 붙여넣기하십시오...",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "1",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1.5",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "2",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "필드 검색"
+    },
+    "noResultMessage" : {
+      "translate" : "검색된 결과 없음"
+    }
+  }
+}

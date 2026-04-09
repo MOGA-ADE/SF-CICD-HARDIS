@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GRDF_Statut_Droit_Acces__c</fullName>
+    <label>GRDF: Statut droit d&apos;accès</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Demande d&apos;accès en attente de validation</fullName>
+                <default>false</default>
+                <label>Demande d&apos;accès en attente de validation</label>
+            </value>
+            <value>
+                <fullName>Demande d&apos;accès validée</fullName>
+                <default>false</default>
+                <label>Demande d&apos;accès validée</label>
+            </value>
+            <value>
+                <fullName>Demande d&apos;accès rejetée</fullName>
+                <default>false</default>
+                <label>Demande d&apos;accès rejetée</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

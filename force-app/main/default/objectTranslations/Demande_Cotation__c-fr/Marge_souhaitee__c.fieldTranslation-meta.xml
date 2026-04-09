@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Marge souhaitée --></label>
+    <name>Marge_souhaitee__c</name>
+    <picklistValues>
+        <masterLabel>Marge maximale</masterLabel>
+        <translation><!-- Marge maximale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marge minimale</masterLabel>
+        <translation><!-- Marge minimale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marge moyenne</masterLabel>
+        <translation><!-- Marge moyenne --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Appel_qualite</fullName>
+    <fields>Name</fields>
+    <fields>Score_conformite__c</fields>
+    <fields>Score_commercial__c</fields>
+    <label>Appel qualité</label>
+</CompactLayout>
