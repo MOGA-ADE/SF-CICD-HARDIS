@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_001</fullName>
+    <active>true</active>
+    <description>Score du client comprit entre 0 et 10</description>
+    <errorConditionFormula>TECH_Score_commercial__c &lt; 0 ||  TECH_Score_commercial__c &gt; 10</errorConditionFormula>
+    <errorMessage>Attention le score du commercial doit être compris 0 et 10</errorMessage>
+</ValidationRule>

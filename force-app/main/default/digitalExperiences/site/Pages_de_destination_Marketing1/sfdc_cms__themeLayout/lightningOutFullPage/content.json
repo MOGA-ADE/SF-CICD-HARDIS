@@ -1,0 +1,13 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Lightning Out Full Page",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "definition" : "experience_marketing_landing:lightningOutFullPage",
+      "id" : "b8f9114b-0c4f-45a6-a04b-e833d8787ad7",
+      "type" : "component"
+    }
+  },
+  "urlName" : "lightning-out-full-page"
+}

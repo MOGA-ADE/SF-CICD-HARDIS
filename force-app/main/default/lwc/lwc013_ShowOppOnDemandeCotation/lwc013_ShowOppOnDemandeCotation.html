@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title={cardTitle} icon-name="standard:opportunity">
+        <lightning-datatable
+            if:true={isCommunity}
+            key-field="id"
+            data={dataList}
+            columns={columnsListCommunity}
+            hide-checkbox-column>
+        </lightning-datatable>
+        <lightning-datatable
+            if:false={isCommunity}
+            key-field="id"
+            data={dataList}
+            columns={columnsListSalesforce}
+            hide-checkbox-column>
+        </lightning-datatable>
+    </lightning-card>
+</template>

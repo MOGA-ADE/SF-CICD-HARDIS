@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>TEIXEIRA DA SILVA JEREMY Partenaire - Responsable</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>TEIXEIRA DA SILVA JEREMY Partenaire - Responsable</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>TEIXEIRADASILVAJEREMYPartenaireDirigeant</parentRole>
+</Role>

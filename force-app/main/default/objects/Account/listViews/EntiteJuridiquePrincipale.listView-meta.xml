@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EntiteJuridiquePrincipale</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Siren__c</columns>
+    <columns>Code_NAF__c</columns>
+    <columns>CEE__c</columns>
+    <columns>CSPE__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Account_EntiteJuridiquePrincipale,0122o0000003qgV</value>
+    </filters>
+    <label>Comptes Principaux</label>
+</ListView>

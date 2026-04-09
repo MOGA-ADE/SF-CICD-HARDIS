@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Les départements sont ceux dont le</description>
+        <name>DEC_SyndicDansDepartement</name>
+        <label>Est-ce que le syndic se trouve dans l&apos;un département</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>UPDATE_AccountTCHSiret</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Doublon Autoriser</defaultConnectorLabel>
+        <rules>
+            <name>ch_Doublon_Syndic_interdit_dans_ce_departement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GET_Departement_Syndic</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Doublon  de syndic interdit dans ce département</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Departement</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.BillingPostalCode},2)</expression>
+    </formulas>
+    <interviewLabel>Account_BeforeUpdate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account_BeforeUpdate</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GET_Departement_Syndic</name>
+        <label>GET : Département Syndic</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>DEC_SyndicDansDepartement</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Departement__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Departement</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Departement_syndic__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>retire le ELLISPHERE__ELLI_IdRegisterestb2__c</description>
+        <name>UPDATE_AccountTCHSiret</name>
+        <label>UPDATE : remove TCH Siret</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ELLISPHERE__ELLI_IdRegisterestb2__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GET_Departement_Syndic</targetReference>
+        </connector>
+        <filterFormula>AND(
+    {!$Record.RecordType.DeveloperName} = &apos;Syndic&apos;,
+    {!$Record.ELLISPHERE__ELLI_IdRegisterestb2__c} != null
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

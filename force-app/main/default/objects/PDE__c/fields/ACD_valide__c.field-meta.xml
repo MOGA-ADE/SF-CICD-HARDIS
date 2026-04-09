@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACD_valide__c</fullName>
+    <description>Calcul si on se trouve à moins de 12 mois de la date de signature de l&apos;ACD</description>
+    <formula>TODAY() &lt; ADDMONTHS(Date_signature_ACD__c,12)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ACD valide ?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

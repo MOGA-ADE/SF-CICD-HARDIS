@@ -1,0 +1,527 @@
+{
+  "smartling" : {
+    "translate_paths" : {
+      "path" : "*/translate",
+      "key" : "/{*}",
+      "instruction" : "*/translation-note"
+    }
+  },
+  "tooltips" : {
+    "btn-undo" : {
+      "translate" : "Cofnij"
+    },
+    "btn-redo" : {
+      "translate" : "Ponów"
+    },
+    "btn-fontstyle" : {
+      "translate" : "Styl czcionki"
+    },
+    "btn-fontsize" : {
+      "translate" : "Rozmiar czcionki"
+    },
+    "btn-bold" : {
+      "translate" : "Pogrubienie"
+    },
+    "btn-italic" : {
+      "translate" : "Kursywa"
+    },
+    "btn-underline" : {
+      "translate" : "Podkreśl"
+    },
+    "btn-fontcolor" : {
+      "translate" : "Kolor tekstu"
+    },
+    "btn-leftalign" : {
+      "translate" : "Wyrównaj do lewej"
+    },
+    "btn-rightalign" : {
+      "translate" : "Wyrównaj do prawej"
+    },
+    "btn-centeralign" : {
+      "translate" : "Wyśrodkuj"
+    },
+    "btn-linespacing" : {
+      "translate" : "Odstępy między wierszami"
+    },
+    "btn-unorderedlist" : {
+      "translate" : "Lista wypunktowana"
+    },
+    "btn-orderedlist" : {
+      "translate" : "Lista numerowana"
+    },
+    "btn-inserttable" : {
+      "translate" : "Wstaw tabelę"
+    },
+    "table" : {
+      "btn-delete" : {
+        "translate" : "usuń"
+      },
+      "btn-mergecells" : {
+        "translate" : "Scal komórki",
+        "translation-note" : "merge multiple table cells into one"
+      },
+      "btn-1" : {
+        "translate" : "Wstaw wiersz powyżej"
+      },
+      "btn-2" : {
+        "translate" : "Wstaw wiersz poniżej"
+      },
+      "btn-3" : {
+        "translate" : "Wstaw kolumnę po lewej"
+      },
+      "btn-4" : {
+        "translate" : "Wstaw kolumnę po prawej"
+      },
+      "btn-5" : {
+        "translate" : "Skonfiguruj tabelę"
+      },
+      "btn-6" : {
+        "translate" : "Usuń wiersz"
+      },
+      "btn-7" : {
+        "translate" : "Usuń kolumnę"
+      },
+      "btn-8" : {
+        "translate" : "Usuń tabelę"
+      },
+      "btn-9" : {
+        "translate" : "Kolor wypełnienia tła"
+      }
+    },
+    "btn-conditional" : {
+      "translate" : "Dodaj regułę logiczną"
+    },
+    "inlineToolbar" : {
+      "btn-1" : {
+        "translate" : "Prześlij obraz"
+      },
+      "btn-2" : {
+        "translate" : "Prześlij dokument"
+      }
+    }
+  },
+  "heading" : {
+    "dropdown-1" : {
+      "translate" : "Nagłówek",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-2" : {
+      "translate" : "Podtytuł",
+      "translation-note" : "text heading format"
+    },
+    "dropdown-3" : {
+      "translate" : "Zwykły tekst",
+      "translation-note" : "text heading format"
+    }
+  },
+  "docusignFields" : {
+    "label-company" : {
+      "translate" : "Firma",
+      "translation-note" : "Docusign field type"
+    },
+    "label-datesigned" : {
+      "translate" : "Data podpisania",
+      "translation-note" : "Docusign field type"
+    },
+    "label-email" : {
+      "translate" : "E-mail",
+      "translation-note" : "Docusign field type"
+    },
+    "label-firstname" : {
+      "translate" : "Imię",
+      "translation-note" : "Docusign field type"
+    },
+    "label-fullname" : {
+      "translate" : "Imię i nazwisko",
+      "translation-note" : "Docusign field type"
+    },
+    "label-initial" : {
+      "translate" : "Parafuj",
+      "translation-note" : "Docusign field type"
+    },
+    "label-lastname" : {
+      "translate" : "Nazwisko",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature" : {
+      "translate" : "Podpis",
+      "translation-note" : "Docusign field type"
+    },
+    "label-signature2" : {
+      "translate" : "Podpisz",
+      "translation-note" : "Docusign field type, in the document"
+    },
+    "label-text" : {
+      "translate" : "Tekst",
+      "translation-note" : "Docusign field type"
+    },
+    "label-title" : {
+      "translate" : "Tytuł",
+      "translation-note" : "Docusign field type"
+    }
+  },
+  "tabProperties" : {
+    "btn-1" : {
+      "translate" : "Mniej szczegółów"
+    },
+    "btn-2" : {
+      "translate" : "Więcej szczegółów"
+    },
+    "label-1" : {
+      "translate" : "Limit znaków"
+    },
+    "label-2" : {
+      "translate" : "Wybierz typ nazwy"
+    },
+    "label-3" : {
+      "translate" : "Etykieta danych"
+    },
+    "label-4" : {
+      "translate" : "Tylko do odczytu"
+    },
+    "label-5" : {
+      "translate" : "Wymagane pole"
+    },
+    "label-6" : {
+      "translate" : "Wskazówki narzędzia"
+    },
+    "label-7" : {
+      "translate" : "Weryfikacja"
+    },
+    "validationType" : {
+      "dropdown-none" : {
+        "translate" : "Brak"
+      },
+      "dropdown-ssn" : {
+        "translate" : "SSN"
+      },
+      "dropdown-email" : {
+        "translate" : "E-mail"
+      },
+      "dropdown-numbers" : {
+        "translate" : "Liczby"
+      },
+      "dropdown-letters" : {
+        "translate" : "Litery"
+      },
+      "dropdown-date" : {
+        "translate" : "Data"
+      },
+      "dropdown-zip" : {
+        "translate" : "Kod pocztowy"
+      },
+      "dropdown-zip4" : {
+        "translate" : "Zip+4"
+      },
+      "dropdown-custom" : {
+        "translate" : "Niestandardowy"
+      }
+    },
+    "validationOptions" : {
+      "text-comma" : {
+        "translate" : ", (przecinek)"
+      },
+      "text-datemask" : {
+        "translate" : "Maska daty potwierdzenia"
+      },
+      "date-1" : {
+        "translate" : "MM / dd / rrrr",
+        "translation-note" : "date format"
+      },
+      "date-2" : {
+        "translate" : "Dd / mm / rrrr",
+        "translation-note" : "date format"
+      },
+      "date-3" : {
+        "translate" : "rrrr/MM/dd",
+        "translation-note" : "date format"
+      },
+      "text-datemessage1" : {
+        "translate" : "Wymagany format daty: dd/mm/rrrr"
+      },
+      "text-datemessage2" : {
+        "translate" : "Wymagany format daty: dd/mm/rrrr"
+      },
+      "text-datemessage3" : {
+        "translate" : "Wymagany format daty: dd/mm/rrrr"
+      },
+      "text-decimalseparator" : {
+        "translate" : "Separator liczb dziesiętnych"
+      },
+      "text-errormessage" : {
+        "translate" : "Wiadomość o błędzie"
+      },
+      "text-lettersmessage" : {
+        "translate" : "Wpisz tylko litery"
+      },
+      "text-period" : {
+        "translate" : ". (kropka)"
+      },
+      "text-regexpattern" : {
+        "translate" : "Wzór Regex"
+      }
+    }
+  },
+  "mergeTable" : {
+    "label-1" : {
+      "translate" : "Utwórz tabelę scalania: {{label}}"
+    },
+    "label-2" : {
+      "translate" : "WYBRANE KOLUMNY"
+    },
+    "label-3" : {
+      "translate" : "(Przeciągnij, aby zmienić kolejność)"
+    },
+    "label-4" : {
+      "translate" : "POLA"
+    },
+    "button-1" : {
+      "translate" : "Anuluj"
+    },
+    "button-2" : {
+      "translate" : "Zastosuj"
+    }
+  },
+  "tabs" : {
+    "label-1" : {
+      "translate" : "Pola DocuSign"
+    },
+    "label-2" : {
+      "translate" : "Pola Salesforce"
+    }
+  },
+  "recipient" : {
+    "btn-1" : {
+      "translate" : "Edytuj odbiorców"
+    },
+    "btn-2" : {
+      "translate" : "Dodaj odbiorcę"
+    },
+    "btn-3" : {
+      "translate" : "Dodaj kolejnego"
+    },
+    "btn-4" : {
+      "translate" : "Gotowe",
+      "translation-note" : "Complete editing"
+    },
+    "btn-5" : {
+      "translate" : "Anuluj",
+      "translation-note" : "Discard changes"
+    },
+    "btn-6" : {
+      "translate" : "usuń",
+      "translation-note" : "Delete button to confirm delete changes"
+    },
+    "text-1" : {
+      "translate" : "Dodawaj i edytuj role odbiorców. Przykładowe role to „Klient” lub „Kadry”."
+    },
+    "text-2" : {
+      "translate" : "Nazwa zastępcza (wymagana*)",
+      "translation-note" : "input placeholder"
+    },
+    "text-3" : {
+      "translate" : "Ten odbiorca ma 1 przypisane pole. Usuwając tego odbiorcę, usuniesz również jego pole. Czy chcesz usunąć odbiorcę i jego pole?"
+    },
+    "text-4" : {
+      "translate" : "Odbiorca ma przypisane pola: {{number}}. Usuwając tego odbiorcę, usuniesz również jego pola. Czy chcesz usunąć odbiorcę i jego pola?"
+    },
+    "label-1" : {
+      "translate" : "Odbiorca posiada pola"
+    },
+    "error-1" : {
+      "translate" : "Nazwa każdego adresata musi być unikalna."
+    },
+    "error-2" : {
+      "translate" : "Podaj nazwę zastępczą"
+    },
+    "generic" : {
+      "errorMessage" : "Error Message",
+      "translate" : "Coś poszło nie tak"
+    }
+  },
+  "preview" : {
+    "cancelBtn" : {
+      "translate" : "Anuluj"
+    },
+    "loadMore" : {
+      "translate" : "Wczytaj więcej…"
+    },
+    "noResultsFound" : {
+      "translate" : "💬 Brak wyników"
+    },
+    "previewBtn" : {
+      "translate" : "Podgląd"
+    },
+    "previewOff" : {
+      "translate" : "Podgląd wył."
+    },
+    "previewOn" : {
+      "translate" : "Podgląd wł."
+    },
+    "recentlyUsed" : {
+      "translate" : "Ostatnio używane"
+    },
+    "record" : {
+      "translate" : "Wpis"
+    },
+    "recordModalDescription" : {
+      "translate" : "Zobacz, jak wygląda scalanie pól w szablonie przy użyciu prawdziwych danych"
+    },
+    "recordModalTitle" : {
+      "translate" : "Wybierz wpis do wyświetlenia"
+    },
+    "searchSalesforce" : {
+      "translate" : "Wyszukaj w Salesforce"
+    },
+    "showSmartContent" : {
+      "translate" : "Pokaż inteligentną zawartość"
+    }
+  },
+  "file" : {
+    "text-1" : {
+      "translate" : "Zacznij od przesłania swoich plików."
+    },
+    "text-2" : {
+      "translate" : "Przeciągnij i upuść tutaj pliki"
+    },
+    "text-3" : {
+      "translate" : "Obsługiwane typy plików: docx, jpg, jpeg, png, gif"
+    },
+    "text-4" : {
+      "translate" : "Maksymalny rozmiar dokumentu: {{number}} MB",
+      "translation-note" : "number of file size"
+    },
+    "text-5" : {
+      "translate" : "Szablon pomyślnie dodany."
+    },
+    "text-6" : {
+      "translate" : "Dokument, który próbujesz przesłać, jest za duży. Obsługujemy dokumenty o rozmiarze do 25 MB."
+    },
+    "text-7" : {
+      "translate" : "Plik, który próbujesz przesłać, nie jest w obsługiwanym formacie. Obsługujemy: DOCX, CSV, TXT, PNG, GIF, JPEG i JPG."
+    },
+    "text-8" : {
+      "translate" : "Musisz przesyłać jeden dokument na raz"
+    },
+    "text-9" : {
+      "translate" : "Niestety nie możemy zaimportować tego pliku"
+    },
+    "btn-upload" : {
+      "translate" : "PRZEŚLIJ"
+    }
+  },
+  "conditionalLogic" : {
+    "btn-cancel" : {
+      "translate" : "Anuluj"
+    },
+    "btn-edit" : {
+      "translate" : "Edytuj"
+    },
+    "btn-delete" : {
+      "translate" : "usuń"
+    },
+    "btn-save" : {
+      "translate" : "Zapisz"
+    },
+    "label-title" : {
+      "translate" : "Konstruktor reguł"
+    },
+    "btn-add" : {
+      "translate" : "DODAJ REGUŁĘ"
+    },
+    "label-name" : {
+      "translate" : "Nazwij regułę"
+    },
+    "dropdown-method1" : {
+      "translate" : "Zastosuj wszystkie z następujących warunków"
+    },
+    "dropdown-method2" : {
+      "translate" : "Zastosuj dowolne z następujących warunków"
+    },
+    "label-if" : {
+      "translate" : "Jeśli"
+    },
+    "label-orif" : {
+      "translate" : "Albo jeśli"
+    },
+    "label-andif" : {
+      "translate" : "I jeśli"
+    },
+    "label-then" : {
+      "translate" : "Następnie"
+    },
+    "label-otherwise" : {
+      "translate" : "Albo…"
+    },
+    "dropdown-show" : {
+      "translate" : "Wyświetl następującą zawartość"
+    },
+    "dropdown-hide" : {
+      "translate" : "Ukryj następującą zawartość"
+    },
+    "text-drag1" : {
+      "translate" : "Przeciągnij pola scalania w dowolne miejsce wewnątrz tego kontenera „Jeśli”."
+    },
+    "text-drag2" : {
+      "translate" : "Przeciągnij tutaj swoje pole Salesforce."
+    },
+    "text" : {
+      "translate" : "Wszelkie zmiany wprowadzone w tym bloku logicznym nie zostaną zapisane. Potwierdź, że chcesz anulować."
+    },
+    "text-title" : {
+      "translate" : "Czy na pewno chcesz anulować?"
+    },
+    "btn-confirm" : {
+      "translate" : "POTWIERDŹ"
+    },
+    "error-1" : {
+      "translate" : "Wprowadź nazwę reguły."
+    },
+    "error-2" : {
+      "translate" : "Niektóre z warunków posiadają nieprawidłowe wartości."
+    },
+    "error-3" : {
+      "translate" : "Twój blok logiczny zawiera zduplikowane nazwy reguł. Zmień nazwy i spróbuj ponownie."
+    },
+    "error-4" : {
+      "translate" : "Dodaj warunek dla {{name}}, aby utworzyć blok logiczny.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-5" : {
+      "translate" : "Dodaj zawartość do instrukcji logicznej „Następnie” w {{name}}.",
+      "translation-note" : "{{name}} will be user input rule name"
+    },
+    "error-6" : {
+      "translate" : "Dodaj zawartość do instrukcji logicznej „Następnie” w Albo."
+    },
+    "placeholder" : {
+      "translate" : "Zacznij pisać lub wklej tutaj swoją nową zawartość…"
+    }
+  },
+  "text-placeholder" : {
+    "translate" : "Wpisz lub wklej tutaj tekst, aby rozpocząć tworzenie nowego szablonu…",
+    "translation-note" : "placeholder when editor is empty"
+  },
+  "linespacing" : {
+    "dropdown-single" : {
+      "translate" : "Pojedynczy",
+      "translation-note" : "single linespacing between paragraphs"
+    },
+    "dropdown-middle" : {
+      "translate" : "1,5",
+      "translation-note" : "1.5 linespacing between paragraphs"
+    },
+    "dropdown-double" : {
+      "translate" : "Podwójny",
+      "translation-note" : "double linespacing between paragraphs"
+    }
+  },
+  "salesforceFields" : {
+    "searchField" : {
+      "translate" : "Wyszukaj pola"
+    },
+    "noResultMessage" : {
+      "translate" : "Nie znaleziono wyników"
+    }
+  }
+}

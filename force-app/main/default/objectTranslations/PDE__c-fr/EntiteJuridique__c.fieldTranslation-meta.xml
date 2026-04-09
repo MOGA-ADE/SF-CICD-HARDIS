@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Compte --></label>
+    <lookupFilter>
+        <errorMessage><!-- Un pde ne peut pas être rattaché à un Syndic --></errorMessage>
+    </lookupFilter>
+    <name>EntiteJuridique__c</name>
+    <relationshipLabel><!-- Points d&apos;énergie --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Recordtype</fullName>
+    <active>true</active>
+    <label>Contact-Recordtype</label>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDREZIEUX FOOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cellule RDV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultation MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data CARTEGIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FEURS FOOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fichier de prospection - UW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LE CÈDRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onssen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospection téléphonique hebdomadaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reattribution AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renouvellement ADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUBSTENCIEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Madame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monsieur</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,76 @@
+<template>
+  <div class="slds-is-relative">
+    <template if:true={isLoading}>
+      <lightning-spinner
+        alternative-text="Chargement..."
+        size="medium"
+      ></lightning-spinner>
+    </template>
+
+    <div class="slds-m-around_medium">
+      <lightning-layout horizontal-align="center" class="slds-m-bottom_medium">
+        <img src={logoUrl} alt="Company Logo" style="max-height: 80px" />
+      </lightning-layout>
+
+      <lightning-input
+        type="number"
+        name="margin"
+        label="Marge à partager (en €)"
+        placeholder="ex: 10.50"
+        step="0.01"
+        onchange={handleInputChange}
+      >
+      </lightning-input>
+
+      <lightning-combobox
+        name="validityDuration"
+        label="Durée de l'offre"
+        value={validityDuration}
+        options={validityDurationOptions}
+        onchange={handleInputChange}
+        class="slds-m-vertical_medium"
+      >
+      </lightning-combobox>
+
+      <lightning-input
+        type="checkbox"
+        label="Offre énergie verte"
+        onchange={handleInputChange}
+        checked={isGreenEnergy}
+        name="isGreenEnergy"
+      ></lightning-input>
+
+      <h3 class="slds-section-title--divider slds-m-top_large">
+        Sélectionner l'ACD
+      </h3>
+      <template if:true={files.length}>
+        <div style="height: 150px">
+          <lightning-datatable
+            key-field="ContentDocumentId"
+            data={files}
+            columns={fileColumns}
+            onrowselection={handleRowSelection}
+            max-row-selection="1"
+          >
+          </lightning-datatable>
+        </div>
+      </template>
+      <template if:false={files.length}>
+        <p class="slds-text-align_center slds-m-vertical_medium">
+          Aucun fichier trouvé sur le compte associé.
+        </p>
+      </template>
+
+      <div class="slds-m-top_large slds-text-align_right">
+        <lightning-button
+          variant="brand"
+          label="Demande de prix"
+          title="Demande de prix"
+          onclick={handlePriceRequestClick}
+          disabled={isPriceRequestDisabled}
+        >
+        </lightning-button>
+      </div>
+    </div>
+  </div>
+</template>

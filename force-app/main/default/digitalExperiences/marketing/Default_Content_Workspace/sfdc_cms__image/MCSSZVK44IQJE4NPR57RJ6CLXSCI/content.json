@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__image",
+  "title" : "filliere",
+  "contentBody" : {
+    "sfdc_cms:media" : {
+      "source" : {
+        "mimeType" : "image/jpeg",
+        "ref" : "0sNaT0000005aZ7UAI",
+        "type" : "file",
+        "size" : 268062
+      }
+    }
+  },
+  "urlName" : "filliere"
+}

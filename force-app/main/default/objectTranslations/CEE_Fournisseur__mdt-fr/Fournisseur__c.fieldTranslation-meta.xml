@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fournisseur --></label>
+    <name>Fournisseur__c</name>
+    <picklistValues>
+        <masterLabel>Dyneff</masterLabel>
+        <translation><!-- Dyneff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enovos</masterLabel>
+        <translation><!-- Enovos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaz Européen</masterLabel>
+        <translation><!-- Gaz Européen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MET Energie</masterLabel>
+        <translation><!-- MET Energie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OHM Energie</masterLabel>
+        <translation><!-- OHM Energie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEFE Energy</masterLabel>
+        <translation><!-- SEFE Energy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

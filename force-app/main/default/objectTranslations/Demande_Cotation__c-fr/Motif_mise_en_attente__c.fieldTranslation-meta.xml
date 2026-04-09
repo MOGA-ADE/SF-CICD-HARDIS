@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motif de mise en attente --></label>
+    <name>Motif_mise_en_attente__c</name>
+    <picklistValues>
+        <masterLabel>Client absent</masterLabel>
+        <translation><!-- Client absent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client souhaite attendre</masterLabel>
+        <translation><!-- Client souhaite attendre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client à eu un imprévu</masterLabel>
+        <translation><!-- Client à eu un imprévu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En attente de l’offre concurrente</masterLabel>
+        <translation><!-- En attente de l’offre concurrente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Projet reporté (déménagement, vente, imprévu)</masterLabel>
+        <translation><!-- Projet reporté (déménagement, vente, imprévu) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Présentation des prix uniquement</masterLabel>
+        <translation><!-- Présentation des prix uniquement --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

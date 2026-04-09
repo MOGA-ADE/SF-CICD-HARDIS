@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "aa1c69a1-d643-4fc6-af72-0a289147cc82",
+    "propertyOverrides" : {
+      "activeViewId" : "d7b6e7d5-30fb-41f1-922b-7a9c9a877a24"
+    },
+    "targetId" : "9173867f-91e1-470a-ac4b-e3fa2e18c47e",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Entit_Juridique_Dtails_Coproprit_Page",
+  "id" : "20615cd1-bbb6-4ba3-b2b8-32a6f066dae8",
+  "type" : "experienceVariation"
+}

@@ -1,0 +1,50 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <lightning-icon icon-name="standard:channel_program_history" alternative-text="Quote image" size="small"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                  <span>Sites Offre Endesa n°{quoteOfferNumber} ({relatedQLISize})</span>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body">
+          <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid" aria-label="Liste des qlis">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Nom">Numéro compteur</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Date fin de contrat">Commission souhaité</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Type Offre">Abonnement souhaité</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <template for:each={relatedQLIs} for:item="qli">
+                    <tr key={qli.Id} class="slds-hint-parent">
+                        <th scope="row">
+                          <div class="slds-truncate" title={qli.TECH_PdeReference__c} onclick={getQLIId} oncontextmenu={getQLIId} onauxclick={getQLIId} data-id={qli.Id}>
+                            <a href={redirectToQLI} tabindex="-1">{qli.TECH_PdeReference__c}</a>
+                          </div>
+                        </th>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title={qli.Commission_Endesa_Elec_Souhaitee__c}>{qli.Commission_Endesa_Elec_Souhaitee__c} €</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title={qli.Abonnement_Endesa_Elec_Souhaitee__c}>{qli.Abonnement_Endesa_Elec_Souhaitee__c} €</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+          </table>
+        </div>
+      </article>
+</template>

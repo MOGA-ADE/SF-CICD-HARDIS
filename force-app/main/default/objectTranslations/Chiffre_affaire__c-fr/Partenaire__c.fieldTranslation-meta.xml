@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Partenaire --></label>
+    <lookupFilter>
+        <errorMessage><!-- Vous ne pouvez insérer que des partenaires --></errorMessage>
+    </lookupFilter>
+    <name>Partenaire__c</name>
+    <relationshipLabel><!-- Chiffre d&apos;affaire --></relationshipLabel>
+</CustomFieldTranslation>

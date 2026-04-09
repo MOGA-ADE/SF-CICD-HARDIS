@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- TECH piste jamais changé --></label>
+    <name>TEC_piste_jamais_chang__c</name>
+</CustomFieldTranslation>

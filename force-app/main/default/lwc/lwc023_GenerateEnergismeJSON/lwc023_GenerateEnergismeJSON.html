@@ -1,0 +1,63 @@
+<template>
+    <lightning-card title="Génération de Fichiers Energisme" icon-name="standard:contact" variant="Narrow">
+        <!-- Card Header -->
+        <div slot="header" class="slds-grid slds-grid_align-spread slds-m-bottom_medium">
+            <h2 class="slds-text-heading_medium">Génération de Fichiers Energisme</h2>
+        </div>
+
+        <!-- Card Body -->
+        <div class="slds-p-around_medium">
+            <!-- Step 1: Select Signataire -->
+            <template if:true={signataireOptions}>
+                <lightning-combobox
+                    name="signataire"
+                    label="Sélectionner un Signataire"
+                    value={selectedSignataire}
+                    placeholder="Sélectionner un contact"
+                    options={signataireOptions}
+                    onchange={handleSelection}>
+                </lightning-combobox>
+            </template>
+
+            <!-- Step 2: Select File Type -->
+            <lightning-radio-group
+                name="fileType"
+                label="Type de Fichier"
+                options={fileTypeOptions}
+                value={selectedFileType}
+                class="slds-m-top_medium"
+                onchange={handleFileTypeSelection}>
+            </lightning-radio-group>
+
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-m-top_medium">
+                    <lightning-spinner alternative-text="Chargement en cours..."></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- Error Display -->
+            <template if:true={error}>
+                <div class="slds-text-color_error slds-m-top_medium">
+                    {error}
+                </div>
+            </template>
+
+            <template if:true={selectedFileType}>
+                <div class="slds-m-top_medium slds-grid slds-grid_align-center">
+                    <lightning-button 
+                        label="Annuler" 
+                        variant="neutral" 
+                        onclick={handleCancel}>
+                    </lightning-button>
+                    <lightning-button
+                        label="Télécharger"
+                        variant="brand"
+                        class="slds-m-left_small"
+                        onclick={handleConfirm}>
+                    </lightning-button>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <mktDataModelAttributes>
+        <creationType>ADG</creationType>
+        <dataModelTaxonomy>Salesforce_SFDCReferenceModel_0_93</dataModelTaxonomy>
+        <dataSpaceName>default</dataSpaceName>
+        <description>Individual data graph Value</description>
+        <isEnabled>true</isEnabled>
+        <isSegmentable>true</isSegmentable>
+        <isUsedForMetrics>false</isUsedForMetrics>
+        <labelOverride>Individual data graph Value</labelOverride>
+        <masterLabel>Individual_data_grap_1772170762951_VALUE</masterLabel>
+        <objectCategory>Salesforce_SFDCReferenceModel_0_93.Profile</objectCategory>
+        <referenceEntityName>Individual_data_grap_1772170762951_VALUE_ADG</referenceEntityName>
+    </mktDataModelAttributes>
+</CustomObject>

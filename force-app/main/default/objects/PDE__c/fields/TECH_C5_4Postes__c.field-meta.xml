@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_C5_4Postes__c</fullName>
+    <formula>OR(TEXT(FTA__c)=&apos;BT &lt;= 36Kva - CU 4 postes&apos;,TEXT(FTA__c)=&apos;BT &lt;= 36Kva - MU 4 postes&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TECH_C5_4Postes</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

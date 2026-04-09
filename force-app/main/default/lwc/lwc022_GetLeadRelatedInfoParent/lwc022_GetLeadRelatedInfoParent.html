@@ -1,0 +1,12 @@
+<template>
+    <template if:true={isLoading}>
+        <div class="relative">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+    </template>
+    <template if:false={isLoading}>
+        <c-lwc022_-get-lead-related-contact list-contact={listContact} error={error}></c-lwc022_-get-lead-related-contact>
+        <br>
+        <c-lwc022_-get-lead-related-score list-score={listScore} error={error}></c-lwc022_-get-lead-related-score>
+    </template>
+</template>

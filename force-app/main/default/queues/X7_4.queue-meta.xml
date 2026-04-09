@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>7.4 a prospecter</name>
+    <queueMembers>
+        <users>
+            <user>b.legrand@alliancedesenergies.fr</user>
+            <user>c.menier@alliancedesenergies.fr</user>
+            <user>c.filoche@alliancedesenergies.fr</user>
+            <user>j.ouvry@alliancedesenergies.fr</user>
+            <user>m.gelci@alliancedesenergies.fr</user>
+            <user>r.desse@alliancedesenergies.fr</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

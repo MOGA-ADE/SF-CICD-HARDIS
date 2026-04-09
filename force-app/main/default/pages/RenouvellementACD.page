@@ -1,0 +1,164 @@
+<apex:page renderAs="pdf" 
+    controller="VFC009_RenouvellementACDController" 
+    applyBodyTag="false" 
+    applyHtmlTag="false" 
+    showHeader="false">
+    <head>
+        <style>
+            body {
+                background-color: #fff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11pt;
+                padding: 0.5cm;
+                margin: 0px;
+                color: #000;
+                border-top: 0.1cm;
+                border-right: 0;
+                border-bottom: 0cm;
+                border-left: 0;
+                border-color: #234A83;
+                border-style: solid;
+            }
+            h1 {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                text-transform: uppercase;
+                font-size: 13pt;
+                text-decoration: none;
+                margin-bottom: 1.5cm;
+                color: #27457A
+            }
+            .CGV {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 9pt;
+                padding-bottom: 12pt;
+            }
+            .section {
+                margin-bottom: 1cm;
+                text-align: justify ;
+            }
+            .signature-block {
+                margin-top: 1.5cm;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 5px;
+                text-align: left;
+            }
+            .footer {
+                font-size: 9pt;
+                text-align: center;
+                margin-top: 30px;
+            }
+            h3{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                text-align: left;
+                margin-top: 20px;
+            }
+
+
+            .page-break-always {
+                page-break-after: always;
+            }
+
+            .logo{
+                width: 7cm;
+                margin: auto;
+                text-align: center;
+                margin-top:0.8cm;
+                margin-bottom: 0.8cm;
+            }
+
+            .logo_img{
+                width: 7cm;
+            }
+
+            .ds-paraphe-anchor{
+                position: fixed;         /* se répète sur toutes les pages rendues */
+                right: 14px;             /* ajuste finement */
+                bottom: 14px;            /* ajuste finement */
+                color: #ffffff;          /* “invisible” sur fond blanc */
+                font-size: 1px;          /* tout petit */
+            }
+
+
+        </style>
+    </head>
+
+    <body >
+        <div class="page-break-always">
+            <div class="logo"><img src="{!URLFOR($Resource.ACD_LogoADE)}" class="logo_img"></img></div>
+            <h1>Formulaire d'autorisation pour la récupération des données de consommation auprès des gestionnaires de réseaux</h1>
+
+            <div >
+                <h3>Le Client :</h3>
+                La société <strong>{!account.Name}</strong> <br/>Enregistrée sous le numéro SIRET <strong>{!account.siret__c}</strong> Immatriculée au RCS de <br/>
+                Représentée par <strong>{!nomSignataire}</strong> en sa qualité de <strong>{!signataire.Title}</strong>
+            </div>
+
+            <div class="section">
+                <h3>Le Tiers :</h3>
+                La société <strong>ALLIANCE DES ÉNERGIES</strong>, immatriculée au RCS de LYON sous le numéro 88308769400039, ainsi que les partenaires fournisseurs d’énergie* d’ALLIANCE DES ÉNERGIES.
+            </div>
+
+            <div class="section">
+                Par la signature de ce document, le Client autorise expressément le Tiers à demander et à recevoir communication auprès du Gestionnaire de Réseau de Distribution de gaz et/ou d’électricité des données techniques
+                (consommations et profil, capacité journalière en gaz, puissance en électricité et tarif d’acheminement, l’historique des consommations jusqu’à la date de ce consentement, 
+                le flux des consommations jusqu’à la date de fin du consentement, les données contractuelles et techniques, les données publiées, les données informatives et de consommations journalières),
+                associées aux points de livraison dont les références figurent ci-après, en vue de la préparation d’une offre de fourniture de gaz et/ou d’électricité.
+            </div>
+
+            <div class="section">
+                La présente autorisation est conclue pour une durée de douze (12) mois à compter de sa signature.
+            </div>
+
+            <div class="CGV">
+                Le Client accepte expressément que ses données personnelles soient conservées par le Tiers à des fins de gestion et de traçabilité pendant toute la période d’exécution 
+                du contrat ou à défaut pour la durée de douze (12) mois. Conformément à la loi Informatique et Libertés du 6 janvier 1978, le Client dispose d’un droit d’accès, de rectification, 
+                de suppression et d’opposition pour motifs légitimes sur l’ensemble des données le concernant qu’il peut exercer sur simple demande auprès du Tiers et/ou d’Enedis, 
+                34 place des Corolles, 92079 Paris La Défense Cedex.
+            </div>                
+        </div>
+        <div class="section">
+            <h3>Références des points d’énergie concernés :</h3><br/>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Référence compteur</th>
+                        <th>Adresse de consommation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <apex:repeat value="{!listPDE}" var="pde">
+                    <tr>
+                        <td>{!pde.TECH_num_compteur__c}</td>
+                        <td>{!pde.Adresse_de_consommation__c}</td>
+                    </tr>
+                </apex:repeat>
+                </tbody>
+            </table>
+        </div>
+        <div class="signature-block">
+            Fait à : <br/>
+            Le : <br/><br/>
+
+            NOM Prénom : <strong>{!nomSignataire}</strong><br/><br/>
+            SIGNATURE : ___________________________<br/><br/>
+
+            Cachet commercial
+        </div>
+        <div class="ds-paraphe-anchor">[[PARAPHE]]</div>
+        <div class="footer">
+            * Consulter la liste de nos partenaires fournisseurs d’énergie : 
+            <a href="https://alliancedesenergies.fr/fournisseurs-ade/">https://alliancedesenergies.fr/fournisseurs-ade/</a><br/>
+            <br/>
+            © ALLIANCE DES ÉNERGIES – 2024
+        </div>
+    </body>
+</apex:page>

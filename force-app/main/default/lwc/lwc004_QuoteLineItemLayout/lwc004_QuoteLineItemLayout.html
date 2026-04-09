@@ -1,0 +1,717 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={loadPage}>
+        <lightning-record-edit-form object-api-name="QuoteLineItem" record-id={recordId} onsuccess={handleSuccess}>
+            <div class="slds-grid slds-grid_vertical">
+                <div class="slds-col">
+                    <article class="slds-card mgb">
+                        <div class="slds-card__header slds-grid headerCard">
+                          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <div class="slds-media__figure">
+                                <lightning-icon icon-name="standard:account_info" alternative-text="Info" size="small"></lightning-icon>
+                            </div>
+                            <div class="slds-media__body">
+                              <h2 class="slds-card__header-title">Informations</h2>
+                            </div>
+                          </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner bodyCard">
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-output-field field-name="QuoteId">
+                                    </lightning-output-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-output-field field-name="Voir_Opportunite__c">
+                                    </lightning-output-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-output-field field-name="TECH_Siret_Payeur__c"></lightning-output-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-output-field field-name="TECH_PdeReference__c">
+                                    </lightning-output-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-input-field field-name="DebutDeFourniture__c">
+                                    </lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-input-field field-name="Nouvelle_Echeance__c">
+                                    </lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-input-field field-name="DureeEngagement__c">
+                                    </lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning-input-field field-name="UnitPrice">
+                                    </lightning-input-field>
+                                </div>
+                                <template if:true={showCard_Gaz}>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CARGaz__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TECH_Profil__c">
+                                        </lightning-output-field>
+                                    </div>
+                                </template>
+                                <template if:false={showCard_Gaz}>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CAR_New__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Puissance_souscrite__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="slds-col">
+                    <template if:true={showCard_Gaz}>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:flow" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Fourniture</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="AbonnementMois__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixMolecule__c">
+                                        </lightning-input-field>
+                                    </div>               
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:approval" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Acheminement/Taxes</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <template if:true={isCEESoumis}>
+                                            <lightning-input-field field-name="CeeMwh__c">
+                                            </lightning-input-field>
+                                        </template>
+                                        <template if:false={isCEESoumis}>
+                                            <lightning-output-field field-name="CeeMwh__c">
+                                            </lightning-output-field>
+                                        </template>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TICGN__c">
+                                        </lightning-output-field>
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="FraisTransportDistributionCapacite__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CTA__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:checkout" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Budget</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TECH_Budget__c">
+                                        </lightning-output-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="Budget_TTC__c"></lightning-output-field>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div class="slds-col">
+                    <template if:true={showCard_C1C4}>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:custom_notification" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Fourniture</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="AbonnementMois__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PointesMWh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_Pointe__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHphMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HPH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHchMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HCH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHpeMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHceMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HCE__c"></lightning-input-field>
+                                    </div>                   
+                                    
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:calibration" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">CEE/Capacité</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <template if:true={isCEESoumis}>
+                                            <lightning-input-field field-name="CeeMwh__c">
+                                            </lightning-input-field>
+                                        </template>
+                                        <template if:false={isCEESoumis}>
+                                            <lightning-output-field field-name="CeeMwh__c">
+                                            </lightning-output-field>
+                                        </template>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_Pointes__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HPH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HCH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HCE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:approval" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Taxes</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CSPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:checkout" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Budget</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TECH_Budget__c">
+                                        </lightning-output-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="Budget_TTC__c">
+                                        </lightning-output-field>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div class="slds-col">
+                    <template if:true={showCard_C5CU}>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:custom_notification" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Fourniture</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="AbonnementMois__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixBase__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_Base__c">
+                                        </lightning-input-field>
+                                    </div>                        
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:calibration" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">CEE/Capacité</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <template if:true={isCEESoumis}>
+                                            <lightning-input-field field-name="CeeMwh__c">
+                                            </lightning-input-field>
+                                        </template>
+                                        <template if:false={isCEESoumis}>
+                                            <lightning-output-field field-name="CeeMwh__c">
+                                            </lightning-output-field>
+                                        </template>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_Base__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:approval" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Taxes</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CSPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:checkout" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Budget</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TECH_Budget__c">
+                                        </lightning-output-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="Budget_TTC__c">
+                                        </lightning-output-field>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div class="slds-col">
+                    <template if:true={showCard_C5MU}>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:custom_notification" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Fourniture</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="AbonnementMois__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHP__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="ConsoHP__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHC__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="ConsoHC__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:calibration" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">CEE/Capacité</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <template if:true={isCEESoumis}>
+                                            <lightning-input-field field-name="CeeMwh__c">
+                                            </lightning-input-field>
+                                        </template>
+                                        <template if:false={isCEESoumis}>
+                                            <lightning-output-field field-name="CeeMwh__c">
+                                            </lightning-output-field>
+                                        </template>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HP__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HC__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:approval" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Taxes</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CSPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:checkout" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Budget</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TECH_Budget__c">
+                                        </lightning-output-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="Budget_TTC__c">
+                                        </lightning-output-field>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div class="slds-col">
+                    <template if:true={showCard_C54Postes}>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:custom_notification" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Fourniture</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="AbonnementMois__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHphMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HPH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHchMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HCH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHpeMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="PrixHceMwh__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Conso_HCE__c"></lightning-input-field>
+                                    </div>             
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:calibration" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">CEE/Capacité</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <template if:true={isCEESoumis}>
+                                            <lightning-input-field field-name="CeeMwh__c">
+                                            </lightning-input-field>
+                                        </template>
+                                        <template if:false={isCEESoumis}>
+                                            <lightning-output-field field-name="CeeMwh__c">
+                                            </lightning-output-field>
+                                        </template>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HPH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HCH__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="Capa_HCE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:approval" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Taxes</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-input-field field-name="CSPE__c">
+                                        </lightning-input-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slds-card mgb">
+                            <div class="slds-card__header slds-grid headerCard">
+                              <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:checkout" alternative-text="Info" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2 class="slds-card__header-title">Budget</h2>
+                                </div>
+                              </header>
+                            </div>
+                            <div class="slds-card__body slds-card__body_inner bodyCard">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="TECH_Budget__c">
+                                        </lightning-output-field>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12">
+                                        <lightning-output-field field-name="Budget_TTC__c">
+                                        </lightning-output-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div class="slds-col">
+                    <article class="slds-card mgb">
+                        <div class="slds-card__body slds-card__body_inner">
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div class="slds-col slds-size_10-of-12">
+                                </div>
+                                <div class="slds-col slds-size_2-of-12 buttonMAJ">
+                                    <lightning-button  variant="brand" type="submit" label="Mettre à jour" onclick={handleClick}>
+                                    </lightning-button>     
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </template>
+</template>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motif_hors_cible_manquant</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Hors Cible&quot;),
+    ISBLANK(TEXT(Motif_hors_cible__c))
+)</errorConditionFormula>
+    <errorDisplayField>Motif_hors_cible__c</errorDisplayField>
+    <errorMessage>Merci de renseigner un motif de hors cible</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Permet de monitorer la marge par defaut et le seuil minimal et maximal</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Marge PEP&apos;s</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,66 @@
+{
+  "appPageId" : "f9f2494f-415a-4e39-a047-76d6a255a59f",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d1bfe3e8-3c3b-4dba-bff8-29b20dc6dda9",
+  "label" : "Record Detail",
+  "regions" : [ {
+    "id" : "8d651c4e-0723-4232-bd6e-9a249ecb3897",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "9fa43c90-c0b0-4fdc-8fe0-67a63491b357",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "showLegacyActivityComposer" : false,
+        "tab1Type" : "details",
+        "tab2Type" : "related",
+        "tab3Type" : "chatter",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "d50faba2-5f72-4036-a1bb-c2dc506c94f2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f2545b61-30f9-43b5-b45e-e9d9504cefc0",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "75122275-f89a-4a74-a8df-77e1f4da508e",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "53ac7c7b-9565-4b57-b7b6-0b3e9d2385fe",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "635ad14c-11b2-497b-ae19-a42c08ba6957",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail"
+}

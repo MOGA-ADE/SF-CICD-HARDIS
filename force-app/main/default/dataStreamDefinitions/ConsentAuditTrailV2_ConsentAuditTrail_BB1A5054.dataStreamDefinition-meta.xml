@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>ConsentAuditTrailV2_7a7b69f7_1c8e_44d5_96e7_60809ff17c24</dataConnector>
+    <dataConnectorType>IngestApi</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>INGESTAPI</dataPlatformDataSetItemName>
+    <dataSource>ConsentAuditTrailV2_7a7b69f7_1c8e_44d5_96e7_60809ff17c24</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>ConsentAuditTrailV2-ConsentAuditTrail</masterLabel>
+    <mktDataLakeObject>ConsentAuditTrailV2_ConsentAudi_BB1A5054__dll</mktDataLakeObject>
+    <mktDataTranObject>ConsentAuditTrailV2_ConsentAudi_BB1A5054</mktDataTranObject>
+</DataStreamDefinition>

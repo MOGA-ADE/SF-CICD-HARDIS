@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Batiment a plus de 2 ans ? --></label>
+    <name>Batiment_a_plus_de_2_ans__c</name>
+</CustomFieldTranslation>

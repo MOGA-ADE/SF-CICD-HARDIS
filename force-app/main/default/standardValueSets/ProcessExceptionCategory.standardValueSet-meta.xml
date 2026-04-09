@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Activation de commande</fullName>
+        <default>true</default>
+        <label>Activation de commande</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Approbation de commande</fullName>
+        <default>false</default>
+        <label>Approbation de commande</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exécution</fullName>
+        <default>false</default>
+        <label>Exécution</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Paiement</fullName>
+        <default>false</default>
+        <label>Paiement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Facturation</fullName>
+        <default>false</default>
+        <label>Facturation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Place Order</fullName>
+        <default>false</default>
+        <label>Place Order</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Order To Asset</fullName>
+        <default>false</default>
+        <label>Order To Asset</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Order Item Summary To Asset</fullName>
+        <default>false</default>
+        <label>Order Item Summary To Asset</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Order To Billing Schedule</fullName>
+        <default>false</default>
+        <label>Order To Billing Schedule</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Syndication du catalogue</fullName>
+        <default>false</default>
+        <label>Syndication du catalogue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Paiement de l’abonnement</fullName>
+        <default>false</default>
+        <label>Paiement de l’abonnement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Annuler</fullName>
+        <default>false</default>
+        <label>Annuler</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Crédit de paiement</fullName>
+        <default>false</default>
+        <label>Crédit de paiement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service de livraison Commerce</fullName>
+        <default>false</default>
+        <label>Service de livraison Commerce</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Concurrence identifiée --></label>
+    <name>Concurrence_identifiee__c</name>
+    <picklistValues>
+        <masterLabel>Ne sais pas</masterLabel>
+        <translation><!-- Ne sais pas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non</masterLabel>
+        <translation><!-- Non --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oui</masterLabel>
+        <translation><!-- Oui --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

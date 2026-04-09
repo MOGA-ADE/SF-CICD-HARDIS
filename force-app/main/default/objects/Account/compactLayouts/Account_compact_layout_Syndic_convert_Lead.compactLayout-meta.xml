@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_compact_layout_Syndic_convert_Lead</fullName>
+    <fields>Name</fields>
+    <fields>Syndic__c</fields>
+    <label>Account compact layout Syndic convert Lead</label>
+</CompactLayout>

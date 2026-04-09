@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BudgetHTTan__c</fullName>
+    <formula>BudgetFourniture__c +BudgetObligationsMWH__c + Budget_Acheminement_Annuel_HTT__c + Budget_Taxes_annuel_HTVA__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Budget Annuel Estimé + Obligations(€/an)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

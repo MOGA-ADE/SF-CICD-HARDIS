@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- API : Date de la demande --></label>
+    <name>API_Date_demande__c</name>
+</CustomFieldTranslation>

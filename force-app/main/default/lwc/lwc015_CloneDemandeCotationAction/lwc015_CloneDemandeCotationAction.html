@@ -1,0 +1,14 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-quick-action-panel header="Cloner la demande">
+        <div class="actionBody">
+            <lightning-spinner if:true={showSpinner} alternative-text="Loading" size="medium"></lightning-spinner>
+            <lightning-input type="text" label="Nom de la nouvelle demande de cotation" value={cotationName} onchange={changeName}></lightning-input>
+            <lightning-input type="datetime" label="Nouvelle date de RDV" value={cotationRDV} onchange={changeRDV}></lightning-input>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Annuler" onclick={closeAction}></lightning-button>
+            <lightning-button variant="brand" label="Cloner" class="slds-m-left_x-small" onclick={cloneRecord}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

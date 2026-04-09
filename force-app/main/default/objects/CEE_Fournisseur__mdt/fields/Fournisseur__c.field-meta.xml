@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fournisseur__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Fournisseur</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Dyneff</fullName>
+                <default>true</default>
+                <label>Dyneff</label>
+            </value>
+            <value>
+                <fullName>Enovos</fullName>
+                <default>false</default>
+                <label>Enovos</label>
+            </value>
+            <value>
+                <fullName>Gaz Européen</fullName>
+                <default>false</default>
+                <label>Gaz Européen</label>
+            </value>
+            <value>
+                <fullName>MET Energie</fullName>
+                <default>false</default>
+                <label>MET Energie</label>
+            </value>
+            <value>
+                <fullName>OHM Energie</fullName>
+                <default>false</default>
+                <label>OHM Energie</label>
+            </value>
+            <value>
+                <fullName>SEFE Energy</fullName>
+                <default>false</default>
+                <label>SEFE Energy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

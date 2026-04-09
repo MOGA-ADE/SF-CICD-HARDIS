@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "41b47d2b-5909-47a8-9dab-9e25ffcd2116",
+  "appPageId" : "f8ea84a1-88eb-4d26-b3be-6be6b20f8905",
+  "configurationTags" : [ ],
+  "devName" : "Symposium__c",
+  "id" : "9f9a2ad1-e37f-4aeb-b9d2-de9c56571f16",
+  "label" : "Symposium",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-symposium",
+  "type" : "route",
+  "urlPrefix" : "symposium"
+}

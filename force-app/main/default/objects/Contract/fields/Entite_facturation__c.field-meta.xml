@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entite_facturation__c</fullName>
+    <label>Entité de facturation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>FournisseurPicklist__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ENGIE E &amp; C</fullName>
+                <default>false</default>
+                <label>ENGIE E &amp; C</label>
+            </value>
+            <value>
+                <fullName>ENGIE GC PRIVE</fullName>
+                <default>false</default>
+                <label>ENGIE GC PRIVE</label>
+            </value>
+            <value>
+                <fullName>ENGIE GC PUBLIC</fullName>
+                <default>false</default>
+                <label>ENGIE GC PUBLIC</label>
+            </value>
+            <value>
+                <fullName>ENGIE PRO</fullName>
+                <default>false</default>
+                <label>ENGIE PRO</label>
+            </value>
+            <value>
+                <fullName>SEFE Energy</fullName>
+                <default>false</default>
+                <label>SEFE Energy</label>
+            </value>
+            <value>
+                <fullName>SEFE INCUBATEUR</fullName>
+                <default>false</default>
+                <label>SEFE INCUBATEUR</label>
+            </value>
+            <value>
+                <fullName>PRIMEO ENERGIE PEF</fullName>
+                <default>false</default>
+                <label>PRIMEO ENERGIE PEF</label>
+            </value>
+            <value>
+                <fullName>PRIMEO ENERGIE PEGC</fullName>
+                <default>false</default>
+                <label>PRIMEO ENERGIE PEGC</label>
+            </value>
+            <value>
+                <fullName>Endesa</fullName>
+                <default>false</default>
+                <label>Endesa</label>
+            </value>
+            <value>
+                <fullName>ENDESA GC</fullName>
+                <default>false</default>
+                <label>ENDESA GC</label>
+            </value>
+            <value>
+                <fullName>TOTAL HORIZON</fullName>
+                <default>false</default>
+                <label>TOTAL HORIZON</label>
+            </value>
+            <value>
+                <fullName>TOTAL GC</fullName>
+                <default>false</default>
+                <label>TOTAL GC</label>
+            </value>
+            <value>
+                <fullName>VATTENFALL BLEU PRO</fullName>
+                <default>false</default>
+                <label>VATTENFALL BLEU PRO</label>
+            </value>
+            <value>
+                <fullName>VATTENFALL GC</fullName>
+                <default>false</default>
+                <label>VATTENFALL GC</label>
+            </value>
+            <value>
+                <fullName>OHM Grille</fullName>
+                <default>false</default>
+                <label>OHM Grille</label>
+            </value>
+            <value>
+                <fullName>OHM Mid Market</fullName>
+                <default>false</default>
+                <label>OHM Mid Market</label>
+            </value>
+            <value>
+                <fullName>OHM GC</fullName>
+                <default>false</default>
+                <label>OHM GC</label>
+            </value>
+            <value>
+                <fullName>Gaz Européen	Paris</fullName>
+                <default>false</default>
+                <label>Gaz Européen	Paris</label>
+            </value>
+            <value>
+                <fullName>Gaz Européen	Lyon</fullName>
+                <default>false</default>
+                <label>Gaz Européen	Lyon</label>
+            </value>
+            <value>
+                <fullName>Gaz Européen	Sud</fullName>
+                <default>false</default>
+                <label>Gaz Européen	Sud</label>
+            </value>
+            <value>
+                <fullName>Gaz Européen Sud-Ouest</fullName>
+                <default>false</default>
+                <label>Gaz Européen Sud-Ouest</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>OHM Energie</controllingFieldValue>
+            <valueName>OHM Grille</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OHM Energie</controllingFieldValue>
+            <valueName>OHM Mid Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OHM Energie</controllingFieldValue>
+            <valueName>OHM GC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Endesa</controllingFieldValue>
+            <valueName>Endesa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Endesa</controllingFieldValue>
+            <valueName>ENDESA GC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engie</controllingFieldValue>
+            <valueName>ENGIE E &amp; C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engie</controllingFieldValue>
+            <valueName>ENGIE GC PRIVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engie</controllingFieldValue>
+            <valueName>ENGIE GC PUBLIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engie</controllingFieldValue>
+            <valueName>ENGIE PRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gaz Européen</controllingFieldValue>
+            <valueName>Gaz Européen	Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gaz Européen</controllingFieldValue>
+            <valueName>Gaz Européen	Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gaz Européen</controllingFieldValue>
+            <valueName>Gaz Européen	Sud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gaz Européen</controllingFieldValue>
+            <valueName>Gaz Européen Sud-Ouest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Primeo Energie</controllingFieldValue>
+            <valueName>PRIMEO ENERGIE PEF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Primeo Energie</controllingFieldValue>
+            <valueName>PRIMEO ENERGIE PEGC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEFE Energy</controllingFieldValue>
+            <valueName>SEFE Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEFE Energy</controllingFieldValue>
+            <valueName>SEFE INCUBATEUR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TotalEnergies</controllingFieldValue>
+            <valueName>TOTAL HORIZON</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TotalEnergies</controllingFieldValue>
+            <valueName>TOTAL GC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vattenfall</controllingFieldValue>
+            <valueName>VATTENFALL BLEU PRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vattenfall</controllingFieldValue>
+            <valueName>VATTENFALL GC</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

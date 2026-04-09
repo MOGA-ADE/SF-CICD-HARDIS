@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>LWC Data Table</masterLabel>
+    <description>PDE Lightning data table for screen flow</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <propertyType name="t" extends="SObject" label="SObject" description="Generic sObject data type used for input sObject properties" />
+            <property name="input" type="{t[]}" label="SObjects à passé au lwc" role="inputOnly"/>
+            <property name="flowName" type="String" label="Nom du flow à passé au lwc" role="inputOnly" default=""/>
+            <property name="selected" type="{t[]}" label="SObjects sélectionné par le lwc" />
+            <property name="selectedRowsCount" type="Integer" label="Nb elements" role="outputOnly" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

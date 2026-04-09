@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nom_section__c</fullName>
+    <label>Nom de section</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN</fullName>
+                <default>false</default>
+                <label>ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN</label>
+            </value>
+            <value>
+                <fullName>ACTIVITÉS FINANCIÈRES ET D&apos;ASSURANCE</fullName>
+                <default>false</default>
+                <label>ACTIVITÉS FINANCIÈRES ET D&apos;ASSURANCE</label>
+            </value>
+            <value>
+                <fullName>ACTIVITÉS IMMOBILIÈRES</fullName>
+                <default>false</default>
+                <label>ACTIVITÉS IMMOBILIÈRES</label>
+            </value>
+            <value>
+                <fullName>ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES</fullName>
+                <default>false</default>
+                <label>ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES</label>
+            </value>
+            <value>
+                <fullName>ADMINISTRATION PUBLIQUE</fullName>
+                <default>false</default>
+                <label>ADMINISTRATION PUBLIQUE</label>
+            </value>
+            <value>
+                <fullName>AGRICULTURE, SYLVICULTURE ET PÊCHE</fullName>
+                <default>false</default>
+                <label>AGRICULTURE, SYLVICULTURE ET PÊCHE</label>
+            </value>
+            <value>
+                <fullName>ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES</fullName>
+                <default>false</default>
+                <label>ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES</label>
+            </value>
+            <value>
+                <fullName>AUTRES ACTIVITÉS DE SERVICES</fullName>
+                <default>false</default>
+                <label>AUTRES ACTIVITÉS DE SERVICES</label>
+            </value>
+            <value>
+                <fullName>COMMERCE ; RÉPARATION D&apos;AUTOMOBILES ET DE MOTOCYCLES</fullName>
+                <default>false</default>
+                <label>COMMERCE ; RÉPARATION D&apos;AUTOMOBILES ET DE MOTOCYCLES</label>
+            </value>
+            <value>
+                <fullName>CONSTRUCTION</fullName>
+                <default>false</default>
+                <label>CONSTRUCTION</label>
+            </value>
+            <value>
+                <fullName>ENSEIGNEMENT</fullName>
+                <default>false</default>
+                <label>ENSEIGNEMENT</label>
+            </value>
+            <value>
+                <fullName>HÉBERGEMENT ET RESTAURATION</fullName>
+                <default>false</default>
+                <label>HÉBERGEMENT ET RESTAURATION</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE MANUFACTURIÈRE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE MANUFACTURIÈRE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIES EXTRACTIVES</fullName>
+                <default>false</default>
+                <label>INDUSTRIES EXTRACTIVES</label>
+            </value>
+            <value>
+                <fullName>INFORMATION ET COMMUNICATION</fullName>
+                <default>false</default>
+                <label>INFORMATION ET COMMUNICATION</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION ET DISTRIBUTION D&apos;EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION</fullName>
+                <default>false</default>
+                <label>PRODUCTION ET DISTRIBUTION D&apos;EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION ET DISTRIBUTION D&apos;ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D&apos;AIR CONDITIONNÉ</fullName>
+                <default>false</default>
+                <label>PRODUCTION ET DISTRIBUTION D&apos;ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D&apos;AIR CONDITIONNÉ</label>
+            </value>
+            <value>
+                <fullName>SANTÉ HUMAINE ET ACTION SOCIALE</fullName>
+                <default>false</default>
+                <label>SANTÉ HUMAINE ET ACTION SOCIALE</label>
+            </value>
+            <value>
+                <fullName>TRANSPORTS ET ENTREPOSAGE</fullName>
+                <default>false</default>
+                <label>TRANSPORTS ET ENTREPOSAGE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

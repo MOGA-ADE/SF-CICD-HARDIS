@@ -1,0 +1,72 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Header and Footer",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"19c9790e-2d61-4ec2-ae8a-68f79c8a1a7c\",\"columns\":[{\"UUID\":\"2354da44-2024-47ff-bd4e-78bb3578ba59\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "id" : "2354da44-2024-47ff-bd4e-78bb3578ba59",
+            "name" : "headerSection",
+            "title" : "En-tête du thème",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "19c9790e-2d61-4ec2-ae8a-68f79c8a1a7c",
+          "type" : "component"
+        } ],
+        "id" : "21a08c70-471d-43ac-8281-1d6d07bab541",
+        "name" : "header",
+        "title" : "header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"2b67fe45-f5b6-489e-b4ff-c48fd65ab5fb\",\"columns\":[{\"UUID\":\"60bc2200-124e-4931-91af-d016885ea132\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "id" : "60bc2200-124e-4931-91af-d016885ea132",
+            "name" : "footerSection",
+            "title" : "Pied de page du thème",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "2b67fe45-f5b6-489e-b4ff-c48fd65ab5fb",
+          "type" : "component"
+        } ],
+        "id" : "34baa0b5-9f33-49ba-b05b-635406a6a38a",
+        "name" : "footer",
+        "title" : "footer",
+        "type" : "region"
+      } ],
+      "definition" : "experience_marketing_landing:headerAndFooter",
+      "id" : "19ad1b00-9f96-4128-99b8-39088a282ed2",
+      "type" : "component"
+    }
+  },
+  "urlName" : "header-and-footer"
+}

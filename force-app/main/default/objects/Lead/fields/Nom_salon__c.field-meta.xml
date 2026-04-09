@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nom_salon__c</fullName>
+    <label>Nom du salon</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Nom_salon</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Atlantica - Niort</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Agro Haut de France – Arras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Analyse Industrielle &amp; Instrumentation - Paris Champerret</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>AGECOTEL – Nice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>AutoCar Expo - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Business Expo – Amiens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Beauté Sélection – Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Congrès National UNIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>CIEL (Carrefour de l&apos;immobilier d&apos;entreprise Lyonnais) – Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Congrès National FNAIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Congrès SYNERPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Congrès Réunir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>CIEL - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Congrès HLM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Congrès HLM - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>CFIA – Rennes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>EquipHotel - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>EQUIP AUTO - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Enviropro - Angers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Franchise expo - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>FitLyon - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>FCTM ESOPE - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Funexpo - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Funéraire Paris – Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Franchise Event – Rennes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Flotauto - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Food in Sud - Marseille</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Global Industrie - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon de la copropriete - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon Expert comptable - Aura - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIVAL - Angers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Packaging Week - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIRAH Europain – Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Open Énergie – Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Rest&apos;Hotel et métiers de bouche – Rennes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>S.I.T.L – Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIA - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Rencontre Régionale Mobilians</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIEC – Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon des métiers de bouche – Montpellier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Horesta - Lille</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Innov Agri - Outarville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>In salon – Nice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Journée des Conseils Syndicaux UNIS - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SETT – Montpellier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon Alpin – Albertville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon expert-comptable - Lons-le-Saunier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon Comptoir et Fournil - La Rochelle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon Vendéeprho - La Roche Sur Yon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIMODEC - La-Roche-sur-Foron</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>PROBIO Ouest - Angers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>INNOMOOV - Avignon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIMI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon Grand Ouest - Nantes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SOLUCOP - Nice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Pollutec - Paris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Pollutec - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SIRHA - Lyon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon Vienneprho</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SOLUCOP - Toulouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SOLUCOP - Lille</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SELI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SPACE Elevage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Serbotel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Energy Class Factory – Lille</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Fetexpo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>SEPEM - Douai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Forum Energy Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Salon de l&apos;Environnement de Travail et des Achats -  SETA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Food Hotel Tech</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Ouest industrie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Euromove</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Forum europ&apos;energies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salon</controllingFieldValue>
+            <valueName>Mondial de l&apos;Auto</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

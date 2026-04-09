@@ -1,0 +1,40 @@
+.buttonContainer{
+    display:flex;
+    align-items: end;
+    height: 100%;
+}
+
+.title{
+    text-align: center;
+}
+
+.spinnerContainer{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.borderBottom {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.marginBottom {
+    margin-bottom: 30px;
+}
+
+.resetBGK {
+    background-image: none;
+    background-color: #F3F3F3;
+    text-shadow: none;
+}
+
+.flexP {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Code_NAF__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Code NAF</label>
+    <referenceTo>CodeNAF__c</referenceTo>
+    <relationshipLabel>Entités Juridiques</relationshipLabel>
+    <relationshipName>EntitesJuridiques</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

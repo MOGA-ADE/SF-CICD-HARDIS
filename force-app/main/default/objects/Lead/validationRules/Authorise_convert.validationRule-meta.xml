@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Authorise_convert</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(IsConverted,
+				NOT(ISPICKVAL(Status,&apos;ACD reçu&apos;)),
+				NOT(ISPICKVAL(Status,&apos;Convertie&apos;)),
+			 RecordTypeId = &apos;0122o0000003qgYAAQ&apos;)</errorConditionFormula>
+    <errorMessage>Merci de mettre le status à &apos;ACD reçu&apos; ou &apos;Convertie&apos; avant de convertir la piste en compte.</errorMessage>
+</ValidationRule>

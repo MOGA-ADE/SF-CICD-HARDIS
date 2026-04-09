@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Créer un record Document__c privé afin de pouvoir y stocker les fichiers relatif à un syndic</description>
+    <flowDefinition>Creation_Document_Syndic</flowDefinition>
+    <label>Déposer des fichiers</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

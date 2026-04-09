@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ce champs signifie que le PDE est associé à un contrat signé par ADE/PWE dont la date de fin de contrat n&apos;est pas encore dépassée. --></help>
+    <label><!-- Contrat actif --></label>
+    <name>Contrat_actif__c</name>
+</CustomFieldTranslation>

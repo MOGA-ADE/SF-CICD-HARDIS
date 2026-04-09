@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_QLI_Remplie__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+		ISPICKVAL(PDE__r.FTA__c, &quot;BT &lt;= 36 kVA - CU&quot;),
+        NOT(ISNULL(Nouvelle_Echeance__c)),
+        PrixBase__c != 0
+    ),
+    &apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+    IF(
+        AND(
+			ISPICKVAL(PDE__r.FTA__c, &quot;BT &lt;= 36 kVA - MU&quot;),
+            PrixHP__c != 0,
+            PrixHC__c != 0,
+            NOT(ISNULL(Nouvelle_Echeance__c))
+        ),
+        &apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+            IF(
+                AND(
+                    OR(
+						ISPICKVAL(PDE__r.FTA__c, &quot;BT &lt;= 36Kva - CU 4 postes&quot;),
+						ISPICKVAL(PDE__r.FTA__c, &quot;BT &lt;= 36Kva - MU 4 postes&quot;),
+						ISPICKVAL(PDE__r.FTA__c, &quot;BT &gt; 36 kVA - LU&quot;),
+						ISPICKVAL(PDE__r.FTA__c, &quot;BT &gt; 36 kVA - CU&quot;)),
+                    PrixHphMwh__c != 0,
+                    PrixHchMwh__c != 0,
+                    PrixHpeMwh__c != 0,
+                    PrixHceMwh__c != 0,
+                    NOT(ISNULL(Nouvelle_Echeance__c))
+                ),
+                &apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+                    IF(
+                        AND(
+                            OR( 
+								ISPICKVAL(PDE__r.FTA__c, &quot;HTA - PF - CU&quot;),
+								ISPICKVAL(PDE__r.FTA__c, &quot;HTA - PF - LU&quot;),
+								ISPICKVAL(PDE__r.FTA__c, &quot;HTA - PM - CU&quot;),
+								ISPICKVAL(PDE__r.FTA__c, &quot;HTA - PM - LU&quot;)),
+                            PrixHphMwh__c != 0,
+                            PrixHchMwh__c != 0,
+                            PrixHpeMwh__c != 0,
+                            PrixHceMwh__c != 0,
+                            PointesMWh__c != 0,
+                            NOT(ISNULL(Nouvelle_Echeance__c))
+                        ),
+                        &apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+                    IF(
+                        AND(TECH_RT__c = &apos;PDE_Gaz&apos;,
+                            AbonnementMois__c != 0,
+                            PrixMolecule__c != 0,
+                            NOT(ISNULL(Nouvelle_Echeance__c))),
+                            &apos;&lt;span style=&quot;border-radius: 15px;background:green; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;√&lt;/span&gt;&apos;,
+                            &apos;&lt;span style=&quot;border-radius: 15px;background:red; padding: 4px; font-weight: bold; color: #FFF&quot;&gt;X&lt;/span&gt;&apos;
+)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>QLI Remplie</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

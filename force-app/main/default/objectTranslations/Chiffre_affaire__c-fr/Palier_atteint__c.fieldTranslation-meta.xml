@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Palier atteint --></label>
+    <name>Palier_atteint__c</name>
+</CustomFieldTranslation>

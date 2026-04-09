@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Economie Identifiée suite au TURPE --></help>
+    <label><!-- Economie Identifiée (€HT/an) --></label>
+    <name>EconomieIdentifiee__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FTA__c</fullName>
+    <description>ELEC</description>
+    <label>FTA</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Segment__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BT &lt;= 36 kVA - CU</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36 kVA - CU</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36 kVA - MU</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36 kVA - MU</label>
+            </value>
+            <value>
+                <fullName>BT &gt; 36 kVA - CU</fullName>
+                <default>false</default>
+                <label>BT &gt; 36 kVA - CU</label>
+            </value>
+            <value>
+                <fullName>BT &gt; 36 kVA - LU</fullName>
+                <default>false</default>
+                <label>BT &gt; 36 kVA - LU</label>
+            </value>
+            <value>
+                <fullName>HTA - PF - CU</fullName>
+                <default>false</default>
+                <label>HTA - PF - CU</label>
+            </value>
+            <value>
+                <fullName>HTA - PF - LU</fullName>
+                <default>false</default>
+                <label>HTA - PF - LU</label>
+            </value>
+            <value>
+                <fullName>HTA - PM - CU</fullName>
+                <default>false</default>
+                <label>HTA - PM - CU</label>
+            </value>
+            <value>
+                <fullName>HTA - PM - LU</fullName>
+                <default>false</default>
+                <label>HTA - PM - LU</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36Kva - CU 4 postes</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36Kva - CU 4 postes</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36Kva - MU 4 postes</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36Kva - MU 4 postes</label>
+            </value>
+            <value>
+                <fullName>BT &lt;= 36 kVA - LU EP</fullName>
+                <default>false</default>
+                <label>BT &lt;= 36 kVA - LU EP</label>
+            </value>
+            <value>
+                <fullName>Aucun</fullName>
+                <default>false</default>
+                <label>Aucun</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>BT &lt;= 36 kVA - CU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>BT &lt;= 36 kVA - MU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>BT &lt;= 36Kva - CU 4 postes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>BT &lt;= 36Kva - MU 4 postes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C5</controllingFieldValue>
+            <valueName>BT &lt;= 36 kVA - LU EP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <valueName>BT &gt; 36 kVA - CU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C4</controllingFieldValue>
+            <valueName>BT &gt; 36 kVA - LU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <valueName>HTA - PF - CU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <valueName>HTA - PF - LU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <valueName>HTA - PM - CU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C3</controllingFieldValue>
+            <controllingFieldValue>C2</controllingFieldValue>
+            <controllingFieldValue>C1</controllingFieldValue>
+            <valueName>HTA - PM - LU</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
