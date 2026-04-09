@@ -103,7 +103,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.11.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000JoE2SAK
     SubscriberPackageId: 0331Q0000015PlGQAU
     SubscriberPackageName: Marketing Analytics
