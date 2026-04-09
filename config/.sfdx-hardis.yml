@@ -13,7 +13,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 2.26.0.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000piiuCAA
     SubscriberPackageId: 0332p000000EBa1AAG
     SubscriberPackageName: ELLISPHERE
@@ -23,7 +23,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 2.60.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000kqaiCAA
     SubscriberPackageId: 033b0000000Pf2AAAS
     SubscriberPackageName: Declarative Lookup Rollup Summaries Tool
@@ -33,7 +33,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 2.19.0.8
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000pij9CAA
     SubscriberPackageId: 0336F0000005OQLQA2
     SubscriberPackageName: CMTD Enhanced Related List
@@ -43,7 +43,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 3.3.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000kqZ6CAI
     SubscriberPackageId: 0334p000000AQHEAA4
     SubscriberPackageName: Dynamic Flow Progress
@@ -53,7 +53,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 2.0.0.3
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000pin6CAA
     SubscriberPackageId: 0332w000000LaV2AAK
     SubscriberPackageName: RecordClone
@@ -63,7 +63,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.6.0.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000VMtWCAW
     SubscriberPackageId: 033U00000008YtFIAU
     SubscriberPackageName: HubSpot Integration
@@ -73,7 +73,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 3.0.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o000000kqdwCAA
     SubscriberPackageId: 0336A000000R2HGQA0
     SubscriberPackageName: Docusign Apps Launcher
@@ -83,7 +83,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 7.14.2.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o0000003HkJCAU
     SubscriberPackageId: 033400000008lMWAAY
     SubscriberPackageName: Pardot
@@ -93,7 +93,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 5.9.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000IpvKSAS
     SubscriberPackageId: 0331Q000000NyrBQAS
     SubscriberPackageName: Marketing Setup Objects
@@ -113,7 +113,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.2.0.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A32o0000003HjVCAU
     SubscriberPackageId: 033f40000004aGxAAI
     SubscriberPackageName: b2bmaIntegration
@@ -133,7 +133,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 3.21.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000JoKUSA0
     SubscriberPackageId: 0331Q000000Wr6wQAC
     SubscriberPackageName: Salesforce Data Cloud - Flow Reports
@@ -143,7 +143,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.2.0.4
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000IpwwSAC
     SubscriberPackageId: 033EE0000000clFYAQ
     SubscriberPackageName: Salesforce Data Cloud - Flow Integration
@@ -153,7 +153,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.7.0.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000JoHGSA0
     SubscriberPackageId: 0331Q000000YnuTQAS
     SubscriberPackageName: UMA Analytics (SMS)
@@ -163,7 +163,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.9.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000IpleSAC
     SubscriberPackageId: 0331Q000000kZz6QAE
     SubscriberPackageName: MessagingEventsSms
@@ -173,7 +173,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.9.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000IpiQSAS
     SubscriberPackageId: 0331Q000000oXeAQAU
     SubscriberPackageName: UnifiedMessagingConsent
@@ -183,7 +183,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 1.5.0.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000Ipk2SAC
     SubscriberPackageId: 0331Q0000011HLVQA2
     SubscriberPackageName: UnifiedWhatsAppPackage
@@ -193,7 +193,7 @@ installedPackages:
     SubscriberPackageVersionNumber: 258.0.0.2
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
   - Id: 0A3aT000000IpqUSAS
     SubscriberPackageId: 033EE00000014BFYAY
     SubscriberPackageName: MessagingEventsEmailEngagement
@@ -203,4 +203,4 @@ installedPackages:
     SubscriberPackageVersionNumber: 2.2.0.1
     VersionSettings: namespace
     installOnScratchOrgs: false
-    installDuringDeployments: true
+    installDuringDeployments: false
