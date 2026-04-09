@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Ellisphere</label>
+    <protected>false</protected>
+    <values>
+        <field>contractId__c</field>
+        <value xsi:type="xsd:string">46830</value>
+    </values>
+    <values>
+        <field>password__c</field>
+        <value xsi:type="xsd:string">7MEPT28QS4PT</value>
+    </values>
+    <values>
+        <field>productId__c</field>
+        <value xsi:type="xsd:string">101030</value>
+    </values>
+    <values>
+        <field>userId__c</field>
+        <value xsi:type="xsd:string">NN421031</value>
+    </values>
+</CustomMetadata>

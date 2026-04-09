@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LogoCompactLayout__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( TECH_fournisseur__c,
+&quot;Antargaz&quot;,IMAGE(&quot;/resource/Logos/antargaz.png&quot;,&quot;Antargaz&quot;, 50, 100),
+&quot;Alterna&quot;,IMAGE(&quot;/resource/Logos/alterna.png&quot;,&quot;Alterna&quot;, 50, 100),
+&quot;Dyneff&quot;,IMAGE(&quot;/resource/Logos/dyneff.png&quot;,&quot;Dyneff&quot;, 50, 100),
+&quot;EDF Entreprises&quot;,IMAGE(&quot;/resource/Logos/edf.png&quot;,&quot;EDF Entreprises&quot;, 50, 100),
+&quot;Ekwateur&quot;,IMAGE(&quot;/resource/Logos/ekwateur.png&quot;,&quot;Ekwateur&quot;, 50, 100),
+&quot;Electricité de Provence&quot;,IMAGE(&quot;/resource/Logos/electricitedeprovence.png&quot;,&quot;Electricite de Provence&quot;, 50, 100),
+&quot;Electricité de Strasbourg&quot;,IMAGE(&quot;/resource/Logos/electricitedestrasbourg.png&quot;,&quot;Electricite de Strasbourg&quot;, 50, 100),
+&quot;Elmy&quot;,IMAGE(&quot;/resource/Logos/elmy.png&quot;,&quot;Elmy&quot;, 50, 100),
+&quot;Endesa&quot;,IMAGE(&quot;/resource/Logos/endesa.png&quot;,&quot;Endesa&quot;, 50, 100),
+&quot;Enercoop&quot;,IMAGE(&quot;/resource/Logos/enercoop.png&quot;,&quot;Enercoop&quot;, 50, 100),
+&quot;Engie&quot;,IMAGE(&quot;/resource/Logos/engie.png&quot;,&quot;Engie&quot;, 50, 100),
+&quot;Eni&quot;,IMAGE(&quot;/resource/Logos/eni.png&quot;,&quot;Eni&quot;, 50, 100),
+&quot;Enovos&quot;,IMAGE(&quot;/resource/Logos/enovos.png&quot;,&quot;Enovos&quot;, 50, 100),
+&quot;Dalkia&quot;,IMAGE(&quot;/resource/Logos/dalkia.png&quot;,&quot;Dalkia&quot;, 50, 100),
+&quot;Gaz de Bordeaux&quot;,IMAGE(&quot;/resource/Logos/gazdebordeaux.png&quot;,&quot;Gaz de Bordeaux&quot;, 50, 100),
+&quot;Gaz Européen&quot;,IMAGE(&quot;/resource/Logos/gazeuropeen.png&quot;,&quot;Gaz Europeen&quot;, 50, 100),
+&quot;Gazel Energie&quot;,IMAGE(&quot;/resource/Logos/gazelenergie.png&quot;,&quot;Gazel Energie&quot;, 50, 100),
+&quot;GEG&quot;,IMAGE(&quot;/resource/Logos/geg.png&quot;,&quot;GEG&quot;, 50, 100),
+&quot;Iberdrola&quot;,IMAGE(&quot;/resource/Logos/iberdrola.png&quot;,&quot;Iberdrola&quot;, 50, 100),
+&quot;La Bellenergie&quot;,IMAGE(&quot;/resource/Logos/labellenergie.png&quot;,&quot;La Bellenergie&quot;, 50, 100),
+&quot;LLUM&quot;,IMAGE(&quot;/resource/Logos/llum.png&quot;,&quot;LLUM&quot;, 50, 100),
+&quot;MET Energie&quot;,IMAGE(&quot;/resource/Logos/metenergie.png&quot;,&quot;MET Energie&quot;, 50, 100),
+&quot;OHM Energie&quot;,IMAGE(&quot;/resource/Logos/ohmenergie.png&quot;,&quot;OHM Energie&quot;, 50, 100),
+&quot;Picoty&quot;,IMAGE(&quot;/resource/Logos/picoty.png&quot;,&quot;Picoty&quot;, 50, 100),
+&quot;Planete OUI&quot;,IMAGE(&quot;/resource/Logos/planeteoui.png&quot;,&quot;Planete OUI&quot;, 50, 100),
+&quot;Primeo Energie&quot;,IMAGE(&quot;/resource/Logos/primeoenergie.png&quot;,&quot;Primeo Energie&quot;, 50, 100),
+&quot;Save energies&quot;,IMAGE(&quot;/resource/Logos/saveenergies.png&quot;,&quot;Save energies&quot;, 50, 100),
+&quot;SEFE Energy&quot;,IMAGE(&quot;/resource/Logos/SEFE.png&quot;,&quot;SEFE Energy&quot;, 50, 100),
+&quot;Situation Actuelle&quot;,IMAGE(&quot;/resource/Logos/Situation_Actuelle.png&quot;,&quot;Situation Actuelle&quot;, 50, 100),
+&quot;Proposition Renouvellement&quot;, IMAGE(&quot;/resource/Logos/Proposition_Renouvellement.png&quot;,&quot;Proposition de renouvellement&quot;, 50, 100),
+&quot;Selia&quot;,IMAGE(&quot;/resource/Logos/selia.png&quot;,&quot;Selia&quot;, 50, 100),
+&quot;TotalEnergies&quot;,IMAGE(&quot;/resource/Logos/totalenergies.png&quot;,&quot;TotalEnergies&quot;, 50, 100),
+&quot;Vattenfall&quot;,IMAGE(&quot;/resource/Logos/vattenfall.png&quot;,&quot;Vattenfall&quot;, 50, 100),
+&quot;Ekivolt&quot;,IMAGE(&quot;/resource/Logos/ekivolt.png&quot;,&quot;Ekivolt&quot;, 50, 100),
+&quot;Ilek&quot;,IMAGE(&quot;/resource/Logos/ilek.png&quot;,&quot;Ekivolt&quot;, 50, 100),
+&quot;Hellio&quot;,IMAGE(&quot;/resource/Logos/hellio.png&quot;,&quot;Hellio&quot;, 50, 100),
+&quot;Lucia&quot;,IMAGE(&quot;/resource/Logos/lucia.png&quot;,&quot;Lucia&quot;, 50, 100),
+&quot;Proxelia&quot;,IMAGE(&quot;/resource/Logos/proxelia.png&quot;,&quot;Proxelia&quot;, 50, 100),
+&quot;None&quot;)</formula>
+    <label>Logo du fournisseur</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

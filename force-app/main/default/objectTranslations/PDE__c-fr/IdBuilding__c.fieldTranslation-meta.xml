@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ID Externe utilisé par les process Homeys pour le TURPE --></help>
+    <label><!-- Id Building --></label>
+    <name>IdBuilding__c</name>
+</CustomFieldTranslation>

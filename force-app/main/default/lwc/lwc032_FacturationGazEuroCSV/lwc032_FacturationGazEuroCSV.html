@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Aide Facturation Gaz Euro">
+        <div class="slds-m-around_medium slds-grid slds-gutters slds-wrap slds-grid_vertical-align-end">
+            <div class="slds-col">
+                <lightning-combobox
+                    label="Mois"
+                    value={month}
+                    options={monthOptions}
+                    placeholder="Sélectionnez un mois"
+                    onchange={handleMonthChange}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-m-left_medium">
+                <lightning-combobox
+                    label="Année"
+                    value={year}
+                    options={yearOptions}
+                    placeholder="Sélectionnez une année"
+                    onchange={handleYearChange}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-m-left_large slds-m-top_large">
+                <lightning-button
+                    label="Télécharger le template"
+                    variant="brand"
+                    onclick={handleDownload}
+                    disabled={isDisabled}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

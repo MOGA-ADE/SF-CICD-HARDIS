@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- GRDF: Statut droit d&apos;accès --></label>
+    <name>GRDF_Statut_Droit_Acces__c</name>
+    <picklistValues>
+        <masterLabel>Demande d&apos;accès en attente de validation</masterLabel>
+        <translation><!-- Demande d&apos;accès en attente de validation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande d&apos;accès rejetée</masterLabel>
+        <translation><!-- Demande d&apos;accès rejetée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demande d&apos;accès validée</masterLabel>
+        <translation><!-- Demande d&apos;accès validée --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>BT_ENERGY_Utilisateur_Partenaire</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>BT ENERGY Utilisateur Partenaire partage leur records</description>
+        <label>BT ENERGY Utilisateur Partenaire</label>
+        <sharedTo>
+            <portalRole>BTENERGYUtilisateurPartenaire</portalRole>
+        </sharedTo>
+        <sharedFrom>
+            <portalRole>BTENERGYUtilisateurPartenaire</portalRole>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Dauphine_provences_energies</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Dauphine provences energies</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>DauphineProvenceenergiesPartenaireDirigeant</portalRoleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <portalRoleAndSubordinates>DauphineProvenceenergiesPartenaireDirigeant</portalRoleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Directeur_commercial_ADE_PARIS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Directeur commercial ADE PARIS</label>
+        <sharedTo>
+            <role>Directeur_commercial_ADE_PARIS</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Directeur_commercial_ADE_PARIS</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Energy</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Energy +</label>
+        <sharedTo>
+            <group>Energy</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Energy</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Equipe_Bonnard</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Equipe Bonnard</label>
+        <sharedTo>
+            <group>Noe_Bonnard</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipe_Noe_Bonnard</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Equipe_COGEM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Equipe COGEM</label>
+        <sharedTo>
+            <group>COGEM_Energies</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>COGEM_Energies</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Equipe_Cazaban</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Equipe Cazaban</label>
+        <sharedTo>
+            <group>David_Cazaban</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipe_David_Cazaban</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Equipe_Dhainaut</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Equipe Dhainaut</label>
+        <sharedTo>
+            <group>Jeremie_Dhainaut</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipe_Jeremie_Dhainaut</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Equipe_Grskovic</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Equipe Grskovic</label>
+        <sharedTo>
+            <group>Olivier_Grskovic</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipe_Olivier_Grskovic</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Equipe_Hacini</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Equipe Hacini</label>
+        <sharedTo>
+            <group>Hugo_Hacini</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipe_Hugo_Hacini</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lisa_Alexandre</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lisa/Alexandre</label>
+        <sharedTo>
+            <group>Lisa_Dauge_Alexandre_Beaufils</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Lisa_Dauge_Alexandre_Beaufils</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Megane_Noureddine</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Megane Noureddine</label>
+        <sharedTo>
+            <role>Directeur_commercial_sedentaire_ADE</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Directeur_commercial_sedentaire_ADE</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Noureddine_Lille</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Noureddine Lille</label>
+        <sharedTo>
+            <role>Directeur_commercial_sedentaire_ADE</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Directeur_Commercial_ADE_Lille</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Noureddine_Lille_Commerce</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Noureddine Lille Commerce</label>
+        <sharedTo>
+            <role>Directeur_commercial_sedentaire_ADE</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Commercial_ADE_Lille</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Partage_Directeur_partenaires_France</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Partage Directeur partenaires France</label>
+        <sharedTo>
+            <role>Directeur_partenaires_France</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Directeur_partenaires_France</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Phenix_Energies</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Phenix Energies</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>PHENIXENERGIESVILLEURBANNEPartenaireResponsable</portalRoleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <portalRoleAndSubordinates>PHENIXENERGIESVILLEURBANNEPartenaireResponsable</portalRoleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Walid_Megane</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Walid/Megane</label>
+        <sharedTo>
+            <group>Megane_Smatti</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Walid_Laid</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

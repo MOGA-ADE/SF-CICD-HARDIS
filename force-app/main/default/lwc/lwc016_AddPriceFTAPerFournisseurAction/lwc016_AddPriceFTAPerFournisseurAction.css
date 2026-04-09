@@ -1,0 +1,37 @@
+.actionBody {
+    position: relative;
+    max-height: 800px;
+}
+
+.fournisseurHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.fournisseurHeader h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.ftaContainer {
+    margin-bottom: 12px;
+}
+
+.disabledButton {
+    pointer-events: none;
+}
+
+.h1Container {
+    display: flex;
+    align-items: center; 
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remuneration_source__c</fullName>
+    <description>Le calcul de la commission se fait lors de la validation du contrat et se base sur la convention de la source si elle existe.</description>
+    <inlineHelpText>Le calcul de la commission se fait lors de la validation du contrat et se base sur la convention de la source si elle existe.</inlineHelpText>
+    <label>Rémunération perçu par la source</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadOwnerIsQueue</fullName>
+    <active>true</active>
+    <description>Empeche la mise à jour du statut tant que la piste appartient à la queue</description>
+    <errorConditionFormula>LEFT(OwnerId,3)&lt;&gt;&quot;005&quot;&amp;&amp;
+ISCHANGED( Status )</errorConditionFormula>
+    <errorMessage>Merci de vous attribuer la piste avant de travailler dessus</errorMessage>
+</ValidationRule>

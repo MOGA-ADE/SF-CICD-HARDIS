@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>N2H ENERGIES (N2HE) Utilisateur Partenaire</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>N2H ENERGIES (N2HE) Utilisateur Partenaire</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>N2HENERGIESN2HEPartenaireResponsable</parentRole>
+</Role>

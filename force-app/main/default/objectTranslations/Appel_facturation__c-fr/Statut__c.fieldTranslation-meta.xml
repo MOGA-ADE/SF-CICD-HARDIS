@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Statut --></label>
+    <name>Statut__c</name>
+    <picklistValues>
+        <masterLabel>Appel à facturation émis</masterLabel>
+        <translation><!-- Appel à facturation émis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En attente de validation ADV</masterLabel>
+        <translation><!-- En attente de validation ADV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OK pour facturation</masterLabel>
+        <translation><!-- OK pour facturation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

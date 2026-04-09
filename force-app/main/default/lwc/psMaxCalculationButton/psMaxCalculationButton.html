@@ -1,0 +1,59 @@
+<template>
+    <article class="slds-card borderBottom">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:calculated_insights"
+                            alternative-text="Calculated Insights Icon" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Drop bills">
+                            <span class="slds-text-heading_x-small"><b>Service M023 - Puissance Max</b></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner slds-m-bottom_large">
+            <template if:true={loaded}>
+                <div if:false={result} class="slds-illustration slds-illustration_small">
+                    <div class="slds-text-longform slds-text-align_center">
+                        <p class="slds-text-body_regular">
+                            Vous êtes sur le point de récupérer la Puissance Max pour ce compteur.<br>
+                            La demande sera transmise à SGE et sera traitée dans un delai maximum de 72.
+                        </p>
+                    </div>
+                </div>
+
+                <div if:true={result} class="slds-m-top_medium">
+                    <div class={messageClass} role="alert">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <lightning-icon icon-name={statusIcon} size="small" variant="inverse">
+                                </lightning-icon>
+                            </div>
+                            <div class="slds-media__body">
+                                <p class="slds-text-body_regular">{result}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <template if:false={loaded}>
+                <div class="slds-align_absolute-center slds-p-vertical_xx-large">
+                    <lightning-spinner alternative-text="Communication SGE..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+        </div>
+        <footer class="slds-card__footer">
+            <template if:true={loaded}>
+                <lightning-button label="Lancer la demande" variant="brand" onclick={handleLancerAppel}
+                    disabled={result}>
+                </lightning-button>
+            </template>
+        </footer>
+    </article>
+</template>

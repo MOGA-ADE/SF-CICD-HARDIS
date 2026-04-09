@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_RDV_Prospection_telephonique_hebdo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ ISPICKVAL(LeadSource, &apos;Prospection téléphonique hebdomadaire&apos;),
+ ISBLANK(Date_RDV_R1__c) 				
+)</errorConditionFormula>
+    <errorDisplayField>Date_RDV_R1__c</errorDisplayField>
+    <errorMessage>Vous devez renseigner une date de RDV (R1) pour toutes les pistes provenant d&apos;une prospection téléphonique hebdomadaire</errorMessage>
+</ValidationRule>

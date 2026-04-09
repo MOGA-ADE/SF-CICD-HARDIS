@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3 kVa</fullName>
+        <default>false</default>
+        <label>3 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>6 kVa</fullName>
+        <default>false</default>
+        <label>6 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>9 kVa</fullName>
+        <default>false</default>
+        <label>9 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>12 kVa</fullName>
+        <default>false</default>
+        <label>12 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>15 kVa</fullName>
+        <default>false</default>
+        <label>15 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>18 kVa</fullName>
+        <default>false</default>
+        <label>18 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>24 kVa</fullName>
+        <default>false</default>
+        <label>24 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>30 kVa</fullName>
+        <default>false</default>
+        <label>30 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>36 kVa</fullName>
+        <default>false</default>
+        <label>36 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>42 kVa</fullName>
+        <default>false</default>
+        <label>42 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>48 kVa</fullName>
+        <default>false</default>
+        <label>48 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>54 kVa</fullName>
+        <default>false</default>
+        <label>54 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>60 kVa</fullName>
+        <default>false</default>
+        <label>60 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>66 kVa</fullName>
+        <default>false</default>
+        <label>66 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>72 kVa</fullName>
+        <default>false</default>
+        <label>72 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>78 kVa</fullName>
+        <default>false</default>
+        <label>78 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>84 kVa</fullName>
+        <default>false</default>
+        <label>84 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>90 kVa</fullName>
+        <default>false</default>
+        <label>90 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>96 kVa</fullName>
+        <default>false</default>
+        <label>96 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>102 kVa</fullName>
+        <default>false</default>
+        <label>102 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>108 kVa</fullName>
+        <default>false</default>
+        <label>108 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>120 kVa</fullName>
+        <default>false</default>
+        <label>120 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>132 kVa</fullName>
+        <default>false</default>
+        <label>132 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>144 kVa</fullName>
+        <default>false</default>
+        <label>144 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>156 kVa</fullName>
+        <default>false</default>
+        <label>156 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>168 kVa</fullName>
+        <default>false</default>
+        <label>168 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>180 kVa</fullName>
+        <default>false</default>
+        <label>180 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>192 kVa</fullName>
+        <default>false</default>
+        <label>192 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>204 kVa</fullName>
+        <default>false</default>
+        <label>204 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>216 kVa</fullName>
+        <default>false</default>
+        <label>216 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>228 kVa</fullName>
+        <default>false</default>
+        <label>228 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>240 kVa</fullName>
+        <default>false</default>
+        <label>240 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>&lt; 250 kVa</fullName>
+        <default>false</default>
+        <label>&lt; 250 kVa</label>
+    </customValue>
+    <customValue>
+        <fullName>&gt; 250 kVa</fullName>
+        <default>false</default>
+        <label>&gt; 250 kVa</label>
+    </customValue>
+    <masterLabel>Puissance en KVA</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

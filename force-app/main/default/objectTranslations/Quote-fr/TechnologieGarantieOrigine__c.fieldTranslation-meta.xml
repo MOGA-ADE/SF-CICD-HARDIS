@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Technologie --></label>
+    <name>TechnologieGarantieOrigine__c</name>
+    <picklistValues>
+        <masterLabel>BioGAZ</masterLabel>
+        <translation><!-- BioGAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BioGNV</masterLabel>
+        <translation><!-- BioGNV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Biométhane</masterLabel>
+        <translation><!-- Biométhane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cogénération</masterLabel>
+        <translation><!-- Cogénération --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eolien</masterLabel>
+        <translation><!-- Eolien --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hydraulique</masterLabel>
+        <translation><!-- Hydraulique --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Photovoltaïque</masterLabel>
+        <translation><!-- Photovoltaïque --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tout confondu</masterLabel>
+        <translation><!-- Tout confondu --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

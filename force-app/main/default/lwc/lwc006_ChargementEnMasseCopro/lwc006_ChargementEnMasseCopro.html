@@ -1,0 +1,20 @@
+<template>
+	<lightning-card title="Importer des copropriétés" icon-name="standard:account">
+		<lightning-spinner if:true={showSpinner}></lightning-spinner>
+		<div class="slds-p-around_medium">
+			<div class="slds-grid slds-gutters slds-wrap slds-grid_align-end">
+				<div class="slds-col slds-size_1-of-1 slds-m-bottom_x-small" draggable="true" ondragover={handleDragOver}
+					ondrop={handleDrop}>
+					<div id="holderCOPRO" class="slds-var-m-top_medium slds-align_absolute-center drop">
+						Glisser/Déposer votre fichier de copropriétés
+					</div>
+				</div>
+				<div class="slds-col">
+					<lightning-button variant="brand" label="Export des copropriétés" title="Export des copropriétés"
+						onclick={exportCopros}>
+					</lightning-button>
+				</div>
+			</div>
+		</div>
+	</lightning-card>
+</template>

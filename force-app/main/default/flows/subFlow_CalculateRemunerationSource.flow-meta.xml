@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>assign_ConventionInactive</name>
+        <label>Convention n&apos;existe pas</label>
+        <locationX>138</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>var_ConventionExiste</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>DEC_Charge_RDV</name>
+        <label>Est-ce que le contrat est lié à un chargé de RDV ?</label>
+        <locationX>226</locationX>
+        <locationY>842</locationY>
+        <defaultConnector>
+            <targetReference>UPDATE_Contrat</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Non</defaultConnectorLabel>
+        <rules>
+            <name>ch_ChargeRDVPresent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GET_contrat.Charge_RDV__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UPDATE_Contrat2</targetReference>
+            </connector>
+            <label>Oui</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>DEC_ContratASource</name>
+        <label>Est-ce que le contrat a une source ?</label>
+        <locationX>226</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>DEC_Charge_RDV</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Non</defaultConnectorLabel>
+        <rules>
+            <name>Oui</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GET_contrat.Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DEC_SourceConventionActive</targetReference>
+            </connector>
+            <label>Oui</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>DEC_SourceConventionActive</name>
+        <label>Est-ce que la source à une convention active ?</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>assign_ConventionInactive</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Non</defaultConnectorLabel>
+        <rules>
+            <name>ch_conventionActive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GET_contrat.Source__r.Convention__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GET_contrat.Source__r.Convention__r.Inactive__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DEC_Charge_RDV</targetReference>
+            </connector>
+            <label>Oui</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_RemunerationChargeRDV</name>
+        <dataType>Number</dataType>
+        <expression>IF( ISNULL({!GET_contrat.Charge_RDV__c}),0,{!formula_RemunerationCommercial} * 0.3)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_RemunerationCommercial</name>
+        <dataType>Number</dataType>
+        <expression>IF({!GET_contrat.Source__r.Convention__r.RecordType.Name} = &apos;Apporteurs Affaires&apos;,{!GET_contrat.Commission_commercial__c} - {!formula_RemunerationSource},{!GET_contrat.Commission_commercial__c} )</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_RemunerationCommercialeAvecChargeRDV</name>
+        <dataType>Number</dataType>
+        <expression>{!formula_RemunerationCommercial} - {!formula_RemunerationChargeRDV}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_RemunerationSource</name>
+        <dataType>Number</dataType>
+        <expression>IF( {!GET_contrat.Source__r.Name} = &apos;LE CEDRE&apos;,
+    MIN(
+        {!GET_contrat.Consommation_totale__c} * {!GET_contrat.Source__r.Convention__r.Remuneration_E_Mwh_Palier1__c},
+        0.2 * {!GET_contrat.Commission_commercial__c}
+    ),
+    IF(
+        ISPICKVAL({!GET_contrat.Source__r.Convention__r.Type_de_remuneration__c}, &apos;Pourcentage&apos;),
+        IF(
+            {!GET_contrat.Commission_commercial__c} &gt;= {!GET_contrat.Source__r.Convention__r.Montant_declenchement_palier4__c},
+            {!GET_contrat.Commission_commercial__c} * ({!GET_contrat.Source__r.Convention__r.Pourcentage_remuneration_palier4__c}/100),
+            IF(
+                {!GET_contrat.Commission_commercial__c} &gt;= {!GET_contrat.Source__r.Convention__r.Montant_declenchement_palier3__c},
+                {!GET_contrat.Commission_commercial__c} * ({!GET_contrat.Source__r.Convention__r.Pourcentage_remuneration_palier3__c}/100),
+                IF(
+                    {!GET_contrat.Commission_commercial__c} &gt;= {!GET_contrat.Source__r.Convention__r.Montant_declenchement_palier2__c},
+                    {!GET_contrat.Commission_commercial__c} * ({!GET_contrat.Source__r.Convention__r.Pourcentage_remuneration_palier2__c}/100),
+                    IF(
+                        {!GET_contrat.Commission_commercial__c} &gt;= {!GET_contrat.Source__r.Convention__r.Montant_declenchement_palier1__c},
+                        {!GET_contrat.Commission_commercial__c} * ({!GET_contrat.Source__r.Convention__r.Pourcentage_remuneration_palier1__c}/100),
+                        0
+                    )
+                )
+            )
+        ),
+        IF(
+            ISPICKVAL({!GET_contrat.Source__r.Convention__r.Type_de_remuneration__c}, &apos;€/Mwh par palier&apos;),
+            IF(
+                {!GET_contrat.Consommation_totale__c} &gt;= {!GET_contrat.Source__r.Convention__r.Volume_declenchement_palier4__c},
+                {!GET_contrat.Consommation_totale__c} * {!GET_contrat.Source__r.Convention__r.Remuneration_E_Mwh_Palier4__c},
+                IF(
+                    {!GET_contrat.Consommation_totale__c} &gt;= {!GET_contrat.Source__r.Convention__r.Volume_declenchement_palier3__c},
+                    {!GET_contrat.Consommation_totale__c} * {!GET_contrat.Source__r.Convention__r.Remuneration_E_Mwh_Palier3__c},
+                    IF(
+                        {!GET_contrat.Consommation_totale__c} &gt;= {!GET_contrat.Source__r.Convention__r.Volume_declenchement_palier2__c},
+                        {!GET_contrat.Consommation_totale__c} * {!GET_contrat.Source__r.Convention__r.Remuneration_E_Mwh_Palier2__c},
+                        IF(
+                            {!GET_contrat.Consommation_totale__c} &gt;= {!GET_contrat.Source__r.Convention__r.Volume_declenchement_palier1__c},
+                            {!GET_contrat.Consommation_totale__c} * {!GET_contrat.Source__r.Convention__r.Remuneration_E_Mwh_Palier1__c},
+                            0
+                        )
+                    )
+                )
+            ),
+            IF(
+                ISPICKVAL({!GET_contrat.Source__r.Convention__r.Type_de_remuneration__c}, &apos;€/Compteur&apos;),
+                {!GET_contrat.Nombre_PDE__c} * {!GET_contrat.Source__r.Convention__r.Remuneration_E_NmbrCompteur__c},
+                0
+            )
+        )
+    )
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>subFlow_CalculateRemunerationSource {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>subFlow_CalculateRemunerationSource</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GET_contrat</name>
+        <label>GET contrat</label>
+        <locationX>226</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>DEC_ContratASource</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contract</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>UPDATE_Contrat</name>
+        <label>Mise à jour des rémuénrations sur le contrat</label>
+        <locationX>358</locationX>
+        <locationY>950</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GET_contrat.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Commission_commercial__c</field>
+            <value>
+                <elementReference>formula_RemunerationCommercial</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Remuneration_source__c</field>
+            <value>
+                <elementReference>formula_RemunerationSource</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contract</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UPDATE_Contrat2</name>
+        <label>Mise à jour des rémuénrations sur le contrat</label>
+        <locationX>94</locationX>
+        <locationY>950</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GET_contrat.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Commission_charge_RDV__c</field>
+            <value>
+                <elementReference>formula_RemunerationChargeRDV</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Commission_commercial__c</field>
+            <value>
+                <elementReference>formula_RemunerationCommercialeAvecChargeRDV</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Remuneration_source__c</field>
+            <value>
+                <elementReference>formula_RemunerationSource</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contract</object>
+    </recordUpdates>
+    <start>
+        <locationX>100</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GET_contrat</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_ConventionExiste</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+</Flow>

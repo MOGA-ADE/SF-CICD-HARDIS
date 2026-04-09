@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_PropositionRenouvellement_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>TECH_Proposition De Renouvellement</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>TECH_Proposition De Renouvellement</labelOverride>
+        <masterLabel>TECH_Proposition De Renouvellement</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <type>Checkbox</type>
+</CustomField>

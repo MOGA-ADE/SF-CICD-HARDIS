@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Motif de refus --></label>
+    <name>Motif_refus__c</name>
+    <picklistValues>
+        <masterLabel>A déjà renégocié avec son fournisseur</masterLabel>
+        <translation><!-- A déjà renégocié avec son fournisseur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A déjà un courtier</masterLabel>
+        <translation><!-- A déjà un courtier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>J&apos;ai encore le temps pour ça</masterLabel>
+        <translation><!-- J&apos;ai encore le temps pour ça --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Je n&apos;ai pas de temps à vous consacrer</masterLabel>
+        <translation><!-- Je n&apos;ai pas de temps à vous consacrer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Je ne sais pas qui est le décisionnaire</masterLabel>
+        <translation><!-- Je ne sais pas qui est le décisionnaire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Je ne suis pas intéressé</masterLabel>
+        <translation><!-- Je ne suis pas intéressé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nous passons pas les achats/C&apos;est centralisé</masterLabel>
+        <translation><!-- Nous passons pas les achats/C&apos;est centralisé --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

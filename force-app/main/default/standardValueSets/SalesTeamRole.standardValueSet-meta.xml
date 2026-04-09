@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Chargé(e) d&apos;affaire</fullName>
+        <default>false</default>
+        <label>Chargé(e) d&apos;affaire</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hybride</fullName>
+        <default>false</default>
+        <label>Hybride</label>
+    </standardValue>
+</StandardValueSet>

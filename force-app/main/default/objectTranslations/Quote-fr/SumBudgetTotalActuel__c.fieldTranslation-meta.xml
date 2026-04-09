@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Somme des BudgetTotalActuel__c des QLI liés --></help>
+    <label><!-- Budget Total Actuel (€HT/an) --></label>
+    <name>SumBudgetTotalActuel__c</name>
+</CustomFieldTranslation>

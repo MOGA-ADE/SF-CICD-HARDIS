@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Prospection téléphonique</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Statut_appel__c</fieldNames>
+        <fieldNames>Nombre_appel__c</fieldNames>
+        <fieldNames>Commentaires__c</fieldNames>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;SELON LE STATUT DE L&amp;#39;APPEL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Si &lt;strong&gt;répondeur &lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Pensez à écouter le répondeur pour confirmer le nom de l&amp;#39;entreprise, le nom du décisionnaire et peut être récupérer un autre numéro de téléphone&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Si &lt;strong&gt;rappel auto&lt;/strong&gt; :&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A programmer dans le cas ou nous n&amp;#39;avons pas eu le décisionnaire en direct et qu&amp;#39;on nous demande de rappeler plus tard&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Si &lt;strong&gt;rappel perso&lt;/strong&gt; :&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A programmer dans le cas ou on a pu confirmer le nom du décisionnaire et ses disponibilités, programmer votre entretien sur le module événement&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Si &lt;strong&gt;NRPP &lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ce statut apparait après un certain nombre d&amp;#39;appels non répondu&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>ARappeler</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Statut_appel__c</fieldNames>
+        <picklistValueName>En cours de prospection</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Nombre_appel__c</fieldNames>
+        <fieldNames>Statut_appel__c</fieldNames>
+        <picklistValueName>Faux numéro</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motif_hors_cible__c</fieldNames>
+        <info>&lt;p&gt;La qualification hors cible doit se faire à la marge, n&amp;#39;hésitez pas à consulter votre manager.&lt;/p&gt;</info>
+        <picklistValueName>Hors Cible</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Nombre_appel__c</fieldNames>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Nombre_appel__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Bravo&lt;/strong&gt;, n&amp;#39;oubliez pas de reconfirmer toutes les coordonées et préciser l&amp;#39;adresse exacte du RDV pour faciliter la venue de votre commercial.&lt;/p&gt;</info>
+        <picklistValueName>RDV commercial pris</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motif_refus__c</fieldNames>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&lt;em&gt;&amp;quot;La chute n&amp;#39;est pas l&amp;#39;échec, l&amp;#39;échec est de rester là où on est tombé&amp;quot; Socrate. &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Qualifier de la bonne manière votre refus basez vous sur la première cause de refus&lt;/p&gt;</info>
+        <picklistValueName>Refusée</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Prospection_telephonique</recordTypeName>
+</PathAssistant>

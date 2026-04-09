@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Ekwateur_GAZ</label>
+    <protected>false</protected>
+    <values>
+        <field>Conso_Max__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Conso_Min__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Duree_Engagement__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>FTA__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Fournisseur__c</field>
+        <value xsi:type="xsd:string">Ekwateur</value>
+    </values>
+    <values>
+        <field>Puissance_Souscrite__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Remuneration__c</field>
+        <value xsi:type="xsd:double">10.0</value>
+    </values>
+    <values>
+        <field>Type_Energie__c</field>
+        <value xsi:type="xsd:string">GAZ</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_Short_FTA__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(TEXT(FTA__c), &apos;4 postes&apos;),RIGHT(TEXT(FTA__c), 11) ,RIGHT(TEXT(FTA__c), 2))</formula>
+    <label>TECH Short FTA</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_002</fullName>
+    <active>true</active>
+    <description>Date de signature du client supérieur à aujourd&apos;hui</description>
+    <errorConditionFormula>CustomerSignedDate &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>CustomerSignedDate</errorDisplayField>
+    <errorMessage>Attention, votre date de signature du contrat est dans le future</errorMessage>
+</ValidationRule>

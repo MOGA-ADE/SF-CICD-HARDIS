@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AGRI EQ 101</fullName>
+        <default>false</default>
+        <label>AGRI EQ 101</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI EQ 102</fullName>
+        <default>false</default>
+        <label>AGRI EQ 102</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI EQ 104</fullName>
+        <default>false</default>
+        <label>AGRI EQ 104</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI EQ 105</fullName>
+        <default>false</default>
+        <label>AGRI EQ 105</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI EQ 106</fullName>
+        <default>false</default>
+        <label>AGRI EQ 106</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI SE 101</fullName>
+        <default>false</default>
+        <label>AGRI SE 101</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 101</fullName>
+        <default>false</default>
+        <label>AGRI TH 101</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 102</fullName>
+        <default>false</default>
+        <label>AGRI TH 102</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 103</fullName>
+        <default>false</default>
+        <label>AGRI TH 103</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 104</fullName>
+        <default>false</default>
+        <label>AGRI TH 104</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 105</fullName>
+        <default>false</default>
+        <label>AGRI TH 105</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 108</fullName>
+        <default>false</default>
+        <label>AGRI TH 108</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 109</fullName>
+        <default>false</default>
+        <label>AGRI TH 109</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 110</fullName>
+        <default>false</default>
+        <label>AGRI TH 110</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 113</fullName>
+        <default>false</default>
+        <label>AGRI TH 113</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 117</fullName>
+        <default>false</default>
+        <label>AGRI TH 117</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 118</fullName>
+        <default>false</default>
+        <label>AGRI TH 118</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI TH 119</fullName>
+        <default>false</default>
+        <label>AGRI TH 119</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI UT 101</fullName>
+        <default>false</default>
+        <label>AGRI UT 101</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI UT 102</fullName>
+        <default>false</default>
+        <label>AGRI UT 102</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI UT 103</fullName>
+        <default>false</default>
+        <label>AGRI UT 103</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRI UT 104</fullName>
+        <default>false</default>
+        <label>AGRI UT 104</label>
+    </customValue>
+    <customValue>
+        <fullName>IND BA 110</fullName>
+        <default>false</default>
+        <label>IND BA 110</label>
+    </customValue>
+    <customValue>
+        <fullName>IND BA 112</fullName>
+        <default>false</default>
+        <label>IND BA 112</label>
+    </customValue>
+    <customValue>
+        <fullName>IND BA 113</fullName>
+        <default>false</default>
+        <label>IND BA 113</label>
+    </customValue>
+    <customValue>
+        <fullName>IND BA 114</fullName>
+        <default>false</default>
+        <label>IND BA 114</label>
+    </customValue>
+    <customValue>
+        <fullName>IND BA 116</fullName>
+        <default>false</default>
+        <label>IND BA 116</label>
+    </customValue>
+    <customValue>
+        <fullName>IND BA 117</fullName>
+        <default>false</default>
+        <label>IND BA 117</label>
+    </customValue>
+    <customValue>
+        <fullName>IND EN 101</fullName>
+        <default>false</default>
+        <label>IND EN 101</label>
+    </customValue>
+    <customValue>
+        <fullName>IND EN 102</fullName>
+        <default>false</default>
+        <label>IND EN 102</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 102</fullName>
+        <default>false</default>
+        <label>IND UT 102</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 103</fullName>
+        <default>false</default>
+        <label>IND UT 103</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 104</fullName>
+        <default>false</default>
+        <label>IND UT 104</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 105</fullName>
+        <default>false</default>
+        <label>IND UT 105</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 112</fullName>
+        <default>false</default>
+        <label>IND UT 112</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 113</fullName>
+        <default>false</default>
+        <label>IND UT 113</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 114</fullName>
+        <default>false</default>
+        <label>IND UT 114</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 115</fullName>
+        <default>false</default>
+        <label>IND UT 115</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 116</fullName>
+        <default>false</default>
+        <label>IND UT 116</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 117</fullName>
+        <default>false</default>
+        <label>IND UT 117</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 118</fullName>
+        <default>false</default>
+        <label>IND UT 118</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 120</fullName>
+        <default>false</default>
+        <label>IND UT 120</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 121</fullName>
+        <default>false</default>
+        <label>IND UT 121</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 122</fullName>
+        <default>false</default>
+        <label>IND UT 122</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 123</fullName>
+        <default>false</default>
+        <label>IND UT 123</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 124</fullName>
+        <default>false</default>
+        <label>IND UT 124</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 125</fullName>
+        <default>false</default>
+        <label>IND UT 125</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 127</fullName>
+        <default>false</default>
+        <label>IND UT 127</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 129</fullName>
+        <default>false</default>
+        <label>IND UT 129</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 130</fullName>
+        <default>false</default>
+        <label>IND UT 130</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 131</fullName>
+        <default>false</default>
+        <label>IND UT 131</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 132</fullName>
+        <default>false</default>
+        <label>IND UT 132</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 133</fullName>
+        <default>false</default>
+        <label>IND UT 133</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 134</fullName>
+        <default>false</default>
+        <label>IND UT 134</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 135</fullName>
+        <default>false</default>
+        <label>IND UT 135</label>
+    </customValue>
+    <customValue>
+        <fullName>IND UT 136</fullName>
+        <default>false</default>
+        <label>IND UT 136</label>
+    </customValue>
+    <customValue>
+        <fullName>RES CH 103</fullName>
+        <default>false</default>
+        <label>RES CH 103</label>
+    </customValue>
+    <customValue>
+        <fullName>RES CH 104</fullName>
+        <default>false</default>
+        <label>RES CH 104</label>
+    </customValue>
+    <customValue>
+        <fullName>RES CH 105</fullName>
+        <default>false</default>
+        <label>RES CH 105</label>
+    </customValue>
+    <customValue>
+        <fullName>RES CH 106</fullName>
+        <default>false</default>
+        <label>RES CH 106</label>
+    </customValue>
+    <customValue>
+        <fullName>RES CH 107</fullName>
+        <default>false</default>
+        <label>RES CH 107</label>
+    </customValue>
+    <customValue>
+        <fullName>RES CH 108</fullName>
+        <default>false</default>
+        <label>RES CH 108</label>
+    </customValue>
+    <customValue>
+        <fullName>RES EC 101</fullName>
+        <default>false</default>
+        <label>RES EC 101</label>
+    </customValue>
+    <customValue>
+        <fullName>RES EC 102</fullName>
+        <default>false</default>
+        <label>RES EC 102</label>
+    </customValue>
+    <customValue>
+        <fullName>RES EC 103</fullName>
+        <default>false</default>
+        <label>RES EC 103</label>
+    </customValue>
+    <customValue>
+        <fullName>RES EC 104</fullName>
+        <default>false</default>
+        <label>RES EC 104</label>
+    </customValue>
+    <customValue>
+        <fullName>RES EC 107</fullName>
+        <default>false</default>
+        <label>RES EC 107</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 101</fullName>
+        <default>false</default>
+        <label>BAR EN 101</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 102</fullName>
+        <default>false</default>
+        <label>BAR EN 102</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 103</fullName>
+        <default>false</default>
+        <label>BAR EN 103</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 104</fullName>
+        <default>false</default>
+        <label>BAR EN 104</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 105</fullName>
+        <default>false</default>
+        <label>BAR EN 105</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 106</fullName>
+        <default>false</default>
+        <label>BAR EN 106</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 107</fullName>
+        <default>false</default>
+        <label>BAR EN 107</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 108</fullName>
+        <default>false</default>
+        <label>BAR EN 108</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 109</fullName>
+        <default>false</default>
+        <label>BAR EN 109</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EN 110</fullName>
+        <default>false</default>
+        <label>BAR EN 110</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EQ 102</fullName>
+        <default>false</default>
+        <label>BAR EQ 102</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EQ 103</fullName>
+        <default>false</default>
+        <label>BAR EQ 103</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EQ 110</fullName>
+        <default>false</default>
+        <label>BAR EQ 110</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EQ 111</fullName>
+        <default>false</default>
+        <label>BAR EQ 111</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR EQ 115</fullName>
+        <default>false</default>
+        <label>BAR EQ 115</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR SE 104</fullName>
+        <default>false</default>
+        <label>BAR SE 104</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR SE 105</fullName>
+        <default>false</default>
+        <label>BAR SE 105</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR SE 106</fullName>
+        <default>false</default>
+        <label>BAR SE 106</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 101</fullName>
+        <default>false</default>
+        <label>BAR TH 101</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 102</fullName>
+        <default>false</default>
+        <label>BAR TH 102</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 104</fullName>
+        <default>false</default>
+        <label>BAR TH 104</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 106</fullName>
+        <default>false</default>
+        <label>BAR TH 106</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 107</fullName>
+        <default>false</default>
+        <label>BAR TH 107</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 107 SE</fullName>
+        <default>false</default>
+        <label>BAR TH 107 SE</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 110</fullName>
+        <default>false</default>
+        <label>BAR TH 110</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 111</fullName>
+        <default>false</default>
+        <label>BAR TH 111</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 112</fullName>
+        <default>false</default>
+        <label>BAR TH 112</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 113</fullName>
+        <default>false</default>
+        <label>BAR TH 113</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 116</fullName>
+        <default>false</default>
+        <label>BAR TH 116</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 117</fullName>
+        <default>false</default>
+        <label>BAR TH 117</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 118</fullName>
+        <default>false</default>
+        <label>BAR TH 118</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 122</fullName>
+        <default>false</default>
+        <label>BAR TH 122</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 123</fullName>
+        <default>false</default>
+        <label>BAR TH 123</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 124</fullName>
+        <default>false</default>
+        <label>BAR TH 124</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 125</fullName>
+        <default>false</default>
+        <label>BAR TH 125</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 127</fullName>
+        <default>false</default>
+        <label>BAR TH 127</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 129</fullName>
+        <default>false</default>
+        <label>BAR TH 129</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 130</fullName>
+        <default>false</default>
+        <label>BAR TH 130</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 135</fullName>
+        <default>false</default>
+        <label>BAR TH 135</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 137</fullName>
+        <default>false</default>
+        <label>BAR TH 137</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 139</fullName>
+        <default>false</default>
+        <label>BAR TH 139</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 141</fullName>
+        <default>false</default>
+        <label>BAR TH 141</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 143</fullName>
+        <default>false</default>
+        <label>BAR TH 143</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 145</fullName>
+        <default>false</default>
+        <label>BAR TH 145</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 148</fullName>
+        <default>false</default>
+        <label>BAR TH 148</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 150</fullName>
+        <default>false</default>
+        <label>BAR TH 150</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 155</fullName>
+        <default>false</default>
+        <label>BAR TH 155</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 158</fullName>
+        <default>false</default>
+        <label>BAR TH 158</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 159</fullName>
+        <default>false</default>
+        <label>BAR TH 159</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 160</fullName>
+        <default>false</default>
+        <label>BAR TH 160</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 161</fullName>
+        <default>false</default>
+        <label>BAR TH 161</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 162</fullName>
+        <default>false</default>
+        <label>BAR TH 162</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 163</fullName>
+        <default>false</default>
+        <label>BAR TH 163</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 164</fullName>
+        <default>false</default>
+        <label>BAR TH 164</label>
+    </customValue>
+    <customValue>
+        <fullName>BAR TH 165</fullName>
+        <default>false</default>
+        <label>BAR TH 165</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 101</fullName>
+        <default>false</default>
+        <label>BAT EN 101</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 102</fullName>
+        <default>false</default>
+        <label>BAT EN 102</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 103</fullName>
+        <default>false</default>
+        <label>BAT EN 103</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 104</fullName>
+        <default>false</default>
+        <label>BAT EN 104</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 106</fullName>
+        <default>false</default>
+        <label>BAT EN 106</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 107</fullName>
+        <default>false</default>
+        <label>BAT EN 107</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 108</fullName>
+        <default>false</default>
+        <label>BAT EN 108</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 109</fullName>
+        <default>false</default>
+        <label>BAT EN 109</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EN 110</fullName>
+        <default>false</default>
+        <label>BAT EN 110</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 117</fullName>
+        <default>false</default>
+        <label>BAT EQ 117</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 123</fullName>
+        <default>false</default>
+        <label>BAT EQ 123</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 124</fullName>
+        <default>false</default>
+        <label>BAT EQ 124</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 125</fullName>
+        <default>false</default>
+        <label>BAT EQ 125</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 127</fullName>
+        <default>false</default>
+        <label>BAT EQ 127</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 129</fullName>
+        <default>false</default>
+        <label>BAT EQ 129</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 130</fullName>
+        <default>false</default>
+        <label>BAT EQ 130</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 131</fullName>
+        <default>false</default>
+        <label>BAT EQ 131</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT EQ 133</fullName>
+        <default>false</default>
+        <label>BAT EQ 133</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT SE 103</fullName>
+        <default>false</default>
+        <label>BAT SE 103</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT SE 104</fullName>
+        <default>false</default>
+        <label>BAT SE 104</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT SE 105</fullName>
+        <default>false</default>
+        <label>BAT SE 105</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 102</fullName>
+        <default>false</default>
+        <label>BAT TH 102</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 103</fullName>
+        <default>false</default>
+        <label>BAT TH 103</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 104</fullName>
+        <default>false</default>
+        <label>BAT TH 104</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 105</fullName>
+        <default>false</default>
+        <label>BAT TH 105</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 108</fullName>
+        <default>false</default>
+        <label>BAT TH 108</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 109</fullName>
+        <default>false</default>
+        <label>BAT TH 109</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 110</fullName>
+        <default>false</default>
+        <label>BAT TH 110</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 111</fullName>
+        <default>false</default>
+        <label>BAT TH 111</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 112</fullName>
+        <default>false</default>
+        <label>BAT TH 112</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 113</fullName>
+        <default>false</default>
+        <label>BAT TH 113</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 115</fullName>
+        <default>false</default>
+        <label>BAT TH 115</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 116</fullName>
+        <default>false</default>
+        <label>BAT TH 116</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 121</fullName>
+        <default>false</default>
+        <label>BAT TH 121</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 122</fullName>
+        <default>false</default>
+        <label>BAT TH 122</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 125</fullName>
+        <default>false</default>
+        <label>BAT TH 125</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 126</fullName>
+        <default>false</default>
+        <label>BAT TH 126</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 127</fullName>
+        <default>false</default>
+        <label>BAT TH 127</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 134</fullName>
+        <default>false</default>
+        <label>BAT TH 134</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 135</fullName>
+        <default>false</default>
+        <label>BAT TH 135</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 139</fullName>
+        <default>false</default>
+        <label>BAT TH 139</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 140</fullName>
+        <default>false</default>
+        <label>BAT TH 140</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 141</fullName>
+        <default>false</default>
+        <label>BAT TH 141</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 142</fullName>
+        <default>false</default>
+        <label>BAT TH 142</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 143</fullName>
+        <default>false</default>
+        <label>BAT TH 143</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 145</fullName>
+        <default>false</default>
+        <label>BAT TH 145</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 146</fullName>
+        <default>false</default>
+        <label>BAT TH 146</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 153</fullName>
+        <default>false</default>
+        <label>BAT TH 153</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 154</fullName>
+        <default>false</default>
+        <label>BAT TH 154</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 155</fullName>
+        <default>false</default>
+        <label>BAT TH 155</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 156</fullName>
+        <default>false</default>
+        <label>BAT TH 156</label>
+    </customValue>
+    <customValue>
+        <fullName>BAT TH 157</fullName>
+        <default>false</default>
+        <label>BAT TH 157</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 101</fullName>
+        <default>false</default>
+        <label>TRA EQ 101</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 103</fullName>
+        <default>false</default>
+        <label>TRA EQ 103</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 104</fullName>
+        <default>false</default>
+        <label>TRA EQ 104</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 106</fullName>
+        <default>false</default>
+        <label>TRA EQ 106</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 107</fullName>
+        <default>false</default>
+        <label>TRA EQ 107</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 108</fullName>
+        <default>false</default>
+        <label>TRA EQ 108</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 109</fullName>
+        <default>false</default>
+        <label>TRA EQ 109</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 110</fullName>
+        <default>false</default>
+        <label>TRA EQ 110</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 111</fullName>
+        <default>false</default>
+        <label>TRA EQ 111</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 113</fullName>
+        <default>false</default>
+        <label>TRA EQ 113</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 114</fullName>
+        <default>false</default>
+        <label>TRA EQ 114</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 115</fullName>
+        <default>false</default>
+        <label>TRA EQ 115</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 117</fullName>
+        <default>false</default>
+        <label>TRA EQ 117</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 118</fullName>
+        <default>false</default>
+        <label>TRA EQ 118</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 119</fullName>
+        <default>false</default>
+        <label>TRA EQ 119</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 120</fullName>
+        <default>false</default>
+        <label>TRA EQ 120</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 121</fullName>
+        <default>false</default>
+        <label>TRA EQ 121</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 122</fullName>
+        <default>false</default>
+        <label>TRA EQ 122</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 123</fullName>
+        <default>false</default>
+        <label>TRA EQ 123</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA EQ 124</fullName>
+        <default>false</default>
+        <label>TRA EQ 124</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 101</fullName>
+        <default>false</default>
+        <label>TRA SE 101</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 102</fullName>
+        <default>false</default>
+        <label>TRA SE 102</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 104</fullName>
+        <default>false</default>
+        <label>TRA SE 104</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 105</fullName>
+        <default>false</default>
+        <label>TRA SE 105</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 106</fullName>
+        <default>false</default>
+        <label>TRA SE 106</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 107</fullName>
+        <default>false</default>
+        <label>TRA SE 107</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 108</fullName>
+        <default>false</default>
+        <label>TRA SE 108</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 109</fullName>
+        <default>false</default>
+        <label>TRA SE 109</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 110</fullName>
+        <default>false</default>
+        <label>TRA SE 110</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 111</fullName>
+        <default>false</default>
+        <label>TRA SE 111</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 112</fullName>
+        <default>false</default>
+        <label>TRA SE 112</label>
+    </customValue>
+    <customValue>
+        <fullName>TRA SE 113</fullName>
+        <default>false</default>
+        <label>TRA SE 113</label>
+    </customValue>
+    <masterLabel>Type de travaux</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InternalDataConnector xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias xsi:nil="true"/>
+    <dataConnectionStatus>Connected</dataConnectionStatus>
+    <dataConnectorType>ACCOUNTENGAGEMENT</dataConnectorType>
+    <dataPlatform>ACCOUNTENGAGEMENT</dataPlatform>
+    <dataSourceTenant>AccountEngagementDataSource</dataSourceTenant>
+    <dataSpace xsi:nil="true"/>
+    <externalRecordId>00D2o000000srHzEAI</externalRecordId>
+    <isMetadataSync>false</isMetadataSync>
+    <masterLabel>ACCOUNTENGAGEMENT</masterLabel>
+</InternalDataConnector>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_MarketSegments</fullName>
+    <columns>Name</columns>
+    <columns>DataSpace</columns>
+    <columns>PublishType</columns>
+    <columns>SegmentStatus</columns>
+    <columns>LastSegmentMemberCount</columns>
+    <columns>PublishStatus</columns>
+    <columns>CreatedBy</columns>
+    <columns>CreatedDate</columns>
+    <columns>LastModifiedDate</columns>
+    <columns>LastPublishedEndDateTime</columns>
+    <columns>MarketSegmentType</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CreatedBy</field>
+        <operation>equals</operation>
+        <value>ladmi</value>
+    </filters>
+    <label>Tous les segments</label>
+</ListView>

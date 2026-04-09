@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDE_Optimise_Pictogramme__c</fullName>
+    <description>Champs utilisé pour l&apos;affichage dans la section highlight du page layout</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+  Calcul_PS_Max_OK__c = true,
+  IF(
+    OR(
+      Taux_puissance_souscrite_utilisee__c &lt; 0.85,
+      Taux_puissance_souscrite_utilisee__c &gt; 1.10
+    ),
+    IMAGE(&quot;/img/msg_icons/warning32.png&quot;, &quot;warning32&quot;),
+    IMAGE(&quot;/img/msg_icons/confirm32.png&quot;, &quot;confirm32&quot;)
+  ),
+  &quot;Calcul impossible pour ce compteur&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PDE Optimisé ?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

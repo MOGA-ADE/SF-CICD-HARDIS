@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Segment --></label>
+    <name>Segment__c</name>
+    <picklistValues>
+        <masterLabel>C1</masterLabel>
+        <translation><!-- C1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C2</masterLabel>
+        <translation><!-- C2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C3</masterLabel>
+        <translation><!-- C3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C4</masterLabel>
+        <translation><!-- C4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C5</masterLabel>
+        <translation><!-- C5 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

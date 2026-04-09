@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type de document --></label>
+    <name>Type_de_document__c</name>
+    <picklistValues>
+        <masterLabel>ACD</masterLabel>
+        <translation><!-- ACD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autres</masterLabel>
+        <translation><!-- Autres --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comparatif</masterLabel>
+        <translation><!-- Comparatif --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contrat signé</masterLabel>
+        <translation><!-- Contrat signé --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contrat à signer</masterLabel>
+        <translation><!-- Contrat à signer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facture</masterLabel>
+        <translation><!-- Facture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liasse Fiscale</masterLabel>
+        <translation><!-- Liasse Fiscale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mandat Sepa</masterLabel>
+        <translation><!-- Mandat Sepa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RIB</masterLabel>
+        <translation><!-- RIB --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

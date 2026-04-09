@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "359591bb-f7e4-4bd1-b24d-9a6da605c777",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "Fichier_Related_List",
+  "id" : "182fb35e-9790-414a-a559-800ae673c9ae",
+  "label" : "Fichier Related List",
+  "routeType" : "relatedlist-069",
+  "type" : "route",
+  "urlPrefix" : "contentdocument"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Fichier de prospection</name>
+    <queueMembers>
+        <users>
+            <user>a.bellon@alliancedesenergies.fr</user>
+            <user>a.bruny@alliancedesenergies.fr</user>
+            <user>a.poncin@alliancedesenergies.fr</user>
+            <user>b.beignard@alliancedesenergies.fr</user>
+            <user>b.gaulard@alliancedesenergies.fr</user>
+            <user>c.lhermite@alliancedesenergies.fr</user>
+            <user>f.arquilliere@alliancedesenergies.fr</user>
+            <user>f.maurice@alliancedesenergies.fr</user>
+            <user>j.deng-sandoua@alliancedesenergies.fr</user>
+            <user>j.richard@alliancedesenergies.fr</user>
+            <user>l.legros@alliancedesenergies.fr</user>
+            <user>m.pinet@alliancedesenergies.fr</user>
+            <user>m.colonges@alliancedesenergies.fr</user>
+            <user>n.xayasenh@alliancedesenergies.fr</user>
+            <user>n.stanislawiak@alliancedesenergies.fr</user>
+            <user>noureddine.elballouti@alliancedesenergies.fr</user>
+            <user>r.arronis@alliancedesenergies.fr</user>
+            <user>romain.drouot@alliancedesenergies.fr</user>
+            <user>r.tshibangu-patel@alliancedesenergies.fr</user>
+            <user>t.serra@alliancedesenergies.fr</user>
+            <user>z.lenoir@alliancedesenergies.fr</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

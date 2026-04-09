@@ -1,0 +1,78 @@
+{
+  "forgotPasswordRouteId" : "9bdb0831-160e-4c11-bb2f-0a6df0c9e5c7",
+  "isAvailableToGuests" : false,
+  "isFilteredComponentsView" : true,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "6e7b087b-d80b-4ac8-9a5c-fd9157196d1f",
+  "mainAppPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "f0451266-e369-4caf-9f96-a1e71996f55c",
+  "trustedSitesForScript" : [ {
+    "id" : "1214ba16-a10f-40ca-b76a-ed8c0c990cd5",
+    "isActive" : true,
+    "trustedSiteName" : "Alliance",
+    "trustedSiteUrl" : "https://alliancedesenergies--ellisphere.my.salesforce.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "2e96343f-b3e8-4d99-bee1-61b126a2959a",
+    "isActive" : true,
+    "trustedSiteName" : "File",
+    "trustedSiteUrl" : "https://alliancedesenergies--ellisphere.sandbox.my.salesforce.com/sfc/p/0Q0000008e1G/a/2o0000011WWF/tGsr.TZBwehL9KPdhZxHzfTK8J1pwXTsI7sXQln_Ow8",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "2f99a86e-dfc5-4cf4-a6aa-bde86a936567",
+    "isActive" : true,
+    "trustedSiteName" : "Production_Account",
+    "trustedSiteUrl" : "https://account.docusign.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "9e4030ba-7cfc-4d0b-af3f-8dba26d54992",
+    "isActive" : true,
+    "trustedSiteName" : "Production_eSignature",
+    "trustedSiteUrl" : "https://eu.docusign.net",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "1f4e65c9-2e4a-4b75-8470-1d3db82af645",
+    "isActive" : true,
+    "trustedSiteName" : "Production_Provisioning",
+    "trustedSiteUrl" : "https://api.docusign.net",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "1a9880ae-9d07-416f-9383-ce7080c57478",
+    "isActive" : true,
+    "trustedSiteName" : "OAuth",
+    "trustedSiteUrl" : "https://alliancedesenergies.my.site.com/partenaire/services/oauth2/token",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "6e8c5109-d4d9-45a4-9c3c-3f80ed2bae1a",
+    "isActive" : true,
+    "trustedSiteName" : "OAuth 2",
+    "trustedSiteUrl" : "https://alliancedesenergies.live-preview.salesforce-experience.com/sfsites/c/services/oauth2/token",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "7476f084-aa43-430c-bb18-96ad2cc91cf9",
+    "isActive" : true,
+    "trustedSiteName" : "Docusign1",
+    "trustedSiteUrl" : "https://*.clmfed.docusign.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "34a84f1e-bf51-4458-9df1-6633ee4034ad",
+    "isActive" : true,
+    "trustedSiteName" : "Docusign2",
+    "trustedSiteUrl" : "https://*.clm.docusign.mil",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "178863f1-ac70-4563-a363-f21937ab12da",
+    "isActive" : true,
+    "trustedSiteName" : "Docusign3",
+    "trustedSiteUrl" : "https://*.docusign.net",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "9abc586b-2193-4a4c-9d25-6fd198e6449b",
+    "isActive" : true,
+    "trustedSiteName" : "Docusign4",
+    "trustedSiteUrl" : "https://api.mixpanel.com/track",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d1ac33cc-5b6a-470f-9ceb-640277ae514e",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "detail_a01__c",
+  "id" : "2c2367f2-f512-4b76-9645-428485d01c18",
+  "label" : "Point dénergie Détails",
+  "objectApiName" : "PDE__c",
+  "routeType" : "detail-a01",
+  "type" : "route",
+  "urlPrefix" : "pde"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Appel à facturation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Appels à facturation</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <recordTypes>
+        <label><!-- Commission --></label>
+        <name>Commission</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Décommission --></label>
+        <name>Decommission</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Cet appel à facturation n&apos;est plus modifiable --></errorMessage>
+        <name>VR_001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Un montant positif n&apos;est pas autorisé pour cet appel à facturation. --></errorMessage>
+        <name>VR_002</name>
+    </validationRules>
+</CustomObjectTranslation>

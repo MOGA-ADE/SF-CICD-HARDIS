@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OHM Energie ELEC</label>
+    <protected>false</protected>
+    <values>
+        <field>CEE__c</field>
+        <value xsi:type="xsd:double">11.5</value>
+    </values>
+    <values>
+        <field>Fournisseur__c</field>
+        <value xsi:type="xsd:string">OHM Energie</value>
+    </values>
+    <values>
+        <field>Type_energie__c</field>
+        <value xsi:type="xsd:string">Elec</value>
+    </values>
+</CustomMetadata>

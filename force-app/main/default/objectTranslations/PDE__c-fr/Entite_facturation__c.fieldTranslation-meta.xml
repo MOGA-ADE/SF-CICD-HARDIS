@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Entité de facturation --></label>
+    <name>Entite_facturation__c</name>
+    <picklistValues>
+        <masterLabel>ENDESA GC</masterLabel>
+        <translation><!-- ENDESA GC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGIE E &amp; C</masterLabel>
+        <translation><!-- ENGIE E &amp; C --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGIE GC PRIVE</masterLabel>
+        <translation><!-- ENGIE GC PRIVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGIE GC PUBLIC</masterLabel>
+        <translation><!-- ENGIE GC PUBLIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGIE PRO</masterLabel>
+        <translation><!-- ENGIE PRO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Endesa</masterLabel>
+        <translation><!-- Endesa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaz Européen Lyon</masterLabel>
+        <translation><!-- Gaz Européen Lyon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaz Européen Paris</masterLabel>
+        <translation><!-- Gaz Européen Paris --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaz Européen Sud</masterLabel>
+        <translation><!-- Gaz Européen Sud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gaz Européen Sud-Ouest</masterLabel>
+        <translation><!-- Gaz Européen Sud-Ouest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OHM GC</masterLabel>
+        <translation><!-- OHM GC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OHM Grille</masterLabel>
+        <translation><!-- OHM Grille --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OHM Mid Market</masterLabel>
+        <translation><!-- OHM Mid Market --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRIMEO ENERGIE PEF</masterLabel>
+        <translation><!-- PRIMEO ENERGIE PEF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRIMEO ENERGIE PEGC</masterLabel>
+        <translation><!-- PRIMEO ENERGIE PEGC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEFE Energy</masterLabel>
+        <translation><!-- SEFE Energy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEFE INCUBATEUR</masterLabel>
+        <translation><!-- SEFE INCUBATEUR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOTAL GC</masterLabel>
+        <translation><!-- TOTAL GC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOTAL HORIZON</masterLabel>
+        <translation><!-- TOTAL HORIZON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VATTENFALL BLEU PRO</masterLabel>
+        <translation><!-- VATTENFALL BLEU PRO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VATTENFALL GC</masterLabel>
+        <translation><!-- VATTENFALL GC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

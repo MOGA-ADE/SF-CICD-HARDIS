@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupingStringEnum>ContractStatusCode</groupingStringEnum>
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>En attente de validation</fullName>
+        <default>false</default>
+        <label>En attente de validation</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>En attente de fourniture</fullName>
+        <default>false</default>
+        <label>En attente de fourniture</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>En cours de fourniture</fullName>
+        <default>false</default>
+        <label>En cours de fourniture</label>
+        <groupingString>InApproval</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Date de contrat dépassée</fullName>
+        <default>false</default>
+        <label>Date de contrat dépassée</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+</StandardValueSet>

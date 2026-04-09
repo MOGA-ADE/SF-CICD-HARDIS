@@ -1,0 +1,21 @@
+.selected-rows-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px; /* Espace sous le texte */
+    font-size: 16px; /* Taille de police pour le texte */
+}
+
+.selected-rows-info span {
+    margin-right: 5px;
+}
+
+.selected-count {
+    font-weight: bold;
+    font-size: 18px; /* Taille de police plus grande pour le nombre */
+    color: #000000; /* Couleur mise en avant pour le nombre */
+}
+
+.searchBar {
+    margin-bottom: 16px;
+}

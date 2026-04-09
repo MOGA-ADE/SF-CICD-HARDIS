@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Domaine d&apos;activité ADEME --></label>
+    <name>Domaine_activite_ADEME__c</name>
+    <picklistValues>
+        <masterLabel>AGRICULTURE</masterLabel>
+        <translation><!-- AGRICULTURE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE</masterLabel>
+        <translation><!-- INDUSTRIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RESIDENTIEL</masterLabel>
+        <translation><!-- RESIDENTIEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TERTIAIRE</masterLabel>
+        <translation><!-- TERTIAIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSPORT</masterLabel>
+        <translation><!-- TRANSPORT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- GRDF: Erreur droit d&apos;accès --></label>
+    <name>GRDF_Erreur_Droit_Acces__c</name>
+</CustomFieldTranslation>

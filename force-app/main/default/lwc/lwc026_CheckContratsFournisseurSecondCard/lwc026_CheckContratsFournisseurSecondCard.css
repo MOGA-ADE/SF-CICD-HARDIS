@@ -1,0 +1,8 @@
+.drop{
+    border: 2px dashed rgba(65, 148, 249, 0.75);
+    border-radius: 20px;
+    color:rgb(53, 93, 150);
+    font-weight: bold;
+    background-color: rgba(65, 148, 249, 0.05);
+    height:100px;
+}

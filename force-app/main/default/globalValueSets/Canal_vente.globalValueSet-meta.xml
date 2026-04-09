@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Vente indirecte</fullName>
+        <default>false</default>
+        <label>Vente indirecte</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente Paris</fullName>
+        <default>false</default>
+        <label>Vente Paris</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente sédentaire Lille</fullName>
+        <default>false</default>
+        <label>Vente sédentaire Lille</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente sédentaire Lyon</fullName>
+        <default>false</default>
+        <label>Vente sédentaire Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente terrain</fullName>
+        <default>false</default>
+        <label>Vente terrain</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente terrain Lyon</fullName>
+        <default>false</default>
+        <label>Vente terrain Lyon</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente PEP&apos;S</fullName>
+        <default>false</default>
+        <label>Vente PEP&apos;S</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente prescripteur</fullName>
+        <default>false</default>
+        <label>Vente prescripteur</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente direction</fullName>
+        <default>false</default>
+        <label>Vente direction</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente indirecte direction</fullName>
+        <default>false</default>
+        <label>Vente indirecte direction</label>
+    </customValue>
+    <customValue>
+        <fullName>Vente grand compte</fullName>
+        <default>false</default>
+        <label>Vente grand compte</label>
+    </customValue>
+    <masterLabel>Canal de vente</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

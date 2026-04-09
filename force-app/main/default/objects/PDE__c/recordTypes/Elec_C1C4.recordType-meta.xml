@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elec_C1C4</fullName>
+    <active>false</active>
+    <description>Point d&apos;énergie de C1 à C4</description>
+    <label>Elec C1 à C4</label>
+</RecordType>

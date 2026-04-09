@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Partage_Directeur_partenaires_France</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Partage Directeur partenaires France</label>
+        <sharedTo>
+            <role>Directeur_partenaires_France</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Directeur_partenaires_France</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statut_appel__c</fullName>
+    <label>Statut de l&apos;appel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pas d&apos;appel émis</fullName>
+                <default>false</default>
+                <label>Pas d&apos;appel émis</label>
+            </value>
+            <value>
+                <fullName>Répond</fullName>
+                <default>false</default>
+                <label>Répond</label>
+            </value>
+            <value>
+                <fullName>Répondeur</fullName>
+                <default>false</default>
+                <label>Répondeur</label>
+            </value>
+            <value>
+                <fullName>NRPP</fullName>
+                <default>false</default>
+                <label>NRPP</label>
+            </value>
+            <value>
+                <fullName>Faux numéro</fullName>
+                <default>false</default>
+                <label>Faux numéro</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>RDV commercial pris</controllingFieldValue>
+            <controllingFieldValue>RDV pris</controllingFieldValue>
+            <controllingFieldValue>ARappeler</controllingFieldValue>
+            <controllingFieldValue>Refusée</controllingFieldValue>
+            <controllingFieldValue>Hors Cible</controllingFieldValue>
+            <valueName>Répond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>Pas d&apos;appel émis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ARappeler</controllingFieldValue>
+            <valueName>Répondeur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Faux numéro</controllingFieldValue>
+            <valueName>Faux numéro</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deca122o00000IVIW7AAP</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>ACD</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!URLFOR(IF($Site.prefix == &apos;/s&apos;,&apos;/apex/dfsle__sending&apos;, $Site.Prefix +&apos;/apex/dfsle__sending&apos;), null, [sId = Lead.Id, sendingExperience = &apos;null&apos;, isEmbedded = false, templateId = &apos;a122o00000IVIW7AAP&apos;, recordId = Lead.Id, title = &apos;ACD&apos;])}</url>
+</WebLink>

@@ -1,0 +1,27 @@
+.subtitle{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #d8d8d8;
+    padding: 10px 0px;
+}
+
+.mgb{
+    margin-bottom: 8px;
+}
+
+.headerCard{
+    background-color: #f3f3f3;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+
+.bodyCard{
+    padding: 8px 32px;
+}
+
+.buttonMAJ{
+    padding: 0 0 0 125px;
+}

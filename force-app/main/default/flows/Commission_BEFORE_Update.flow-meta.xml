@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>On met à jour le nom de la commission si c&apos;est une création ou si la date de paiement a changé</description>
+        <name>DEC_UpdateRecord</name>
+        <label>Dois-je mettre à jour l&apos;enregistrement</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Non</defaultConnectorLabel>
+        <rules>
+            <name>ch_oui</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>FORMULA_createOrDateUpdated</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UPDATE_Commission</targetReference>
+            </connector>
+            <label>Oui</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Commission_Name</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Contract__r.FournisseurPicklist__c}) &amp; &quot; ADE &quot;&amp; TEXT(MONTH({!$Record.Mois_paiement__c}))&amp;&quot;-&quot;&amp;TEXT(YEAR({!$Record.Mois_paiement__c})) &amp; &quot; &quot; &amp; {!$Record.Contract__r.Account.Name}</expression>
+    </formulas>
+    <formulas>
+        <name>FORMULA_createOrDateUpdated</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(ISNEW(),ISCHANGED({!$Record.Mois_paiement__c}))</expression>
+    </formulas>
+    <interviewLabel>Commission BEFORE Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Commission BEFORE Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UPDATE_Commission</name>
+        <label>UPDATE Commission</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Commission_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DEC_UpdateRecord</targetReference>
+        </connector>
+        <object>Commission__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

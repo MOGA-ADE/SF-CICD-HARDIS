@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TECH_OptimisationFieldsMissing_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>TECH Champ Optimisation manquant ?</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>TECH Champ Optimisation manquant ?</labelOverride>
+        <masterLabel>TECH Champ Optimisation manquant ?</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <type>Checkbox</type>
+</CustomField>

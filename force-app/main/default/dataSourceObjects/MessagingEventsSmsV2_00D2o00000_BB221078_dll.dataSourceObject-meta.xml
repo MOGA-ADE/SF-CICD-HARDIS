@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSourceObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSource>MessagingEventsSmsV2_00D2o000000srHz_e9bdc394_611d_4d3b_983a_36f17e5cf448</dataSource>
+    <externalRecordIdentifier>MessagingEventsSmsV2_00D2o000000srHz_SmsEngagement_BB221078</externalRecordIdentifier>
+    <masterLabel>MessagingEventsSmsV2_00D2o000000srHz_SmsEngagement_BB221078</masterLabel>
+    <storageType>LOCAL</storageType>
+    <templateVersion>1</templateVersion>
+</DataSourceObject>

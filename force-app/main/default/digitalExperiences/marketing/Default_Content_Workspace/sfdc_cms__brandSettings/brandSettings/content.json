@@ -1,0 +1,8 @@
+{
+  "type" : "sfdc_cms__brandSettings",
+  "title" : "Brand Settings",
+  "contentBody" : {
+    "defaultBrand" : "MCRYBIA4ZOHZECRGQNX7Y75KQ6WQ"
+  },
+  "urlName" : "brand-settings"
+}

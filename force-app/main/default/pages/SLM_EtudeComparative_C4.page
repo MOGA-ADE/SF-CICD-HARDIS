@@ -1,0 +1,701 @@
+<apex:page standardController="Opportunity" id="quote" extensions="VFC004_EtudeComparative"
+           applyBodyTag="false" renderAs="pdf">
+    <head>
+            <title>Test</title>
+
+        <style>
+            @page {
+                size: A4 landscape;
+                margin-left: 0px;
+                margin-right: 2cm;
+            }
+            body {
+                margin-left: 2cm;
+            }
+            table {
+                width: 100%;
+                border: 1px solid black; 
+                text-align: center;
+                border-collapse: collapse;
+                font-size: 10px;
+            }
+            .CompanyInfo tr{
+                background: white;
+            }
+            .companyInfo .contact{
+                border: 0px solid black;
+                border-collapse: collapse;
+            }
+            .companyInfo .title{
+                background: #45818e; 
+                border: 1px solid black; 
+                border-collapse: collapse; 
+                color: white;
+            }
+            .companyInfo .logo{
+                //background: #404040; 
+                border: 0px solid black; 
+                border-collapse: collapse; 
+                color: white;
+                padding: 3px;
+                //padding-top: 15px;
+                //padding-bottom: 15px;
+            }
+            .companyInfo .subtitle{
+                background: #d0e1e2; 
+                border: 1px solid black; 
+                border-collapse: collapse;
+                width: 50%;
+            }
+            .companyInfo .detail{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            .monoSite{
+                font-weight: bold;
+                color: #45818e;
+                font-size: 10px;
+            }
+            .multiSite{
+                font-weight: bold;
+                color: white;
+                font-size: 12px;
+            }
+            .pdeList tr{
+                background: white;
+                width: 100%;
+            }
+            .pdeList .cellStyleWidthFirst{
+                width: 16%;
+            }
+            .pdeList .cellStyleWidthSecond{
+                width: 10%;
+            }
+            .pdeList .cellStyleWidthThird{
+                width: 24%;
+            }
+            .pdeList .cellStyleWidthFourth{
+                width: 4%;
+            }
+            .pdeList .pdeInfoTitle{
+                background-color: #999999;
+                color: white;
+            }
+            .pdeList .pdeInfo{
+                background-color: #d9d9d9 !important;
+                
+            }
+            .borderLines{
+                border-right: 1px solid #D9D9D9 !important;
+                border-left: 1px solid #D9D9D9 !important;
+                border-bottom: 1px solid #D9D9D9 !important;
+                border-top: 0px solid #D9D9D9 !important;
+            }
+            /*.situationActuelle tr{
+                background: white;
+                width: 100%;
+            }
+            .situationActuelle .situationActuelleTitle{
+                background: #999999;
+                color: white;
+            }
+            .situationActuelle .cellStyleWidthFirst{
+                width: 12%;
+            }
+            .situationActuelle .cellStyleWidthSecond{
+                width: 26%;
+            }
+            .situationActuelle .cellStyleWidthThird{
+                width: 13%;
+            }*/
+            .quoteList .quoteFormula{
+                border: 1px solid black; 
+                border-collapse: collapse;
+            }
+            /*.quoteList .quoteLogo{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }*/
+            .quoteList .quoteInfo{
+                background: white; 
+                border: 1px solid black; 
+                border-collapse: collapse;
+            }
+            .quoteList .cellStyleWidthFirst{
+                width: 12.5%;
+            }
+            .quoteList .cellStyleWidthSecond{
+                width: 25%;
+            }
+            .quoteList .cellStyleWidthThird{
+                width: 30%;
+            }
+            .quoteList .cellStyleWidthFourth{
+                width: 20%;
+            }
+            .quoteList .cellStyleWidthFifth{
+                width: 5%;
+            }
+            .quoteList .cellStyleWidthSixth{
+                width: 10%;
+            }
+            .cellStyle{
+                border: 1px solid white;
+                border-collapse: collapse;
+            }
+            .cellStyleLeftSide{
+                            border-left: 1px solid #D9D9D9 !important;
+            }
+            .cellStyleTopSide{
+                            border-top: 1px solid #D9D9D9 !important;
+            }
+            .cellStyleRightSide{
+                border-right: 1px solid #D9D9D9 !important;
+            }
+            .borderRightHidden{
+                border-right: 0px !important;
+            }
+            .cellStyleHidden{
+                border: 0px solid white !important;
+                border-collapse: collapse;
+                padding: 0px;
+                width: 0px;
+            }
+            .cellStyleAsHeader{
+                            border-collapse: collapse;
+                            background-color: red !important;
+            }
+            .cellStyleAsHeader{
+                            border-collapse: collapse;
+                            background-color: red !important;
+            }
+            .bg_color_LightCyan{
+                            //background-color: #D0E0E3; !important;
+            }
+            .bg_color_DarkCyan{
+                            //background-color: #45818E; !important;
+                            color: white;
+            }
+            .bg_color_Cyan{
+                            //background-color: #A2C4C9 !important;
+            }
+            .transparentText{
+                            background-color: white !important;
+                            color: white !important;
+            }
+        </style>
+    </head>
+    <body>
+    <div style="margin-bottom: 45px">
+        <table class="templatesHeaderContainer">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="companyInfo">
+                            <tbody>
+                                <tr>
+                                            <th class="logo" colspan="2" rowspan="3">
+                                                <apex:image url="{!$Resource.QuotationLogoAllianceEnergies}"  height="1.3cm" style="margin-bottom: 8px;"/>
+                                            </th>
+                                </tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr>
+                                            <th class="title" colspan="2">Votre interlocuteur</th>
+                                </tr>
+                                <tr>
+                                <th class="subtitle">Prénom NOM</th>
+                                <th class="detail">{!opportunite.Courtier}</th>
+                            </tr>
+                            <tr>
+                                <th class="subtitle">Téléphone</th>
+                                <th class="detail">{!opportunite.CourtierTelephone}</th>
+                            </tr>
+                            <tr>
+                                <th class="subtitle">Email</th>
+                                <th class="detail">{!opportunite.CourtierEmail}</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="35%">
+                    </td>
+                    <td width="40%">
+                        <table class="companyInfo">
+                            <tbody>
+                                <tr>
+                                            <th class="title" style="border-right: 0px;"></th>
+                                            <th class="title" style="border-left: 0px;">Entreprise</th>
+                                </tr>
+                                <tr>
+                                <th class="subtitle">Raison sociale</th>
+                                <th class="detail">{!opportunite.Raison_sociale}</th>
+                            </tr>
+                            <tr>
+                                <th class="subtitle">SIREN</th>
+                                <th class="detail">{!opportunite.SIREN}</th>
+                            </tr>
+                            <tr>
+                                <th class="title" style="border-right: 0px;"></th>
+                                <th class="title" style="border-left: 0px;">Signataire</th>
+                            </tr>
+                            <tr>
+                                <th class="subtitle">Prénom NOM</th>
+                                <th class="detail">{!opportunite.Prenom_NOM}</th>
+                            </tr>
+                            <tr>
+                                <th class="subtitle">Téléphone</th>
+                                <th class="detail">{!opportunite.Telephone}</th>
+                            </tr>
+                            <tr>
+                                <th class="subtitle">Email</th>
+                                <th class="detail">{!opportunite.Email}</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <apex:outputPanel rendered="{!isMonosite}">
+        <div>
+            <span class="monoSite">MON COMPTEUR</span>
+        </div>
+        <div>
+            <span class="monoSite">Activité du site :&nbsp;{!entreprise.activite}</span>
+        </div>
+    </apex:outputPanel>
+    <!--                         C1 C4                  -->
+        <div style="margin-top: 30px;display:{!IF(opportunite.Template == 'C1/C2/C3/C4','','none')};">
+            <table class="pdeList">
+                <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                    <tr class="pdeInfoTitle">
+                        <th class="cellStyle" colspan="13">
+                            <div class="pdeInfoTitle" style="background-color: #999999;">
+                                <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                            </div>
+                        </th>
+                    </tr>
+                </apex:outputPanel>
+                <tr>
+                    <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">RAE</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Segment</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Puissance (KVA)</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" colspan="6" width="35%">Consommation annuelle (en MWH)</th>
+                </tr>
+                <tr>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">PTE</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPH</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCH</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPE</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCE</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">CAR</th>
+                </tr>
+                
+                <!--<apex:repeat value="{!quotes}" var="quote">-->
+                    <!--<apex:repeat value="{!quotes[0].devis}" var="devis">
+                            
+                        <tr>
+                            <td class="cellStyle borderLines" >{!devis.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!devis.SIRET}</td>
+                            <td class="cellStyle borderLines" >{!devis.RAE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!devis.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!devis.Profil}</td>
+                            <td class="cellStyle borderLines" >{!devis.Segment}</td>
+                            <td class="cellStyle borderLines" >{!devis.Puissance}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoPointes}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHPH}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHCH}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHPE}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHCE}</td>
+                            <td class="cellStyle borderLines" >{!devis.CAR}</td>
+                        </tr>
+                    </apex:repeat>-->
+                    <apex:repeat value="{!pdes}" var="pde">
+                            
+                        <tr>
+                            <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                            <td class="cellStyle borderLines" >{!pde.RAE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!pde.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!pde.Profil}</td>
+                            <td class="cellStyle borderLines" >{!pde.Segment}</td>
+                            <td class="cellStyle borderLines" >{!pde.Puissance}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoPointes}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHPH}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHCH}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHPE}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHCE}</td>
+                            <td class="cellStyle borderLines" >{!pde.CAR}</td>
+                        </tr>
+                    </apex:repeat>
+                <!--</apex:repeat>-->
+            </table>
+        </div>
+    <!--                        /C1 C4                  -->
+    <!--                          C5                        -->
+        <div style="margin-top: 30px;display:{!IF( opportunite.Template == 'C5','','none')};">
+            <table class="pdeList">
+                <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                    <tr class="pdeInfoTitle">
+                        <th class="cellStyle" colspan="9">
+                            <div class="pdeInfoTitle" style="background-color: #999999;">
+                                <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                            </div>
+                        </th>
+                    </tr>
+                </apex:outputPanel>
+                <tr>
+                    <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">RAE</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Segment</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Puissance (KVA)</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" colspan="2" width="35%">Consommation annuelle (en MWH)</th>
+                </tr>
+                <tr>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;" width="17.5%">Base / HP</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;" width="17.5%">HC</th>
+                </tr>
+                
+                <!--<apex:repeat value="{!quotes}" var="quote">-->
+                    <!--<apex:repeat value="{!quotes[0].devis}" var="devis">
+                            
+                        <tr>
+                            <td class="cellStyle borderLines" >{!devis.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!devis.SIRET}</td>
+                            <td class="cellStyle borderLines" >{!devis.RAE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!devis.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!devis.Profil}</td>
+                            <td class="cellStyle borderLines" >{!devis.Segment}</td>
+                            <td class="cellStyle borderLines" >{!devis.Puissance}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoPointes}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHPH}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHCH}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHPE}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHCE}</td>
+                            <td class="cellStyle borderLines" >{!devis.CAR}</td>
+                        </tr>
+                    </apex:repeat>-->
+                    <apex:repeat value="{!pdes}" var="pde">
+                            
+                        <tr>
+                            <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                            <td class="cellStyle borderLines" >{!pde.RAE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!pde.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!pde.Profil}</td>
+                            <td class="cellStyle borderLines" >{!pde.Segment}</td>
+                            <td class="cellStyle borderLines" >{!pde.Puissance}</td>
+                            <td class="cellStyle borderLines" >{!IF(pde.ConsoHC != NULL ,pde.ConsoHP,pde.ConsoBase)}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHC}</td>
+                        </tr>
+                    </apex:repeat>
+                <!--</apex:repeat>-->
+            </table>
+        </div>
+    <!--                          /C5                       -->
+    <!--                 C5 2 Postes 4 Postes                       -->
+        <div style="margin-top: 30px;display:{!IF( opportunite.Template == 'C5 (2postes/4postes','','none')};">
+            <table class="pdeList">
+                <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                    <tr class="pdeInfoTitle">
+                        <th class="cellStyle" colspan="14">
+                            <div class="pdeInfoTitle" style="background-color: #999999;">
+                                <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                            </div>
+                        </th>
+                    </tr>
+                </apex:outputPanel>
+                <tr>
+                    <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">RAE</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Segment</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Puissance (KVA)</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" colspan="7" width="35%">Consommation annuelle (en MWH)</th>
+                </tr>
+                <tr>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">Base / HP</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HC</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPH</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCH</th>
+                    <th class="cellStyle cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HPE</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthFourth pdeInfo" style="background-color: #D9D9D9;">HCE</th>
+                </tr>
+                
+                <!--<apex:repeat value="{!quotes}" var="quote">-->
+                    <!--<apex:repeat value="{!quotes[0].devis}" var="devis">
+                            
+                        <tr>
+                            <td class="cellStyle borderLines" >{!devis.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!devis.SIRET}</td>
+                            <td class="cellStyle borderLines" >{!devis.RAE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!devis.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!devis.Profil}</td>
+                            <td class="cellStyle borderLines" >{!devis.Segment}</td>
+                            <td class="cellStyle borderLines" >{!devis.Puissance}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoPointes}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHPH}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHCH}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHPE}</td>
+                            <td class="cellStyle borderLines" >{!devis.ConsoHCE}</td>
+                            <td class="cellStyle borderLines" >{!devis.CAR}</td>
+                        </tr>
+                    </apex:repeat>-->
+                    <apex:repeat value="{!pdes}" var="pde">
+                            
+                        <tr>
+                            <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                            <td class="cellStyle borderLines" >{!pde.RAE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!pde.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!pde.Profil}</td>
+                            <td class="cellStyle borderLines" >{!pde.Segment}</td>
+                            <td class="cellStyle borderLines" >{!pde.Puissance}</td>
+                            <td class="cellStyle borderLines" >{!IF(pde.ConsoHC != NULL ,pde.ConsoHP,pde.ConsoBase)}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHC}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHPH}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHCH}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHPE}</td>
+                            <td class="cellStyle borderLines" >{!pde.ConsoHCE}</td>
+                        </tr>
+                    </apex:repeat>
+                <!--</apex:repeat>-->
+            </table>
+        </div>
+    <!--                /C5 2 Postes 4 Postes                       -->
+    <!--                           Gaz                      -->
+        <div style="margin-top: 30px;display:{!IF(opportunite.Template == 'Gaz','','none')};">
+            <table class="pdeList">
+                <apex:outputPanel rendered="{!NOT(isMonosite)}">
+                    <tr class="pdeInfoTitle">
+                        <th class="cellStyle" colspan="9">
+                            <div class="pdeInfoTitle" style="background-color: #999999;">
+                                <span class="multiSite">INFORMATIONS COMPTEURS</span>
+                            </div>
+                        </th>
+                    </tr>
+                </apex:outputPanel>
+                <tr>
+                    <th class="cellStyle cellStyleLeftSide cellStyleWidthFirst pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SITE DE CONSOMMATION</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">SIRET</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">PCE</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Echéance</th>
+                    <th class="cellStyle cellStyleWidthSecond pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Profil<br/>-<br/>Option Tarifaire</th>
+                    <th class="cellStyle cellStyleRightSide cellStyleWidthThird pdeInfo" style="background-color: #D9D9D9;" rowspan="2">Consommation annuelle (en MWH)</th>
+                </tr>
+                <tr>
+                </tr>
+                    <apex:repeat value="{!pdes}" var="pde">       
+                        <tr>
+                            <td class="cellStyle borderLines" >{!pde.SITE_DE_CONSOMMATION}</td>
+                            <td class="cellStyle borderLines" >{!pde.SIRET_PAYEUR}</td>
+                            <td class="cellStyle borderLines" >{!pde.PCE}</td>
+                            <td class="cellStyle borderLines" ><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!pde.Echeance}"/></apex:outputText></td>
+                            <td class="cellStyle borderLines" >{!pde.Profil_Gaz}</td>
+                            <td class="cellStyle borderLines" >{!pde.CAR_Gaz}</td>
+                        </tr>
+                    </apex:repeat>
+                <!--</apex:repeat>-->
+            </table>
+        </div>
+    <!--                          /Gaz                      -->
+
+    <apex:repeat value="{!quotes}" var="fournisseur">
+
+        <div style="margin-top: 30px;display: {!IF(fournisseur.isPropositionDeRenouvelement,'none','')};">
+            <apex:repeat var="q" value="{!fournisseur.devis}">
+                <!--             C1/C2/C3/C4            -->
+                    <table class="pdeListSection" width="100%" style="page-break-inside:avoid;display:{!IF(opportunite.Template == 'C1/C2/C3/C4','','none')};">
+                        <!--<tr>
+                            <th class="bg_color_DarkCyan"  colspan="14">ETUDE ELECTRICITE - LUDOCIE</th>
+                        </tr>
+                        <tr>
+                            <th class="transparentText" colspan="14">HIDDEN TEXT</th>
+                        </tr>-->
+                        <tr>
+                            <th class=" bg_color_LightCyan cellStyleRightSide cellStyleLeftSide cellStyleTopSide" style="background-color:{!fournisseur.couleur1}" colspan="15">du <apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!q.DateDebut}"/></apex:outputText> au <apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!q.DateFin}"/></apex:outputText></th>
+                        </tr>
+                        <tr>
+                            <th class=" bg_color_LightCyan cellStyleRightSide cellStyleLeftSide cellStyleTopSide" style="background-color:{!fournisseur.couleur2}" colspan="15">{!fournisseur.Name}</th>
+                        </tr>
+                        
+                        <tr>
+                            <th class="cellStyle cellStyleLeftSide bg_color_LightCyan" rowspan="2" style="vertical-align: middle;background-color:{!fournisseur.couleur1}" width="1cm"><apex:image value="{!IF(fournisseur.logo!=null,URLFOR($Resource.QuotationLogos,'SalesForceElecLogos/'+fournisseur.logo),$Resource.QuotationLogoAllianceEnergies)}" width="1.6cm" height="1cm" style="margin-left : -1.8cm;margin-right : 10px;display:float: left;"/><div style="vertical-align:middle;padding-top: 14px;">RAE</div></th>
+                            <th class="cellStyle cellStyleLeftSide bg_color_LightCyan" rowspan="2" style="vertical-align: middle;background-color:{!fournisseur.couleur1}" width="2.5cm"><!--<apex:image value="{!IF(fournisseur.logo!=null,URLFOR($Resource.QuotationLogos,'SalesForceElecLogos/'+fournisseur.logo),$Resource.QuotationLogoAllianceEnergies)}" width="1.6cm" height="1cm" style="margin-left : -2.2cm;margin-right : 10px;display: {!IF(inc!=0,'none','')};"/>-->Abonnement (€/mois)</th>
+                            <th class="cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}" colspan="5">Prix Electricité (en €/MWH)</th>
+                            <th class="cellStyle bg_color_Cyan"  rowspan="2" style="text-align: center;background-color:{!fournisseur.couleur2}">Budget annuel<br/>(€ HT)</th>
+                            <th class="cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}" colspan="6">Budget Obligations (en €/MWH)</th>
+                            <th class="cellStyle bg_color_Cyan cellStyleRightSide" style="background-color:{!fournisseur.couleur2}" rowspan="2">Budget Annuel Estimé Electricité et Obligations(€ HT)</th>
+                        </tr>
+                        <tr>
+                            <th class="{!IF(fournisseur.isVisiblePTE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisiblePTE}">PTE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleHPH ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleHPH}">HPH</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleHCH ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleHCH}">HCH</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleHPE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleHPE}">HPE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleHCE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleHCE}">HCE</apex:outputPanel></th>
+                            
+                            <th class="{!IF(fournisseur.isVisibleCEE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleCEE}">CEE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleCoutDeCapacite ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleCoutDeCapacite}">Coût de capacité<br/>(estimation)</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleTURPE ,'cellStyle','cellStyleHidden')} cellStyle {!IF(fournisseur.isVisibleHPE,'','borderRightHidden')} bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleTURPE}">TURPE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleCSPE ,'cellStyle','cellStyleHidden')}  bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleCSPE}">CSPE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleTCFE ,'cellStyle','cellStyleHidden')}  bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleTCFE}">TCFE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleTotalBudgetObligation ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan " style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleTotalBudgetObligation}">Total Budget Obligation</apex:outputPanel></th>
+                        </tr>
+
+                        
+                        <apex:repeat var="q" value="{!fournisseur.devis}">
+                            <tr>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleabonnement,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.RAE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleabonnement,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisiblePTE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleabonnement}">{!q.abonnement}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisiblePTE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleHPH,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisiblePTE}">{!q.PrixPointes}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleHPH,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleHCH,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleHPH}">{!q.PrixHPH}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleHCH,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleHPE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleHCH}">{!q.PrixHCH}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleHPE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleHCE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleHPE}">{!q.PrixHPE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleHCE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleBudgetAnnuel,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleHCE}">{!q.PrixHCE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleBudgetAnnuel,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleCEE,'','borderRightHidden')}  borderLines bg_color_LightCyan"><apex:outputPanel rendered="{!fournisseur.isVisibleBudgetAnnuel}">{!q.BudgetAnnuel}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleCEE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleCoutDeCapacite,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleCEE}">{!q.CEE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleCoutDeCapacite,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleTURPE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleCoutDeCapacite}">{!q.CoutDeCapacite}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleTURPE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleCSPE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleTURPE}">{!q.TURPE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleCSPE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleTCFE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleCSPE}">{!q.CSPE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleTCFE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleTotalBudgetObligation,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleTCFE}">{!q.TCFE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleTotalBudgetObligation,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleBudgetAnnuelEstime,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleTotalBudgetObligation}">{!q.TotalBudgetObligation}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleBudgetAnnuelEstime,'cellStyle','cellStyleHidden')}  cellStyle   borderLines bg_color_LightCyan"><apex:outputPanel rendered="{!fournisseur.isVisibleBudgetAnnuelEstime}">{!q.BudgetAnnuelEstime}</apex:outputPanel></td>
+                            </tr>     
+                        </apex:repeat>
+                        <tr>
+                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                        </tr>
+                        <tr>
+                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                        </tr>  
+                    </table>
+                <!--            /C1/C2/C3/C4            -->
+                <!--                  C5                  -->
+                    <table class="pdeListSection" width="100%" style="page-break-inside:avoid;display: {!IF( OR(opportunite.Template == 'C5' , opportunite.Template =='C5 (2postes/4postes'),'','none')};">
+                        <!--<tr>
+                            <th class="bg_color_DarkCyan"  colspan="14">ETUDE ELECTRICITE - LUDOCIE</th>
+                        </tr>
+                        <tr>
+                            <th class="transparentText" colspan="14">HIDDEN TEXT</th>
+                        </tr>-->
+                        <tr>
+                            <th class=" bg_color_LightCyan cellStyleRightSide cellStyleLeftSide cellStyleTopSide" style="background-color:{!fournisseur.couleur1}" colspan="15">du <apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!q.DateDebut}"/></apex:outputText> au <apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!q.DateFin}"/></apex:outputText></th>
+                        </tr>
+                        <tr>
+                            <th class=" bg_color_LightCyan cellStyleRightSide cellStyleLeftSide cellStyleTopSide" style="background-color:{!fournisseur.couleur2}" colspan="15">{!fournisseur.Name}</th>
+                        </tr>
+                        
+                        <tr>
+                            <th class="cellStyle cellStyleLeftSide bg_color_LightCyan" rowspan="2" style="vertical-align: middle;background-color:{!fournisseur.couleur1}" width="1cm"><apex:image value="{!IF(fournisseur.logo!=null,URLFOR($Resource.QuotationLogos,'SalesForceElecLogos/'+fournisseur.logo),$Resource.QuotationLogoAllianceEnergies)}" width="1.6cm" height="1cm" style="margin-left : -1.8cm;margin-right : 10px;display:float: left;"/><div style="vertical-align:middle;padding-top: 14px;">RAE</div></th>
+                            <th class="cellStyle cellStyleLeftSide bg_color_LightCyan" rowspan="2" style="vertical-align: middle;background-color:{!fournisseur.couleur1}" ><!--<apex:image value="{!IF(fournisseur.logo!=null,URLFOR($Resource.QuotationLogos,'SalesForceElecLogos/'+fournisseur.logo),$Resource.QuotationLogoAllianceEnergies)}" width="1.6cm" height="1cm" style="margin-left : -2.2cm;margin-right : 10px;display: {!IF(inc!=0,'none','')};"/>-->Abonnement (€/mois)</th>
+                            <th class="cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}" colspan="2" width="60%" >Prix Electricité (en €/MWH) + TURPE + CAPA</th>
+                            <th class="cellStyle bg_color_Cyan"  rowspan="2" style="text-align: center;background-color:{!fournisseur.couleur2}"  >Budget annuel (€ HT)</th>
+                        </tr>
+                        <tr>
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" width="30%" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">BASE / HP</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" width="30%" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">HC</apex:outputPanel></th>
+                        </tr>
+
+                        
+                        <apex:repeat var="q" value="{!fournisseur.devis}">
+                            <tr>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleabonnement,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.RAE}</apex:outputPanel></td>
+                                
+                                <td class="{!IF(fournisseur.isVisibleabonnement,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisiblePTE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleabonnement}">{!q.abonnement}</apex:outputPanel></td>
+                                
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleHCE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!IF(q.ConsoHC != NULL ,q.ConsoHP,q.ConsoBase)}</apex:outputPanel></td>
+                                
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleBudgetAnnuel,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.ConsoHC}</apex:outputPanel></td>
+
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleBudgetAnnuel,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.BudgetAnnuelEstime}</apex:outputPanel></td>
+
+                                <!--
+                                                                    <td class="cellStyle borderLines" >{!IF(pde.ConsoHC != NULL ,pde.ConsoHP,pde.ConsoBase)}</td>
+                                        <td class="cellStyle borderLines" >{!pde.ConsoHC}</td>
+                                -->
+                                
+                            </tr>     
+                        </apex:repeat>
+                        <tr>
+                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                        </tr>
+                        <tr>
+                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                        </tr>  
+                    </table>
+                <!--                     /C5                    -->
+                <!--                  GAZ                    -->
+                    <table class="pdeListSection" width="100%" style="page-break-inside:avoid;display: {!IF(opportunite.Template == 'Gaz','','none')};">
+                        <tr>
+                            <th class=" bg_color_LightCyan cellStyleRightSide cellStyleLeftSide cellStyleTopSide" style="background-color:{!fournisseur.couleur1}" colspan="15">du <apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!q.DateDebut}"/></apex:outputText> au <apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!q.DateFin}"/></apex:outputText></th>
+                        </tr>
+                        <tr>
+                            <th class=" bg_color_LightCyan cellStyleRightSide cellStyleLeftSide cellStyleTopSide" style="background-color:{!fournisseur.couleur2}" colspan="15">{!fournisseur.Name}</th>
+                        </tr>
+                        
+                        <tr>
+                            <th class="cellStyle cellStyleLeftSide bg_color_LightCyan" rowspan="2" style="vertical-align: middle;background-color:{!fournisseur.couleur1}" width="1cm"><apex:image value="{!IF(fournisseur.logo!=null,URLFOR($Resource.QuotationLogos,'SalesForceElecLogos/'+fournisseur.logo),$Resource.QuotationLogoAllianceEnergies)}" width="1.6cm" height="1cm" style="margin-left : -1.8cm;margin-right : 10px;display:float: left;"/><div style="vertical-align:middle;padding-top: 14px;">RAE</div></th>
+                            <th class="cellStyle cellStyleLeftSide bg_color_LightCyan" rowspan="2" style="vertical-align: middle;background-color:{!fournisseur.couleur1}" width="2.5cm">Abonnement GRDF (€/mois)</th>
+                            <th class="cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}" colspan="2">Prix Gaz (en €/MWH)</th>
+                            <th class="cellStyle bg_color_Cyan"  rowspan="2" style="text-align: center;background-color:{!fournisseur.couleur1}">Budget Fourniture<br/>(HT €/an)</th>
+                            <th class="cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}" colspan="3">Obligations Fournisseurs</th>
+                            <th class="cellStyle bg_color_Cyan " style="background-color:{!fournisseur.couleur1}" rowspan="2">Budget Obligations<br/>(HT €/an)</th>
+                            <th class="cellStyle bg_color_Cyan cellStyleRightSide" style="background-color:{!fournisseur.couleur1}" rowspan="2">Budget Fourniture et<br/>Obligations<br/>(HT €/an)</th>
+                        </tr>
+                        <tr>
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">Molécule</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">Distribution</apex:outputPanel></th>
+                            
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">CEE</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">CTA</apex:outputPanel></th>
+                            <th class="{!IF(fournisseur.isVisibleRAE ,'cellStyle','cellStyleHidden')} cellStyle bg_color_LightCyan" style="background-color:{!fournisseur.couleur1}"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">TICGN</apex:outputPanel></th>
+                            
+                        </tr>
+
+                        
+                        <apex:repeat var="q" value="{!fournisseur.devis}">
+                            <tr>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleabonnement,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.RAE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleabonnement,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleBudgetAnnuel,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleabonnement}">{!q.abonnement}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleBudgetAnnuel,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleBudgetAnnuel}">{!q.PrixMolecule}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleBudgetAnnuel,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.Distribution}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleBudgetAnnuel}">{!q.BudgetAnnuel}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleCEE}">{!q.CEE}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.CTA}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines bg_color_LightCyan"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.TICGN}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleRAE,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.TotalBudgetObligation_Gaz}</apex:outputPanel></td>
+                                <td class="{!IF(fournisseur.isVisibleBudgetAnnuelEstime,'cellStyle','cellStyleHidden')}  cellStyle {!IF(fournisseur.isVisibleRAE,'','borderRightHidden')}  borderLines"><apex:outputPanel rendered="{!fournisseur.isVisibleRAE}">{!q.BudgetAnnuelEstime}</apex:outputPanel></td>
+                            </tr>     
+                        </apex:repeat>
+                        <tr>
+                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                        </tr>
+                        <tr>
+                            <td class="transparentText" colspan="14">HIDDEN TEXT</td>
+                        </tr>  
+                    </table>
+                <!--                 /GAZ                    -->
+            </apex:repeat>
+        </div>
+
+      </apex:repeat>
+      <table width="100%">
+                    <tr>
+                        <td class="cellStyle" style="border: 1px solid black;border-right: 0px solid black;padding-top: 10px;padding-bottom: 10px;paddind-left: 10px;text-align: left;">Commentaire :</td>
+                        <td class="cellStyle" style="border: 1px solid black;border-left: 0px solid black;" colspan="13"></td>
+                    </tr>
+        </table>
+    </body>
+</apex:page>

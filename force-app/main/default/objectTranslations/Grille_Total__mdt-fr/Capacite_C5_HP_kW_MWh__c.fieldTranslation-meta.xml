@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Capacité C5 HP (kW/MWh) --></label>
+    <name>Capacite_C5_HP_kW_MWh__c</name>
+</CustomFieldTranslation>

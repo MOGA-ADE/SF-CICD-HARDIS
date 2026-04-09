@@ -1,0 +1,105 @@
+{
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "9d5c1e8e-a1dd-4ec1-a2ce-8f3de3bb324c",
+  "label" : "Contract Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "cbfc2a3a-a894-4726-b304-a462a00217f9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:pathAssistant",
+      "id" : "e2a92ff3-3dd4-4ddb-8612-ef86608da8f6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "33fdaa93-444d-4035-a171-d977f2fe346f",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordDetail",
+      "id" : "3aaff8ce-c9fe-447f-8f20-2ea4b3676647",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "68db1e33-b33f-4257-b693-8c108f917c4a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "b0a68354-eb93-4154-8ec9-7ca2413a0094",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6a6fa36e-69cf-4c7f-854c-2fa9eda50a2e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1ecdc4d9-2aa6-4f18-b845-5514bbe4831f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "relatedListApiName" : "CombinedAttachments",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:responsiveRelatedListSingle",
+      "id" : "47dc3e0f-268c-45e8-8ab0-f3368d217b19",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "relatedListApiName" : "Prix_contrat_PDE__r",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:responsiveRelatedListSingle",
+      "id" : "afa36898-cf60-47c3-83e8-baa878de6fe8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "relatedListApiName" : "Commissions_salarie__r",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:responsiveRelatedListSingle",
+      "id" : "50082226-b69d-41c6-a21a-fa3173f10e2c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "afbf8800-1932-4360-abf6-4cc6e21de9a7",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-800"
+}

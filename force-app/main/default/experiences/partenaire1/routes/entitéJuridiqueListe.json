@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "45013ef4-c92f-43c0-86de-f1f6edfe251a",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "list_001__c",
+  "id" : "b48f134f-c7b4-4b48-b9fe-fc87f200caa7",
+  "label" : "Entité Juridique Liste",
+  "routeType" : "list-001",
+  "type" : "route",
+  "urlPrefix" : "account"
+}

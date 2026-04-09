@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllAccounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>EntiteJuridiquePrincipale__c</columns>
+    <columns>Siren__c</columns>
+    <columns>Siret__c</columns>
+    <columns>Code_NAF__c</columns>
+    <columns>CEE__c</columns>
+    <columns>CSPE__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Contact__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Statut__c</field>
+        <operation>equals</operation>
+        <value>Client</value>
+    </filters>
+    <label>Tout les comptes</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_002</fullName>
+    <active>true</active>
+    <description>Un appel à facturation de type Commission doit obligatoirement avoir un montant positif.
+Un appel à facturation de type Décommission doit obligatoirement avoir un montant négatif.</description>
+    <errorConditionFormula>OR(AND(
+RecordType.DeveloperName = &quot;Decommission&quot;,Montant__c &gt; 0
+),AND(
+RecordType.DeveloperName = &quot;Commission&quot;,Montant__c &lt; 0
+))</errorConditionFormula>
+    <errorMessage>Un montant positif n&apos;est pas autorisé pour cet appel à facturation.</errorMessage>
+</ValidationRule>

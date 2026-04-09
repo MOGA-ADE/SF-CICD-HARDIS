@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Emailing_Hot_Lille_Lead</fullName>
+    <columns>Campagne_emailing__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <label>Lead Emailing Hot &amp; Warm - Lille</label>
+    <queue>Lead_Emailing_Hot_Lille</queue>
+    <sharedTo>
+        <role>Directeur_Commercial_ADE_Lille</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- PersonalInfo_EPIM --></label>
+        <name>PersonalInfo_EPIM</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage><!-- Merci de rentrer votre numéro de téléphone au format 06 59 59 59 59 (Un espace tous les deux chiffres) --></errorMessage>
+        <name>VR_001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- La région d&apos;activité est autorisée uniquement pour les canaux de vente Terrain --></errorMessage>
+        <name>VR_002</name>
+    </validationRules>
+</CustomObjectTranslation>

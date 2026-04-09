@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COMMUNITY_Elli_RiskClass__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE (ELLISPHERE__Elli_Tch_RiskClass__c,
+&apos;A&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_faible_nul.png&apos;,&apos;Risque faible à quasi-nul&apos;,16,161),
+&apos;GREEN&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_faible_nul.png&apos;,&apos;Risque faible à quasi-nul&apos;,16,161),
+&apos;B&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_moyen_faible.png&apos;,&apos;Risque moyen à faible&apos;,16,161),
+&apos;YELLOW&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_moyen_faible.png&apos;,&apos;Risque moyen à faible&apos;,16,161),
+&apos;C&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_moyen_eleve.png&apos;,&apos;risque moyen à élevé&apos;,16,161),
+&apos;ORANGE&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_moyen_eleve.png&apos;,&apos;risque moyen à élevé&apos;,16,161),
+&apos;D&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_tres_eleve.png&apos;,&apos;risque très avéré&apos;,16,161),
+&apos;RED&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_tres_eleve.png&apos;,&apos;risque très avéré&apos;,16,161),
+&apos;E&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_avere.png&apos;,&apos;Risque avéré&apos;,16,161),
+&apos;BLACK&apos;,IMAGE(&apos;https://alliancedesenergies.my.site.com/partenaire/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_avere.png&apos;,&apos;Risque avéré&apos;,16,161),
+&quot;n/a&quot;)</formula>
+    <label>Classe de risque</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

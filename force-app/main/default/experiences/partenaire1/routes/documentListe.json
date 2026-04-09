@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "869e1d56-f624-40d2-9122-ea5de6d4d46a",
+  "appPageId" : "b9e4e13f-1cc2-4de2-b5be-1b2eb45bb70f",
+  "configurationTags" : [ ],
+  "devName" : "Document_Liste__c",
+  "id" : "2db2fb98-e7bf-4e23-88c4-56ffbd6c402c",
+  "label" : "Document Liste",
+  "objectApiName" : "Document__c",
+  "routeType" : "list-a0J",
+  "type" : "route",
+  "urlPrefix" : "document"
+}

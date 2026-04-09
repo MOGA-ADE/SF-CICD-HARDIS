@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>GRDF_Recuperer_Donnees_PCE</name>
+        <label>GRDF - Récupérer Données PCE</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>GRDFFetchData</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>pceRecords</name>
+            <value>
+                <elementReference>col_PDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type_action</name>
+        </inputParameters>
+        <nameSegment>GRDFFetchData</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assin_Col_PDE</name>
+        <label>Assin Col PDE</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>col_PDE</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>GRDF_Recuperer_Donnees_PCE</targetReference>
+        </connector>
+    </assignments>
+    <description>Récupère les data techniques et contractuelles quand un pde passe au statut GRDF &quot;Demande d&apos;accès validé&quot;</description>
+    <environments>Default</environments>
+    <interviewLabel>GRDF : {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GRDF Fetch Data</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assin_Col_PDE</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>GRDF_Statut_Droit_Acces__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Demande d&apos;accès validée</stringValue>
+            </value>
+        </filters>
+        <object>PDE__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>col_PDE</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PDE__c</objectType>
+    </variables>
+</Flow>

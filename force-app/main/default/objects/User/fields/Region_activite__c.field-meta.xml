@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_activite__c</fullName>
+    <label>Région d&apos;activité</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nord</fullName>
+                <default>false</default>
+                <label>Nord</label>
+            </value>
+            <value>
+                <fullName>Nord Est</fullName>
+                <default>false</default>
+                <label>Nord Est</label>
+            </value>
+            <value>
+                <fullName>Nord Ouest</fullName>
+                <default>false</default>
+                <label>Nord Ouest</label>
+            </value>
+            <value>
+                <fullName>Centre</fullName>
+                <default>false</default>
+                <label>Centre</label>
+            </value>
+            <value>
+                <fullName>Sud</fullName>
+                <default>false</default>
+                <label>Sud</label>
+            </value>
+            <value>
+                <fullName>Sud Est</fullName>
+                <default>false</default>
+                <label>Sud Est</label>
+            </value>
+            <value>
+                <fullName>Sud Ouest</fullName>
+                <default>false</default>
+                <label>Sud Ouest</label>
+            </value>
+            <value>
+                <fullName>Lyon</fullName>
+                <default>false</default>
+                <label>Lyon</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

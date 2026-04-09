@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type de rappel --></label>
+    <name>Type_rappel__c</name>
+    <picklistValues>
+        <masterLabel>Rappel auto</masterLabel>
+        <translation><!-- Rappel auto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rappel perso</masterLabel>
+        <translation><!-- Rappel perso --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

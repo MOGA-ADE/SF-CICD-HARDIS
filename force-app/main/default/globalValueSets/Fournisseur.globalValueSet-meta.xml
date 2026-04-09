@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Dyneff</fullName>
+        <default>false</default>
+        <label>Dyneff</label>
+    </customValue>
+    <customValue>
+        <fullName>Endesa</fullName>
+        <default>false</default>
+        <label>Endesa</label>
+    </customValue>
+    <customValue>
+        <fullName>Engie</fullName>
+        <default>false</default>
+        <label>Engie</label>
+    </customValue>
+    <customValue>
+        <fullName>Enovos</fullName>
+        <default>false</default>
+        <label>Enovos</label>
+    </customValue>
+    <customValue>
+        <fullName>Gazel Energie</fullName>
+        <default>false</default>
+        <label>Gazel Energie</label>
+    </customValue>
+    <customValue>
+        <fullName>Gaz Européen</fullName>
+        <default>false</default>
+        <label>Gaz Européen</label>
+    </customValue>
+    <customValue>
+        <fullName>MET Energie</fullName>
+        <default>false</default>
+        <label>MET Energie</label>
+    </customValue>
+    <customValue>
+        <fullName>OHM Energie</fullName>
+        <default>false</default>
+        <label>OHM Energie</label>
+    </customValue>
+    <customValue>
+        <fullName>Picoty</fullName>
+        <default>false</default>
+        <label>Picoty</label>
+    </customValue>
+    <customValue>
+        <fullName>Primeo Energie</fullName>
+        <default>false</default>
+        <label>Primeo Energie</label>
+    </customValue>
+    <customValue>
+        <fullName>Save energies</fullName>
+        <default>false</default>
+        <label>Save energies</label>
+    </customValue>
+    <customValue>
+        <fullName>SEFE Energy</fullName>
+        <default>false</default>
+        <label>SEFE Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>TotalEnergies</fullName>
+        <default>false</default>
+        <label>TotalEnergies</label>
+    </customValue>
+    <customValue>
+        <fullName>Vattenfall</fullName>
+        <default>false</default>
+        <label>Vattenfall</label>
+    </customValue>
+    <customValue>
+        <fullName>Alpiq</fullName>
+        <default>false</default>
+        <label>Alpiq</label>
+    </customValue>
+    <customValue>
+        <fullName>Alterna</fullName>
+        <default>false</default>
+        <label>Alterna</label>
+    </customValue>
+    <customValue>
+        <fullName>Antargaz</fullName>
+        <default>false</default>
+        <label>Antargaz</label>
+    </customValue>
+    <customValue>
+        <fullName>Axpo</fullName>
+        <default>false</default>
+        <label>Axpo</label>
+    </customValue>
+    <customValue>
+        <fullName>Butagaz</fullName>
+        <default>false</default>
+        <label>Butagaz</label>
+    </customValue>
+    <customValue>
+        <fullName>Dalkia</fullName>
+        <default>false</default>
+        <label>Dalkia</label>
+    </customValue>
+    <customValue>
+        <fullName>Edenkia</fullName>
+        <default>false</default>
+        <label>Edenkia</label>
+    </customValue>
+    <customValue>
+        <fullName>EDF Entreprises</fullName>
+        <default>false</default>
+        <label>EDF Entreprises</label>
+    </customValue>
+    <customValue>
+        <fullName>Ekwateur</fullName>
+        <default>false</default>
+        <label>Ekwateur</label>
+    </customValue>
+    <customValue>
+        <fullName>élecocité</fullName>
+        <default>false</default>
+        <label>élecocité</label>
+    </customValue>
+    <customValue>
+        <fullName>Electricité de Provence</fullName>
+        <default>false</default>
+        <label>Electricité de Provence</label>
+    </customValue>
+    <customValue>
+        <fullName>Electricité de Savoie</fullName>
+        <default>false</default>
+        <label>Electricité de Savoie</label>
+    </customValue>
+    <customValue>
+        <fullName>Electricité de Strasbourg</fullName>
+        <default>false</default>
+        <label>Electricité de Strasbourg</label>
+    </customValue>
+    <customValue>
+        <fullName>Elmy</fullName>
+        <default>false</default>
+        <label>Elmy</label>
+    </customValue>
+    <customValue>
+        <fullName>Enercoop</fullName>
+        <default>false</default>
+        <label>Enercoop</label>
+    </customValue>
+    <customValue>
+        <fullName>énergem</fullName>
+        <default>false</default>
+        <label>énergem</label>
+    </customValue>
+    <customValue>
+        <fullName>Energie d&apos;ici</fullName>
+        <default>false</default>
+        <label>Energie d&apos;ici</label>
+    </customValue>
+    <customValue>
+        <fullName>Energies du Santerre</fullName>
+        <default>false</default>
+        <label>Energies du Santerre</label>
+    </customValue>
+    <customValue>
+        <fullName>Eni</fullName>
+        <default>false</default>
+        <label>Eni</label>
+    </customValue>
+    <customValue>
+        <fullName>Ekivolt</fullName>
+        <default>false</default>
+        <label>Ekivolt</label>
+    </customValue>
+    <customValue>
+        <fullName>Gaz de Bordeaux</fullName>
+        <default>false</default>
+        <label>Gaz de Bordeaux</label>
+    </customValue>
+    <customValue>
+        <fullName>Gazprom</fullName>
+        <default>false</default>
+        <label>Gazprom</label>
+    </customValue>
+    <customValue>
+        <fullName>Gedia Energie et Services</fullName>
+        <default>false</default>
+        <label>Gedia Energie et Services</label>
+    </customValue>
+    <customValue>
+        <fullName>GEG</fullName>
+        <default>false</default>
+        <label>GEG</label>
+    </customValue>
+    <customValue>
+        <fullName>Hellio</fullName>
+        <default>false</default>
+        <label>Hellio</label>
+    </customValue>
+    <customValue>
+        <fullName>Hydronext</fullName>
+        <default>false</default>
+        <label>Hydronext</label>
+    </customValue>
+    <customValue>
+        <fullName>Hydroption</fullName>
+        <default>false</default>
+        <label>Hydroption</label>
+    </customValue>
+    <customValue>
+        <fullName>Iberdrola</fullName>
+        <default>false</default>
+        <label>Iberdrola</label>
+    </customValue>
+    <customValue>
+        <fullName>Ilek</fullName>
+        <default>false</default>
+        <label>Ilek</label>
+    </customValue>
+    <customValue>
+        <fullName>La Bellenergie</fullName>
+        <default>false</default>
+        <label>La Bellenergie</label>
+    </customValue>
+    <customValue>
+        <fullName>LLUM</fullName>
+        <default>false</default>
+        <label>LLUM</label>
+    </customValue>
+    <customValue>
+        <fullName>Lucia</fullName>
+        <default>false</default>
+        <label>Lucia</label>
+    </customValue>
+    <customValue>
+        <fullName>Mega Energie</fullName>
+        <default>false</default>
+        <label>Mega Energie</label>
+    </customValue>
+    <customValue>
+        <fullName>Mint Energie</fullName>
+        <default>false</default>
+        <label>Mint Energie</label>
+    </customValue>
+    <customValue>
+        <fullName>Planète OUI</fullName>
+        <default>false</default>
+        <label>Planète OUI</label>
+    </customValue>
+    <customValue>
+        <fullName>Proxelia</fullName>
+        <default>false</default>
+        <label>Proxelia</label>
+    </customValue>
+    <customValue>
+        <fullName>Sélia</fullName>
+        <default>false</default>
+        <label>Sélia</label>
+    </customValue>
+    <customValue>
+        <fullName>Solvay Energy Services</fullName>
+        <default>false</default>
+        <label>Solvay Energy Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Urban Solar Energy</fullName>
+        <default>false</default>
+        <label>Urban Solar Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Valoris Energie</fullName>
+        <default>false</default>
+        <label>Valoris Energie</label>
+    </customValue>
+    <masterLabel>Fournisseur</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>jules.tronel@alliancedesenergies.fr</email>
+    <name>Lead Emailing - Lille</name>
+    <queueMembers>
+        <users>
+            <user>c.menier@alliancedesenergies.fr</user>
+            <user>c.baudry@alliancedesenergies.fr</user>
+            <user>f.oubrayeme@alliancedesenergies.fr</user>
+            <user>f.djaffar@alliancedesenergies.fr</user>
+            <user>j.yvonnet@alliancedesenergies.fr</user>
+            <user>k.ben-achour@alliancedesenergies.fr</user>
+            <user>l.thieffry@alliancedesenergies.fr</user>
+            <user>m.gelci@alliancedesenergies.fr</user>
+            <user>r.deoliveira@alliancedesenergies.fr</user>
+            <user>r.desse@alliancedesenergies.fr</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

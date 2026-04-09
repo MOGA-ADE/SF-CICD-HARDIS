@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Nom de section --></label>
+    <name>Nom_section__c</name>
+    <picklistValues>
+        <masterLabel>ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN</masterLabel>
+        <translation><!-- ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITÉS FINANCIÈRES ET D&apos;ASSURANCE</masterLabel>
+        <translation><!-- ACTIVITÉS FINANCIÈRES ET D&apos;ASSURANCE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITÉS IMMOBILIÈRES</masterLabel>
+        <translation><!-- ACTIVITÉS IMMOBILIÈRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES</masterLabel>
+        <translation><!-- ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ADMINISTRATION PUBLIQUE</masterLabel>
+        <translation><!-- ADMINISTRATION PUBLIQUE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGRICULTURE, SYLVICULTURE ET PÊCHE</masterLabel>
+        <translation><!-- AGRICULTURE, SYLVICULTURE ET PÊCHE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES</masterLabel>
+        <translation><!-- ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTRES ACTIVITÉS DE SERVICES</masterLabel>
+        <translation><!-- AUTRES ACTIVITÉS DE SERVICES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COMMERCE ; RÉPARATION D&apos;AUTOMOBILES ET DE MOTOCYCLES</masterLabel>
+        <translation><!-- COMMERCE ; RÉPARATION D&apos;AUTOMOBILES ET DE MOTOCYCLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CONSTRUCTION</masterLabel>
+        <translation><!-- CONSTRUCTION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENSEIGNEMENT</masterLabel>
+        <translation><!-- ENSEIGNEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HÉBERGEMENT ET RESTAURATION</masterLabel>
+        <translation><!-- HÉBERGEMENT ET RESTAURATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIE MANUFACTURIÈRE</masterLabel>
+        <translation><!-- INDUSTRIE MANUFACTURIÈRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIES EXTRACTIVES</masterLabel>
+        <translation><!-- INDUSTRIES EXTRACTIVES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INFORMATION ET COMMUNICATION</masterLabel>
+        <translation><!-- INFORMATION ET COMMUNICATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRODUCTION ET DISTRIBUTION D&apos;EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION</masterLabel>
+        <translation><!-- PRODUCTION ET DISTRIBUTION D&apos;EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRODUCTION ET DISTRIBUTION D&apos;ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D&apos;AIR CONDITIONNÉ</masterLabel>
+        <translation><!-- PRODUCTION ET DISTRIBUTION D&apos;ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D&apos;AIR CONDITIONNÉ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SANTÉ HUMAINE ET ACTION SOCIALE</masterLabel>
+        <translation><!-- SANTÉ HUMAINE ET ACTION SOCIALE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSPORTS ET ENTREPOSAGE</masterLabel>
+        <translation><!-- TRANSPORTS ET ENTREPOSAGE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

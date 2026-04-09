@@ -1,0 +1,63 @@
+/* .drop{
+    border: 2px dashed rgba(65, 148, 249, 0.75);
+    border-radius: 12px;
+    color:rgb(53, 93, 150);
+    font-weight: bold;
+    background-color: rgba(65, 148, 249, 0.05);
+    height:100px;
+    padding: 0 16px;
+} */
+
+.labelContainer {
+    display: flex;    
+    align-items: center;
+}
+
+.marginRL {
+    margin: 0 16px;
+}
+
+.draggableContainer {
+    border-radius: 6px;
+    border: 1px dashed gray;
+    padding: 4px;
+}
+
+.actionBody {
+    position: relative;
+    max-height: 800px;
+}
+
+.section1 {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+h2 {
+    margin-right: 16px;
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section2 p{
+    margin-left: 16px;
+    color: green;
+    
+}
+
+.fileUpload{
+    margin-top: -18px;
+}
+
+.disabledButton {
+    pointer-events: none;
+}
+
+:host {
+    --sds-c-icon-color-foreground-default: green;
+}

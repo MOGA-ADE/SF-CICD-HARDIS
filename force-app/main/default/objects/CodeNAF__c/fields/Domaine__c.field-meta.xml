@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domaine__c</fullName>
+    <label>Domaine</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AGRICULTURE ET PÊCHE</fullName>
+                <default>false</default>
+                <label>AGRICULTURE ET PÊCHE</label>
+            </value>
+            <value>
+                <fullName>ACTIVITES DE CONSEIL AUX ENTREPRISES</fullName>
+                <default>false</default>
+                <label>ACTIVITES DE CONSEIL AUX ENTREPRISES</label>
+            </value>
+            <value>
+                <fullName>ACTIVITES DE NETTOYAGE</fullName>
+                <default>false</default>
+                <label>ACTIVITES DE NETTOYAGE</label>
+            </value>
+            <value>
+                <fullName>ACTIVITES DE SECURITE</fullName>
+                <default>false</default>
+                <label>ACTIVITES DE SECURITE</label>
+            </value>
+            <value>
+                <fullName>ACTIVITES JURIDIQUES, COMPTABLES ET DES SIEGES SOCIAUX</fullName>
+                <default>false</default>
+                <label>ACTIVITES JURIDIQUES, COMPTABLES ET DES SIEGES SOCIAUX</label>
+            </value>
+            <value>
+                <fullName>ACTIVITES VETERINAIRES TERTIAIRE</fullName>
+                <default>false</default>
+                <label>ACTIVITES VETERINAIRES TERTIAIRE</label>
+            </value>
+            <value>
+                <fullName>ARCHITECTURE, ETUDES ET NORMES</fullName>
+                <default>false</default>
+                <label>ARCHITECTURE, ETUDES ET NORMES</label>
+            </value>
+            <value>
+                <fullName>ART ET SPECTACLE</fullName>
+                <default>false</default>
+                <label>ART ET SPECTACLE</label>
+            </value>
+            <value>
+                <fullName>AUTRES ACTIVITES DE SERVICES PERSONNELS</fullName>
+                <default>false</default>
+                <label>AUTRES ACTIVITES DE SERVICES PERSONNELS</label>
+            </value>
+            <value>
+                <fullName>AUTRES INDUSTRIES</fullName>
+                <default>false</default>
+                <label>AUTRES INDUSTRIES</label>
+            </value>
+            <value>
+                <fullName>BÂTIMENT ET TRAVAUX PUBLICS (BTP) ET IMMOBILIER</fullName>
+                <default>false</default>
+                <label>BÂTIMENT ET TRAVAUX PUBLICS (BTP) ET IMMOBILIER</label>
+            </value>
+            <value>
+                <fullName>Bien-être</fullName>
+                <default>false</default>
+                <label>Bien-être</label>
+            </value>
+            <value>
+                <fullName>COMMERCE ET DISTRIBUTION</fullName>
+                <default>false</default>
+                <label>COMMERCE ET DISTRIBUTION</label>
+            </value>
+            <value>
+                <fullName>COMMUNICATION, MARKETING ET MEDIAS</fullName>
+                <default>false</default>
+                <label>COMMUNICATION, MARKETING ET MEDIAS</label>
+            </value>
+            <value>
+                <fullName>ENERGIE</fullName>
+                <default>false</default>
+                <label>ENERGIE</label>
+            </value>
+            <value>
+                <fullName>ENSEIGNEMENT ET FORMATION</fullName>
+                <default>false</default>
+                <label>ENSEIGNEMENT ET FORMATION</label>
+            </value>
+            <value>
+                <fullName>FINANCE, BANQUE ET ASSURANCE</fullName>
+                <default>false</default>
+                <label>FINANCE, BANQUE ET ASSURANCE</label>
+            </value>
+            <value>
+                <fullName>Hebergement Social</fullName>
+                <default>false</default>
+                <label>Hebergement Social</label>
+            </value>
+            <value>
+                <fullName>HÔTELLERIE ET RESTAURATION</fullName>
+                <default>false</default>
+                <label>HÔTELLERIE ET RESTAURATION</label>
+            </value>
+            <value>
+                <fullName>IMMOBILIER</fullName>
+                <default>false</default>
+                <label>IMMOBILIER</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE ALIMENTAIRE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE ALIMENTAIRE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE ALIMENTAIRE ANIMAUX</fullName>
+                <default>false</default>
+                <label>INDUSTRIE ALIMENTAIRE ANIMAUX</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE CHIMIE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE CHIMIE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE DE L&apos;AMEUBLEMENT</fullName>
+                <default>false</default>
+                <label>INDUSTRIE DE L&apos;AMEUBLEMENT</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE DE L&apos;OPTIQUE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE DE L&apos;OPTIQUE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE DU BOIS</fullName>
+                <default>false</default>
+                <label>INDUSTRIE DU BOIS</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE DU SPORT &amp; LOISIRS</fullName>
+                <default>false</default>
+                <label>INDUSTRIE DU SPORT &amp; LOISIRS</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE DU TEXTILE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE DU TEXTILE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE ELECTRONIQUE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE ELECTRONIQUE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE MATERIEL MEDICAL/SANTE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE MATERIEL MEDICAL/SANTE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE METALLURGIE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE METALLURGIE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE MINIERE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE MINIERE</label>
+            </value>
+            <value>
+                <fullName>iNDUSTRIE PAPETIERE</fullName>
+                <default>false</default>
+                <label>iNDUSTRIE PAPETIERE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE PETROLIERE</fullName>
+                <default>false</default>
+                <label>INDUSTRIE PETROLIERE</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIE TRANSPORT</fullName>
+                <default>false</default>
+                <label>INDUSTRIE TRANSPORT</label>
+            </value>
+            <value>
+                <fullName>INFORMATIQUE ET TELECOMMUNICATION</fullName>
+                <default>false</default>
+                <label>INFORMATIQUE ET TELECOMMUNICATION</label>
+            </value>
+            <value>
+                <fullName>LOGISTIQUE ET TRANSPORT</fullName>
+                <default>false</default>
+                <label>LOGISTIQUE ET TRANSPORT</label>
+            </value>
+            <value>
+                <fullName>METIERS DE BOUCHE</fullName>
+                <default>false</default>
+                <label>METIERS DE BOUCHE</label>
+            </value>
+            <value>
+                <fullName>MISE A DISPOSITION DE RESSOURCES HUMAINES</fullName>
+                <default>false</default>
+                <label>MISE A DISPOSITION DE RESSOURCES HUMAINES</label>
+            </value>
+            <value>
+                <fullName>ORGANISATIONS ET SYNDICATS DE METIERS</fullName>
+                <default>false</default>
+                <label>ORGANISATIONS ET SYNDICATS DE METIERS</label>
+            </value>
+            <value>
+                <fullName>ORGANISATIONS POLITIQUES ET RELIGIEUSES</fullName>
+                <default>false</default>
+                <label>ORGANISATIONS POLITIQUES ET RELIGIEUSES</label>
+            </value>
+            <value>
+                <fullName>RECHERCHE ET DEVELOPPEMENT EN SCIENCES</fullName>
+                <default>false</default>
+                <label>RECHERCHE ET DEVELOPPEMENT EN SCIENCES</label>
+            </value>
+            <value>
+                <fullName>RECYCLAGE &amp; VALORISATION DES DECHETS</fullName>
+                <default>false</default>
+                <label>RECYCLAGE &amp; VALORISATION DES DECHETS</label>
+            </value>
+            <value>
+                <fullName>Santé</fullName>
+                <default>false</default>
+                <label>Santé</label>
+            </value>
+            <value>
+                <fullName>SERVICE PUBLIC, DEFENSE ET SECURITE</fullName>
+                <default>false</default>
+                <label>SERVICE PUBLIC, DEFENSE ET SECURITE</label>
+            </value>
+            <value>
+                <fullName>SERVICES D&apos;AIE ADMINISTRATIVE &amp; EVENEMENTIELLE AUX ENTREPRISES</fullName>
+                <default>false</default>
+                <label>SERVICES D&apos;AIE ADMINISTRATIVE &amp; EVENEMENTIELLE AUX ENTREPRISES</label>
+            </value>
+            <value>
+                <fullName>SERVICES D&apos;AMENAGEMENT PAYSAGER</fullName>
+                <default>false</default>
+                <label>SERVICES D&apos;AMENAGEMENT PAYSAGER</label>
+            </value>
+            <value>
+                <fullName>SERVICES DE BLANCHISSERIE</fullName>
+                <default>false</default>
+                <label>SERVICES DE BLANCHISSERIE</label>
+            </value>
+            <value>
+                <fullName>SERVICES DE LOCATION</fullName>
+                <default>false</default>
+                <label>SERVICES DE LOCATION</label>
+            </value>
+            <value>
+                <fullName>SERVICES DE REPARATIONS</fullName>
+                <default>false</default>
+                <label>SERVICES DE REPARATIONS</label>
+            </value>
+            <value>
+                <fullName>SERVICES DE RESERVATION</fullName>
+                <default>false</default>
+                <label>SERVICES DE RESERVATION</label>
+            </value>
+            <value>
+                <fullName>SERVICES FUNERAIRES</fullName>
+                <default>false</default>
+                <label>SERVICES FUNERAIRES</label>
+            </value>
+            <value>
+                <fullName>SOCIAL</fullName>
+                <default>false</default>
+                <label>SOCIAL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

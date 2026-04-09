@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ancien propriétaire de la piste dont la source est &apos;Demande de contact site&apos; --></help>
+    <label><!-- Ancien propriétaire de la piste --></label>
+    <name>TECH_Ancien_proprietaire_piste__c</name>
+    <relationshipLabel><!-- Leads (Ancien propriétaire de la piste) --></relationshipLabel>
+</CustomFieldTranslation>
