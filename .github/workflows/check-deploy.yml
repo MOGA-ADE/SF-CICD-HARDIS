@@ -59,7 +59,7 @@ jobs:
           CI_COMMIT_REF_NAME: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
           ORG_ALIAS: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
           CONFIG_BRANCH: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           NOTIF_EMAIL_ADDRESS: ${{ secrets.NOTIF_EMAIL_ADDRESS }}
