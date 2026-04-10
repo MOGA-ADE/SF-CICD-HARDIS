@@ -1,5 +1,8 @@
 projectName: sf_cicd_hardis
 developmentBranch: PreProd
+majorOrgs:
+  - PreProd
+  - main
 autoCleanTypes:
   - destructivechanges
   - flowPositions
