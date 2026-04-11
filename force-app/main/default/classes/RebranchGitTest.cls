@@ -3,5 +3,7 @@ public with sharing class RebranchGitTest {
         System.debug('MOGANADEN2');
         System.debug('MOGANADEN3');
         System.debug('MOGANADEN4');
+        System.debug('MOGANADEN5');
+        // HERE THE TEST CLASS CODE
     }
 }
