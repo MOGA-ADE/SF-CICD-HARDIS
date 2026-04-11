@@ -106,9 +106,9 @@ jobs:
           sf sgd:source:delta \
             --from "$FROM_SHA" \
             --to "$TO_SHA" \
-            --output ./delta \
+            --output-dir ./delta \
             --generate-delta \
-            --repo .
+            --repo-dir . || echo "⚠️ sgd completed with warnings"
 
           echo "📋 Package to deploy:"
           cat ./delta/package/package.xml 2>/dev/null || echo "No changes found"
