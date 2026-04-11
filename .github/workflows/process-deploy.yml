@@ -96,4 +96,29 @@ jobs:
         run: |
           echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
           sf hardis:auth:login
-          sf hardis:project:deploy:smart
+
+          # Calculate delta directly from git SHAs — no PR detection needed
+          FROM_SHA="${CI_COMMIT_BEFORE_SHA}"
+          TO_SHA=$(git rev-parse HEAD)
+          echo "📦 Delta: $FROM_SHA → $TO_SHA"
+
+          mkdir -p delta
+          sf sgd:source:delta \
+            --from "$FROM_SHA" \
+            --to "$TO_SHA" \
+            --output ./delta \
+            --generate-delta \
+            --repo .
+
+          echo "📋 Package to deploy:"
+          cat ./delta/package/package.xml 2>/dev/null || echo "No changes found"
+
+          if grep -q "<types>" ./delta/package/package.xml 2>/dev/null; then
+            sf project deploy start \
+              --manifest ./delta/package/package.xml \
+              --target-org "$ORG_ALIAS" \
+              --test-level RunLocalTests \
+              --wait 120
+          else
+            echo "✅ No changes to deploy"
+          fi
