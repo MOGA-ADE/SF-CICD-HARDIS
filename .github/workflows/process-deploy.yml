@@ -50,8 +50,7 @@ jobs:
       - name: Set env.BRANCH
         run: |
           echo "BRANCH=$(echo "$GITHUB_REF" | cut -d'/' -f 3)" >> "$GITHUB_ENV"
-          echo "CI_COMMIT_BEFORE_SHA=${{ github.event.before }}" >> "$GITHUB_ENV"run: |
-        # run: echo "BRANCH=$(echo "$GITHUB_REF" | cut -d'/' -f 3)" >> "$GITHUB_ENV"
+          echo "CI_COMMIT_BEFORE_SHA=${{ github.event.before }}" >> "$GITHUB_ENV"
       # Login & check deploy with test classes & code coverage
       - name: Login & Process Deployment
         env:
