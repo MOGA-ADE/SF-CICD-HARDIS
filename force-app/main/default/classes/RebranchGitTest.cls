@@ -4,6 +4,10 @@ public with sharing class RebranchGitTest {
         System.debug('MOGANADEN3');
         System.debug('MOGANADEN4');
         System.debug('MOGANADEN5');
-        // HERE THE TEST CLASS CODE
+
+
+         System.debug('MOGANADN6');
+         System.debug('MOGANADN7');
+        // HERE THE TEST CLASS CODE weds fedsxz
     }
 }
