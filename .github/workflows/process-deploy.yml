@@ -1,187 +1,77 @@
-##############################################################################
-# process-deploy.yml
-# Triggered on every push (= PR merge) to a long-lived branch.
-# Runs a real deployment via sfdx-hardis to the mapped Salesforce org.
-#
-# ROOT CAUSE FIX (2026-04):
-#   1. CI_COMMIT_REF_NAME must use github.ref_name (push event) NOT github.base_ref
-#      (base_ref is empty on push events — that's why targetBranch was always "")
-#   2. We pre-fetch the source branch via GitHub REST API before sfdx-hardis runs
-#      so headRef is available even when GitHub deletes the branch after merge.
-##############################################################################
-
-name: "🚀 Deploy (on merge)"
-
+---
+# Manual updates in in job step "Login & Process Deployment" below:
+# - variables for additional branches: add SFDX_CLIENT_ID / KEY variables
+# - To use slack notifications, you can also define SLACK_TOKEN and SLACK_CHANNEL_ID
+#   - For branch scoped messages, add SLACK_CHANNEL_ID_ + branch name (ex: SLACK_CHANNEL_ID_INTEGRATION, SLACK_CHANNEL_ID_UAT)
 on:
   push:
+    # Add your major branches names here
     branches:
       - main
       - PreProd
 
-# Only one deploy per branch at a time
+name: Process Deployment (sfdx-hardis)
+permissions: read-all
 concurrency:
-  group: deploy-${{ github.ref_name }}
-  cancel-in-progress: false   # never cancel an in-progress deploy
-
-env:
-  # ── GitHub token: prefer PAT (needed for GraphQL PR lookup by sfdx-hardis) ──
-  GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
-  # ── Tell sfdx-hardis the CURRENT branch (fix: ref_name, NOT base_ref) ────────
-  CI_COMMIT_REF_NAME: ${{ github.ref_name }}
-  CI_COMMIT_SHA: ${{ github.sha }}
-  # ── Disable flow diff to reduce noise during CI ──────────────────────────────
-  SFDX_DISABLE_FLOW_DIFF: "true"
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
-  deploy:
-    name: "Deploy → ${{ github.ref_name }}"
+  process_deployment:
+    name: Process Deployment to Major Org
     runs-on: ubuntu-latest
-
+    permissions:
+      pull-requests: write
+      contents: write
+      issues: write
     steps:
-      # ─────────────────────────────────────────────────────────────────────────
-      # 1. Checkout — full history required for delta calculation
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Checkout repository
+      # Git Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
         with:
+          persist-credentials: true
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 2. Detect the SOURCE BRANCH that was merged into ${{ github.ref_name }}
-      #
-      #    Strategy A: GitHub REST API  /commits/{sha}/pulls  — works even if the
-      #                head branch was deleted after the merge.
-      #    Strategy B: Parse the merge-commit message as a fallback.
-      #    Strategy C: git diff against github.event.before (last resort).
-      #
-      #    The detected branch is stored in GITHUB_ENV so later steps can use it.
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Detect merged PR source branch
-        id: detect-source
-        env:
-          GH_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
-        run: |
-          MERGE_SHA="${{ github.sha }}"
-          TARGET_BRANCH="${{ github.ref_name }}"
-          REPO="${{ github.repository }}"
-          SOURCE_BRANCH=""
-
-          echo "🔍 Looking for PR merged into $TARGET_BRANCH with SHA $MERGE_SHA"
-
-          # ── Strategy A: GitHub REST API (works even after branch deletion) ──
-          if [ -n "$GH_TOKEN" ]; then
-            API_RESPONSE=$(curl -s \
-              -H "Authorization: Bearer $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/${REPO}/commits/${MERGE_SHA}/pulls")
-
-            SOURCE_BRANCH=$(echo "$API_RESPONSE" \
-              | grep -o '"ref": *"[^"]*"' \
-              | head -1 \
-              | sed 's/"ref": *"\(.*\)"/\1/')
-
-            if [ -z "$SOURCE_BRANCH" ] || [ "$SOURCE_BRANCH" = "null" ]; then
-              # Try the head.ref field directly
-              SOURCE_BRANCH=$(echo "$API_RESPONSE" \
-                | python3 -c "import sys,json; prs=json.load(sys.stdin); print(prs[0]['head']['ref'] if prs else '')" 2>/dev/null || echo "")
-            fi
-          fi
-
-          # ── Strategy B: Parse merge commit message ────────────────────────
-          if [ -z "$SOURCE_BRANCH" ] || [ "$SOURCE_BRANCH" = "null" ]; then
-            COMMIT_MSG=$(git log -1 --pretty=%s)
-            echo "📝 Commit message: $COMMIT_MSG"
-            # GitHub standard merge: "Merge pull request #N from org/branch-name"
-            SOURCE_BRANCH=$(echo "$COMMIT_MSG" \
-              | sed -n 's/Merge pull request #[0-9]* from [^/]*\/\(.*\)/\1/p')
-          fi
-
-          # ── Strategy C: No PR found — fallback to before/after SHAs ─────
-          if [ -z "$SOURCE_BRANCH" ] || [ "$SOURCE_BRANCH" = "null" ]; then
-            echo "⚠️  Could not detect source branch — will use before/after SHA for delta"
-            echo "DELTA_FROM=${{ github.event.before }}" >> "$GITHUB_ENV"
-            echo "DELTA_TO=${{ github.sha }}" >> "$GITHUB_ENV"
-          else
-            echo "✅ Detected source branch: $SOURCE_BRANCH"
-            echo "SOURCE_BRANCH=$SOURCE_BRANCH" >> "$GITHUB_ENV"
-          fi
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 3. Setup Node.js
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Setup Node.js
+      # Setup node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 4. Install Salesforce CLI + sfdx-hardis
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Install Salesforce CLI + sfdx-hardis
+          node-version: 24
+      # SFDX & plugins
+      - name: Install SFDX and plugins
         run: |
-          npm install -g @salesforce/cli sfdx-hardis
-          sf version
-          echo "sfdx-hardis version: $(sfdx hardis:version 2>/dev/null || npx sfdx-hardis --version 2>/dev/null || echo 'unknown')"
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 5. Authenticate to the target Salesforce org via JWT
-      #    Secrets naming convention (set in GitHub → Settings → Secrets):
-      #      SFDX_CLIENT_ID_PreProd    → Consumer Key for Ellisphere Connected App
-      #      SFDX_CLIENT_KEY_PreProd   → Base64-encoded server.key for PreProd
-      #      SFDX_INSTANCE_URL_PreProd → https://alliancedesenergies--ellisphere.sandbox.my.salesforce.com
-      #
-      #      SFDX_CLIENT_ID_main       → Consumer Key for Production Connected App
-      #      SFDX_CLIENT_KEY_main      → Base64-encoded server.key for main
-      #      SFDX_INSTANCE_URL_main    → https://alliancedesenergies.my.salesforce.com
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Authenticate to target org (${{ github.ref_name }})
+          npm install @salesforce/cli --global
+          sf plugins install @salesforce/plugin-packaging
+          echo 'y' | sf plugins install sfdx-hardis
+          # echo 'y' | sf plugins install sfdmu # Disabled while it does not play well with @salesforce/cli
+          echo 'y' | sf plugins install sfdx-git-delta
+            sf version --verbose --json
+      # Set env branch variable (github.ref_name seems to not work)
+      - name: Set env.BRANCH
+        run: echo "BRANCH=$(echo "$GITHUB_REF" | cut -d'/' -f 3)" >> "$GITHUB_ENV"
+      # Login & check deploy with test classes & code coverage
+      - name: Login & Process Deployment
         env:
-          SFDX_CLIENT_ID:    ${{ secrets[format('SFDX_CLIENT_ID_{0}', github.ref_name)] }}
-          SFDX_CLIENT_KEY:   ${{ secrets[format('SFDX_CLIENT_KEY_{0}', github.ref_name)] }}
-          SFDX_INSTANCE_URL: ${{ secrets[format('SFDX_INSTANCE_URL_{0}', github.ref_name)] }}
-        run: |
-          echo "$SFDX_CLIENT_KEY" | base64 --decode > server.key
-          sf org login jwt \
-            --client-id     "$SFDX_CLIENT_ID" \
-            --jwt-key-file  server.key \
-            --instance-url  "$SFDX_INSTANCE_URL" \
-            --alias         target-org \
-            --set-default
-          rm -f server.key
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 6. Run sfdx-hardis deployment
-      #    Key env vars passed:
-      #      CI_COMMIT_REF_NAME  = current branch (e.g. PreProd or main)
-      #      SOURCE_BRANCH       = the dev_* branch that was merged (if detected)
-      #      GITHUB_TOKEN        = PAT for GraphQL PR lookup
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Deploy to ${{ github.ref_name }}
-        env:
+          SFDX_CLIENT_ID_PREPROD: ${{ secrets.SFDX_CLIENT_ID_PREPROD}}
+          SFDX_CLIENT_KEY_PREPROD: ${{ secrets.SFDX_CLIENT_KEY_PREPROD}}
+          SFDX_CLIENT_ID_MAIN: ${{ secrets.SFDX_CLIENT_ID_MAIN}}
+          SFDX_CLIENT_KEY_MAIN: ${{ secrets.SFDX_CLIENT_KEY_MAIN}}
+          SFDX_AUTH_URL_TECHNICAL_ORG: ${{ secrets.SFDX_AUTH_URL_TECHNICAL_ORG }}
+          SFDX_DEPLOY_WAIT_MINUTES: ${{ vars.SFDX_DEPLOY_WAIT_MINUTES || '120' }}
+          SFDX_TEST_WAIT_MINUTES: ${{ vars.SFDX_TEST_WAIT_MINUTES || '120' }}
+          CI_COMMIT_REF_NAME: ${{ env.BRANCH }} # Defines the target branch of the PR
+          ORG_ALIAS: ${{ env.BRANCH }} # Defines the target branch of the PR
+          CONFIG_BRANCH: ${{ env.BRANCH }} # Defines the target branch of the PR
           GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
-          CI_COMMIT_REF_NAME: ${{ github.ref_name }}
-          CI_COMMIT_SHA: ${{ github.sha }}
-          FORCE_SOURCE_BRANCH: ${{ env.SOURCE_BRANCH }}
-          SFDX_DISABLE_FLOW_DIFF: "true"
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          NOTIF_EMAIL_ADDRESS: ${{ secrets.NOTIF_EMAIL_ADDRESS }}
+          JIRA_HOST: ${{ secrets.JIRA_HOST }}
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+          JIRA_PAT: ${{ secrets.JIRA_HOST }}
+          FORCE_COLOR: "1"
         run: |
-          echo "📌 Branch:         $CI_COMMIT_REF_NAME"
-          echo "📌 Source branch:  ${FORCE_SOURCE_BRANCH:-<not detected>}"
-          echo "📌 Merge SHA:      $CI_COMMIT_SHA"
-          sfdx hardis:project:deploy:sources:dx \
-            --target-org target-org \
-            --debug
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 7. Upload deployment artifacts
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Upload deployment logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: deploy-logs-${{ github.ref_name }}-${{ github.run_id }}
-          path: |
-            **/*.xml
-            .sfdx/tools/testresults/
-            hardis-report/
-          retention-days: 30
+          echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
+          sf hardis:auth:login
+          sf hardis:project:deploy:smart
