@@ -11,7 +11,11 @@ public with sharing class RebranchGitTest {
 
 
         System.debug('MOGANADN8');
+
+
+        System.debug('MOGANADN9');
         // HERE THE TEST CLASS CODE weds fedsxzsa
         // fsaxz
+        fswasx
     }
 }
