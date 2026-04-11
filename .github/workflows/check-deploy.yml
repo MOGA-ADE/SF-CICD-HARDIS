@@ -1,107 +1,77 @@
-##############################################################################
-# check-deploy.yml
-# Triggered on every Pull Request targeting PreProd or main.
-# Runs a check-only (validate) deployment so the PR cannot be merged
-# until the metadata compiles and tests pass.
-##############################################################################
-
-name: "🔍 Check Deploy (PR Validation)"
+---
+# Manual updates in in job step "Login & Process Deployment" below:
+# - variables for additional branches: add SFDX_CLIENT_ID / KEY variables
+# - To use slack notifications, you can also define SLACK_TOKEN and SLACK_CHANNEL_ID
+#   - For branch scoped messages, add SLACK_CHANNEL_ID_ + branch name (ex: SLACK_CHANNEL_ID_INTEGRATION, SLACK_CHANNEL_ID_UAT)
 
 on:
   pull_request:
+    # Add your major branches names here
     branches:
       - main
       - PreProd
-    types: [opened, synchronize, reopened, ready_for_review]
+permissions: read-all
+name: Simulate Deployment (sfdx-hardis)
 
-# Cancel in-progress runs for the same PR to save runner minutes
 concurrency:
-  group: check-${{ github.ref }}
+  group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
 jobs:
-  check-deploy:
-    name: "Validate → ${{ github.base_ref }}"
+  check_deployment:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
-
+    name: Simulate Deployment to Major Org
+    permissions:
+      pull-requests: write
+      contents: write
+      issues: write
     steps:
-      # ─────────────────────────────────────────────────────────────────────────
-      # 1. Checkout — full history required for delta calculation
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Checkout repository
+      # Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 2. Setup Node.js
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Setup Node.js
+          persist-credentials: true
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # Fetch all branches
+      # Setup node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 3. Install Salesforce CLI + sfdx-hardis
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Install Salesforce CLI + sfdx-hardis
+          node-version: 24
+      # SFDX & plugins
+      - name: Install SFDX and plugins
         run: |
-          npm install -g @salesforce/cli sfdx-hardis
-          sf version
-          echo "sfdx-hardis version: $(sfdx hardis:version 2>/dev/null || npx sfdx-hardis --version 2>/dev/null || echo 'unknown')"
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 4. Authenticate to the TARGET sandbox using JWT (Connected App)
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Authenticate to target org (${{ github.base_ref }})
+          npm install --no-cache @salesforce/cli --global
+          sf plugins install @salesforce/plugin-packaging
+          echo 'y' | sf plugins install sfdx-hardis
+          echo 'y' | sf plugins install sfdx-git-delta
+          sf version --verbose --json
+      # Login & check deploy with test classes & code coverage
+      - name: Login & Simulate deployment
         env:
-          SFDX_CLIENT_ID:    ${{ secrets[format('SFDX_CLIENT_ID_{0}', github.base_ref)] }}
-          SFDX_CLIENT_KEY:   ${{ secrets[format('SFDX_CLIENT_KEY_{0}', github.base_ref)] }}
-          SFDX_INSTANCE_URL: ${{ secrets[format('SFDX_INSTANCE_URL_{0}', github.base_ref)] }}
-        run: |
-          echo "$SFDX_CLIENT_KEY" | base64 --decode > server.key
-          sf org login jwt \
-            --client-id     "$SFDX_CLIENT_ID" \
-            --jwt-key-file  server.key \
-            --instance-url  "$SFDX_INSTANCE_URL" \
-            --alias         target-org \
-            --set-default
-          rm -f server.key
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 5. Check-only deploy (validate)
-      #    For PR events:
-      #      github.head_ref = the source branch (e.g. dev_Jerome)
-      #      github.base_ref = the target branch (e.g. PreProd)
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Run check-only deploy
-        env:
+          SFDX_CLIENT_ID_PREPROD: ${{ secrets.SFDX_CLIENT_ID_PREPROD}}
+          SFDX_CLIENT_KEY_PREPROD: ${{ secrets.SFDX_CLIENT_KEY_PREPROD}}
+          SFDX_CLIENT_ID_MAIN: ${{ secrets.SFDX_CLIENT_ID_MAIN}}
+          SFDX_CLIENT_KEY_MAIN: ${{ secrets.SFDX_CLIENT_KEY_MAIN}}
+          SFDX_AUTH_URL_TECHNICAL_ORG: ${{ secrets.SFDX_AUTH_URL_TECHNICAL_ORG }}
+          SFDX_DEPLOY_WAIT_MINUTES: ${{ vars.SFDX_DEPLOY_WAIT_MINUTES || '120' }}
+          SFDX_TEST_WAIT_MINUTES: ${{ vars.SFDX_TEST_WAIT_MINUTES || '120' }}
+          CI_COMMIT_REF_NAME: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
+          ORG_ALIAS: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
+          CONFIG_BRANCH: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
           GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
-          # For PR validation events, base_ref is the TARGET branch being deployed to
-          CI_COMMIT_REF_NAME: ${{ github.base_ref }}
-          CI_COMMIT_SHA: ${{ github.sha }}
-          # Explicitly pass source branch so delta detection is reliable
-          FORCE_SOURCE_BRANCH: ${{ github.head_ref }}
-          SFDX_DISABLE_FLOW_DIFF: "true"
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          NOTIF_EMAIL_ADDRESS: ${{ secrets.NOTIF_EMAIL_ADDRESS }}
+          JIRA_HOST: ${{ secrets.JIRA_HOST }}
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+          JIRA_PAT: ${{ secrets.JIRA_HOST }}
+          JIRA_TICKET_REGEX: ${{ secrets.JIRA_TICKET_REGEX }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FORCE_COLOR: "1"
+          SFDX_DISABLE_FLOW_DIFF: ${{ vars.SFDX_DISABLE_FLOW_DIFF || 'true' }} # Set to true to disable Flow doc during CI/CD
         run: |
-          echo "📌 Target branch (base):  $CI_COMMIT_REF_NAME"
-          echo "📌 Source branch (head):  $FORCE_SOURCE_BRANCH"
-          sfdx hardis:project:deploy:sources:dx \
-            --check \
-            --target-org target-org \
-            --debug
-
-      # ─────────────────────────────────────────────────────────────────────────
-      # 6. Upload test results
-      # ─────────────────────────────────────────────────────────────────────────
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: check-results-${{ github.event.pull_request.number }}-${{ github.run_id }}
-          path: |
-            **/*.xml
-            .sfdx/tools/testresults/
-            hardis-report/
-          retention-days: 14
+          echo "Simulate SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
+          sf hardis:auth:login
+          sf hardis:project:deploy:smart --check
